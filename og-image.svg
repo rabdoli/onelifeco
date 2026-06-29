@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#15110b"/><stop offset="60%" stop-color="#0a0a0c"/><stop offset="100%" stop-color="#050507"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7e6"/><stop offset="34%" stop-color="#ffc879"/>
+      <stop offset="70%" stop-color="#c9863a" stop-opacity="0.4"/><stop offset="100%" stop-color="#c9863a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="232" r="150" fill="url(#glow)"/>
+  <circle cx="600" cy="232" r="78" fill="none" stroke="#ffc879" stroke-opacity="0.5" stroke-width="2.5"/>
+  <circle cx="600" cy="232" r="14" fill="#ffe9c2"/>
+  <text x="600" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#FAF8F5" letter-spacing="2">One Life</text>
+  <text x="600" y="492" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#C9A96E">We light the way.</text>
+  <text x="600" y="566" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#8B7B6B" letter-spacing="6">SIMPLE APPS FOR THE LIFE YOU WANT &#183; STARTING WITH LUTEN</text>
+</svg>
