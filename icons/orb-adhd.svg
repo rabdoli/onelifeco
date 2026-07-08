@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">
+  <defs>
+    <linearGradient id="bg" x1="0.13" y1="0" x2="0.63" y2="1">
+      <stop offset="0" stop-color="#00d89c"></stop>
+      <stop offset="1" stop-color="#009252"></stop>
+    </linearGradient>
+    <radialGradient id="gloss" cx="0.5" cy="-0.25" r="1.15">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"></stop>
+      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.07"></stop>
+      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0"></stop>
+    </radialGradient>
+    <radialGradient id="base" cx="0.5" cy="1.1" r="0.9">
+      <stop offset="0" stop-color="#00622d" stop-opacity="0.55"></stop>
+      <stop offset="0.6" stop-color="#00622d" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <circle cx="34" cy="34" r="34" fill="url(#bg)"></circle>
+  <circle cx="34" cy="34" r="34" fill="url(#base)"></circle>
+  <circle cx="34" cy="34" r="34" fill="url(#gloss)"></circle>
+  <g transform="translate(17,17) scale(1.4167)" style="color:#fff">
+  <path d="M4 7 H20 M4 12 H20 M4 17 H20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M9 4.8 V9.2 M16 9.8 V14.2 M7 14.8 V19.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+</svg>

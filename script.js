@@ -502,13 +502,18 @@ function render(route){if(!pages[route])route='home';
   document.title=TITLES[route]||'One Life';
   scrollTo(0,0);Alley.setWalk(0);Alley.setDawn(0);requestAnimationFrame(onScroll);}
 // navigate : render + push a clean URL (no hash)
-function go(route){if(!pages[route])route='home';render(route);
+// animate the page swap with the View Transitions API where supported (and motion is allowed)
+function swap(route){
+  if(document.startViewTransition&&!reduce){document.startViewTransition(function(){render(route);});}
+  else{render(route);}
+}
+function go(route){if(!pages[route])route='home';swap(route);
   if(history.pushState)history.pushState({route:route},'',route==='home'?'/':'/'+route);}
 // give every in-app link a real path href, so clean URLs show and right-click / new-tab work
 document.querySelectorAll('a[data-route]').forEach(function(a){var r=a.getAttribute('data-route');a.setAttribute('href',r==='home'?'/':'/'+r);});
 document.addEventListener('click',function(e){if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
   var t=e.target.closest('[data-route]');if(t){e.preventDefault();go(t.getAttribute('data-route'));}});
-addEventListener('popstate',function(){render(pathToRoute());});
+addEventListener('popstate',function(){swap(pathToRoute());});
 var initial=pathToRoute();render(initial);
 if(history.replaceState)history.replaceState({route:initial},'',initial==='home'?'/':'/'+initial);
 
