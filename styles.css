@@ -244,8 +244,8 @@ a{color:inherit;text-decoration:none;}
   background:radial-gradient(circle, rgba(201,169,110,.22), rgba(31,61,31,.16) 40%, transparent 68%);filter:blur(20px);}
 .luten-hero .lh-inner{position:relative;z-index:5;padding:0 24px;}
 .luten-hero .eyebrow{color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp 1.4s var(--ease) .4s forwards;}
-.luten-hero h1{font-family:var(--serif);font-weight:300;color:var(--cream);font-size:clamp(80px,17vw,260px);
-  line-height:.9;margin-bottom:24px;text-shadow:0 0 90px rgba(201,169,110,.5);opacity:0;animation:fadeUp 1.6s var(--ease) .7s forwards;}
+.luten-hero h1{font-family:var(--sans);font-weight:200;text-transform:lowercase;letter-spacing:-.02em;color:var(--cream);font-size:clamp(60px,12vw,180px);
+  line-height:.95;margin-bottom:26px;text-shadow:0 0 90px rgba(201,169,110,.4);opacity:0;animation:fadeUp 1.6s var(--ease) .7s forwards;}
 .luten-hero .lh-tag{font-size:clamp(15px,2vw,22px);color:var(--stone);letter-spacing:.04em;opacity:0;animation:fadeUp 1.6s var(--ease) 1s forwards;}
 .luten-hero .lh-tag em{font-style:italic;color:var(--gold);}
 .luten-waves{position:absolute;bottom:46px;left:0;width:100%;height:120px;z-index:3;overflow:hidden;pointer-events:none;
