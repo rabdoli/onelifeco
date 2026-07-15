@@ -247,7 +247,8 @@ a{color:inherit;text-decoration:none;}
 .luten-hero h1{font-family:var(--sans);font-weight:200;text-transform:lowercase;letter-spacing:-.02em;color:var(--cream);font-size:clamp(60px,12vw,180px);
   line-height:.95;margin-bottom:26px;text-shadow:0 0 90px rgba(201,169,110,.4);opacity:0;animation:fadeUp 1.6s var(--ease) .7s forwards;}
 .luten-hero .lh-tag{font-size:clamp(15px,2vw,22px);color:var(--stone);letter-spacing:.04em;opacity:0;animation:fadeUp 1.6s var(--ease) 1s forwards;}
-.luten-hero .lh-tag em{font-style:italic;color:var(--gold);}
+.luten-hero .lh-tag em{font-style:normal;font-weight:400;color:var(--gold);}
+.luten-hero .lh-cta{margin-top:38px;opacity:0;animation:fadeUp 1.6s var(--ease) 1.3s forwards;}
 .luten-waves{position:absolute;bottom:46px;left:0;width:100%;height:120px;z-index:3;overflow:hidden;pointer-events:none;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);}
 .luten-waves svg{position:absolute;left:0;top:0;width:200%;height:100%;}
@@ -445,5 +446,5 @@ a{color:inherit;text-decoration:none;}
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
   .copy{opacity:1 !important;filter:none !important;transform:none !important;}
-  .secret,.hero-station .sub,.scroll-hint,.luten-hero .eyebrow,.luten-hero h1,.luten-hero .lh-tag{opacity:1 !important;animation:none !important;}
+  .secret,.hero-station .sub,.scroll-hint,.luten-hero .eyebrow,.luten-hero h1,.luten-hero .lh-tag,.luten-hero .lh-cta{opacity:1 !important;animation:none !important;}
 }
