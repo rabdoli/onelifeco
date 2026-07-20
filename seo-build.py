@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
-# Generates a static, crawlable HTML file per route from index.html (the home source),
-# each with its own title / description / canonical / OG + the right .page active.
-# Run this after editing index.html:  python3 seo-build.py
+# Generates a static, crawlable HTML file per route, each with its own
+# title / description / canonical / OG, ONLY its own page markup, and real hrefs.
+#
+# EDIT `_source.html`, NOT `index.html`.
+# _source.html is the master template holding every page section. index.html is a
+# BUILD OUTPUT (the home route) and is overwritten on every run, exactly like the
+# other routes. Editing index.html directly means your change is silently lost the
+# next time this runs.
+#
+# Run after editing:  python3 seo-build.py
 import re, os
 ROOT=os.path.dirname(os.path.abspath(__file__))
 BASE="https://onelifeco.app"
-src=open(os.path.join(ROOT,"index.html"),encoding="utf-8").read()
+SRC_FILE=os.path.join(ROOT,"_source.html")
+if not os.path.exists(SRC_FILE):   # first run after the split: seed it from index.html
+    SRC_FILE=os.path.join(ROOT,"index.html")
+src=open(SRC_FILE,encoding="utf-8").read()
 
 # per-route: (page id suffix, title, description, extra JSON-LD or None)
 LUTEN_LD=('<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Luten","applicationCategory":"HealthApplication","operatingSystem":"iOS","url":"%s/luten","description":"A sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.","publisher":{"@type":"Organization","name":"One Life"}}</script>'%BASE
@@ -23,8 +33,11 @@ ROUTES={
    "How One Life handles your data: local-first, privacy-respecting, and transparent.", None),
 }
 # home <div id> for each route (page-home is active in source)
-PAGEID={"luten":"page-luten","about":"page-about","contact":"page-contact",
+PAGEID={"home":"page-home","luten":"page-luten","about":"page-about","contact":"page-contact",
         "termsofservice":"page-terms","privacypolicy":"page-privacy"}
+
+HOME_TITLE="One Life &middot; We light the way."
+HOME_DESC="One Life is a quiet company building simple apps for the life you actually want to live. Starting with Luten, sound for sleep, focus, ADHD and stress."
 
 ALL_PAGE_IDS=["page-home","page-luten","page-about","page-contact","page-terms","page-privacy"]
 
@@ -58,7 +71,10 @@ def real_hrefs(h):
 
 def build(route, title, desc, extra_ld):
     h=src
-    url=BASE+"/"+route
+    # The home route lives at the site root. Computing this here (rather than after
+    # the meta rewrites) matters: canonical and og:url are written below, so getting
+    # it wrong emits <link rel="canonical" href="/home">, a URL that does not exist.
+    url=BASE+"/" if route=="home" else BASE+"/"+route
     # title (appears in <title>, og:title, twitter:title)
     h=re.sub(r'<title>.*?</title>', '<title>'+title+'</title>', h, count=1)
     h=re.sub(r'(<meta property="og:title" content=").*?(")', r'\g<1>'+title+r'\g<2>', h, count=1)
@@ -87,12 +103,21 @@ def build(route, title, desc, extra_ld):
     # the internal link graph dependent on JS execution. Emitting them statically means
     # crawlers see a normal linked site.
     h=real_hrefs(h)
-    outdir=os.path.join(ROOT,route); os.makedirs(outdir,exist_ok=True)
-    open(os.path.join(outdir,"index.html"),"w",encoding="utf-8").write(h)
+    if route=="home":                       # the home route is the site root
+        outpath=os.path.join(ROOT,"index.html")
+    else:
+        outdir=os.path.join(ROOT,route); os.makedirs(outdir,exist_ok=True)
+        outpath=os.path.join(outdir,"index.html")
+    open(outpath,"w",encoding="utf-8").write(h)
     return url
 
 made=[]
 for r,(t,d,ld) in ROUTES.items():
     made.append(build(r,t,d,ld))
+# The homepage is built too, so it also ships only its own markup and real hrefs.
+# Previously it was the raw source: all six pages inline (duplicating every other
+# route) and every internal link still href="#", so it passed no crawlable link
+# equity to /luten despite being the strongest page on the domain.
+made.append(build("home", HOME_TITLE, HOME_DESC, None))
 print("generated per-route pages:")
 for u in made: print("  "+u)
