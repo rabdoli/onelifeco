@@ -11,7 +11,7 @@ src=open(os.path.join(ROOT,"index.html"),encoding="utf-8").read()
 LUTEN_LD=('<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Luten","applicationCategory":"HealthApplication","operatingSystem":"iOS","url":"%s/luten","description":"A sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.","publisher":{"@type":"Organization","name":"One Life"}}</script>'%BASE
  +'<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Luten a meditation app?","acceptedAnswer":{"@type":"Answer","text":"No. Luten is functional sound, not guided meditation. You tell it how you feel and press play. No course, no breathing homework, no gurus."}},{"@type":"Question","name":"Can sound help an ADHD or busy mind focus?","acceptedAnswer":{"@type":"Answer","text":"Luten\'s ADHD mode plays steady, low-surprise sound like brown noise and gentle beds, with a timer, made to help a restless mind settle and start. It is a wellness tool, not a medical device."}},{"@type":"Question","name":"What sounds help you sleep with a racing mind?","acceptedAnswer":{"@type":"Answer","text":"Warm, beatless sound works best: brown noise, delta tones and ocean drift. Luten also shows a real sleep score from Apple Health so you can see your nights."}},{"@type":"Question","name":"Does Luten have study and focus sound?","acceptedAnswer":{"@type":"Answer","text":"Yes. Focus mode queues steady study sound and starts a timer, so you drop into flow without falling down a playlist rabbit hole."}},{"@type":"Question","name":"How do I get Luten, and is it free?","acceptedAnswer":{"@type":"Answer","text":"Luten launches on the App Store August 18. Join the waitlist to get in early: the first 100 people get it free for life and the next 100 get a free first year. You can also scan the code to try the TestFlight beta today. Android is on the way."}}]}</script>')
 ROUTES={
- "luten":("Luten &middot; Sound for the mind: ADHD, focus, study and sleep | One Life",
+ "luten":("Sound for ADHD, Focus &amp; Sleep That Learns You | Luten",
    "Luten is a sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "about":("About &middot; One Life",
    "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten.", None),
@@ -25,6 +25,36 @@ ROUTES={
 # home <div id> for each route (page-home is active in source)
 PAGEID={"luten":"page-luten","about":"page-about","contact":"page-contact",
         "termsofservice":"page-terms","privacypolicy":"page-privacy"}
+
+ALL_PAGE_IDS=["page-home","page-luten","page-about","page-contact","page-terms","page-privacy"]
+
+def _remove_div_block(h, pid):
+    """Remove <div ... id="pid"> ... </div> including nested divs."""
+    m=re.search(r'<div class="page[^"]*" id="'+re.escape(pid)+r'"[^>]*>', h)
+    if not m: return h
+    start, i, depth = m.start(), m.end(), 1
+    while i < len(h) and depth > 0:
+        nd = h.find('<div', i)
+        nc = h.find('</div>', i)
+        if nc == -1: return h            # unbalanced, leave the document untouched
+        if nd != -1 and nd < nc:
+            depth += 1; i = nd + 4
+        else:
+            depth -= 1; i = nc + 6
+    return h[:start] + h[i:]
+
+def strip_other_pages(h, keep_pid):
+    for pid in ALL_PAGE_IDS:
+        if pid != keep_pid:
+            h=_remove_div_block(h, pid)
+    return h
+
+def real_hrefs(h):
+    """<a href="#" data-route="luten"> -> <a href="/luten" data-route="luten">"""
+    def sub(m):
+        tag, route = m.group(0), m.group(1)
+        return tag.replace('href="#"', 'href="'+('/' if route=='home' else '/'+route)+'"')
+    return re.sub(r'<a [^>]*href="#"[^>]*data-route="([a-z]+)"[^>]*>', sub, h)
 
 def build(route, title, desc, extra_ld):
     h=src
@@ -47,6 +77,16 @@ def build(route, title, desc, extra_ld):
     h=h.replace('<div class="page active" id="page-home">','<div class="page" id="page-home">')
     pid=PAGEID[route]
     h=h.replace('<div class="page" id="'+pid+'">','<div class="page active" id="'+pid+'">')
+    # SEO: ship ONLY this route's page markup.
+    # Previously every generated route contained all six page divs and merely toggled
+    # CSS visibility, so all six URLs served byte-identical body content (~6,000 words,
+    # 5 <h1>s). Google treats that as duplicate content and cannot tell what any single
+    # URL is about, which is fatal for ranking /luten on its own terms.
+    h=strip_other_pages(h, pid)
+    # SEO: real hrefs in the RAW html. script.js sets these at runtime, but that makes
+    # the internal link graph dependent on JS execution. Emitting them statically means
+    # crawlers see a normal linked site.
+    h=real_hrefs(h)
     outdir=os.path.join(ROOT,route); os.makedirs(outdir,exist_ok=True)
     open(os.path.join(outdir,"index.html"),"w",encoding="utf-8").write(h)
     return url

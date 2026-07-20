@@ -358,7 +358,9 @@ document.querySelectorAll('.luten-mark').forEach(function(m){m.innerHTML=lutenIc
 // reveal each section's copy as you walk to it; place the bridge just before Luten
 function lightStations(){
   var pl=Alley.state.pathLamps;pl.length=0;
-  if(!homePage.classList.contains('active')||Alley.state.scene!=='alley'){Alley.state.bridgeDepth=-1;return;}
+  // homePage is absent on built sub-routes (each ships only its own page markup),
+  // and this runs inside the rAF loop, so an unguarded access throws every frame.
+  if(!homePage||!homePage.classList.contains('active')||Alley.state.scene!=='alley'){Alley.state.bridgeDepth=-1;return;}
   var vh=innerHeight;Alley.state.bridgeDepth=-1;
   for(var i=0;i<stations.length;i++){
     var s=stations[i],r=s.getBoundingClientRect();
@@ -490,8 +492,13 @@ var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the m
 function pathToRoute(){var p=location.pathname.replace(/^\/+|\/+$/g,'');return pages[p]?p:'home';}
 // render the page for a route (no history change)
 function render(route){if(!pages[route])route='home';
+  // Each built route now ships ONLY its own page markup (see seo-build.py), so a
+  // sibling route's <div> is not in this document. When that happens, fall back to
+  // a real navigation instead of throwing on a null element.
+  var target=document.getElementById(pages[route]);
+  if(!target){location.href=(route==='home'?'/':'/'+route);return;}
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
-  document.getElementById(pages[route]).classList.add('active');
+  target.classList.add('active');
   document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-route')===route);});
   if(navApps)navApps.classList.toggle('active-app',route==='luten');
   Alley.setScene(route==='home'?'alley':'calm');Alley.setActive(true);
@@ -507,7 +514,11 @@ function swap(route){
   if(document.startViewTransition&&!reduce){document.startViewTransition(function(){render(route);});}
   else{render(route);}
 }
-function go(route){if(!pages[route])route='home';swap(route);
+function go(route){if(!pages[route])route='home';
+  // Cross-route click on a built page: that page's markup is not in this document,
+  // so do a real navigation rather than a no-op SPA swap.
+  if(!document.getElementById(pages[route])){location.href=(route==='home'?'/':'/'+route);return;}
+  swap(route);
   if(history.pushState)history.pushState({route:route},'',route==='home'?'/':'/'+route);}
 // give every in-app link a real path href, so clean URLs show and right-click / new-tab work
 document.querySelectorAll('a[data-route]').forEach(function(a){var r=a.getAttribute('data-route');a.setAttribute('href',r==='home'?'/':'/'+r);});
