@@ -36,6 +36,7 @@ SAME_AS = [
     APP_STORE,
     "https://www.instagram.com/lutenapp/",
     "https://www.tiktok.com/@lutenapp",
+    "https://www.youtube.com/@lutenapp",
 ]
 
 SOFTWARE_APP = {

@@ -20,8 +20,18 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# clean-URL SPA fallback: serve index.html for app routes (real files take precedence)
+# Missing paths must 404, not serve the homepage at 200.
+#
+# The old rule sent every unmatched path to /index.html with status 200, so
+# https://onelifeco.app/anything-at-all returned the full homepage successfully.
+# That is a soft 404: an unbounded number of unique URLs all serving identical
+# content, which Google either treats as duplicates or flags outright.
+#
+# Safe to remove the fallback because the site is no longer an SPA. seo-build.py
+# writes a real index.html per route (/, /luten, /about, /contact,
+# /termsofservice, /privacypolicy) and Netlify serves those files directly;
+# nothing depends on client-side routing to resolve a URL.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "/404.html"
+  status = 404
