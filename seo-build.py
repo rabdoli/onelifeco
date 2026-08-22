@@ -78,7 +78,11 @@ def build(route, title, desc, extra_ld):
     # The home route lives at the site root. Computing this here (rather than after
     # the meta rewrites) matters: canonical and og:url are written below, so getting
     # it wrong emits <link rel="canonical" href="/home">, a URL that does not exist.
-    url=BASE+"/" if route=="home" else BASE+"/"+route
+    # TRAILING SLASH MATTERS. Netlify 301s /luten to /luten/, so a canonical of
+    # "/luten" names a URL that redirects rather than the one that serves 200.
+    # Google follows it, but a self-referencing canonical that does not
+    # self-reference wastes crawl budget and muddies which URL is the real one.
+    url=BASE+"/" if route=="home" else BASE+"/"+route+"/"
     # title (appears in <title>, og:title, twitter:title)
     h=re.sub(r'<title>.*?</title>', '<title>'+title+'</title>', h, count=1)
     h=re.sub(r'(<meta property="og:title" content=").*?(")', r'\g<1>'+title+r'\g<2>', h, count=1)

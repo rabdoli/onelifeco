@@ -42,13 +42,13 @@ SAME_AS = [
 SOFTWARE_APP = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "@id": f"{BASE}/luten#app",
+    "@id": f"{BASE}/luten/#app",
     "name": "Luten",
     # The exact App Store title, so the two listings corroborate each other.
     "alternateName": "Luten: Sleep & Focus Sounds",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "iOS",
-    "url": f"{BASE}/luten",
+    "url": f"{BASE}/luten/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
     "description": ("A sound-first iOS app for a busy mind: ADHD focus, study, "
