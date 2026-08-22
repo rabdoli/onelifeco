@@ -18,8 +18,12 @@ if not os.path.exists(SRC_FILE):   # first run after the split: seed it from ind
 src=open(SRC_FILE,encoding="utf-8").read()
 
 # per-route: (page id suffix, title, description, extra JSON-LD or None)
-LUTEN_LD=('<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Luten","applicationCategory":"HealthApplication","operatingSystem":"iOS","url":"%s/luten","description":"A sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.","publisher":{"@type":"Organization","name":"One Life"}}</script>'%BASE
- +'<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Luten a meditation app?","acceptedAnswer":{"@type":"Answer","text":"No. Luten is functional sound, not guided meditation. You tell it how you feel and press play. No course, no breathing homework, no gurus."}},{"@type":"Question","name":"Can sound help an ADHD or busy mind focus?","acceptedAnswer":{"@type":"Answer","text":"Luten\'s ADHD mode plays steady, low-surprise sound like brown noise and gentle beds, with a timer, made to help a restless mind settle and start. It is a wellness tool, not a medical device."}},{"@type":"Question","name":"What sounds help you sleep with a racing mind?","acceptedAnswer":{"@type":"Answer","text":"Warm, beatless sound works best: brown noise, delta tones and ocean drift. Luten also shows a real sleep score from Apple Health so you can see your nights."}},{"@type":"Question","name":"Does Luten have study and focus sound?","acceptedAnswer":{"@type":"Answer","text":"Yes. Focus mode queues steady study sound and starts a timer, so you drop into flow without falling down a playlist rabbit hole."}},{"@type":"Question","name":"How do I get Luten, and is it free?","acceptedAnswer":{"@type":"Answer","text":"Luten launches on the App Store August 18. Join the waitlist to get in early: the first 100 people get it free for life and the next 100 get a free first year. You can also scan the code to try the TestFlight beta today. Android is on the way."}}]}</script>')
+# Structured data for /luten now lives in luten_ld.py. It had grown into two
+# unreadable one-line literals, and its content is a factual claim about the
+# product: the FAQ was still telling Google the app launches on August 18 and
+# offering a free-for-life waitlist that no longer exists.
+import luten_ld
+LUTEN_LD=luten_ld.blocks()
 ROUTES={
  "luten":("Sound for ADHD, Focus &amp; Sleep That Learns You | Luten",
    "Luten is a sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
