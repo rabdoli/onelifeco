@@ -51,8 +51,8 @@ SOFTWARE_APP = {
     "url": f"{BASE}/luten/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
-    "description": ("A sound-first iOS app for a busy mind: ADHD focus, study, "
-                    "deep sleep and calm. Tell it how you feel and press play. "
+    "description": ("A sound-first iOS app for a busy mind: ADHD, focus, study "
+                    "and sleep. Tell it how you feel and press play. "
                     "Not another meditation app."),
     # `offers` is one of Google's required properties. The app is a free
     # download with in-app subscriptions, so price 0 is the honest value.

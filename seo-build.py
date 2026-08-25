@@ -26,7 +26,7 @@ import luten_ld
 LUTEN_LD=luten_ld.blocks()
 ROUTES={
  "luten":("Sound for ADHD, Focus &amp; Sleep That Learns You | Luten",
-   "Luten is a sound-first iOS app for a busy mind: ADHD focus, study, deep sleep and calm. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
+   "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "about":("About &middot; One Life",
    "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten.", None),
  "contact":("Contact &middot; One Life",
