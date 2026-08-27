@@ -472,17 +472,13 @@ addEventListener('scroll',onScroll,{passive:true});
     '<path class="wv wv4" d="'+sine(16,8,60)+'"/></svg>';
   el.innerHTML=svg;})();
 
-// placeholder QR code on the Luten page (deterministic pattern with finder squares)
-(function(){var el=document.getElementById('lutenQR');if(!el)return;var n=25,r='';
-  function finder(x,y){r+='<rect x="'+x+'" y="'+y+'" width="7" height="7" rx="1.4" fill="#15110a"/>'+
-    '<rect x="'+(x+1)+'" y="'+(y+1)+'" width="5" height="5" rx="1" fill="#f6f3ec"/>'+
-    '<rect x="'+(x+2)+'" y="'+(y+2)+'" width="3" height="3" rx="0.6" fill="#15110a"/>';}
-  function inFinder(x,y){return (x<8&&y<8)||(x>n-9&&y<8)||(x<8&&y>n-9);}
-  for(var y=0;y<n;y++)for(var x=0;x<n;x++){if(inFinder(x,y))continue;
-    // deterministic pseudo-random modules
-    if(((x*7+y*13+x*y*3)%5)<2)r+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="#15110a"/>';}
-  finder(0,0);finder(n-7,0);finder(0,n-7);
-  el.innerHTML='<svg viewBox="-0.5 -0.5 '+(n+1)+' '+(n+1)+'" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">'+r+'</svg>';})();
+// The Luten QR is now a REAL, static, scannable SVG at /luten/luten-qr.svg,
+// generated with segno (v8, ECC-H) encoding the App Store URL.
+// What used to live here was a 'placeholder QR': deterministic pseudo-random
+// modules drawn with three finder squares. It LOOKED like a QR code and
+// encoded nothing, so every scan of it failed silently. Do not reintroduce a
+// drawn QR; if the destination changes, regenerate the SVG.
+
 
 /* =========================================================
    7. ROUTING
