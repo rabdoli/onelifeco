@@ -25,7 +25,7 @@ src=open(SRC_FILE,encoding="utf-8").read()
 import luten_ld
 LUTEN_LD=luten_ld.blocks()
 ROUTES={
- "luten":("Sound for ADHD, Focus &amp; Sleep That Learns You | Luten",
+ "luten":("Luten: Sound for ADHD, Focus &amp; Sleep That Learns You",
    "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "about":("About &middot; One Life",
    "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten.", None),
@@ -39,6 +39,8 @@ ROUTES={
 # home <div id> for each route (page-home is active in source)
 PAGEID={"home":"page-home","luten":"page-luten","about":"page-about","contact":"page-contact",
         "termsofservice":"page-terms","privacypolicy":"page-privacy"}
+
+OG_IMAGE={"luten":"/luten/og-luten.png"}
 
 HOME_TITLE="One Life &middot; We light the way."
 HOME_DESC="One Life is a quiet company building simple apps for the life you actually want to live. Starting with Luten, sound for sleep, focus, ADHD and stress."
@@ -91,6 +93,15 @@ def build(route, title, desc, extra_ld):
     h=re.sub(r'(<meta name="description" content=").*?(")', r'\g<1>'+desc+r'\g<2>', h, count=1)
     h=re.sub(r'(<meta property="og:description" content=").*?(")', r'\g<1>'+desc+r'\g<2>', h, count=1)
     h=re.sub(r'(<meta name="twitter:description" content=").*?(")', r'\g<1>'+desc+r'\g<2>', h, count=1)
+    # per-route og:image. /luten has its own social card; every other route uses the
+    # site-wide one. This used to be a direct edit to luten/index.html, which the next
+    # build silently reverted, so it lives here now.
+    if route in OG_IMAGE:
+        img = BASE + OG_IMAGE[route]
+        h = h.replace('<meta property="og:image" content="https://onelifeco.app/og-image.png" />',
+                      '<meta property="og:image" content="'+img+'" />')
+        h = h.replace('<meta name="twitter:image" content="https://onelifeco.app/og-image.png" />',
+                      '<meta name="twitter:image" content="'+img+'" />')
     # canonical + og:url (exact root only, not og:image)
     h=h.replace('<link rel="canonical" href="https://onelifeco.app/" />','<link rel="canonical" href="'+url+'" />')
     h=h.replace('<meta property="og:url" content="https://onelifeco.app/" />','<meta property="og:url" content="'+url+'" />')

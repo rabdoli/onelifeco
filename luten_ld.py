@@ -33,6 +33,7 @@ APP_STORE = "https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392
 # Every profile that is genuinely ours. Adding one we do not control, or one
 # that 404s, weakens the set rather than strengthening it.
 SAME_AS = [
+    "https://www.producthunt.com/products/luten",
     APP_STORE,
     "https://www.instagram.com/lutenapp/",
     "https://www.tiktok.com/@lutenapp",
@@ -70,25 +71,41 @@ SOFTWARE_APP = {
 # listening duration, or state the catalogue size.
 FAQ = [
     ("Is Luten a meditation app?",
-     "No. Luten is functional sound, not guided meditation. You tell it how you "
-     "feel and press play. No course, no breathing homework, no gurus."),
+     "No. Luten is functional sound, not guided meditation. You tell it "
+     "how you feel and press play. No course, no breathing homework, no "
+     "gurus."),
     ("What is Luten?",
-     "Luten is an iOS app that plays sound for sleep, focus, ADHD, stress and "
-     "kids, and learns which sounds you actually stay with. It is made by One "
-     "Life. The name is pronounced LOO-ten."),
+     "Luten is an iOS app that plays sound for sleep, focus, ADHD, "
+     "stress and kids, and learns which sounds you actually stay with. "
+     "It is made by One Life. The name is pronounced LOO-ten."),
     ("Can sound help an ADHD or busy mind focus?",
-     "Luten's ADHD mode plays steady, low-surprise sound with a timer, made for "
-     "a restless mind. It is a wellness tool, not a medical device, and it does "
-     "not treat any condition."),
+     "Luten's ADHD mode plays steady, low-surprise sound with a timer, "
+     "made for a restless mind. It is a wellness tool, not a medical "
+     "device, and it does not treat any condition."),
     ("What sounds help you sleep with a racing mind?",
-     "Warm, beatless sound: brown noise, low tones and ocean drift. Luten also "
-     "shows a sleep score from Apple Health so you can see your nights."),
+     "Most people reach for warm, beatless sound with nothing that "
+     "builds or drops in it: brown noise, low held tones, rain and "
+     "ocean. Luten also shows a sleep score from Apple Health so you can "
+     "see your nights."),
     ("Does Luten have study and focus sound?",
-     "Yes. Focus mode queues steady study sound and starts a timer, so you drop "
-     "into work without falling down a playlist rabbit hole."),
+     "Yes. Focus mode queues steady study sound and starts a timer, so "
+     "you drop into work without falling down a playlist rabbit hole."),
+    ("Does Luten work without a connection?",
+     "Yes. Download the sounds you want and they play with no signal, on "
+     "a plane, in a basement, anywhere. Nothing has to buffer before it "
+     "starts."),
+    ("Does Luten keep playing when I lock my phone?",
+     "Yes. Playback carries on with the screen off, with full controls "
+     "on the lock screen and in Control Center, and a sleep timer if you "
+     "want one."),
+    ("Does Luten send my data anywhere?",
+     "Sona, the companion you talk to, runs entirely on your iPhone "
+     "using Apple's own on-device language tools. What you type stays on "
+     "the phone."),
     ("How do I get Luten, and is it free?",
-     "Luten is on the App Store for iPhone. It is a free download with two free "
-     "sounds in every section, and a subscription unlocks the rest."),
+     "Luten is out now on the App Store for iPhone. It is a free "
+     "download with an optional subscription, and the annual plan starts "
+     "with a 7-day free trial."),
 ]
 
 FAQ_PAGE = {
