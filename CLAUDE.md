@@ -21,6 +21,19 @@ pricing mechanics. A count is not a "pricing term". The point is that someone
 should open the app and find out, not weigh a number against the price before
 they have heard anything.
 
+**Grep the CONCEPT, not the string.** The 2026-08-27 sweep grepped for `16` and
+the exact banned sentences, and on 2026-08-29 BetaList published **"Sixteen
+sounds are free forever"** anyway, because the number was spelled out as a word.
+Two prepared-copy files had it as a paraphrase ("two sounds in each section",
+"two sounds per section are free"). The check that actually works:
+
+    grep -rniE "sixteen|[0-9]+ sounds|two (free )?sounds|sounds (are|is) free|free forever|unlocks the|full library|hundreds of sounds"
+
+Run it over BOTH repos and over every live listing, not just the one you came
+for. Internal engineering notes and tests are exempt; anything a stranger could
+read is not.
+
+
 **Never make a health claim**, and treat "what works" phrasing as a claim.
 Describing content is fine ("brown noise, rain, low held tones"); saying it works
 is not, including soft forms like "delta tones work best for sleep". Never
