@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sleep sounds with no talking | Luten</title>
+<meta name="description" content="Why almost every sleep app has a voice in it, what no talking has to actually mean, and how to test an app in thirty seconds before you trust it at night." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://onelifeco.app/luten/no-talking/" />
+<meta property="og:title" content="Sleep sounds with no talking" />
+<meta property="og:description" content="No narrator, no intro voice, no ad read, no choir pad. What no talking has to include to be true, and how to check before you trust it at night." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Luten" />
+<meta property="og:url" content="https://onelifeco.app/luten/no-talking/" />
+<meta property="og:image" content="https://onelifeco.app/luten/og-luten.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sleep sounds with no talking" />
+<meta name="twitter:description" content="No narrator, no intro voice, no ad read, no choir pad. What no talking has to include to be true, and how to check before you trust it at night." />
+<meta name="twitter:image" content="https://onelifeco.app/luten/og-luten.png" />
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0b1326;
+    color: rgba(255,255,255,0.85);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  .glow {
+    position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(251,191,36,0.10), rgba(139,92,246,0.10) 40%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 32px 0 8px; }
+  .brand { font-family: 'Lexend', sans-serif; font-weight: 200; letter-spacing: 9px; font-size: 22px; color: #fff; padding-left: 9px; text-shadow: 0 0 16px rgba(124,137,176,0.6); }
+  .brand a { color: inherit; text-decoration: none; }
+  .hero { padding: 48px 0 24px; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 50px); color: #fff; letter-spacing: -1px; line-height: 1.08; margin-bottom: 16px; }
+  .hero .tag { font-size: clamp(16px, 3vw, 20px); color: rgba(255,255,255,0.6); }
+  h2 { color: #fff; font-size: 23px; margin: 46px 0 14px; letter-spacing: -0.3px; }
+  h3 { color: #fff; font-size: 16px; margin: 24px 0 8px; }
+  p { margin-bottom: 14px; color: rgba(255,255,255,0.7); }
+  a { color: #c0c1ff; }
+  ul { margin: 0 0 16px 20px; color: rgba(255,255,255,0.7); }
+  li { margin-bottom: 8px; }
+  .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 24px; margin-bottom: 16px; }
+  .cta { display: inline-block; background: rgba(128,131,255,0.16); border: 1px solid rgba(128,131,255,0.35); color: #dcdcff; text-decoration: none; border-radius: 999px; padding: 13px 26px; font-size: 15px; margin: 6px 10px 6px 0; }
+  .lead-in { border-left: 2px solid rgba(128,131,255,0.5); padding-left: 18px; color: rgba(255,255,255,0.78); font-size: 17px; margin: 0 0 26px; }
+  footer { padding: 44px 0 70px; color: rgba(255,255,255,0.35); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.07); margin-top: 54px; }
+  footer a { color: rgba(255,255,255,0.55); }
+  .note { font-size: 13px; color: rgba(255,255,255,0.4); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are sleep sounds with no talking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sound with no voice in it at any point: no narrator, no introduction, no ad read, no sung or whispered vocal, and nothing announcing the next track. In practice that usually means noise, rain, ocean, a fan, a low held tone or instrumental ambience, played on its own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do so many sleep apps have a narrator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because most of them are built around guided content: meditations, sleep stories, breathing courses. A voice is the product in those apps, and plain sound is the free layer underneath it. If you want only the sound, you are using the part of the app that was not the point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between no talking and no vocals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No talking usually means no narration. No vocals is stricter: it also rules out singing, humming, whispered ASMR and the choir style pads that many ambient tracks use as texture. A track can have nobody speaking in it and still have a human voice in the mix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Luten have any talking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There are no vocals anywhere in the catalog, no narration, no guided course and no voice announcing anything. Sona, the companion you can type to, answers in text on screen and never speaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Luten have ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There are no ads in Luten, and nothing plays that you did not choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Luten cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luten is free to download from the App Store. There is an optional subscription at $7.99 per month or $59.99 per year, and the annual plan starts with a 7 day free trial. A one-time lifetime option is $119.99."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+
+  <header><div class="brand"><a href="/luten/">luten</a></div></header>
+
+  <div class="hero">
+    <div class="eyebrow">Sound with nobody in it</div>
+    <h1>Sleep sounds with no talking</h1>
+    <p class="tag">Nobody searches this phrase first. They search it after an app talked to them in the dark.</p>
+  </div>
+
+  <p class="lead-in">"No talking" is not a preference people arrive with. It is a complaint. You put
+  something on at night, a voice arrived, and now you are typing the word "no" into a search box.</p>
+
+  <h2>Why the category is full of voices</h2>
+  <p>Most sleep apps are not sound apps. They are guided content apps: meditations, sleep stories,
+  breathing courses, a narrator with a calm and slightly theatrical delivery. That is the product.
+  Plain sound is the layer underneath it, often thin, often there to lead you upstairs to the
+  talking.</p>
+  <p>So if you want only the sound, you are deliberately using the part of the app that was not
+  the point, and it shows. The rain loop is short. The tracks are unevenly mastered, so one is
+  suddenly louder than the last. And every so often something speaks.</p>
+
+  <h2>What "no talking" has to include to be true</h2>
+  <p>The phrase covers more than a narrator, and this is where apps that honestly believe they
+  qualify fall over. All of these are a voice arriving when you did not ask for one:</p>
+  <div class="card">
+    <h3>The narrator</h3>
+    <p>The obvious one. A guided track you opened by accident, or a sound that begins with a
+    thirty second welcome before the rain starts.</p>
+
+    <h3>The intro and the outro</h3>
+    <p>A voice at the top of a track, or worse, at the end of it, after you have fallen asleep.
+    The end of a track is the least tested part of any sound app.</p>
+
+    <h3>The ad read</h3>
+    <p>Free tiers on ad-supported apps insert audio ads between tracks. An ad at 3am is not a
+    minor irritation, it is the loudest thing that has happened in six hours.</p>
+
+    <h3>Sung and whispered voices</h3>
+    <p>Choir style pads, wordless humming and whispered ASMR are all human voices in the mix.
+    A lot of ambient music uses them as texture. Nobody is talking, and there is still somebody
+    in the room.</p>
+
+    <h3>"Next up"</h3>
+    <p>Autoplay that announces the next track, or that runs on into something else entirely
+    once your queue ends. If you have ever woken to a podcast, you know this one.</p>
+  </div>
+
+  <h2>The other things people mean when they say it</h2>
+  <p>The same search usually carries three more requests underneath it, and they are worth naming
+  because an app can pass the talking test and fail all three:</p>
+  <ul>
+    <li><strong>No music.</strong> No melody arriving, no piano, no build. A lot of "rain" tracks have a pad quietly holding a chord under the rain.</li>
+    <li><strong>No thunder.</strong> A thunder crack is a jump scare inside a sound you put on to stop noticing things. It is in the track because it makes a thirty second preview sound impressive.</li>
+    <li><strong>No bright screen.</strong> If getting the sound on means reading a grid of tiles, the app has woken you up before it has played anything.</li>
+  </ul>
+
+  <h2>How to test an app in thirty seconds</h2>
+  <p>Do this in daylight, before you trust anything at night. It takes less time than reading the
+  reviews and it is more reliable.</p>
+  <div class="card">
+    <h3>1. Skip to the last ten seconds of a track</h3>
+    <p>Not the first ten. The end is where the outro voice lives, and where the loop either joins
+    cleanly or does not.</p>
+
+    <h3>2. Listen for the seam</h3>
+    <p>Let it come around once. Most noise tracks are a short recording repeated, and there is a
+    join where the end meets the start. Once you have heard it you cannot un-hear it, and then you
+    are lying there waiting for it.</p>
+
+    <h3>3. Let a timer run out</h3>
+    <p>See what happens after. Silence is correct. Autoplay into something else is not.</p>
+
+    <h3>4. Turn the screen off</h3>
+    <p>Check the sound keeps going, and check what the lock screen shows you.</p>
+
+    <h3>5. Put it in airplane mode</h3>
+    <p>If it stops, the sound was never really on your phone, and neither is your night.</p>
+  </div>
+
+  <h2>Where Luten sits</h2>
+  <p>Luten is sound for the mind, and the absence is the design, not an oversight. It is the one
+  thing here that is a plain fact about the app rather than an opinion about sound.</p>
+  <ul>
+    <li><strong>No vocals anywhere.</strong> Not in one track. No narration, no singing, no whispered layer, no choir pad, no course.</li>
+    <li><strong>No ads.</strong> Not on any tier, not between tracks, not ever.</li>
+    <li><strong>Nothing announces anything.</strong> Sona, the companion you can talk to, answers in text on the screen. She has no voice.</li>
+    <li><strong>Seamless loops.</strong> The join is not there to find.</li>
+    <li><strong>Uniform loudness.</strong> Nothing is suddenly louder than the last thing.</li>
+    <li><strong>A player that stays dark.</strong> A black screen and a slowly turning mark, no menu to read in the middle of the night.</li>
+    <li><strong>Offline playback and background audio</strong>, so airplane mode changes nothing.</li>
+    <li><strong>Noise synthesised to a measured spectrum</strong> rather than a recording with the treble pulled off and a label attached.</li>
+  </ul>
+
+  <p>
+    <a class="cta" href="https://apps.apple.com/app/id6777673392">Get Luten on the App Store</a>
+    <a class="cta" href="/luten/">More about Luten</a>
+  </p>
+  <p class="note">Free to download. Optional subscription at $7.99 a month or $59.99 a year, and the
+  annual plan starts with a 7 day free trial. Lifetime is $119.99, once. iPhone, iOS 17 and later.</p>
+  <p class="note">Luten is a wellness app, not a medical device. Nothing here is advice about
+  treating a sleep problem, and how long anyone listens is their own business.</p>
+
+  <h2>Common questions</h2>
+  <div class="card">
+    <h3>What counts as a sleep sound with no talking?</h3>
+    <p>No voice at any point: no narrator, no intro, no ad read, no sung or whispered vocal, nothing
+    announcing the next track. Usually that means noise, rain, ocean, a fan, a low held tone or
+    instrumental ambience, playing on its own.</p>
+
+    <h3>Why do so many sleep apps have a narrator?</h3>
+    <p>Because the voice is their product. Guided meditations and sleep stories are what those apps
+    are for, and plain sound is the layer underneath. Wanting only the sound means using the part
+    that was not the point.</p>
+
+    <h3>Is "no talking" the same as "no vocals"?</h3>
+    <p>No, and the difference matters. No talking usually means no narration. No vocals also rules
+    out singing, humming, whispered ASMR and choir style pads. A track can have nobody speaking in
+    it and still have a human voice in the mix.</p>
+
+    <h3>Does Luten have any talking, or any ads?</h3>
+    <p>Neither. No vocals anywhere in the catalog, no narration, no course, and no ads on any tier.
+    Sona answers in text and never speaks.</p>
+
+    <h3>Is it free?</h3>
+    <p>It is free to download. The subscription is optional and the annual plan starts with a 7 day
+    free trial. Open it and find out whether it suits you.</p>
+  </div>
+
+  <p class="note">Awake in the middle of the night? Read
+  <a href="/luten/3am/">sounds for waking up at 3am</a>.</p>
+
+  <footer>
+    <p>Luten is A One Life Product. <a href="/luten/">Luten</a> &middot;
+    <a href="/luten/press">Press kit</a> &middot;
+    <a href="/">One Life</a> &middot;
+    <a href="/privacypolicy/">Privacy</a> &middot;
+    <a href="/termsofservice/">Terms</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
