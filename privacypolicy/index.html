@@ -39,6 +39,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
+<!-- Analytics: PostHog, COOKIELESS. Nothing is stored on the visitor's device.
+     "always" mode derives an id server-side from a daily-rotating hash, which is
+     why there is no consent banner on this site and why there does not need to
+     be one. It also means visitor identity resets every day and PostHog cannot
+     do GeoIP, so country data is not available. That was the trade accepted on
+     2026-08-30: no banner, no cookies, slightly coarser numbers.
+
+     This is the same PostHog project as the Luten iOS app, because the API key
+     available here is scoped to one project. Web events carry no $app_build, so
+     the tester and App Review filters in luten-app/tools/analytics/*.py are not
+     affected. Any query counting PEOPLE across the whole project now mixes
+     website visitors with app users: filter on properties.$lib. A separate
+     project would be cleaner and is a two-minute job in the PostHog UI. -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
+  api_host: 'https://us.i.posthog.com',
+  cookieless_mode: 'always',
+  disable_session_recording: true,
+  capture_pageview: true,
+  capture_pageleave: true,
+  respect_dnt: true
+});
+// The one number this site exists to produce: did the visitor go to the App
+// Store. Autocapture would record the click too, but as an anonymous DOM event
+// that is painful to query and easy to break by editing a button label.
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('appstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+</script>
 </head>
 <body>
 
@@ -94,7 +129,7 @@
         <h3>Purchase and subscription data</h3><p>When you buy a Subscription, we receive limited information from your app store, such as which plan you hold and its status. We do not receive or store your full payment-card number.</p>
         <h3>Health and sensitive data</h3><p>Some features can read health data, such as sleep, from sources like Apple Health, only after you grant explicit permission, which you can revoke at any time in your device settings. This data is used solely to provide the feature you asked for, such as an honest sleep score. It is processed on your device wherever possible, is never sold, is never used for advertising, and is never shared except as strictly needed to provide the feature you enabled.</p>
         <h3>Information from third parties</h3><p>We may receive limited information from service providers and Platforms that help us operate the Services, such as confirmation of a purchase or aggregated analytics, always consistent with this policy and their terms.</p>
-        <h3>Cookies and similar technologies</h3><p>Our website may use a minimal set of cookies or similar technologies that are necessary for it to function and, where you allow it, privacy-respecting analytics. You can control cookies through your browser settings. Our apps do not use third-party advertising cookies.</p>
+        <h3>Cookies and similar technologies</h3><p>This website does not set cookies and does not store anything on your device. We use PostHog for privacy-respecting analytics in its cookieless mode, which means it counts page views and clicks without writing a cookie, without using local storage, and without building a profile that follows you between visits. That is why you are not being asked to accept anything. Our apps do not use third-party advertising cookies.</p>
         <h3>How we use information</h3><p>We use information to provide, maintain, personalise, secure, and improve the Services; to deliver soundscapes, sessions, and features such as sleep scoring; to process Subscriptions through your app store; to provide support and respond to you; to detect and prevent fraud, abuse, and security incidents; to comply with legal obligations; and to send important service communications.</p>
         <h3>How we do not use information</h3><p>We do not use your data to manipulate your attention or maximise screen time, we do not run third-party advertising in our apps, and we do not sell or rent your personal information.</p>
         <h3>Legal bases for processing</h3><p>Where the GDPR or similar laws apply, we process personal data to perform our contract with you (to provide the Services); on the basis of your consent, for example for health data or optional features, which you can withdraw at any time; for our legitimate interests in operating, securing, and improving the Services in a way that does not override your rights; and to comply with our legal obligations.</p>
