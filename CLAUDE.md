@@ -74,4 +74,9 @@ and carry no banned copy.
 
 Fazier, Uneed, Product Hunt and SaaSHub, in `_source.html`. Add a new one only
 once that listing is actually live, and check the image URL returns 200.
-AlternativeTo is submitted and awaiting review; add its badge when it approves.
+**AlternativeTo is approved and live** (verified 2026-08-30) but gets NO badge,
+because AlternativeTo does not offer one. Their listing page carries no badge or
+embed link and they publish no widget. Do not go looking again, and do not
+improvise an image URL to fill the gap: a hotlinked unofficial graphic is worse
+than four badges. Link to https://alternativeto.net/software/luten/ in text if it
+is ever worth surfacing.
