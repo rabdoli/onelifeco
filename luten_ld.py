@@ -34,6 +34,11 @@ APP_STORE = "https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392
 # that 404s, weakens the set rather than strengthening it.
 SAME_AS = [
     "https://www.producthunt.com/products/luten",
+    # Approved and published 2026-08-30 (added by AlternativeTo on Aug 28).
+    # Verified in a browser, not with curl: the site answers a non-browser
+    # client with a Cloudflare challenge, so a 403 there is not a dead link.
+    "https://alternativeto.net/software/luten/",
+    "https://www.saashub.com/luten",
     APP_STORE,
     "https://www.instagram.com/lutenapp/",
     "https://www.tiktok.com/@lutenapp",
