@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>White noise, pink noise and brown noise | Luten</title>
+<meta name="description" content="What the noise colours actually mean, why white noise sounds hissy and brown noise sounds deep, what green noise is not, and how to pick one by ear instead of by chart." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://onelifeco.app/luten/white-noise/" />
+<meta property="og:title" content="White noise, pink noise and brown noise" />
+<meta property="og:description" content="White, pink and brown noise have exact definitions and most apps label by feel. Here is what each one is, what the evidence does and does not say, and how to choose." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Luten" />
+<meta property="og:url" content="https://onelifeco.app/luten/white-noise/" />
+<meta property="og:image" content="https://onelifeco.app/luten/og-luten.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="White noise, pink noise and brown noise" />
+<meta name="twitter:description" content="White, pink and brown noise have exact definitions and most apps label by feel. Here is what each one is, what the evidence does and does not say, and how to choose." />
+<meta name="twitter:image" content="https://onelifeco.app/luten/og-luten.png" />
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0b1326;
+    color: rgba(255,255,255,0.85);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  .glow {
+    position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(251,191,36,0.10), rgba(139,92,246,0.10) 40%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 32px 0 8px; }
+  .brand { font-family: 'Lexend', sans-serif; font-weight: 200; letter-spacing: 9px; font-size: 22px; color: #fff; padding-left: 9px; text-shadow: 0 0 16px rgba(124,137,176,0.6); }
+  .brand a { color: inherit; text-decoration: none; }
+  .hero { padding: 48px 0 24px; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 50px); color: #fff; letter-spacing: -1px; line-height: 1.08; margin-bottom: 16px; }
+  .hero .tag { font-size: clamp(16px, 3vw, 20px); color: rgba(255,255,255,0.6); }
+  h2 { color: #fff; font-size: 23px; margin: 46px 0 14px; letter-spacing: -0.3px; }
+  h3 { color: #fff; font-size: 16px; margin: 24px 0 8px; }
+  p { margin-bottom: 14px; color: rgba(255,255,255,0.7); }
+  a { color: #c0c1ff; }
+  ul { margin: 0 0 16px 20px; color: rgba(255,255,255,0.7); }
+  li { margin-bottom: 8px; }
+  .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 24px; margin-bottom: 16px; }
+  .cta { display: inline-block; background: rgba(128,131,255,0.16); border: 1px solid rgba(128,131,255,0.35); color: #dcdcff; text-decoration: none; border-radius: 999px; padding: 13px 26px; font-size: 15px; margin: 6px 10px 6px 0; }
+  .lead-in { border-left: 2px solid rgba(128,131,255,0.5); padding-left: 18px; color: rgba(255,255,255,0.78); font-size: 17px; margin: 0 0 26px; }
+  footer { padding: 44px 0 70px; color: rgba(255,255,255,0.35); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.07); margin-top: 54px; }
+  footer a { color: rgba(255,255,255,0.55); }
+  .note { font-size: 13px; color: rgba(255,255,255,0.4); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between white, pink and brown noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They differ in how the energy is spread across frequency. White noise has equal power at every frequency, so the high end dominates and it reads as bright and hissy. Pink noise rolls the top off at 3 decibels per octave, which puts equal power in every octave and sounds more balanced. Brown noise rolls it off twice as steeply, at 6 decibels per octave, which is why it sounds deep and distant, closer to a waterfall heard through a wall than to a radio between stations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is brown noise better than white noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no established answer, and anyone who gives you one is going further than the evidence does. The comparisons between noise colours are thin, and what exists is mostly small and mixed. What is not in doubt is that people's preferences differ a great deal. The useful test is your own ears over a few nights, not a chart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is green noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Green noise has no standard engineering definition, unlike white, pink and brown, which are defined by their spectral slope. It is an audio and marketing term, usually meaning noise weighted toward the middle of the range, around 500 hertz, where a lot of natural ambience sits. Worth knowing when you see it sold as a distinct thing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does white noise sound so hissy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because equal power per hertz is not equal power to a human ear. Hearing works in octaves, and each octave upward covers twice the range of hertz as the one below it, so the top octaves carry most of the energy in a flat spectrum. White noise measures flat and hears bright. That is not a fault in the sound, it is the difference between a measurement and an ear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Luten have white, pink and brown noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing, and the same kind of variation elsewhere. They are synthesised to a measured spectral slope rather than made by taking a recording and pulling the treble off it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Luten cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luten is free to download from the App Store. There is an optional subscription at $7.99 per month or $59.99 per year, and the annual plan starts with a 7 day free trial. A one-time lifetime option is $119.99."
+      }
+    }
+  ]
+}
+</script>
+<!-- Analytics: PostHog, with NOTHING stored on the visitor's device.
+     `persistence: 'memory'` writes no cookie and no localStorage entry, which is
+     why this site needs no consent banner. This page is NOT generated by
+     seo-build.py, so this block is a hand-maintained copy: if you change the
+     analytics config in _source.html, change it here too. The full rationale,
+     including why `cookieless_mode` was removed on 2026-08-31, is in the comment
+     above the same snippet in _source.html. -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
+  api_host: 'https://us.i.posthog.com',
+  persistence: 'memory',
+  person_profiles: 'identified_only',
+  disable_session_recording: true,
+  capture_pageview: false,
+  capture_pageleave: true,
+  respect_dnt: true
+});
+// Fire the pageview ourselves rather than relying on `capture_pageview: true`,
+// which produced NOTHING on load here. Verified 2026-08-31: ten seconds after
+// load, under both the desktop and an Android Chrome user agent, the page had
+// made zero capture requests, while an explicit capture landed every time. One
+// call, one pageview per load, no dependence on library behaviour we cannot
+// see from outside. If you ever set capture_pageview back to true, delete this
+// line in the same edit or every page view is counted twice.
+posthog.capture('$pageview');
+
+// The one number this site exists to produce: did the visitor go to the App
+// Store. Autocapture would record the click too, but as an anonymous DOM event
+// that is painful to query and easy to break by editing a button label.
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('appstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+</script>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+
+  <header><div class="brand"><a href="/luten/">luten</a></div></header>
+
+  <div class="hero">
+    <div class="eyebrow">The colours, and what they actually mean</div>
+    <h1>White noise, pink noise and brown noise</h1>
+    <p class="tag">Three words used almost interchangeably online. They have exact definitions, and the difference is audible in about four seconds.</p>
+  </div>
+
+  <p class="lead-in">Most people arrive at this by searching one colour, trying it, and finding it
+  is not the sound they had in their head. Usually they wanted a different colour and did not know
+  the word for it.</p>
+
+  <h2>The short version</h2>
+  <p>All three are broadband noise. What separates them is the slope: how the energy falls away as
+  the frequency rises.</p>
+  <div class="card">
+    <h3>White noise</h3>
+    <p>Equal power at every frequency. Flat on a meter, bright and hissy to an ear. Think of an
+    untuned radio, or air escaping.</p>
+
+    <h3>Pink noise</h3>
+    <p>Falls 3 decibels per octave, which works out as equal power in every octave. Fuller and
+    more even than white, without the top-end hiss. Steady rain and distant surf sit near here.</p>
+
+    <h3>Brown noise</h3>
+    <p>Falls 6 decibels per octave, twice as steep again. Deep and dark, more felt than heard.
+    A waterfall through a wall, a ship's engine room, the inside of a plane.</p>
+  </div>
+
+  <h2>Why white noise sounds so much brighter than it measures</h2>
+  <p>This is the part that surprises people, and it explains the whole family. Equal power per
+  hertz is not equal power to a human ear, because hearing works in octaves and each octave upward
+  covers twice as many hertz as the one below it. The octave from 5,000 to 10,000 hertz contains
+  as much bandwidth as everything below 5,000 put together.</p>
+  <p>So a spectrum that is flat on paper puts most of its energy in the top few octaves, which is
+  where hiss lives. White noise measures flat and hears bright. Pink noise corrects for exactly
+  that, which is why it is the one that sounds "even" to most people, and why it is the reference
+  engineers use when they tune a room.</p>
+  <p>Brown goes past even and lands on dark. Nothing is wrong with any of them. They are three
+  points on one slope, and which one sounds right to you is a matter of ears.</p>
+
+  <h2>The colours nobody defines</h2>
+  <p>White, pink and brown are defined by their slope, so two apps using the words correctly will
+  sound alike. The rest are not.</p>
+  <ul>
+    <li><strong>Green noise</strong> has no standard definition. It usually means noise weighted toward the middle, around 500 hertz, where a lot of outdoor ambience sits. Useful as a description, not as a specification.</li>
+    <li><strong>Blue and violet noise</strong> run the other way, rising with frequency instead of falling. They are real definitions and are almost never what somebody wants at night.</li>
+    <li><strong>Grey noise</strong> is shaped to a curve of human hearing so it sounds equally loud across the range. Definitions of it vary between sources.</li>
+  </ul>
+
+  <h2>Why a lot of "brown noise" is not brown noise</h2>
+  <p>Here is the practical problem, and it is worth knowing before you judge a colour by one app.
+  A great deal of what is sold under these names is a recording with a filter on it: someone took
+  a hiss or a fan or a stretch of rain and pulled the treble down until it sounded about right.</p>
+  <p>That is labelling by feel. It gets you something in the neighbourhood, and it also gets you
+  a spectrum nobody measured, uneven level between one track and the next, and a short recording
+  looping with an audible seam where the end meets the start. Once you hear the seam you cannot
+  stop hearing it, and then you are lying there waiting for it instead of forgetting the sound
+  is on.</p>
+  <p>Noise is one of the few things in audio that can simply be generated to its definition. When
+  it is, the colour is the colour, and it can run as long as you like without a join.</p>
+
+  <h2>What the evidence does and does not say</h2>
+  <p>The internet is confident about this and it should not be. Brown noise in particular has been
+  attached to a lot of claims in the last few years, and the research underneath them is thin: the
+  studies are small, they measure different things, and they disagree. There is no established
+  finding that one colour outperforms another for sleep, for focus, or for anyone in particular.</p>
+  <p>So Luten is not going to tell you which one works. What can be said without stretching
+  anything is smaller and more useful:</p>
+  <ul>
+    <li><strong>Preferences vary a lot between people</strong>, and they are stable enough that most people know their own answer within a few nights.</li>
+    <li><strong>A steady broadband sound raises the noise floor</strong>, which is plain acoustics. That is why half audible conversation, the hardest office sound to ignore, gets easier to leave alone.</li>
+    <li><strong>Nothing here is a treatment.</strong> If sleep is a real problem, this is not the thing to fix it with.</li>
+  </ul>
+
+  <h2>How to pick, by ear</h2>
+  <p>Faster than reading about it, and it is your ears that have to agree, not a chart.</p>
+  <div class="card">
+    <h3>1. Play white, then pink, then brown, back to back</h3>
+    <p>In that order, without changing the volume. The slope is obvious when you hear the three
+    in sequence and almost invisible when you hear one alone.</p>
+
+    <h3>2. Notice which one you stop hearing</h3>
+    <p>That is the whole test. The right one is not the one that sounds best in the first four
+    seconds, it is the one that disappears.</p>
+
+    <h3>3. Check it at the volume you would actually use</h3>
+    <p>The colours change character when quiet. Brown thins out, white gets harsher relative to
+    everything else.</p>
+
+    <h3>4. Skip to the last ten seconds of the track</h3>
+    <p>The end is where the loop either joins cleanly or does not, and where an outro voice would
+    live. It is the least tested part of any sound app.</p>
+  </div>
+
+  <h2>Where Luten sits</h2>
+  <p>Luten is sound for the mind, and noise is the part of the catalog where the engineering is
+  checkable rather than a matter of taste.</p>
+  <ul>
+    <li><strong>White, pink and brown, synthesised to a measured spectral slope</strong>, not a recording with the treble pulled off and a label attached.</li>
+    <li><strong>Variants of each</strong>, since a slope is a starting point: white warmed, softened, widened, or swelling and settling very slowly.</li>
+    <li><strong>Seamless loops.</strong> The join is not there to find, however long you leave it running.</li>
+    <li><strong>Uniform loudness</strong> across everything, so moving between tracks does not mean reaching for the volume.</li>
+    <li><strong>No vocals anywhere</strong>, no narration, no ads, and nothing that announces the next thing.</li>
+    <li><strong>A player that stays dark</strong>, plus offline playback and background audio, so airplane mode changes nothing.</li>
+  </ul>
+
+  <p>
+    <a class="cta" href="https://apps.apple.com/app/id6777673392">Get Luten on the App Store</a>
+    <a class="cta" href="/luten/">More about Luten</a>
+  </p>
+  <p class="note">Free to download. Optional subscription at $7.99 a month or $59.99 a year, and the
+  annual plan starts with a 7 day free trial. Lifetime is $119.99, once. iPhone, iOS 17 and later.</p>
+  <p class="note">Luten is a wellness app, not a medical device. Nothing here is advice about
+  treating a sleep or attention problem, and how long anyone listens is their own business.</p>
+
+  <h2>Common questions</h2>
+  <div class="card">
+    <h3>What is the difference between white, pink and brown noise?</h3>
+    <p>They differ in how the energy is spread across frequency. White noise has equal power at every frequency, so the high end dominates and it reads as bright and hissy. Pink noise rolls the top off at 3 decibels per octave, which puts equal power in every octave and sounds more balanced. Brown noise rolls it off twice as steeply, at 6 decibels per octave, which is why it sounds deep and distant, closer to a waterfall heard through a wall than to a radio between stations.</p>
+
+    <h3>Is brown noise better than white noise?</h3>
+    <p>There is no established answer, and anyone who gives you one is going further than the evidence does. The comparisons between noise colours are thin, and what exists is mostly small and mixed. What is not in doubt is that people's preferences differ a great deal. The useful test is your own ears over a few nights, not a chart.</p>
+
+    <h3>What is green noise?</h3>
+    <p>Green noise has no standard engineering definition, unlike white, pink and brown, which are defined by their spectral slope. It is an audio and marketing term, usually meaning noise weighted toward the middle of the range, around 500 hertz, where a lot of natural ambience sits. Worth knowing when you see it sold as a distinct thing.</p>
+
+    <h3>Why does white noise sound so hissy?</h3>
+    <p>Because equal power per hertz is not equal power to a human ear. Hearing works in octaves, and each octave upward covers twice the range of hertz as the one below it, so the top octaves carry most of the energy in a flat spectrum. White noise measures flat and hears bright. That is not a fault in the sound, it is the difference between a measurement and an ear.</p>
+
+    <h3>Does Luten have white, pink and brown noise?</h3>
+    <p>Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing, and the same kind of variation elsewhere. They are synthesised to a measured spectral slope rather than made by taking a recording and pulling the treble off it.</p>
+  </div>
+
+  <p class="note">Also worth reading:
+  <a href="/luten/no-talking/">sleep sounds with no talking</a> and
+  <a href="/luten/3am/">sounds for waking up at 3am</a>.</p>
+
+  <footer>
+    <p>Luten is A One Life Product. <a href="/luten/">Luten</a> &middot;
+    <a href="/luten/press">Press kit</a> &middot;
+    <a href="/">One Life</a> &middot;
+    <a href="/privacypolicy/">Privacy</a> &middot;
+    <a href="/termsofservice/">Terms</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
