@@ -129,10 +129,19 @@ posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
   persistence: 'memory',
   person_profiles: 'identified_only',
   disable_session_recording: true,
-  capture_pageview: true,
+  capture_pageview: false,
   capture_pageleave: true,
   respect_dnt: true
 });
+// Fire the pageview ourselves rather than relying on `capture_pageview: true`,
+// which produced NOTHING on load here. Verified 2026-08-31: ten seconds after
+// load, under both the desktop and an Android Chrome user agent, the page had
+// made zero capture requests, while an explicit capture landed every time. One
+// call, one pageview per load, no dependence on library behaviour we cannot
+// see from outside. If you ever set capture_pageview back to true, delete this
+// line in the same edit or every page view is counted twice.
+posthog.capture('$pageview');
+
 // The one number this site exists to produce: did the visitor go to the App
 // Store. Autocapture would record the click too, but as an anonymous DOM event
 // that is painful to query and easy to break by editing a button label.
