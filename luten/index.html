@@ -40,24 +40,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
-<!-- Analytics: PostHog, COOKIELESS. Nothing is stored on the visitor's device.
-     "always" mode derives an id server-side from a daily-rotating hash, which is
-     why there is no consent banner on this site and why there does not need to
-     be one. It also means visitor identity resets every day and PostHog cannot
-     do GeoIP, so country data is not available. That was the trade accepted on
-     2026-08-30: no banner, no cookies, slightly coarser numbers.
+<!-- Analytics: PostHog, with NOTHING stored on the visitor's device.
+     `persistence: 'memory'` keeps the id in a JS variable for the life of the
+     page, so no cookie and no localStorage entry is ever written. That is why
+     there is no consent banner on this site and why there does not need to be
+     one. `person_profiles: 'identified_only'` means an anonymous visitor
+     creates no person record at all; this site never calls identify().
+
+     THIS REPLACED `cookieless_mode: 'always'` ON 2026-08-31 AND THE REASON
+     MATTERS. Cookieless mode needs a matching project toggle in PostHog
+     (Settings, Web analytics, "Cookieless tracking"). While that toggle is off,
+     PostHog ACCEPTS cookieless events with HTTP 200 and then DISCARDS them.
+     The site logged zero events for a day while looking correctly installed,
+     because it was correctly installed. Proven with paired probes: two events
+     POSTed seconds apart on the same token, identical except for the cookieless
+     flag. The plain one landed. The cookieless one never arrived, four times
+     over six minutes. If you ever put cookieless mode back, verify it with a
+     probe that you then query for, never by reading the config.
+
+     The trade against cookieless: every page load looks like a new visitor, so
+     PAGE VIEWS are trustworthy and UNIQUE VISITORS are not. Count events, not
+     people. In exchange GeoIP works again, so country is available.
 
      This is the same PostHog project as the Luten iOS app, because the API key
      available here is scoped to one project. Web events carry no $app_build, so
      the tester and App Review filters in luten-app/tools/analytics/*.py are not
-     affected. Any query counting PEOPLE across the whole project now mixes
-     website visitors with app users: filter on properties.$lib. A separate
-     project would be cleaner and is a two-minute job in the PostHog UI. -->
+     affected. Any query counting PEOPLE across the whole project mixes website
+     visitors with app users: filter on properties.$lib. A separate project
+     would be cleaner and is a two-minute job in the PostHog UI. -->
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
   api_host: 'https://us.i.posthog.com',
-  cookieless_mode: 'always',
+  persistence: 'memory',
+  person_profiles: 'identified_only',
   disable_session_recording: true,
   capture_pageview: true,
   capture_pageleave: true,
