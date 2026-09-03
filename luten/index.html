@@ -147,6 +147,17 @@ document.addEventListener('click', function (e) {
         <p style="margin:0;font-size:clamp(15px,1.9vw,19px);line-height:1.4;"><b>Out now</b> on the App Store. Free to download, and the annual plan starts with a <b>7-day free trial</b>.</p>
       </div>
       <div class="lh-cta"><a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>
+      <!-- Desktop gets a way to reach its own phone. Between 2026-08-31 and
+           09-02 this page took 65 pageviews and not one of them came from an
+           iPhone: 43 Windows, 9 Mac, 8 Android, 5 Linux. The only call to
+           action above the fold sent every one of those people to a web App
+           Store page they cannot install from, and the QR that solves it sat
+           at the very bottom of a long page. Hidden on touch devices, where
+           the badge is already the right answer and a QR is nonsense. -->
+      <div class="lh-qr" aria-hidden="false">
+        <div class="qr-code"><img src="/luten/luten-qr.svg" width="104" height="104" alt="QR code linking to Luten on the App Store" decoding="async"></div>
+        <span>Scan with your iPhone</span>
+      </div>
     </div>
     <div class="luten-waves" id="lutenWave"></div>
   </section>
