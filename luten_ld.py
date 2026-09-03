@@ -109,8 +109,8 @@ FAQ = [
      "the phone."),
     ("How do I get Luten, and is it free?",
      "Luten is out now on the App Store for iPhone. It is a free "
-     "download with an optional subscription, and the annual plan starts "
-     "with a 7-day free trial."),
+     "download with an optional subscription, and every subscription "
+     "starts with a 7-day free trial."),
 ]
 
 FAQ_PAGE = {
