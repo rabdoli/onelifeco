@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Which Luten sound should you start with? | Luten</title>
+<meta name="description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://onelifeco.app/luten/quiz/" />
+<meta property="og:title" content="Which Luten sound should you start with?" />
+<meta property="og:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Luten" />
+<meta property="og:url" content="https://onelifeco.app/luten/quiz/" />
+<meta property="og:image" content="https://luten-cc112.web.app/luten/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Which Luten sound should you start with?" />
+<meta name="twitter:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta name="twitter:image" content="https://luten-cc112.web.app/luten/og-image.png" />
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0b1326;
+    color: rgba(255,255,255,0.85);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  .glow {
+    position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 700px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(251,191,36,0.10), rgba(139,92,246,0.10) 40%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 32px 0 8px; }
+  .brand { font-family: 'Lexend', sans-serif; font-weight: 200; letter-spacing: 9px; font-size: 22px; color: #fff; padding-left: 9px; text-shadow: 0 0 16px rgba(124,137,176,0.6); }
+  .brand a { color: inherit; text-decoration: none; }
+  .hero { padding: 48px 0 24px; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 50px); color: #fff; letter-spacing: -1px; line-height: 1.08; margin-bottom: 16px; }
+  .hero .tag { font-size: clamp(16px, 3vw, 20px); color: rgba(255,255,255,0.6); }
+  h2 { color: #fff; font-size: 23px; margin: 46px 0 14px; letter-spacing: -0.3px; }
+  h3 { color: #fff; font-size: 16px; margin: 24px 0 8px; }
+  p { margin-bottom: 14px; color: rgba(255,255,255,0.7); }
+  a { color: #c0c1ff; }
+  ul { margin: 0 0 16px 20px; color: rgba(255,255,255,0.7); }
+  li { margin-bottom: 8px; }
+  .card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 22px 24px; margin-bottom: 16px; }
+  .cta { display: inline-block; background: rgba(128,131,255,0.16); border: 1px solid rgba(128,131,255,0.35); color: #dcdcff; text-decoration: none; border-radius: 999px; padding: 13px 26px; font-size: 15px; margin: 6px 10px 6px 0; }
+  .lead-in { border-left: 2px solid rgba(128,131,255,0.5); padding-left: 18px; color: rgba(255,255,255,0.78); font-size: 17px; margin: 0 0 26px; }
+  footer { padding: 44px 0 70px; color: rgba(255,255,255,0.35); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.07); margin-top: 54px; }
+  footer a { color: rgba(255,255,255,0.55); }
+  .note { font-size: 13px; color: rgba(255,255,255,0.4); }
+</style>
+<style>
+  .quiz { margin: 8px 0 10px; }
+  .step { display: none; }
+  .step.on { display: block; }
+  .qh { font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+         color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+  .opt { display: block; width: 100%; text-align: left; cursor: pointer;
+          background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 16px; padding: 16px 20px; margin-bottom: 10px; color: inherit;
+          font: inherit; line-height: 1.45; transition: border-color .15s, background .15s; }
+  .opt:hover, .opt:focus-visible { background: rgba(128,131,255,0.10);
+          border-color: rgba(128,131,255,0.45); outline: none; }
+  .opt b { display: block; color: #fff; font-weight: 500; font-size: 17px; }
+  .opt span { display: block; color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 3px; }
+  .back { background: none; border: none; color: rgba(255,255,255,0.45); font: inherit;
+           cursor: pointer; padding: 6px 0; font-size: 14px; }
+  .reskey { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+             color: rgba(255,255,255,0.35); margin-bottom: 10px; }
+  .res h3 { margin-top: 0; font-size: 25px; }
+  .sound { color: rgba(255,255,255,0.85); font-size: 17px; }
+  #answer { margin-bottom: 8px; }
+  .all-results .res { margin-bottom: 14px; }
+</style>
+<!-- Analytics: PostHog, with NOTHING stored on the visitor's device.
+     `persistence: 'memory'` writes no cookie and no localStorage entry, which is
+     why this site needs no consent banner. This page is NOT generated by
+     seo-build.py, so this block is a hand-maintained copy: if you change the
+     analytics config in _source.html, change it here too. The full rationale,
+     including why `cookieless_mode` was removed on 2026-08-31, is in the comment
+     above the same snippet in _source.html. -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
+  api_host: 'https://us.i.posthog.com',
+  persistence: 'memory',
+  person_profiles: 'identified_only',
+  disable_session_recording: true,
+  capture_pageview: false,
+  capture_pageleave: true,
+  respect_dnt: true
+});
+// Fire the pageview ourselves rather than relying on `capture_pageview: true`,
+// which produced NOTHING on load here. Verified 2026-08-31: ten seconds after
+// load, under both the desktop and an Android Chrome user agent, the page had
+// made zero capture requests, while an explicit capture landed every time. One
+// call, one pageview per load, no dependence on library behaviour we cannot
+// see from outside. If you ever set capture_pageview back to true, delete this
+// line in the same edit or every page view is counted twice.
+posthog.capture('$pageview');
+
+// The one number this site exists to produce: did the visitor go to the App
+// Store. Autocapture would record the click too, but as an anonymous DOM event
+// that is painful to query and easy to break by editing a button label.
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('appstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+</script>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+
+  <header><div class="brand"><a href="/luten/">luten</a></div></header>
+
+  <div class="hero">
+    <div class="eyebrow">Two questions</div>
+    <h1>Which sound should you start with?</h1>
+    <p class="tag">Most sound apps hand everybody the same list and let you dig. This asks
+    what you are actually doing and what you cannot stand, then names one thing to try.</p>
+  </div>
+
+  <div class="quiz">
+    <div class="step on" id="s1">
+      <div class="qh">1 of 2</div>
+      <h2 style="margin-top:0">What are you trying to do?</h2>
+      <button class="opt" data-q="1" data-v="sleep"><b>Get back to sleep</b><span>It is the middle of the night and you are awake.</span></button>
+      <button class="opt" data-q="1" data-v="start"><b>Start something I keep putting off</b><span>The task is not hard. Beginning it is.</span></button>
+      <button class="opt" data-q="1" data-v="focus"><b>Concentrate with people around</b><span>An office, a shared flat, a cafe, a library that is not quiet.</span></button>
+      <button class="opt" data-q="1" data-v="down"><b>Come down from a day</b><span>You finished hours ago and your head did not.</span></button>
+      <button class="opt" data-q="1" data-v="child"><b>Settle a child</b><span>Bedtime, a nap, or a car that needs to stay calm.</span></button>
+    </div>
+
+    <div class="step" id="s2">
+      <div class="qh">2 of 2</div>
+      <h2 style="margin-top:0">What ruins it for you?</h2>
+      <button class="opt" data-q="2" data-v="voice"><b>A voice</b><span>Talking, singing, a narrator, someone telling me to breathe.</span></button>
+      <button class="opt" data-q="2" data-v="tune"><b>A tune</b><span>A melody or a beat I end up following instead of working.</span></button>
+      <button class="opt" data-q="2" data-v="change"><b>A change</b><span>Anything that builds, shifts, or surprises me halfway through.</span></button>
+      <button class="back" id="back">&larr; Back</button>
+    </div>
+
+    <div class="step" id="s3">
+      <div class="qh">Start here</div>
+      <div id="answer"></div>
+      <button class="back" id="again">&larr; Try a different answer</button>
+    </div>
+  </div>
+
+  <h2>What the app does with this</h2>
+  <p>The version above is two taps and a fixed answer. In Luten you say how you feel in your
+  own words, and Sona reads it on the phone itself using Apple's on-device language tools.
+  Nothing you type is sent anywhere. It also learns which sounds you keep and which you skip,
+  so the answer stops being generic.</p>
+  <p>Luten is free to download on the App Store for iPhone. The subscription is optional and
+  every subscription starts with a 7 day free trial.</p>
+  <p><a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_body" target="_blank" rel="noopener">Download
+  Luten on the App Store <span>&rarr;</span></a></p>
+
+  <h2>Every answer, in one place</h2>
+  <p class="note">Fifteen combinations, so you can read them without answering anything.</p>
+  <div class="all-results">
+    <div class="card res" id="r-sleep-voice">
+      <div class="reskey">Get back to sleep &middot; A voice ruins it</div>
+      <h3>Three In The Morning</h3>
+      <p class="sound">Very low cello and double bass, one dark chord held with almost no movement in it.</p>
+      <p>Nothing in the Luten catalog has a voice in it. No narration, no singing, no one telling you to relax. This one was written for the exact hour you are awake in.</p>
+      <p class="note">In the Sleep section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_voice" target="_blank" rel="noopener">Open Three In The Morning in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-sleep-tune">
+      <div class="reskey">Get back to sleep &middot; A tune ruins it</div>
+      <h3>Deep Pink Noise</h3>
+      <p class="sound">Pink noise with the highs taken away. Deep and close.</p>
+      <p>No melody to follow, because there is no melody. Pink noise sits between the hiss of white and the rumble of brown, and this version has the top rolled off so it stays soft across a long night.</p>
+      <p class="note">In the Sleep section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_tune" target="_blank" rel="noopener">Open Deep Pink Noise in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-sleep-change">
+      <div class="reskey">Get back to sleep &middot; A change ruins it</div>
+      <h3>The Long Middle</h3>
+      <p class="sound">A single sustained cello note, almost motionless from the first second to the last.</p>
+      <p>It does not build and it does not resolve. There is nothing coming that you need to stay awake for.</p>
+      <p class="note">In the Sleep section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_change" target="_blank" rel="noopener">Open The Long Middle in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-start-voice">
+      <div class="reskey">Start something I keep putting off &middot; A voice ruins it</div>
+      <h3>Parallel Play</h3>
+      <p class="sound">Sparse felt piano over distant room tone. Company without conversation.</p>
+      <p>Some people find it easier to begin when the room does not feel empty. This is that room, and nobody in it is going to talk to you.</p>
+      <p class="note">In the ADHD section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_voice" target="_blank" rel="noopener">Open Parallel Play in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-start-tune">
+      <div class="reskey">Start something I keep putting off &middot; A tune ruins it</div>
+      <h3>Steady Brown Noise</h3>
+      <p class="sound">Brown noise held completely level. One thing to hold on to.</p>
+      <p>Brown noise is a preference, not a treatment, and we will not tell you otherwise. What is true is that this one is synthesised to its actual spectral slope rather than made by pulling the treble off a recording, and it does not move.</p>
+      <p class="note">In the ADHD section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_tune" target="_blank" rel="noopener">Open Steady Brown Noise in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-start-change">
+      <div class="reskey">Start something I keep putting off &middot; A change ruins it</div>
+      <h3>One Thing At A Time</h3>
+      <p class="sound">One sustained reed organ tone with the slightest movement in it.</p>
+      <p>The whole track is the first second. Nothing arrives later.</p>
+      <p class="note">In the ADHD section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_change" target="_blank" rel="noopener">Open One Thing At A Time in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-focus-voice">
+      <div class="reskey">Concentrate with people around &middot; A voice ruins it</div>
+      <h3>Pure White Noise</h3>
+      <p class="sound">Flat, even white noise. The same from the first second to the last.</p>
+      <p>The worst office sound is a conversation you can almost make out, because your brain keeps trying to finish the sentence. Covering speech is a question of acoustics rather than wellness, and broadband noise is the plainest tool for it.</p>
+      <p class="note">In the Focus section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_voice" target="_blank" rel="noopener">Open Pure White Noise in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-focus-tune">
+      <div class="reskey">Concentrate with people around &middot; A tune ruins it</div>
+      <h3>Page Turns</h3>
+      <p class="sound">Pages turning in a still room, sparse and quiet, like a library desk nearby.</p>
+      <p>No tempo anywhere in it. Lo-fi has a beat, and a beat is a thing to follow. Half an hour in you are nodding along instead of reading.</p>
+      <p class="note">In the Focus section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_tune" target="_blank" rel="noopener">Open Page Turns in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-focus-change">
+      <div class="reskey">Concentrate with people around &middot; A change ruins it</div>
+      <h3>Steady Pink Noise</h3>
+      <p class="sound">Pink noise held perfectly level, with nothing to notice.</p>
+      <p>Deliberately uneventful. There is nothing in here worth turning your head for.</p>
+      <p class="note">In the Focus section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_change" target="_blank" rel="noopener">Open Steady Pink Noise in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-down-voice">
+      <div class="reskey">Come down from a day &middot; A voice ruins it</div>
+      <h3>Low Cedar Stillness</h3>
+      <p class="sound">Solo cello, long slow bows in the low register, woody and grounding.</p>
+      <p>One instrument, no words, no guide. If wordless choirs still read as voices to you, this has none of that either.</p>
+      <p class="note">In the Stress section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_voice" target="_blank" rel="noopener">Open Low Cedar Stillness in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-down-tune">
+      <div class="reskey">Come down from a day &middot; A tune ruins it</div>
+      <h3>The Long Exhale</h3>
+      <p class="sound">A descending pad whose fall is always longer than its rise.</p>
+      <p>Shaped rather than composed. It is a slow shape repeating, not a piece of music going somewhere.</p>
+      <p class="note">In the Stress section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_tune" target="_blank" rel="noopener">Open The Long Exhale in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-down-change">
+      <div class="reskey">Come down from a day &middot; A change ruins it</div>
+      <h3>Empty And Still</h3>
+      <p class="sound">A near-silent sine pad, mostly space.</p>
+      <p>Closer to a quiet room than to a track. Most of it is the space between.</p>
+      <p class="note">In the Stress section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_change" target="_blank" rel="noopener">Open Empty And Still in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-child-voice">
+      <div class="reskey">Settle a child &middot; A voice ruins it</div>
+      <h3>Kiri no Komoriuta</h3>
+      <p class="sound">A Japanese lullaby on solo koto, sparse and full of space, with a breathy shakuhachi far away.</p>
+      <p>The lullabies in Luten come from all over the world and every one of them is instrumental, so nothing is being sung at a child in a language they are meant to understand.</p>
+      <p class="note">In the Kids section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_voice" target="_blank" rel="noopener">Open Kiri no Komoriuta in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-child-tune">
+      <div class="reskey">Settle a child &middot; A tune ruins it</div>
+      <h3>Soft White Noise</h3>
+      <p class="sound">White noise with the top softened. Gentler over a long night.</p>
+      <p>For a child who settles to a hush rather than a song. No tune, nothing that ends.</p>
+      <p class="note">In the Kids section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_tune" target="_blank" rel="noopener">Open Soft White Noise in Luten <span>&rarr;</span></a>
+    </div>
+    <div class="card res" id="r-child-change">
+      <div class="reskey">Settle a child &middot; A change ruins it</div>
+      <h3>Bíum Bíum</h3>
+      <p class="sound">An Icelandic lullaby on harmonium, sustained and very still, the reeds just audible.</p>
+      <p>It circles rather than develops. Nothing in it wakes anybody up.</p>
+      <p class="note">In the Kids section of Luten.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_change" target="_blank" rel="noopener">Open Bíum Bíum in Luten <span>&rarr;</span></a>
+    </div>
+  </div>
+
+  <h2>Questions people ask before they download</h2>
+  <div class="card">
+    <h3>Is there any talking?</h3>
+    <p>No. There are no vocals anywhere in the catalog. No narration, no guided meditation,
+    no course.</p>
+
+    <h3>Does it play with the screen off?</h3>
+    <p>Yes. Audio keeps going in the background and on the lock screen, sounds download for
+    offline playback, and the player stays black while it plays.</p>
+
+    <h3>Are these claims about what sound does to me?</h3>
+    <p>No, and deliberately not. The descriptions above say what a sound is, not what it will
+    do to you. Whether something suits you is your call, not ours, and how long you listen is
+    your business.</p>
+
+    <h3>Is it free?</h3>
+    <p>It is free to download. The subscription is optional and every subscription starts with
+    a 7 day free trial.</p>
+  </div>
+
+  <p class="note">More on the specifics:
+  <a href="/luten/3am/">sounds for waking at 3am</a>,
+  <a href="/luten/no-talking/">sleep sounds with no talking</a>,
+  <a href="/luten/white-noise/">white, pink and brown noise</a>,
+  <a href="/luten/rain-sounds/">rain sounds with no thunder</a>,
+  <a href="/luten/fan-sounds/">fan sounds for sleeping</a>.</p>
+
+  <footer>
+    <p>Luten is A One Life Product. <a href="/luten/">Luten</a> &middot;
+    <a href="/luten/press">Press kit</a> &middot;
+    <a href="/">One Life</a> &middot;
+    <a href="/privacypolicy/">Privacy</a> &middot;
+    <a href="/termsofservice/">Terms</a></p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var pick = {};
+  function show(id) {
+    ['s1','s2','s3'].forEach(function (s) {
+      document.getElementById(s).classList.toggle('on', s === id);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function cap(name, props) { if (window.posthog) posthog.capture(name, props || {}); }
+
+  document.querySelectorAll('.opt').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var q = b.getAttribute('data-q'), v = b.getAttribute('data-v');
+      if (q === '1') {
+        pick.a = v;
+        cap('quiz_step_1', { answer: v });
+        show('s2');
+      } else {
+        pick.b = v;
+        var src = document.getElementById('r-' + pick.a + '-' + pick.b);
+        if (!src) return;
+        var box = document.getElementById('answer');
+        box.innerHTML = src.innerHTML;
+        cap('quiz_complete', { doing: pick.a, ruins: pick.b, result: pick.a + '_' + pick.b });
+        history.replaceState(null, '', '#' + pick.a + '-' + pick.b);
+        show('s3');
+      }
+    });
+  });
+
+  document.getElementById('back').addEventListener('click', function () { show('s1'); });
+  document.getElementById('again').addEventListener('click', function () {
+    history.replaceState(null, '', location.pathname);
+    show('s1');
+  });
+
+  // A shared link like /luten/quiz/#sleep-voice opens straight on that answer.
+  var h = (location.hash || '').replace('#', '');
+  if (/^[a-z]+-[a-z]+$/.test(h) && document.getElementById('r-' + h)) {
+    var p = h.split('-');
+    pick.a = p[0]; pick.b = p[1];
+    document.getElementById('answer').innerHTML = document.getElementById('r-' + h).innerHTML;
+    cap('quiz_deeplink', { result: p[0] + '_' + p[1] });
+    show('s3');
+  }
+})();
+</script>
+</body>
+</html>
