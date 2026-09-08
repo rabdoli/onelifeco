@@ -362,6 +362,10 @@ function lightStations(){
   // and this runs inside the rAF loop, so an unguarded access throws every frame.
   if(!homePage||!homePage.classList.contains('active')||Alley.state.scene!=='alley'){Alley.state.bridgeDepth=-1;return;}
   var vh=innerHeight;Alley.state.bridgeDepth=-1;
+  // 760px is the same breakpoint at which the CSS stops side-pinning the copy
+  // and centres it. Read per frame rather than cached: the pane can be resized
+  // and a phone can be rotated, and a stale value would strand the plateau.
+  var __narrow=innerWidth<=760;
   for(var i=0;i<stations.length;i++){
     var s=stations[i],r=s.getBoundingClientRect();
     if(s.hasAttribute('data-luten')){Alley.state.bridgeDepth=(r.top-vh*0.30)/(vh*0.14);}
@@ -370,7 +374,21 @@ function lightStations(){
     var c=s.querySelector('.copy'),cr=c?c.getBoundingClientRect():r;
     var center=cr.top+cr.height*0.5, d=(center-vh/2)/vh, ad=Math.abs(d);
     // text reveals and goes away quickly; brightest exactly at centre
-    if(!s.classList.contains('hero-station'))s.style.setProperty('--ct',Math.max(0,Math.min(1,1-ad*2.4)).toFixed(3));
+    // PHONES GET A PLATEAU, added 2026-09-08. The reveal is a cone: --ct is 1 only
+    // when the copy block's centre sits exactly at the viewport centre, and falls
+    // to 0 by 0.42vh away. On a desktop you glide through that cone with a wheel
+    // and it reads as cinematic. On a phone you flick and STOP, and wherever you
+    // stop is where you read from. The copy block is 206px in an 812px viewport,
+    // so it is fully on screen while its centre is anywhere from 0.13vh to 0.87vh:
+    // at those extremes the old curve gave --ct 0.1, which is opacity 0.12 behind
+    // 6px of blur. Reza opened the page on an iPhone and could not read it.
+    // So below 760px, where the copy is already centred rather than side-pinned,
+    // --ct stays at 1 across a plateau and only falls off once the block is
+    // genuinely leaving. Same fade, same order, just a window you can stop inside.
+    if(!s.classList.contains('hero-station')){
+      var ct=__narrow?1-Math.max(0,ad-0.34)*3.2:1-ad*2.4;
+      s.style.setProperty('--ct',Math.max(0,Math.min(1,ct)).toFixed(3));
+    }
     if(s.dataset.side){
       // linear depth: the light comes toward you from ahead, then crosses off to its side as you pass it
       var depth=3.4 + d*7.5;
