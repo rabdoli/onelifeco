@@ -362,10 +362,6 @@ function lightStations(){
   // and this runs inside the rAF loop, so an unguarded access throws every frame.
   if(!homePage||!homePage.classList.contains('active')||Alley.state.scene!=='alley'){Alley.state.bridgeDepth=-1;return;}
   var vh=innerHeight;Alley.state.bridgeDepth=-1;
-  // 760px is the same breakpoint at which the CSS stops side-pinning the copy
-  // and centres it. Read per frame rather than cached: the pane can be resized
-  // and a phone can be rotated, and a stale value would strand the plateau.
-  var __narrow=innerWidth<=760;
   for(var i=0;i<stations.length;i++){
     var s=stations[i],r=s.getBoundingClientRect();
     if(s.hasAttribute('data-luten')){Alley.state.bridgeDepth=(r.top-vh*0.30)/(vh*0.14);}
@@ -374,20 +370,25 @@ function lightStations(){
     var c=s.querySelector('.copy'),cr=c?c.getBoundingClientRect():r;
     var center=cr.top+cr.height*0.5, d=(center-vh/2)/vh, ad=Math.abs(d);
     // text reveals and goes away quickly; brightest exactly at centre
-    // PHONES GET A PLATEAU, added 2026-09-08. The reveal is a cone: --ct is 1 only
-    // when the copy block's centre sits exactly at the viewport centre, and falls
-    // to 0 by 0.42vh away. On a desktop you glide through that cone with a wheel
-    // and it reads as cinematic. On a phone you flick and STOP, and wherever you
-    // stop is where you read from. The copy block is 206px in an 812px viewport,
-    // so it is fully on screen while its centre is anywhere from 0.13vh to 0.87vh:
-    // at those extremes the old curve gave --ct 0.1, which is opacity 0.12 behind
-    // 6px of blur. Reza opened the page on an iPhone and could not read it.
-    // So below 760px, where the copy is already centred rather than side-pinned,
-    // --ct stays at 1 across a plateau and only falls off once the block is
-    // genuinely leaving. Same fade, same order, just a window you can stop inside.
+    // A PLATEAU, NOT A POINT. Rewritten 2026-09-08, and it applies at EVERY width.
+    // The reveal used to be a cone: --ct hit 1 only when the copy block's centre
+    // sat exactly at the viewport centre, and fell to 0 by 0.42vh away. Stop
+    // anywhere else and .copy-in served the words behind up to 7px of blur.
+    // A first pass gated this to phones. That was wrong twice over. Reza sent a
+    // wide-viewport screenshot with the heading crisp and the paragraph a smear,
+    // and the reason is the thing to remember: BLUR IS ABSOLUTE, TEXT IS NOT.
+    // The same 3px destroys a 10px eyebrow, damages 15px body copy, and barely
+    // touches a 100px serif heading, so "it looks fine" judged off the headline
+    // is not a judgement about the page. Nobody reads only the headline.
+    // So: --ct holds at 1 while the block is anywhere near the middle, and only
+    // falls once it is genuinely leaving. Same fade, same order, same peak.
     if(!s.classList.contains('hero-station')){
-      var ct=__narrow?1-Math.max(0,ad-0.34)*3.2:1-ad*2.4;
-      s.style.setProperty('--ct',Math.max(0,Math.min(1,ct)).toFixed(3));
+      // 0.42 is measured, not chosen. The copy block is fully on screen while its
+      // centre is within 0.378vh (390w), 0.411vh (834w) or 0.345vh (1440w) of the
+      // viewport centre, so a plateau of 0.42 covers every one of them: if you can
+      // see the whole block, you can read it, on any device. The fade then runs
+      // from there to 0 at 0.753vh, by which point the block is mostly off screen.
+      s.style.setProperty('--ct',Math.max(0,Math.min(1,1-Math.max(0,ad-0.42)*3.0)).toFixed(3));
     }
     if(s.dataset.side){
       // linear depth: the light comes toward you from ahead, then crosses off to its side as you pass it

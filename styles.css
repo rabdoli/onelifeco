@@ -173,8 +173,16 @@ a{color:inherit;text-decoration:none;}
 .hero-station .scroll-hint .label{display:none;}
 .station.side-left .copy{left:8%;right:auto;transform:none;text-align:left;width:min(48vw,520px);}
 .station.side-right .copy{left:auto;right:8%;transform:none;text-align:right;width:min(48vw,520px);}
-.copy-in{opacity:calc(.02 + var(--ct,0)*.98);filter:blur(calc((1 - var(--ct,0)) * 7px));
-  transform:translateY(calc((1 - var(--ct,0)) * 26px));transition:opacity .28s linear,filter .28s linear,transform .28s linear;}
+/* The reveal. --ct is driven per frame in script.js and plateaus at 1 while the
+   block is anywhere near the middle of the screen, so these are the EDGES of the
+   fade rather than the state you normally read in.
+   Blur was 7px and opacity floored at .02, which is a smear. The trap is that
+   blur is measured in px while text is not: 7px erases a 10px eyebrow, ruins
+   15px body copy, and leaves a 100px serif heading looking almost fine, so the
+   damage is invisible if you check the headline. Reveal now leans on opacity and
+   the lift, with blur as a light touch that small type can survive. */
+.copy-in{opacity:calc(.12 + var(--ct,0)*.88);filter:blur(calc((1 - var(--ct,0)) * 2px));
+  transform:translateY(calc((1 - var(--ct,0)) * 16px));transition:opacity .28s linear,filter .28s linear,transform .28s linear;}
 .copy .eyebrow{margin-bottom:24px;}
 .copy h2{font-family:var(--serif);font-weight:300;color:var(--cream);font-size:clamp(42px,7vw,108px);
   line-height:1;letter-spacing:-.01em;margin-bottom:22px;text-shadow:0 0 50px rgba(255,196,120,.35);}
@@ -430,12 +438,6 @@ a{color:inherit;text-decoration:none;}
 }
 /* on phones the story copy reads better centred under its light than pinned to a narrow side column */
 @media(max-width:760px){
-  /* The reveal, softened for a screen you stop on. script.js widens --ct into a
-     plateau below this same breakpoint; these are the floors that catch the rest.
-     7px of blur and 2% opacity are a smear you cannot read if you land mid-fade,
-     and on a phone you land wherever the flick ends. Same fade, gentler extremes. */
-  .copy-in{opacity:calc(.15 + var(--ct,0)*.85);filter:blur(calc((1 - var(--ct,0)) * 3px));
-    transform:translateY(calc((1 - var(--ct,0)) * 14px));}
   .station.side-left .copy,.station.side-right .copy{left:50%;right:auto;transform:translateX(-50%);text-align:center;width:min(88vw,520px);}
   .copy .body-text{margin-left:auto;margin-right:auto;}
   .get-row{gap:30px;}
