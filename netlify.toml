@@ -20,6 +20,40 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Keep build sources and internal docs out of the public site.
+#
+# publish = "." uploads the whole repo root, so _source.html, CLAUDE.md and the
+# build scripts physically exist on the CDN and would serve at 200. A plain
+# redirect will not fire for a path that maps to a real uploaded file, so these
+# use force = true to win over the file and return the 404 page instead. The
+# IndexNow key file (<key>.txt) is deliberately NOT blocked: it must stay public
+# so Bing/IndexNow can fetch it to verify domain ownership.
+[[redirects]]
+  from = "/_source.html"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/seo-build.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/luten_ld.py"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Missing paths must 404, not serve the homepage at 200.
 #
 # The old rule sent every unmatched path to /index.html with status 200, so
