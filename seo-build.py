@@ -32,9 +32,9 @@ ROUTES={
  "contact":("Contact &middot; One Life",
    "Questions, ideas, or feedback? Get in touch with One Life. We read everything.", None),
  "termsofservice":("Terms of Service &middot; One Life",
-   "The Terms of Service for One Life and its apps, including Luten.", None),
+   "The Terms of Service for One Life and its apps, including Luten and Cassette.", None),
  "privacypolicy":("Privacy Policy &middot; One Life",
-   "How One Life handles your data: local-first, privacy-respecting, and transparent.", None),
+   "How One Life handles your data in Luten, Cassette and on this website: local-first, privacy-respecting, and transparent.", None),
 }
 # home <div id> for each route (page-home is active in source)
 PAGEID={"home":"page-home","luten":"page-luten","about":"page-about","contact":"page-contact",
