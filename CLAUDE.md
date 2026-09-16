@@ -47,9 +47,11 @@ all running text; lowercase "luten" only as a styled wordmark; never all-caps.
     _source.html    the master template holding all six page sections
     seo-build.py    per-route title, description, canonical, og:image
     luten_ld.py     the SoftwareApplication and FAQPage JSON-LD for /luten
+    cassette_ld.py  the same for /cassette (its FAQ must match the page word for word)
 
-    index.html, luten/index.html, about/index.html, contact/index.html,
-    termsofservice/index.html, privacypolicy/index.html   ALL BUILD OUTPUTS
+    index.html, luten/index.html, cassette/index.html, about/index.html,
+    contact/index.html, termsofservice/index.html, privacypolicy/index.html
+                                                           ALL BUILD OUTPUTS
 
 After editing a source, run `python3 seo-build.py`, then commit the sources and
 the regenerated outputs together.
@@ -80,3 +82,24 @@ embed link and they publish no widget. Do not go looking again, and do not
 improvise an image URL to fill the gap: a hotlinked unofficial graphic is worse
 than four badges. Link to https://alternativeto.net/software/luten/ in text if it
 is ever worth surfacing.
+
+## The Cassette page (added 2026-09-16)
+
+`/cassette` is the second product page, built on the Luten page's classes with a
+maroon tint scoped to `#page-cassette`, a Cassette station on the home walk right
+after Luten, and a working "try the deck" demo in script.js (section 6b) that
+replays a sample meeting and never touches the microphone.
+
+- **Cassette's free tier IS published, on purpose.** Reza approved "transcripts
+  and notes free for 5 tapes a month" on 2026-09-16; it matches the App Store
+  description. The never-publish-the-free-tier rule above is Luten's alone. Do
+  not "fix" the Cassette page by removing it, and do not copy the wording onto
+  anything Luten.
+- Every image under `cassette/` and every `icons/cassette-*.svg` comes from
+  `tools/make_cassette_assets.py` (icon, social card, App Store QR with
+  ct=web_qr, gallery screens, feature orbs, hero waveform). Regenerate, never
+  hand-edit.
+- New build sources at the repo root need a forced 404 in netlify.toml, as
+  `cassette_ld.py` has. Anything under `/tools/` is already blocked.
+- No social profiles exist for Cassette yet (checked with Reza). Add them to
+  `cassette_ld.py` SAME_AS only once they are live.

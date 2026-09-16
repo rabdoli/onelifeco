@@ -24,11 +24,16 @@ src=open(SRC_FILE,encoding="utf-8").read()
 # offering a free-for-life waitlist that no longer exists.
 import luten_ld
 LUTEN_LD=luten_ld.blocks()
+# /cassette carries its own SoftwareApplication + FAQPage, built the same way.
+import cassette_ld
+CASSETTE_LD=cassette_ld.blocks()
 ROUTES={
  "luten":("Luten: Sound for ADHD, Focus &amp; Sleep That Learns You",
    "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
+ "cassette":("Cassette: AI Note Taker for Meetings, Lectures &amp; Voice Memos",
+   "Cassette is a cassette deck for iPhone that records meetings, lectures and memos, then writes the transcript, summary, action items and follow-up email.", CASSETTE_LD),
  "about":("About &middot; One Life",
-   "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten.", None),
+   "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten and Cassette.", None),
  "contact":("Contact &middot; One Life",
    "Questions, ideas, or feedback? Get in touch with One Life. We read everything.", None),
  "termsofservice":("Terms of Service &middot; One Life",
@@ -37,15 +42,15 @@ ROUTES={
    "How One Life handles your data in Luten, Cassette and on this website: local-first, privacy-respecting, and transparent.", None),
 }
 # home <div id> for each route (page-home is active in source)
-PAGEID={"home":"page-home","luten":"page-luten","about":"page-about","contact":"page-contact",
+PAGEID={"home":"page-home","luten":"page-luten","cassette":"page-cassette","about":"page-about","contact":"page-contact",
         "termsofservice":"page-terms","privacypolicy":"page-privacy"}
 
-OG_IMAGE={"luten":"/luten/og-luten.png"}
+OG_IMAGE={"luten":"/luten/og-luten.png","cassette":"/cassette/og-cassette.png"}
 
 HOME_TITLE="One Life &middot; We light the way."
-HOME_DESC="One Life is a quiet company building simple apps for the life you actually want to live. Starting with Luten, sound for sleep, focus, ADHD and stress."
+HOME_DESC="One Life is a quiet company building simple apps for daily life: Luten, sound for sleep and focus, and Cassette, an AI note taker for iPhone."
 
-ALL_PAGE_IDS=["page-home","page-luten","page-about","page-contact","page-terms","page-privacy"]
+ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-about","page-contact","page-terms","page-privacy"]
 
 def _remove_div_block(h, pid):
     """Remove <div ... id="pid"> ... </div> including nested divs."""

@@ -500,10 +500,195 @@ addEventListener('scroll',onScroll,{passive:true});
 
 
 /* =========================================================
+   6b. CASSETTE : hero waveform + the try-the-deck demo
+   ========================================================= */
+// Everything here is inert unless the Cassette page's own elements exist, so it
+// costs nothing on every other route. The demo records nothing and never asks
+// for the microphone: it replays a real sample meeting (the one in the App Store
+// screenshots, from tools/make_cassette_assets.py) at about seven times speed.
+// It sends no analytics of its own: this site's PostHog project is Luten's, so
+// Cassette interest is read from the existing $pageview and appstore_click
+// events on route /cassette/ instead of new event names in Luten's data.
+(function(){
+  // Loudness envelope of that same recording, 180 points, 0..100.
+  var ENV=[86,80,77,90,67,88,68,66,66,78,82,0,73,81,90,86,79,77,82,0,77,68,68,58,75,51,67,69,72,91,84,84,74,55,72,57,61,61,76,86,66,56,7,84,80,100,42,0,83,66,88,85,72,84,70,85,71,27,68,72,79,58,68,67,78,95,63,60,54,68,69,70,76,71,67,71,76,66,70,63,90,84,81,91,2,69,51,91,77,83,42,79,58,45,16,0,78,71,75,56,74,68,88,90,79,84,79,7,53,31,80,57,19,69,79,74,61,82,70,74,76,84,76,3,66,2,81,81,78,80,57,66,57,68,70,81,61,56,0,76,76,84,73,85,77,87,67,82,79,73,81,74,83,59,77,74,45,69,80,78,72,3,74,66,76,59,13,59,65,64,71,82,65,28,92,73,73,67,68,0];
+
+  var wave=document.getElementById('casWave');
+  if(wave){
+    // drawn twice across 2400 units so the -50% slide loops seamlessly
+    var n=ENV.length,slot=1200/n,bars='';
+    for(var k=0;k<2;k++)for(var i=0;i<n;i++){
+      var h=Math.max(3,ENV[i]*0.9),x=(k*1200+i*slot).toFixed(1);
+      bars+='<rect class="bar" x="'+x+'" y="'+(55-h/2).toFixed(1)+'" width="'+(slot*0.56).toFixed(2)+'" height="'+h.toFixed(1)+'" rx="1.4"/>';}
+    wave.innerHTML='<svg viewBox="0 0 2400 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">'+bars+'</svg>';
+  }
+
+  var demo=document.getElementById('casDemo');
+  if(!demo)return;
+  var $=function(id){return document.getElementById(id);};
+  var recBtn=$('casRec'),markBtn=$('casMark'),stopBtn=$('casStop'),sheet=$('casSheet'),tabs=$('casTabs'),
+      timeEl=$('casTime'),modeEl=$('casMode'),marksEl=$('casMarks'),lamp=$('casLamp'),lampText=$('casLampText'),hint=$('casHint');
+  var reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var LINES=[[0,"Okay, let's get started."],[1.7,"This is our weekly check-in for the website relaunch."],[4.7,"Tom, how are the new product pages coming along?"],[7.9,"They are almost done."],[9.4,"The photos are in, and the new pages load twice as fast as the old site."],[13.9,"I still need to fix the checkout button on small phones."],[17.4,"I'll have that done by Thursday."],[19.3,"Great. Priya, what did customers tell you in the interviews last week?"],[23.6,"Most of them couldn't find the shipping cost until the very last step."],[27.4,"Three people said that's exactly when they gave up."],[30.2,"That's a clear signal."],[31.9,"If people can't see the price."],[33.7,"They won't buy."],[34.7,"We could show shipping right on the product page."],[37.6,"It's a small change."],[38.9,"Let's do it."],[40.3,"Tom, can you add the shipping cost to the product page before launch?"],[44.1,"Sure. I'll add it this week."],[46.4,"And I'll write up the interview findings and share them with the whole team on Friday."],[50.6,"Perfect. So when can we launch?"],[53.2,"If testing goes well, we can go live on October 12."],[56.9,"Then October 12th it is."],[59.3,"I'll tell the marketing team today so they can plan the announcement email."],[63.3,"One more thing."],[64.7,"Let's keep the old blog posts."],[68.9,"Good point. We keep the blog."],[71.2,"Thanks, everyone. See you next week."]];
+  var LENGTH=73.7,SPEED=7;
+  // What the app wrote for this meeting. Actions and people only count once the
+  // tape has reached the line that produced them, so stopping early writes less.
+  var ACTIONS=[{text:'Add shipping cost to product page before launch',due:'this week',at:44.1},
+               {text:'Write up interview findings and share with the team',due:'Friday',at:46.4},
+               {text:'Keep old blog posts',at:64.7}];
+  var PEOPLE=[['Tom',4.7],['Priya',19.3]];
+  var QUOTE_LINES=[11,12]; // "If people can't see the price." "They won't buy."
+  function summary(t){
+    if(t>=64.7)return 'The team discussed the website relaunch, identified issues with the checkout process, and decided to implement changes to improve user experience. They also agreed to keep the old blog posts.';
+    if(t>=44.1)return 'The team checked in on the website relaunch. The new product pages are nearly done, and customer interviews showed people give up when they cannot see the shipping cost, so it goes on the product page.';
+    if(t>=19.3)return 'A weekly check-in on the website relaunch. The new product pages are almost done and load twice as fast, with the checkout button on small phones still to fix by Thursday.';
+    if(t>=8)return 'The weekly website relaunch check-in had only just started when the tape stopped.';
+    return '';
+  }
+
+  var state='idle',tape=0,marks=[],last=0,raf=0,shownLines=0,tab='notes';
+  var vuL=$('casVuL'),vuR=$('casVuR');
+  [vuL,vuR].forEach(function(v){for(var i=0;i<16;i++)v.appendChild(document.createElement('i'));});
+
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function names(s){return esc(s).replace(/\b(Tom|Priya)\b/g,'<span class="cas-name">$1</span>');}
+  function clock(t){t=Math.floor(t);var h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return [h,m,s].map(function(v){return v<10?'0'+v:v;}).join(':');}
+  function stamp(t){t=Math.floor(t);var m=Math.floor(t/60),s=t%60;return (m<10?'0'+m:m)+':'+(s<10?'0'+s:s);}
+  function lineAt(t){var idx=-1;for(var i=0;i<LINES.length;i++){if(LINES[i][0]<=t+0.5)idx=i;}return idx;}
+
+  function setVU(level){
+    [vuL,vuR].forEach(function(v,ch){var lv=level<=0?0:Math.max(0,Math.min(16,Math.round((level+(ch?-4:3)+Math.random()*8-4)/100*16)));
+      [].forEach.call(v.children,function(s,i){var on=i<lv;s.classList.toggle('on',on);s.classList.toggle('hot',on&&i>=11&&i<14);s.classList.toggle('peak',on&&i>=14);});});
+  }
+  function setLamp(kind,text){lamp.className='cas-lamp'+(kind?' '+kind:'');lampText.textContent=text;}
+
+  function renderLive(){
+    // append any lines the tape has now reached
+    var reached=lineAt(tape);
+    if(shownLines===0&&reached>=0)sheet.innerHTML='';
+    while(shownLines<=reached){
+      var L=LINES[shownLines],d=document.createElement('p');
+      d.className='cas-line';d.dataset.i=shownLines;
+      d.innerHTML='<time>'+stamp(L[0])+'</time><span class="t">'+names(L[1])+'</span>';
+      sheet.appendChild(d);shownLines++;
+      sheet.scrollTop=sheet.scrollHeight;
+    }
+    [].forEach.call(sheet.querySelectorAll('.cas-line'),function(p){p.classList.toggle('now',+p.dataset.i===reached);});
+  }
+
+  function frame(now){
+    if(state!=='rec')return;
+    var dt=Math.min(0.1,(now-last)/1000);last=now;
+    tape=Math.min(LENGTH,tape+dt*SPEED);
+    timeEl.textContent=clock(tape);
+    setVU(ENV[Math.min(ENV.length-1,Math.floor(tape/LENGTH*ENV.length))]);
+    renderLive();
+    if(tape>=LENGTH){stop(true);return;}
+    raf=requestAnimationFrame(frame);
+  }
+
+  function press(btn){btn.classList.add('down');setTimeout(function(){btn.classList.remove('down');},160);}
+
+  function start(){
+    state='rec';tape=0;marks=[];shownLines=0;tab='notes';
+    sheet.setAttribute('aria-live','off');
+    tabs.hidden=true;setTab('notes',true);
+    sheet.innerHTML='<div class="cas-empty"><span class="cas-hand">Recording</span><p>Listening to the sample meeting.</p></div>';
+    marksEl.textContent='Marks 00';modeEl.innerHTML='<span class="rec">&#9679; Rec</span> &middot; Side A';
+    setLamp('rec','Rec');demo.classList.add('rolling');
+    recBtn.disabled=true;markBtn.disabled=false;stopBtn.disabled=false;
+    hint.textContent='Press Mark when a line is worth keeping.';
+    last=performance.now();raf=requestAnimationFrame(frame);
+  }
+
+  function mark(){
+    if(state!=='rec')return;
+    var i=lineAt(tape);if(i<0)return;
+    if(marks.indexOf(i)<0)marks.push(i);
+    marksEl.textContent='Marks '+(marks.length<10?'0':'')+marks.length;
+    var p=sheet.querySelector('.cas-line[data-i="'+i+'"]');if(p)p.classList.add('hl');
+  }
+
+  function stop(reachedEnd){
+    if(state!=='rec')return;
+    cancelAnimationFrame(raf);state='writing';
+    demo.classList.remove('rolling');setVU(0);
+    markBtn.disabled=true;stopBtn.disabled=true;
+    modeEl.innerHTML='Side A &middot; Writing notes';setLamp('busy','Writing');
+    hint.textContent='Writing the transcript, notes and email.';
+    sheet.innerHTML='<div class="cas-writing"><span class="cas-hand">Writing your notes</span><p style="font-size:14px;color:#6e6860;line-height:28px;">Summary, highlights, action items and a follow-up email.</p></div>';
+    setTimeout(function(){
+      state='done';setLamp('','Saved');modeEl.innerHTML='Side A &middot; Saved';
+      recBtn.disabled=false;
+      hint.textContent='Switch tabs for the email and transcript, or press Record to start over.';
+      tabs.hidden=false;sheet.setAttribute('aria-live','polite');setTab('notes');
+    },reduceMotion?200:1500);
+  }
+
+  function highlightGroups(t){
+    var picks=[];
+    marks.slice().sort(function(a,b){return LINES[a][0]-LINES[b][0];}).forEach(function(i){if(picks.indexOf(i)<0)picks.push(i);});
+    QUOTE_LINES.forEach(function(i){if(LINES[i][0]<=t&&picks.indexOf(i)<0)picks.push(i);});
+    picks=picks.slice(0,4).sort(function(a,b){return a-b;});
+    var groups=[];picks.forEach(function(i){var g=groups[groups.length-1];if(g&&g[g.length-1]===i-1)g.push(i);else groups.push([i]);});
+    return groups;
+  }
+  function reachedActions(t){return ACTIONS.filter(function(a){return a.at<=t;});}
+  function reachedPeople(t){return PEOPLE.filter(function(p){return p[1]<=t;}).map(function(p){return p[0];});}
+
+  function notesHTML(t){
+    var h='',s=summary(t),groups=highlightGroups(t),acts=reachedActions(t);
+    if(s)h+='<div class="cas-block"><h5>Summary</h5><p>'+names(s)+'</p></div>';
+    if(groups.length){h+='<div class="cas-block"><h5>Highlights</h5>';
+      groups.forEach(function(g){h+='<p class="cas-quote"><time>'+stamp(LINES[g[0]][0])+'</time><q>'+names(g.map(function(i){return LINES[i][1];}).join(' '))+'</q></p>';});
+      h+='</div>';}
+    if(acts.length){h+='<div class="cas-block"><h5>Actions</h5><ul>';
+      acts.forEach(function(a){h+='<li class="cas-act"><span>'+esc(a.text)+(a.due?'<em>'+esc(a.due)+'</em>':'')+'</span></li>';});
+      h+='</ul></div>';}
+    if(!h)h='<div class="cas-empty"><span class="cas-hand">Too short to write up</span><p>Record a little longer and Cassette has something to summarize.</p></div>';
+    return h;
+  }
+  function transcriptHTML(t){
+    var hl={};highlightGroups(t).forEach(function(g){g.forEach(function(i){hl[i]=1;});});
+    var h='';LINES.forEach(function(L,i){if(L[0]<=t+0.5)h+='<p class="cas-line'+(hl[i]?' hl':'')+'" style="animation:none"><time>'+stamp(L[0])+'</time><span class="t">'+names(L[1])+'</span></p>';});
+    return h||'<div class="cas-empty"><span class="cas-hand">No speech yet</span><p>The tape stopped before anyone spoke.</p></div>';
+  }
+  function emailHTML(t){
+    var people=reachedPeople(t),acts=reachedActions(t),s=summary(t);
+    var greet=people.length>1?people.slice(0,-1).join(', ')+' and '+people[people.length-1]:(people[0]||'all');
+    var h='<div class="cas-block"><p class="cas-field"><b>Subject</b><span>Recap: Website relaunch check-in</span></p>';
+    if(people.length)h+='<p class="cas-field"><b>To</b><span>'+people.join(', ')+'</span></p>';
+    h+='</div><div class="cas-block"><p>Hi '+esc(greet)+',</p></div>';
+    h+='<div class="cas-block"><p>Thanks for your time. Here\'s a quick recap of what we covered.</p></div>';
+    if(s)h+='<div class="cas-block"><p>'+names(s)+'</p></div>';
+    if(acts.length){h+='<div class="cas-block"><p>Action items:</p><ul>';
+      acts.forEach(function(a){h+='<li>&bull; '+esc(a.text)+(a.due?' (by '+esc(a.due)+')':'')+'</li>';});h+='</ul></div>';}
+    h+='<div class="cas-block"><p>Let me know if I missed anything.</p></div><div class="cas-block"><p>Best,</p></div>';
+    return h;
+  }
+
+  function setTab(name,quiet){
+    tab=name;
+    [].forEach.call(tabs.querySelectorAll('button'),function(b){var on=b.getAttribute('data-tab')===name;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false');});
+    if(quiet||state!=='done')return;
+    sheet.innerHTML=name==='email'?emailHTML(tape):name==='transcript'?transcriptHTML(tape):notesHTML(tape);
+    sheet.scrollTop=0;
+  }
+
+  recBtn.addEventListener('click',function(){press(recBtn);if(state==='idle'||state==='done')start();});
+  markBtn.addEventListener('click',function(){press(markBtn);mark();});
+  stopBtn.addEventListener('click',function(){press(stopBtn);stop(false);});
+  tabs.addEventListener('click',function(e){var b=e.target.closest('button[data-tab]');if(!b)return;setTab(b.getAttribute('data-tab'));});
+  // leaving the page mid-recording (another route, or a hidden tab) stops the tape cleanly
+  document.addEventListener('visibilitychange',function(){if(document.hidden&&state==='rec')stop(false);});
+})();
+
+/* =========================================================
    7. ROUTING
    ========================================================= */
-var pages={home:'page-home',luten:'page-luten',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
-var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
+var pages={home:'page-home',luten:'page-luten',cassette:'page-cassette',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
+var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',cassette:'Cassette · Press record. Get the notes.',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
 function pathToRoute(){var p=location.pathname.replace(/^\/+|\/+$/g,'');return pages[p]?p:'home';}
 // render the page for a route (no history change)
 function render(route){if(!pages[route])route='home';
@@ -515,7 +700,7 @@ function render(route){if(!pages[route])route='home';
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
   target.classList.add('active');
   document.querySelectorAll('[data-nav]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-route')===route);});
-  if(navApps)navApps.classList.toggle('active-app',route==='luten');
+  if(navApps)navApps.classList.toggle('active-app',route==='luten'||route==='cassette');
   Alley.setScene(route==='home'?'alley':'calm');Alley.setActive(true);
   // the soundscape lives only on Luten : leaving the page stops it
   if(route!=='luten'&&typeof Voice!=='undefined'&&Voice.isOn()){Voice.toggle();
