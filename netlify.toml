@@ -10,6 +10,15 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
 
+# Password AutoFill: iOS fetches this file to learn that app.cassette.deck and
+# onelifeco.app share accounts, so it can offer to save and fill the password.
+# Apple requires application/json, and the file has no extension, so Netlify
+# would otherwise serve it as application/octet-stream and iOS would ignore it.
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+
 # long-cache the immutable image/icon assets
 [[headers]]
   for = "/*.svg"
