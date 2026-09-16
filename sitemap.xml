@@ -66,6 +66,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://onelifeco.app/cassette/press</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://onelifeco.app/privacypolicy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

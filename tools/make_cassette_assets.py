@@ -21,6 +21,9 @@ OUTPUTS
     cassette/og-cassette.png       1200x630 social card, laid out like og-luten.png
     cassette/cassette-qr.svg       App Store QR, ct=web_qr
     cassette/screen-*.webp         five captures for the gallery
+    cassette/media/                the press kit downloads: 1024px icon, the five
+                                   App Store cards and the five plain screens at
+                                   full resolution, plus card thumbnails
     icons/cassette-*.svg           feature orbs, drawn like icons/orb-*.svg
     (stdout)                       the waveform envelope, pasted into script.js
 
@@ -115,6 +118,7 @@ def icon():
     big = Image.open(render).convert("RGBA")
     os.remove(render)
     big.resize((320, 320), Image.LANCZOS).save(os.path.join(OUT, "cassette-icon.png"), optimize=True)
+    big.save(os.path.join(OUT, "media", "cassette-app-icon-1024.png"), optimize=True)
     # Social card: the icon centred on Luten's card ground, the same 470px box.
     card = Image.new("RGB", (1200, 630), (31, 31, 38))
     mark = big.resize((470, 470), Image.LANCZOS)
@@ -136,6 +140,20 @@ def screens():
         im.save(os.path.join(OUT, f"screen-{name}.webp"), "WEBP", quality=82, method=6)
 
 
+def media():
+    """Full-resolution files for /cassette/press. JPEG, not PNG: a 1320x2868 PNG is
+    over a megabyte and press use does not need lossless."""
+    names = ("record", "notes", "transcript", "email", "shelf")
+    for i, name in enumerate(names, 1):
+        card = Image.open(os.path.join(APP, "AppStore/screenshots/cards", f"{i}_{name}.png")).convert("RGB")
+        card.save(os.path.join(OUT, "media", f"cassette-appstore-{i}-{name}.jpg"), "JPEG", quality=90, optimize=True, progressive=True)
+        card.resize((360, round(360 * card.height / card.width)), Image.LANCZOS).save(
+            os.path.join(OUT, "media", f"thumb-appstore-{i}-{name}.webp"), "WEBP", quality=80, method=6)
+    for name, capture in zip(names, ("deck", "notes", "transcript", "email", "shelf")):
+        raw = Image.open(os.path.join(APP, "AppStore/screenshots/captures", f"raw-{capture}.png")).convert("RGB")
+        raw.save(os.path.join(OUT, "media", f"cassette-screen-{name}.jpg"), "JPEG", quality=92, optimize=True, progressive=True)
+
+
 def waveform(points=180):
     pcm = subprocess.run(["ffmpeg", "-v", "quiet", "-i", os.path.join(APP, "AppStore/screenshots/samples/relaunch.m4a"),
                           "-ac", "1", "-ar", "8000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
@@ -147,13 +165,14 @@ def waveform(points=180):
 
 
 def main():
-    os.makedirs(OUT, exist_ok=True)
+    os.makedirs(os.path.join(OUT, "media"), exist_ok=True)
     for slug, top, bottom, shadow, glyph in ORBS:
         with open(os.path.join(ICONS, f"cassette-{slug}.svg"), "w") as f:
             f.write(orb_svg(top, bottom, shadow, glyph))
     icon()
     qr()
     screens()
+    media()
     waveform()
 
 
