@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Flip the Cassette press kit from "in review" to "released", once, on release day.
+
+WHY THIS FILE EXISTS
+/cassette/press went live on 2026-09-16 while Cassette was still Waiting for
+Review, so its Release row says the app was submitted and the date will follow.
+Reza asked for that row to update itself the day Apple approves the app, and for
+the App Store link to be confirmed working first. This is the whole job, written
+down so a scheduled run cannot improvise the copy.
+
+WHAT COUNTS AS RELEASED
+Apple's public lookup API returning Cassette. Approval alone is not enough: the
+version is set to release automatically after approval, and the listing can take
+a while to appear after that, so the lookup (not App Store Connect's state) is
+the moment the App Store link actually works for a reader.
+
+    python3 tools/cassette_release.py check            # print the status, change nothing
+    python3 tools/cassette_release.py apply            # edit + commit if released
+    python3 tools/cassette_release.py apply --push     # ... and push (deploys)
+
+Idempotent: once the press kit says "Released", apply does nothing.
+"""
+import argparse
+import datetime
+import json
+import os
+import subprocess
+import sys
+import urllib.request
+from zoneinfo import ZoneInfo
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PRESS = os.path.join(ROOT, "cassette", "press.html")
+CLAUDE_MD = os.path.join(ROOT, "CLAUDE.md")
+APP_ID = 6812001404
+LOOKUP = f"https://itunes.apple.com/lookup?id={APP_ID}&country=us"
+
+OLD_RELEASE = ("<tr><td>Release</td><td>Submitted to the App Store on Wednesday, September 16, 2026. "
+               "Release date to follow App Review</td></tr>")
+OLD_STORE = ('<a href="https://apps.apple.com/app/id6812001404">apps.apple.com/app/id6812001404</a></td>')
+OLD_COMMENT = ('UPDATE THE\n     "Release" ROW the day App Review approves the app.')
+OLD_NOTE = ('**Update\n  its "Release" row the day App Review approves Cassette**; until then it says the\n'
+            '  app was submitted on 2026-09-16 with the date to follow.')
+
+
+def lookup():
+    with urllib.request.urlopen(LOOKUP, timeout=30) as r:
+        data = json.load(r)
+    hits = [x for x in data.get("results", []) if x.get("trackId") == APP_ID]
+    return hits[0] if hits else None
+
+
+def store_page_ok(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def release_day(app):
+    # Apple stamps a first release at midnight Pacific; name the day as Apple does.
+    stamp = datetime.datetime.fromisoformat(app["releaseDate"].replace("Z", "+00:00"))
+    day = stamp.astimezone(ZoneInfo("America/Los_Angeles"))
+    return day.strftime("%A, %B ") + str(day.day) + day.strftime(", %Y"), day.date().isoformat()
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("mode", choices=["check", "apply"])
+    ap.add_argument("--push", action="store_true")
+    args = ap.parse_args()
+
+    press = open(PRESS, encoding="utf-8").read()
+    if "<tr><td>Release</td><td>Released " in press:
+        print("ALREADY_RELEASED press kit already updated; nothing to do")
+        return 0
+
+    app = lookup()
+    if not app:
+        print("NOT_LIVE Cassette is not in the public App Store lookup yet")
+        return 0
+    url = app.get("trackViewUrl", "")
+    if not store_page_ok(url):
+        print(f"LISTED_BUT_PAGE_NOT_READY lookup has Cassette but {url} did not return 200 yet")
+        return 0
+    human, iso = release_day(app)
+    print(f"LIVE version {app.get('version')} released {human} ({iso}) {url}")
+    if args.mode == "check":
+        return 0
+
+    for needle, name in ((OLD_RELEASE, "release row"), (OLD_STORE, "App Store row"), (OLD_COMMENT, "comment")):
+        if needle not in press:
+            print(f"ABORT the {name} in cassette/press.html no longer matches; update it by hand")
+            return 2
+    press = press.replace(OLD_RELEASE, f"<tr><td>Release</td><td>Released {human}</td></tr>")
+    press = press.replace(OLD_STORE, OLD_STORE[:-len("</td>")] + " (live now)</td>")
+    press = press.replace(OLD_COMMENT, f'The "Release" row was set on\n     release day ({iso}) by tools/cassette_release.py.')
+    open(PRESS, "w", encoding="utf-8").write(press)
+
+    md = open(CLAUDE_MD, encoding="utf-8").read()
+    if OLD_NOTE in md:
+        md = md.replace(OLD_NOTE, f'Its "Release" row was\n  set on release day ({iso}) by `tools/cassette_release.py`.')
+        open(CLAUDE_MD, "w", encoding="utf-8").write(md)
+
+    git = lambda *a: subprocess.run(["git", "-C", ROOT, *a], check=True, capture_output=True, text=True).stdout
+    git("add", "cassette/press.html", "CLAUDE.md")
+    git("commit", "-q", "-m", f"Press kit: Cassette is released ({human})\n\n"
+        f"Set by tools/cassette_release.py once Apple's lookup listed Cassette and its App Store page\n"
+        f"answered: {url}\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
+    print("COMMITTED", git("log", "--oneline", "-1").strip())
+    if args.push:
+        git("pull", "-q", "--rebase", "origin", "main")
+        git("push", "-q", "origin", "main")
+        print("PUSHED")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
