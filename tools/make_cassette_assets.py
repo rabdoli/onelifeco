@@ -24,13 +24,13 @@ OUTPUTS
     cassette/media/                the press kit downloads: 1024px icon, the five
                                    App Store cards and the five plain screens at
                                    full resolution, plus card thumbnails
-    icons/cassette-*.svg           feature orbs, drawn like icons/orb-*.svg
+    icons/cassette-*.svg           feature icons, drawn from the app's own parts
     (stdout)                       the waveform envelope, pasted into script.js
 
-WHY THE ACCENTS ARE WHAT THEY ARE
-The five orb colours are the per-card accents of the App Store screenshots
-(AppStore/screenshots/compose.py): record red, notes amber, transcript teal,
-email coral, shelf sand. The page, the store listing and the app agree.
+WHY THE ICONS LOOK LIKE THAT
+They are the app's own materials, not generic glyphs: the plastic key face, the
+ruled paper with its red margin, the cassette from the app icon, the LCD and the
+SHARE glyph. The card accents in cassette/index.html follow the app's palette.
 
     python3 tools/make_cassette_assets.py
 """
@@ -49,65 +49,112 @@ ICONS = os.path.join(ROOT, "icons")
 
 APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
 
-# (slug, top colour, bottom colour, shadow colour, glyph markup in a 24x24 box)
-ORBS = [
-    ("record", "#ff6a5e", "#c42a2a", "#7a1414",
-     '<circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2" opacity="0.55"/>'
-     '<circle cx="12" cy="12" r="4.6" fill="currentColor"/>'),
-    ("transcript", "#5fe3bd", "#1f9a78", "#0c5a45",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">'
-     '<path d="M4 7h2.5M4 12h2.5M4 17h2.5" opacity="0.55"/>'
-     '<path d="M9.5 7H20M9.5 12h8M9.5 17h9.5"/></g>'),
-    ("notes", "#ffcc6b", "#d98a1e", "#7e4a08",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-     '<path d="M4.5 7.2l1.7 1.7 3-3"/><path d="M4.5 13.2l1.7 1.7 3-3"/>'
-     '<path d="M12.5 7.5H20M12.5 13.5H20"/><path d="M12.5 19H17" opacity="0.55"/></g>'
-     '<circle cx="6.6" cy="19" r="1.3" fill="currentColor" opacity="0.55"/>'),
-    ("email", "#ff9170", "#d44f2e", "#7c2610",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-     '<rect x="3.5" y="6" width="17" height="12.5" rx="2.4"/><path d="M4.6 7.6l7.4 5.6 7.4-5.6"/></g>'),
-    ("shelf", "#f1d79c", "#b8924a", "#6a5020",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">'
-     '<circle cx="10.5" cy="10.5" r="5.6"/><path d="M14.8 14.8l4.7 4.7"/></g>'),
-    ("export", "#a9b6ff", "#5a6ad0", "#2c3478",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-     '<path d="M12 4v10.5"/><path d="M8.4 7.6L12 4l3.6 3.6"/>'
-     '<path d="M8 11H6.5A2.5 2.5 0 0 0 4 13.5v4A2.5 2.5 0 0 0 6.5 20h11a2.5 2.5 0 0 0 2.5-2.5v-4A2.5 2.5 0 0 0 17.5 11H16"/></g>'),
-    ("private", "#8fd3ff", "#2f86c4", "#123f66",
-     '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
-     '<rect x="5" y="10.5" width="14" height="10" rx="2.4"/><path d="M8.2 10.5V7.8a3.8 3.8 0 0 1 7.6 0v2.7"/></g>'
-     '<circle cx="12" cy="15.5" r="1.4" fill="currentColor"/>'),
-    ("deck", "#f4efe6", "#b9b1a4", "#5e574c",
-     '<g fill="none" stroke="#3a2f2a" stroke-width="2">'
-     '<rect x="3" y="6.5" width="18" height="11" rx="2.6"/></g>'
-     '<circle cx="8.6" cy="12" r="2.4" fill="#3a2f2a"/><circle cx="15.4" cy="12" r="2.4" fill="#3a2f2a"/>'
-     '<path d="M3.5 9h17" stroke="#d6423a" stroke-width="1.6"/>'),
-]
-
-
-def orb_svg(top, bottom, shadow, glyph):
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">
-  <defs>
-    <linearGradient id="bg" x1="0.13" y1="0" x2="0.63" y2="1">
-      <stop offset="0" stop-color="{top}"></stop>
-      <stop offset="1" stop-color="{bottom}"></stop>
+# The feature icons are drawn from the app's own parts, so the page looks like the thing it sells:
+# a plastic key face (Palette.panel* and keyEdge), the notes paper with its red margin rule, the app
+# icon's cassette, the deck's LCD, and the SHARE glyph the tape screen uses.
+KEY = """  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F2EE"/><stop offset="0.52" stop-color="#E4E2DD"/><stop offset="1" stop-color="#CCCAC5"/>
     </linearGradient>
-    <radialGradient id="gloss" cx="0.5" cy="-0.25" r="1.15">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"></stop>
-      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.07"></stop>
-      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0"></stop>
-    </radialGradient>
-    <radialGradient id="base" cx="0.5" cy="1.1" r="0.9">
-      <stop offset="0" stop-color="{shadow}" stop-opacity="0.55"></stop>
-      <stop offset="0.6" stop-color="{shadow}" stop-opacity="0"></stop>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF7EE"/><stop offset="1" stop-color="#F3EEE1"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B201F"/><stop offset="1" stop-color="#0A0D0C"/>
+    </linearGradient>
+    <radialGradient id="led" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#E8615A"/><stop offset="0.55" stop-color="#C33A34"/><stop offset="1" stop-color="#9C1D1B"/>
     </radialGradient>
   </defs>
-  <circle cx="34" cy="34" r="34" fill="url(#bg)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#base)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#gloss)"></circle>
-  <g transform="translate(17,17) scale(1.4167)" style="color:#fff">{glyph}</g>
-</svg>
+  <g>
+    <rect x="3" y="4" width="62" height="61" rx="16" fill="#9E9B96" opacity="0.5"/>
+    <rect x="3" y="3" width="62" height="61" rx="16" fill="url(#face)"/>
+    <path d="M7 19a12 12 0 0 1 12-12h30a12 12 0 0 1 12 12" fill="none" stroke="#FCFBF9" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <rect x="3.75" y="3.75" width="60.5" height="59.5" rx="15.25" fill="none" stroke="#B3B0AB" stroke-width="1.5"/>
+  </g>
 """
+
+
+def key_svg(glyph):
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">\n'
+            + KEY + glyph + "</svg>\n")
+
+
+def paper_page(x=13, y=13, w=42, h=41, margin=9):
+    """A ruled page with the red margin rule, like the tape's notes paper."""
+    return (f'    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="3" fill="url(#paper)" stroke="#B9B5AC" stroke-width="1.2"/>\n'
+            f'    <line x1="{x + margin}" y1="{y + 1.5}" x2="{x + margin}" y2="{y + h - 1.5}" stroke="#C44848" stroke-width="1.2" opacity="0.65"/>\n')
+
+
+def rule(x, y, w, opacity=0.5, color="#2B2A28", height=1.8):
+    return f'    <rect x="{x}" y="{y}" width="{w}" height="{height}" rx="{height / 2}" fill="{color}" opacity="{opacity}"/>\n'
+
+
+def cassette_shell(x, y, w=40, h=17, label="#C0332E"):
+    """The app icon's cassette: cream shell, red stripe, dark window, two reels."""
+    cy = y + h * 0.62
+    reel = h * 0.19
+    return (f'    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h * 0.18}" fill="#EDE8DC" stroke="#A8A49B" stroke-width="1.1"/>\n'
+            f'    <rect x="{x + 1.2}" y="{y + h * 0.2}" width="{w - 2.4}" height="{h * 0.11}" fill="{label}"/>\n'
+            f'    <rect x="{x + w * 0.22}" y="{cy - h * 0.23}" width="{w * 0.56}" height="{h * 0.46}" rx="{h * 0.12}" fill="#211E1C"/>\n'
+            + "".join(f'    <circle cx="{x + w * f}" cy="{cy}" r="{reel}" fill="#FBF7EE"/>\n'
+                      f'    <circle cx="{x + w * f}" cy="{cy}" r="{reel * 0.42}" fill="#3B3733"/>\n' for f in (0.34, 0.66)))
+
+
+def icon_glyphs():
+    """slug to glyph markup, in the order the page uses them."""
+    return [
+        # the deck's red REC light
+        ("record",
+         '    <circle cx="34" cy="33.5" r="13.5" fill="#B7B3AC" opacity="0.35"/>\n'
+         '    <circle cx="34" cy="33.5" r="12.5" fill="url(#led)"/>\n'
+         '    <circle cx="30.4" cy="29.6" r="3.4" fill="#FFFFFF" opacity="0.42"/>\n'
+         '    <circle cx="34" cy="33.5" r="12.5" fill="none" stroke="#7E1513" stroke-width="1.1" opacity="0.55"/>\n'),
+        # the transcript page: a timestamp against every line
+        ("transcript",
+         paper_page(margin=11)
+         + "".join(rule(11.5, y, 6.5, 0.45, "#6E6A63", 1.6) + rule(26.5, y, w, 0.5)
+                   for y, w in ((19.5, 24), (27.5, 21), (35.5, 25), (43.5, 15)))),
+        # the notes page: a highlighted line, then actions with their checkboxes
+        ("notes",
+         paper_page()
+         + rule(24, 19, 24, 0.5)
+         + '    <rect x="23" y="26" width="26" height="6.5" rx="2" fill="#FFD264" opacity="0.85"/>\n'
+         + rule(24, 28.4, 24, 0.55)
+         + '    <rect x="23.5" y="37" width="6" height="6" rx="1.4" fill="none" stroke="#2B2A28" stroke-width="1.4" opacity="0.7"/>\n'
+         + rule(32.5, 39, 16, 0.5)
+         + '    <rect x="23.5" y="46" width="6" height="6" rx="1.4" fill="none" stroke="#2B2A28" stroke-width="1.4" opacity="0.7"/>\n'
+         + rule(32.5, 48, 12, 0.5)),
+        # the follow-up letter
+        ("email",
+         '    <rect x="11" y="19" width="46" height="31" rx="3.5" fill="url(#paper)" stroke="#B9B5AC" stroke-width="1.2"/>\n'
+         '    <rect x="12.2" y="45.5" width="43.6" height="3.3" rx="1.6" fill="#C44848" opacity="0.6"/>\n'
+         '    <path d="M12.5 21.5 34 37 55.5 21.5" fill="none" stroke="#2B2A28" stroke-width="2" stroke-linejoin="round" opacity="0.8"/>\n'
+         '    <path d="M12.5 47.8 27 33.5M55.5 47.8 41 33.5" fill="none" stroke="#2B2A28" stroke-width="1.4" opacity="0.35"/>\n'),
+        # tapes on the shelf
+        ("shelf",
+         cassette_shell(14, 14) + cassette_shell(14, 35.5)
+         + '    <rect x="12" y="55.5" width="44" height="2.6" rx="1.3" fill="#2B2A28" opacity="0.28"/>\n'),
+        # the app's own SHARE glyph: a tray with an arrow leaving it
+        ("export",
+         '    <path d="M20 36v12a2.5 2.5 0 0 0 2.5 2.5h23A2.5 2.5 0 0 0 48 48V36" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" opacity="0.85"/>\n'
+         '    <path d="M34 42V17" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" opacity="0.85"/>\n'
+         '    <path d="M25.5 25.5 34 17l8.5 8.5" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>\n'),
+        # the deck's LCD, lit
+        ("private",
+         '    <rect x="10" y="20" width="48" height="27" rx="5" fill="url(#glass)" stroke="#2A2E2C" stroke-width="1.2"/>\n'
+         '    <rect x="14.5" y="24.5" width="17" height="5" rx="1" fill="#5CF2C8" opacity="0.95"/>\n'
+         '    <rect x="34" y="24.5" width="9" height="5" rx="1" fill="#5CF2C8" opacity="0.5"/>\n'
+         + "".join(f'    <rect x="{14.5 + i * 4.2}" y="{38.5 - h}" width="2.6" height="{h + 3}" rx="0.9" fill="#5CF2C8" opacity="{0.9 if i < 7 else 0.35}"/>\n'
+                   for i, h in enumerate((2, 4, 6, 5, 7, 4, 6, 2, 1)))
+         + '    <rect x="14.5" y="41.5" width="39" height="1.6" rx="0.8" fill="#5CF2C8" opacity="0.25"/>\n'),
+        # the piano key row
+        ("deck",
+         '    <rect x="9" y="19" width="50" height="31" rx="5" fill="#A9A6A1" opacity="0.75"/>\n'
+         + "".join(f'    <rect x="{x}" y="22" width="9.5" height="25" rx="2.4" fill="#F2F0EC" stroke="#AEABA6" stroke-width="1"/>\n'
+                   + "".join(f'    <rect x="{x + 1.8}" y="{36 + j * 2.6}" width="5.9" height="1.3" rx="0.65" fill="#8E8B86"/>\n' for j in range(3))
+                   for x in (12, 23, 34, 45))),
+    ]
 
 
 def icon():
@@ -166,9 +213,9 @@ def waveform(points=180):
 
 def main():
     os.makedirs(os.path.join(OUT, "media"), exist_ok=True)
-    for slug, top, bottom, shadow, glyph in ORBS:
+    for slug, glyph in icon_glyphs():
         with open(os.path.join(ICONS, f"cassette-{slug}.svg"), "w") as f:
-            f.write(orb_svg(top, bottom, shadow, glyph))
+            f.write(key_svg(glyph))
     icon()
     qr()
     screens()

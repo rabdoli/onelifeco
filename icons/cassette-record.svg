@@ -1,21 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">
   <defs>
-    <linearGradient id="bg" x1="0.13" y1="0" x2="0.63" y2="1">
-      <stop offset="0" stop-color="#ff6a5e"></stop>
-      <stop offset="1" stop-color="#c42a2a"></stop>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F2EE"/><stop offset="0.52" stop-color="#E4E2DD"/><stop offset="1" stop-color="#CCCAC5"/>
     </linearGradient>
-    <radialGradient id="gloss" cx="0.5" cy="-0.25" r="1.15">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"></stop>
-      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.07"></stop>
-      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0"></stop>
-    </radialGradient>
-    <radialGradient id="base" cx="0.5" cy="1.1" r="0.9">
-      <stop offset="0" stop-color="#7a1414" stop-opacity="0.55"></stop>
-      <stop offset="0.6" stop-color="#7a1414" stop-opacity="0"></stop>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF7EE"/><stop offset="1" stop-color="#F3EEE1"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B201F"/><stop offset="1" stop-color="#0A0D0C"/>
+    </linearGradient>
+    <radialGradient id="led" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#E8615A"/><stop offset="0.55" stop-color="#C33A34"/><stop offset="1" stop-color="#9C1D1B"/>
     </radialGradient>
   </defs>
-  <circle cx="34" cy="34" r="34" fill="url(#bg)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#base)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#gloss)"></circle>
-  <g transform="translate(17,17) scale(1.4167)" style="color:#fff"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2" opacity="0.55"/><circle cx="12" cy="12" r="4.6" fill="currentColor"/></g>
+  <g>
+    <rect x="3" y="4" width="62" height="61" rx="16" fill="#9E9B96" opacity="0.5"/>
+    <rect x="3" y="3" width="62" height="61" rx="16" fill="url(#face)"/>
+    <path d="M7 19a12 12 0 0 1 12-12h30a12 12 0 0 1 12 12" fill="none" stroke="#FCFBF9" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <rect x="3.75" y="3.75" width="60.5" height="59.5" rx="15.25" fill="none" stroke="#B3B0AB" stroke-width="1.5"/>
+  </g>
+    <circle cx="34" cy="33.5" r="13.5" fill="#B7B3AC" opacity="0.35"/>
+    <circle cx="34" cy="33.5" r="12.5" fill="url(#led)"/>
+    <circle cx="30.4" cy="29.6" r="3.4" fill="#FFFFFF" opacity="0.42"/>
+    <circle cx="34" cy="33.5" r="12.5" fill="none" stroke="#7E1513" stroke-width="1.1" opacity="0.55"/>
 </svg>

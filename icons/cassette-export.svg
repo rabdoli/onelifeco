@@ -1,21 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">
   <defs>
-    <linearGradient id="bg" x1="0.13" y1="0" x2="0.63" y2="1">
-      <stop offset="0" stop-color="#a9b6ff"></stop>
-      <stop offset="1" stop-color="#5a6ad0"></stop>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F2EE"/><stop offset="0.52" stop-color="#E4E2DD"/><stop offset="1" stop-color="#CCCAC5"/>
     </linearGradient>
-    <radialGradient id="gloss" cx="0.5" cy="-0.25" r="1.15">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"></stop>
-      <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.07"></stop>
-      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0"></stop>
-    </radialGradient>
-    <radialGradient id="base" cx="0.5" cy="1.1" r="0.9">
-      <stop offset="0" stop-color="#2c3478" stop-opacity="0.55"></stop>
-      <stop offset="0.6" stop-color="#2c3478" stop-opacity="0"></stop>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF7EE"/><stop offset="1" stop-color="#F3EEE1"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B201F"/><stop offset="1" stop-color="#0A0D0C"/>
+    </linearGradient>
+    <radialGradient id="led" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#E8615A"/><stop offset="0.55" stop-color="#C33A34"/><stop offset="1" stop-color="#9C1D1B"/>
     </radialGradient>
   </defs>
-  <circle cx="34" cy="34" r="34" fill="url(#bg)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#base)"></circle>
-  <circle cx="34" cy="34" r="34" fill="url(#gloss)"></circle>
-  <g transform="translate(17,17) scale(1.4167)" style="color:#fff"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10.5"/><path d="M8.4 7.6L12 4l3.6 3.6"/><path d="M8 11H6.5A2.5 2.5 0 0 0 4 13.5v4A2.5 2.5 0 0 0 6.5 20h11a2.5 2.5 0 0 0 2.5-2.5v-4A2.5 2.5 0 0 0 17.5 11H16"/></g></g>
+  <g>
+    <rect x="3" y="4" width="62" height="61" rx="16" fill="#9E9B96" opacity="0.5"/>
+    <rect x="3" y="3" width="62" height="61" rx="16" fill="url(#face)"/>
+    <path d="M7 19a12 12 0 0 1 12-12h30a12 12 0 0 1 12 12" fill="none" stroke="#FCFBF9" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <rect x="3.75" y="3.75" width="60.5" height="59.5" rx="15.25" fill="none" stroke="#B3B0AB" stroke-width="1.5"/>
+  </g>
+    <path d="M20 36v12a2.5 2.5 0 0 0 2.5 2.5h23A2.5 2.5 0 0 0 48 48V36" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M34 42V17" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M25.5 25.5 34 17l8.5 8.5" fill="none" stroke="#2B2A28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
 </svg>

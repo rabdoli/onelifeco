@@ -63,7 +63,8 @@ FAQ = [
     ("Does my audio leave my iPhone?",
      "Transcripts come from Apple speech recognition, on the device wherever "
      "your iPhone supports your language; otherwise that recording may be sent "
-     "to Apple to transcribe. The notes are written on the device. Recordings "
+     "to Apple to transcribe. The notes are written by Apple's models, not by an "
+     "outside AI service. Recordings "
      "are only uploaded if you sign in with Premium, to back them up."),
     ("Do I need an account?",
      "No. Recording, transcripts and notes all work without one. Signing in "
