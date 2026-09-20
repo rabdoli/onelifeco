@@ -61,11 +61,12 @@ FAQ = [
      "tape and backs up your shelf, and the annual plan starts with a 7-day "
      "free trial."),
     ("Does my audio leave my iPhone?",
-     "Transcripts come from Apple speech recognition, on the device wherever "
-     "your iPhone supports your language; otherwise that recording may be sent "
-     "to Apple to transcribe. The notes are written by Apple's models, not by an "
-     "outside AI service. Recordings "
-     "are only uploaded if you sign in with Premium, to back them up."),
+     "The audio stays on your iPhone unless you sign in with Premium to back it up. "
+     "Transcripts come from Apple speech recognition, on the device wherever your iPhone "
+     "supports your language; otherwise that recording may be sent to Apple to transcribe. "
+     "The notes are written by Apple's models, never by an outside AI service: on iOS 27 "
+     "the transcript goes to Apple's Private Cloud Compute, which does not keep it, and on "
+     "earlier iPhones the notes are written on the device."),
     ("Do I need an account?",
      "No. Recording, transcripts and notes all work without one. Signing in "
      "keeps your purchase with you, and with Premium it backs up every tape so "
