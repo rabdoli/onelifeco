@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generates https://onelifeco.app/luten/quiz/ .
+Generates https://www.onelifeco.app/luten/quiz/ .
 
 WHY THIS EXISTS. Reverb's mandate (REVERB.md section 1b) makes new installs the
 binding constraint and forces an UNTRIED channel after a missed week. The
@@ -198,12 +198,12 @@ def build():
 <title>{html.escape(title)} | Luten</title>
 <meta name="description" content="{html.escape(desc)}" />
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://onelifeco.app/luten/quiz/" />
+<link rel="canonical" href="https://www.onelifeco.app/luten/quiz/" />
 <meta property="og:title" content="{html.escape(title)}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Luten" />
-<meta property="og:url" content="https://onelifeco.app/luten/quiz/" />
+<meta property="og:url" content="https://www.onelifeco.app/luten/quiz/" />
 <meta property="og:image" content="https://luten-cc112.web.app/luten/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />

@@ -20,7 +20,7 @@ Bing, Yandex, Naver and Seznam share submissions with each other. So this is the
 whole fix, done from the shell, with no account.
 
 HOW IT AUTHENTICATES
-The key below is also published at https://onelifeco.app/<key>.txt containing
+The key below is also published at https://www.onelifeco.app/<key>.txt containing
 exactly the key and nothing else. The endpoint fetches that file to prove we
 control the host. If the file stops being served, submissions start failing with
 422, so the .txt file is not optional decoration: do not delete it.
@@ -41,7 +41,7 @@ import re
 import urllib.request
 
 KEY = "491fd658f60fca0bcb0ae907abc4dc22"
-HOST = "onelifeco.app"
+HOST = "www.onelifeco.app"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 SITEMAP = "sitemap.xml"
 

@@ -18,7 +18,7 @@ belongs to Luten. For Cassette, Reza approved "transcripts and notes free for 5
 tapes a month" on 2026-09-16, and it matches the App Store description.
 """
 
-BASE = "https://onelifeco.app"
+BASE = "https://www.onelifeco.app"
 APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
 
 SAME_AS = [

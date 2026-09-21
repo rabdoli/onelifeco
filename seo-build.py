@@ -11,7 +11,7 @@
 # Run after editing:  python3 seo-build.py
 import re, os
 ROOT=os.path.dirname(os.path.abspath(__file__))
-BASE="https://onelifeco.app"
+BASE="https://www.onelifeco.app"
 SRC_FILE=os.path.join(ROOT,"_source.html")
 if not os.path.exists(SRC_FILE):   # first run after the split: seed it from index.html
     SRC_FILE=os.path.join(ROOT,"index.html")
@@ -103,13 +103,13 @@ def build(route, title, desc, extra_ld):
     # build silently reverted, so it lives here now.
     if route in OG_IMAGE:
         img = BASE + OG_IMAGE[route]
-        h = h.replace('<meta property="og:image" content="https://onelifeco.app/og-image.png" />',
+        h = h.replace('<meta property="og:image" content="https://www.onelifeco.app/og-image.png" />',
                       '<meta property="og:image" content="'+img+'" />')
-        h = h.replace('<meta name="twitter:image" content="https://onelifeco.app/og-image.png" />',
+        h = h.replace('<meta name="twitter:image" content="https://www.onelifeco.app/og-image.png" />',
                       '<meta name="twitter:image" content="'+img+'" />')
     # canonical + og:url (exact root only, not og:image)
-    h=h.replace('<link rel="canonical" href="https://onelifeco.app/" />','<link rel="canonical" href="'+url+'" />')
-    h=h.replace('<meta property="og:url" content="https://onelifeco.app/" />','<meta property="og:url" content="'+url+'" />')
+    h=h.replace('<link rel="canonical" href="https://www.onelifeco.app/" />','<link rel="canonical" href="'+url+'" />')
+    h=h.replace('<meta property="og:url" content="https://www.onelifeco.app/" />','<meta property="og:url" content="'+url+'" />')
     # extra JSON-LD (Luten SoftwareApplication) right after the structured-data graph
     if extra_ld:
         h=h.replace('<!-- fonts -->', extra_ld+'\n<!-- fonts -->', 1)

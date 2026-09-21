@@ -27,7 +27,7 @@ a rating in markup is exactly what earns a structured-data manual action. Add it
 when real ratings exist, not before.
 """
 
-BASE = "https://onelifeco.app"
+BASE = "https://www.onelifeco.app"
 APP_STORE = "https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392"
 
 # Every profile that is genuinely ours. Adding one we do not control, or one
