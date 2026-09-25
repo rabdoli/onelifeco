@@ -21,6 +21,14 @@ tapes a month" on 2026-09-16, and it matches the App Store description.
 BASE = "https://www.onelifeco.app"
 APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
 
+# RELEASED is False until Apple's public lookup lists Cassette. Until then its App
+# Store URL is a 404 for every reader, so the build (seo-build.py, via
+# prerelease() below) swaps each store link, badge and QR for "coming soon" copy
+# and drops the URL from the structured data. tools/cassette_release.py sets this
+# to True on release day and rebuilds; do not flip it by hand before the lookup
+# answers, and do not hand-edit the store links in _source.html.
+RELEASED = False
+
 SAME_AS = [
     APP_STORE,
 ]
@@ -53,6 +61,15 @@ SOFTWARE_APP = {
     },
     "publisher": {"@id": f"{BASE}/#org"},
 }
+if not RELEASED:
+    # No download URL, no store sameAs, no availability until the listing exists.
+    SOFTWARE_APP.pop("downloadUrl")
+    _same = [u for u in SAME_AS if u != APP_STORE]
+    if _same:
+        SOFTWARE_APP["sameAs"] = _same
+    else:
+        SOFTWARE_APP.pop("sameAs")
+    SOFTWARE_APP["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 
 FAQ = [
     ("Is Cassette free?",
@@ -107,3 +124,48 @@ def blocks():
         '<script type="application/ld+json">%s</script>'
         % json.dumps(d, ensure_ascii=False, separators=(",", ":"))
         for d in (SOFTWARE_APP, FAQ_PAGE))
+
+
+def prerelease(h):
+    """Rewrite every Cassette App Store link in the site source into honest
+    "coming soon" copy. Applied by seo-build.py while RELEASED is False. Every
+    replacement must match exactly once, so a source edit that moves one of
+    these fails the build loudly instead of shipping a dead link."""
+    import re
+
+    def once(h, old, new):
+        assert h.count(old) == 1, "cassette prerelease: expected once: " + old[:70]
+        return h.replace(old, new)
+
+    def once_re(h, pat, new):
+        h2, n = re.subn(pat, new, h)
+        assert n == 1, "cassette prerelease: expected once: " + pat[:70]
+        return h2
+
+    # nav pill
+    h = once(h, 'class="brand">Cassette<em>Live</em></a>',
+                'class="brand">Cassette<em>Soon</em></a>')
+    # Organization graph: the Cassette brand's only sameAs is the store URL
+    h = once(h, ',"sameAs":["https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"]}', '}')
+    # hero: the button becomes the demo, the demo link becomes the status line
+    h = once(h, '<div class="lh-cta"><a href="https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404?ct=web_hero" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>',
+                '<div class="lh-cta"><a href="#try" class="btn-light">Try the deck <span class="arrow">&rarr;</span></a></div>')
+    h = once(h, '<div class="cas-try-link"><a href="#try">Or try the deck right here</a></div>',
+                '<div class="cas-try-link">Coming soon to the App Store for iPhone</div>')
+    # both QR codes encode the store URL
+    h = once_re(h, r'\s*<div class="lh-qr" aria-hidden="false">\s*<div class="qr-code"><img src="/cassette/cassette-qr\.svg"[^>]*></div>\s*<span>Scan with your iPhone</span>\s*</div>', '')
+    h = once_re(h, r'\s*<div class="qr"><div class="qr-code"><img src="/cassette/cassette-qr\.svg"[^>]*></div><span>Scan to download</span></div>', '')
+    # Get section
+    h = once(h, '>Download</p>\n      <h2>Get Cassette.</h2>', '>Coming Soon</p>\n      <h2>Get Cassette.</h2>')
+    h = once(h, 'Free to download on the App Store. Scan the code or tap the badge.',
+                'Coming soon to the App Store, free to download. Until then, try the deck above.')
+    badge_open = '<a href="https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404?ct=web_badge" class="store-badge" target="_blank" rel="noopener" aria-label="Download Cassette on the App Store">'
+    h = once(h, badge_open, '<span class="store-badge is-soon" aria-label="Cassette is coming soon to the App Store">')
+    i = h.index('aria-label="Cassette is coming soon to the App Store">')
+    close_old = '<span><small>Download on the</small><b>App Store</b></span></a>'
+    j = h.index(close_old, i)
+    h = h[:j] + '<span><small>Coming soon to the</small><b>App Store</b></span></span>' + h[j + len(close_old):]
+    h = once(h, 'On the App Store for iPhone, iOS 17 or later.',
+                'Coming soon to the App Store for iPhone, iOS 17 or later.')
+    assert "id6812001404" not in h, "cassette prerelease: a store link survived"
+    return h

@@ -101,6 +101,13 @@ replays a sample meeting and never touches the microphone.
   hand-edit.
 - New build sources at the repo root need a forced 404 in netlify.toml, as
   `cassette_ld.py` has. Anything under `/tools/` is already blocked.
+- **Store links are gated by `cassette_ld.RELEASED`** (False until Apple's lookup lists
+  the app). While False, seo-build.py runs `cassette_ld.prerelease()`, which turns every
+  App Store link, badge and QR on /cassette into "coming soon" copy, sets the nav pill to
+  Soon, and drops the store URL from the structured data; each rewrite must match exactly
+  once, so moving one of those elements fails the build instead of shipping a 404.
+  `tools/cassette_release.py apply` flips the flag, updates llms.txt and the press kit,
+  rebuilds and commits in one step (rehearsed 2026-09-25). Never flip it by hand.
 - No social profiles exist for Cassette yet (checked with Reza). Add them to
   `cassette_ld.py` SAME_AS only once they are live.
 - `/cassette/press` is `cassette/press.html`, hand-written like `luten/press.html`

@@ -37,7 +37,20 @@ LOOKUP = f"https://itunes.apple.com/lookup?id={APP_ID}&country=us"
 
 OLD_RELEASE = ("<tr><td>Release</td><td>Submitted to the App Store on Wednesday, September 16, 2026. "
                "Release date to follow App Review</td></tr>")
-OLD_STORE = ('<a href="https://apps.apple.com/app/id6812001404">apps.apple.com/app/id6812001404</a></td>')
+# The press kit shows the store address as plain text until release (a link to a
+# listing that does not exist yet is a 404 for a journalist), then becomes a link.
+OLD_STORE = ('apps.apple.com/app/id6812001404 (link goes live on release day)</td>')
+NEW_STORE = ('<a href="https://apps.apple.com/app/id6812001404">apps.apple.com/app/id6812001404</a> (live now)</td>')
+# The site itself: cassette_ld.RELEASED gates every store link on /cassette, the
+# nav pill and the structured data, and llms.txt states the app's status.
+LD = os.path.join(ROOT, "cassette_ld.py")
+LLMS = os.path.join(ROOT, "llms.txt")
+OLD_FLAG = "RELEASED = False"
+OLD_LLMS_STATUS = "Submitted to the App Store and awaiting release."
+OLD_LLMS_REQ = "Requirements: any iPhone on iOS 17 or later."
+OUTPUTS = ["index.html", "luten/index.html", "cassette/index.html", "apps/spend/index.html",
+           "about/index.html", "contact/index.html", "termsofservice/index.html",
+           "privacypolicy/index.html"]
 OLD_COMMENT = ('UPDATE THE\n     "Release" ROW the day App Review approves the app.')
 OLD_NOTE = ('**Update\n  its "Release" row the day App Review approves Cassette**; until then it says the\n'
             '  app was submitted on 2026-09-16 with the date to follow.')
@@ -95,9 +108,24 @@ def main():
             print(f"ABORT the {name} in cassette/press.html no longer matches; update it by hand")
             return 2
     press = press.replace(OLD_RELEASE, f"<tr><td>Release</td><td>Released {human}</td></tr>")
-    press = press.replace(OLD_STORE, OLD_STORE[:-len("</td>")] + " (live now)</td>")
+    press = press.replace(OLD_STORE, NEW_STORE)
     press = press.replace(OLD_COMMENT, f'The "Release" row was set on\n     release day ({iso}) by tools/cassette_release.py.')
+    ld = open(LD, encoding="utf-8").read()
+    llms = open(LLMS, encoding="utf-8").read()
+    for text, needle, name in ((ld, OLD_FLAG, "RELEASED flag in cassette_ld.py"),
+                               (llms, OLD_LLMS_STATUS, "Cassette status line in llms.txt"),
+                               (llms, OLD_LLMS_REQ, "Cassette requirements line in llms.txt")):
+        if text.count(needle) != 1:
+            print(f"ABORT the {name} no longer matches; update it by hand")
+            return 2
     open(PRESS, "w", encoding="utf-8").write(press)
+    open(LD, "w", encoding="utf-8").write(ld.replace(OLD_FLAG, "RELEASED = True"))
+    llms = llms.replace(OLD_LLMS_STATUS, "Available now on the App Store for iPhone.")
+    llms = llms.replace(OLD_LLMS_REQ, OLD_LLMS_REQ + "\n\nDownload: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404")
+    open(LLMS, "w", encoding="utf-8").write(llms)
+    # Rebuild so every store link, badge and QR on /cassette comes back.
+    subprocess.run([sys.executable, os.path.join(ROOT, "seo-build.py")], check=True, cwd=ROOT,
+                   capture_output=True, text=True)
 
     md = open(CLAUDE_MD, encoding="utf-8").read()
     if OLD_NOTE in md:
@@ -105,8 +133,8 @@ def main():
         open(CLAUDE_MD, "w", encoding="utf-8").write(md)
 
     git = lambda *a: subprocess.run(["git", "-C", ROOT, *a], check=True, capture_output=True, text=True).stdout
-    git("add", "cassette/press.html", "CLAUDE.md")
-    git("commit", "-q", "-m", f"Press kit: Cassette is released ({human})\n\n"
+    git("add", "cassette/press.html", "CLAUDE.md", "cassette_ld.py", "llms.txt", *OUTPUTS)
+    git("commit", "-q", "-m", f"Cassette is released ({human}): store links, press kit and llms.txt\n\n"
         f"Set by tools/cassette_release.py once Apple's lookup listed Cassette and its App Store page\n"
         f"answered: {url}\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>")
     print("COMMITTED", git("log", "--oneline", "-1").strip())

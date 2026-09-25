@@ -32,6 +32,9 @@ src=src.replace(_FAQ_MARK, luten_ld.page_html().lstrip())
 # /cassette carries its own SoftwareApplication + FAQPage, built the same way.
 import cassette_ld
 CASSETTE_LD=cassette_ld.blocks()
+# Until Apple lists Cassette, every store link would be a 404; see cassette_ld.RELEASED.
+if not cassette_ld.RELEASED:
+    src=cassette_ld.prerelease(src)
 ROUTES={
  "luten":("Luten: Sound for ADHD, Focus &amp; Sleep That Learns You",
    "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
