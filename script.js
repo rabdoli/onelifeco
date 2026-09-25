@@ -687,8 +687,8 @@ addEventListener('scroll',onScroll,{passive:true});
 /* =========================================================
    7. ROUTING
    ========================================================= */
-var pages={home:'page-home',luten:'page-luten',cassette:'page-cassette',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
-var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',cassette:'Cassette · Press record. Get the notes.',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
+var pages={home:'page-home',luten:'page-luten',cassette:'page-cassette','apps/spend':'page-spend',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
+var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',cassette:'Cassette · Press record. Get the notes.','apps/spend':'Spend · Coming soon',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
 function pathToRoute(){var p=location.pathname.replace(/^\/+|\/+$/g,'');return pages[p]?p:'home';}
 // render the page for a route (no history change)
 function render(route){if(!pages[route])route='home';
@@ -706,7 +706,10 @@ function render(route){if(!pages[route])route='home';
   if(route!=='luten'&&typeof Voice!=='undefined'&&Voice.isOn()){Voice.toggle();
     var ob=document.getElementById('soundOrb');if(ob){ob.classList.remove('on');var st=document.getElementById('soundTxt');if(st)st.innerHTML='Light<br>the sound';}}
   closeMenu();
-  document.title=TITLES[route]||'One Life';
+  // Keep the <title> seo-build.py wrote. Every built route ships only its own page,
+  // so render() only runs for the route this file was built for, and overwriting the
+  // title here swapped each page's search title for a short label in the rendered DOM.
+  if(!document.title)document.title=TITLES[route]||'One Life';
   scrollTo(0,0);Alley.setWalk(0);Alley.setDawn(0);requestAnimationFrame(onScroll);}
 // navigate : render + push a clean URL (no hash)
 // animate the page swap with the View Transitions API where supported (and motion is allowed)
@@ -762,6 +765,22 @@ if(form){form.addEventListener('submit',function(e){e.preventDefault();var ok=tr
       if(err)err.style.display='block';});
   });
   form.querySelectorAll('input,textarea').forEach(function(f){f.addEventListener('input',function(){f.style.borderColor='';});});}
+
+// waitlist forms (/apps/spend): same Netlify Forms POST as the contact form
+document.querySelectorAll('form.waitlist-form').forEach(function(wf){
+  var box=wf.parentNode,ok=box.querySelector('.form-success'),err=box.querySelector('.form-error');
+  wf.addEventListener('submit',function(e){e.preventDefault();
+    var em=wf.querySelector('input[type="email"]');
+    if(!em.value.trim()||!em.checkValidity()){em.style.borderColor='#c97a6e';em.focus();return;}
+    if(err)err.style.display='none';
+    var btn=wf.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.style.opacity='.6';}
+    var body=new URLSearchParams();new FormData(wf).forEach(function(v,k){body.append(k,v);});
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()})
+      .then(function(r){if(!r.ok)throw new Error('status '+r.status);wf.style.display='none';if(ok)ok.classList.add('show');})
+      .catch(function(){if(btn){btn.disabled=false;btn.style.opacity='';}if(err)err.style.display='block';});
+  });
+  wf.querySelectorAll('input').forEach(function(f){f.addEventListener('input',function(){f.style.borderColor='';});});
+});
 
 /* =========================================================
    9. SOUND ORB

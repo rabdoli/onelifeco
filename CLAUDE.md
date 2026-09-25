@@ -44,14 +44,14 @@ all running text; lowercase "luten" only as a styled wordmark; never all-caps.
 
 ## Edit the sources, never the build outputs
 
-    _source.html    the master template holding all six page sections
+    _source.html    the master template holding every page section
     seo-build.py    per-route title, description, canonical, og:image
     luten_ld.py     the SoftwareApplication and FAQPage JSON-LD for /luten
     cassette_ld.py  the same for /cassette (its FAQ must match the page word for word)
 
-    index.html, luten/index.html, cassette/index.html, about/index.html,
-    contact/index.html, termsofservice/index.html, privacypolicy/index.html
-                                                           ALL BUILD OUTPUTS
+    index.html, luten/index.html, cassette/index.html, apps/spend/index.html,
+    about/index.html, contact/index.html, termsofservice/index.html,
+    privacypolicy/index.html                               ALL BUILD OUTPUTS
 
 After editing a source, run `python3 seo-build.py`, then commit the sources and
 the regenerated outputs together.
@@ -108,3 +108,21 @@ replays a sample meeting and never touches the microphone.
   Its downloads live in `cassette/media/` (from make_cassette_assets.py). **Update
   its "Release" row the day App Review approves Cassette**; until then it says the
   app was submitted on 2026-09-16 with the date to follow.
+
+## AI visibility files (added 2026-09-25)
+
+- **The /luten FAQ has ONE source: `luten_ld.FAQ`.** `_source.html` holds only a
+  `<!--LUTEN_FAQ ...-->` marker; seo-build.py renders the list into the page and
+  into the FAQPage markup, so the two are the same words by construction (they had
+  drifted: different answers, and a question in the markup that was not on the
+  page). Add or edit a question in `luten_ld.py`, never in `_source.html`.
+- **`llms.txt`** at the root is hand-written. It states each app's status, Luten's
+  features, pricing and privacy stance. Update it the same day any of those change
+  (Cassette's release, Android, a new app), and keep it inside both copy rules.
+- **`robots.txt`** names the AI crawlers explicitly and allows everything.
+- **`/apps/spend/`** is a coming-soon page (`page-spend`) with a Netlify Forms
+  waitlist (`spend-waitlist`). Route keys in seo-build.py may contain a slash.
+- **script.js no longer overwrites `document.title`.** Each built route ships only
+  its own page, so render() only runs for that route, and the old overwrite put a
+  short label in place of the SEO title in the rendered DOM that Google indexes.
+- `/privacy` and `/terms` 301 to the real legal URLs (netlify.toml).

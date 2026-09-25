@@ -39,6 +39,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css" />
+<!-- Without JavaScript nothing drives the nav reveal or the per-station --ct
+     fade, so both would sit hidden or at 12% opacity. The words are always in
+     the HTML; this keeps them readable too. -->
+<noscript><style>.nav{opacity:1;transform:none;pointer-events:auto;}.copy-in{opacity:1;filter:none;transform:none;}</style></noscript>
 <!-- Analytics: PostHog, with NOTHING stored on the visitor's device.
      `persistence: 'memory'` keeps the id in a JS variable for the life of the
      page, so no cookie and no localStorage entry is ever written. That is why
@@ -247,6 +251,7 @@ document.addEventListener('click', function (e) {
       <div class="copy"><p class="app-no">App 03 · Lighting soon</p>
         <div class="glyph dim"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h2>Spend</h2><p class="body-text">Money, finally made clear. Expense tracking that quiets the noise around what you earn and spend.</p>
+        <a href="/apps/spend/" class="arrow-link">Join the Spend waitlist <span>&rarr;</span></a>
       </div>
     </section>
 
@@ -289,7 +294,7 @@ document.addEventListener('click', function (e) {
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
         <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
       <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
       <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
     </div>
@@ -360,6 +365,19 @@ document.addEventListener('click', function (e) {
 
   <section class="luten-sub">
     <div class="wrap2">
+      <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">How It Works</p>
+      <h2>How Luten works.</h2>
+      <p class="lead">Four steps, and the first two take a few seconds.</p>
+      <div class="detail-list">
+        <div class="detail-row"><div class="k">1. Say how you feel</div><div class="v">Pick <b>Sleep, Focus, Stress, ADHD or Kids</b>, or tell Sona in your own words, such as tired, wired or cannot focus.</div></div>
+        <div class="detail-row"><div class="k">2. Press play</div><div class="v">Luten plays <b>instrumental sound</b> matched to that need, crossfading between tracks so it never sounds like one file on loop.</div></div>
+        <div class="detail-row"><div class="k">3. Put the phone down</div><div class="v">Add a <b>sleep timer</b> that fades the sound out, or a <b>focus timer</b>. Playback continues with the screen locked, and downloaded sounds play offline.</div></div>
+        <div class="detail-row"><div class="k">4. It learns what you keep</div><div class="v">Luten notices which sounds you keep playing and <b>suggests those first</b>, on your device.</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="luten-sub" style="border-top:none;padding-top:0;">
+    <div class="wrap2">
       <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">Why It Feels Different</p>
       <h2>Not another meditation app.</h2>
       <p class="lead">No voice to follow, nothing to get right. You press play, and the sound does the work.</p>
@@ -372,6 +390,19 @@ document.addEventListener('click', function (e) {
     </div>
   </section>
 
+  <section class="luten-sub" style="border-top:none;padding-top:0;">
+    <div class="wrap2">
+      <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">Luten or a Playlist</p>
+      <h2>When Luten is the right choice.</h2>
+      <p class="lead">A music playlist and Luten both put sound in your ears. They are built for different jobs.</p>
+      <div class="detail-list">
+        <div class="detail-row"><div class="k">Choose a playlist</div><div class="v">When you want <b>songs you know</b>, lyrics, a favourite artist, or music to enjoy for its own sake.</div></div>
+        <div class="detail-row"><div class="k">Choose Luten</div><div class="v">When you want sound for <b>one job</b>, sleep, focus, stress, ADHD or a child's bedtime, chosen by how you feel rather than by searching.</div></div>
+        <div class="detail-row"><div class="k">What plays</div><div class="v">A playlist plays whatever tracks it holds, which can include vocals and changes in volume. In Luten <b>every sound is instrumental</b>, with even loudness and crossfaded loops.</div></div>
+        <div class="detail-row"><div class="k">Built-in tools</div><div class="v">Luten adds a <b>sleep timer that fades out</b>, focus and Pomodoro-style timers, guided breathing, and a sleep score from Apple Health.</div></div>
+      </div>
+    </div>
+  </section>
   <section class="luten-sub" style="border-top:none;padding-top:0;">
     <div class="wrap2">
       <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">The Signature</p>
@@ -428,14 +459,7 @@ document.addEventListener('click', function (e) {
       <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">Questions</p>
       <h2>Questions, answered.</h2>
       <div class="diff-list">
-        <div class="diff"><h4>Is Luten a meditation app?</h4><p>No. Luten is functional sound, not guided meditation. You tell it how you feel and press play. No course, no breathing homework, no gurus.</p></div>
-        <div class="diff"><h4>Can sound help an ADHD or busy mind focus?</h4><p>Luten's ADHD mode plays steady, low-surprise sound like brown noise and gentle beds, with a timer, made to help a restless mind settle and start. It is a wellness tool, not a medical device.</p></div>
-        <div class="diff"><h4>What sounds help you sleep with a racing mind?</h4><p>Most people reach for warm, beatless sound with nothing that builds or drops in it: brown noise, low held tones, rain and ocean. Luten also shows a real sleep score from Apple Health so you can see your nights.</p></div>
-        <div class="diff"><h4>Does Luten have study and focus sound?</h4><p>Yes. Focus mode queues steady study sound and starts a timer, so you drop into flow without falling down a playlist rabbit hole.</p></div>
-        <div class="diff"><h4>Does Luten work without a connection?</h4><p>Yes. Download the sounds you want and they play with no signal, on a plane, in a basement, anywhere. Nothing has to buffer before it starts.</p></div>
-        <div class="diff"><h4>Does it keep playing when I lock my phone?</h4><p>Yes. Playback carries on with the screen off, and you get full controls on the lock screen and in Control Center, with a sleep timer if you want one.</p></div>
-        <div class="diff"><h4>Does Luten send my data anywhere?</h4><p>Sona, the companion you talk to, runs entirely on your iPhone using Apple's own on-device language tools. What you type stays on the phone.</p></div>
-        <div class="diff"><h4>How do I get Luten, and is it free?</h4><p>Luten is out now on the App Store for iPhone. It is a free download with an optional subscription, and every subscription starts with a 7-day free trial. Android is coming soon.</p></div>
+        <!--LUTEN_FAQ: generated from luten_ld.FAQ by seo-build.py; edit the questions there, not here-->
       </div>
     </div>
   </section>
@@ -472,7 +496,7 @@ document.addEventListener('click', function (e) {
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
         <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
       <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
       <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
     </div>
@@ -677,7 +701,7 @@ document.addEventListener('click', function (e) {
     <div class="footer-grid">
       <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
         <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+      <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
       <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
       <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
     </div>
@@ -707,7 +731,7 @@ document.addEventListener('click', function (e) {
         <div class="about-apps">
           <a href="/luten" data-route="luten" class="about-app"><span class="aa-dot" style="--ic:#C9A96E"></span><b>Luten</b><span>Sound for the mind. Sleep, focus, calm and ADHD, no meditation.</span><em>Out now</em></a>
           <a href="/cassette" data-route="cassette" class="about-app"><span class="aa-dot" style="--ic:#e8403c"></span><b>Cassette</b><span>Press record, get the notes. Transcripts, summaries and follow-ups.</span><em>Out now</em></a>
-          <div class="about-app dim"><span class="aa-dot" style="--ic:#5C4A3A"></span><b>Spend</b><span>Money, finally made clear.</span><em>Coming soon</em></div>
+          <a href="/apps/spend/" class="about-app dim"><span class="aa-dot" style="--ic:#5C4A3A"></span><b>Spend</b><span>Money, finally made clear.</span><em>Coming soon</em></a>
           <div class="about-app dim"><span class="aa-dot" style="--ic:#5C4A3A"></span><b>Still</b><span>Mindfulness for real life.</span><em>Coming soon</em></div>
           <div class="about-app dim"><span class="aa-dot" style="--ic:#5C4A3A"></span><b>Move</b><span>Movement that meets your body.</span><em>Coming soon</em></div>
         </div>
@@ -722,7 +746,7 @@ document.addEventListener('click', function (e) {
       <div class="footer-grid">
         <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
           <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
         <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
         <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
       </div>
@@ -765,7 +789,36 @@ document.addEventListener('click', function (e) {
       <div class="footer-grid">
         <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
           <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
+        <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
+      </div>
+      <div class="footer-bottom"><span class="copy-line">&copy; 2026 One Life Company. All rights reserved.</span><span class="product-line">every app, a one life product</span></div>
+    </footer>
+  </div>
+</div>
+<div class="page" id="page-spend">
+  <div class="sheet">
+    <div class="sheet-hero"><p class="eyebrow" style="display:block;margin-bottom:24px;">App 03 &middot; Coming soon</p><h1>Spend.</h1>
+      <p>Money, finally made clear. Spend is a daily expense tracking app from One Life, the company behind Luten and Cassette. It quiets the noise around what you earn and spend.</p></div>
+    <div class="contact-form">
+      <p style="margin-bottom:34px;">Spend is in development and not available yet. Leave your email and we will write once, when it is ready.</p>
+      <form class="waitlist-form" name="spend-waitlist" method="POST" action="/apps/spend/" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="spend-waitlist" />
+        <p style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="field"><label for="spend-email">Email</label><input id="spend-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" required /></div>
+        <div style="margin-top:54px;"><button type="submit" class="btn-light">Join the waitlist <span class="arrow">&rarr;</span></button></div>
+        <p style="margin-top:26px;font-size:13px;color:var(--bark);">We use your email only to tell you when Spend launches. See the <a href="/privacypolicy" data-route="privacypolicy" style="color:var(--lamp);">Privacy Policy</a>.</p>
+      </form>
+      <div class="form-success"><div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12l5 5L20 7"/></svg></div>
+        <h2>You are on the list.</h2><p>We will email you when Spend is ready. Nothing else.</p></div>
+      <p class="form-error" style="display:none;margin-top:24px;color:#c97a6e;font-size:14px;">Something went wrong. Please email <a href="mailto:contact@onelifeco.app" style="color:var(--lamp);">contact@onelifeco.app</a> and we will add you.</p>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
+          <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
+        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
         <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
         <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
       </div>
@@ -837,7 +890,7 @@ document.addEventListener('click', function (e) {
       <div class="footer-grid">
         <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
           <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
         <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
         <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
       </div>
@@ -920,7 +973,7 @@ document.addEventListener('click', function (e) {
       <div class="footer-grid">
         <div class="footer-brand"><a href="/" class="nav-logo" data-route="home"><span class="mark"></span>One Life</a>
           <p>The quiet force behind the apps you use to live better. We stay invisible so the lights can shine.</p></div>
-        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/" data-route="home">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
+        <div class="footer-col"><h5>Apps</h5><a href="/luten" data-route="luten">Luten</a><a href="/cassette" data-route="cassette">Cassette</a><a href="/apps/spend/">Spend</a><a href="/" data-route="home">Still</a><a href="/" data-route="home">Move</a></div>
         <div class="footer-col"><h5>Company</h5><a href="/about" data-route="about">About</a><a href="/contact" data-route="contact">Contact</a></div>
         <div class="footer-col"><h5>Legal</h5><a href="/termsofservice" data-route="termsofservice">Terms of Service</a><a href="/privacypolicy" data-route="privacypolicy">Privacy Policy</a></div>
       </div>

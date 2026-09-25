@@ -47,7 +47,10 @@ SAME_AS = [
 
 SOFTWARE_APP = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    # MobileApplication is the schema.org subtype of SoftwareApplication for
+    # phone apps. Google's software app rich result accepts it, and it tells an
+    # assistant plainly that Luten is something you install on a phone.
+    "@type": "MobileApplication",
     "@id": f"{BASE}/luten/#app",
     "name": "Luten",
     # The exact App Store title, so the two listings corroborate each other.
@@ -74,27 +77,65 @@ SOFTWARE_APP = {
 
 # Answers describe what the app IS. None of them promise an outcome, name a
 # listening duration, or state the catalogue size.
+#
+# THIS LIST IS ALSO THE VISIBLE FAQ ON /luten. seo-build.py renders it into the
+# page at the <!--LUTEN_FAQ--> marker in _source.html, so the page and the
+# FAQPage markup are the same words by construction. Google requires FAQ markup
+# to match visible content, and the two had already drifted apart (different
+# answers, and a question in the markup that was not on the page).
+#
+# Several questions are phrased the way people ask an assistant ("What sounds
+# help you fall asleep?"). The ANSWERS still only describe sound and the app:
+# what people choose, what Luten has, and that Luten does not prescribe a
+# length. That is the line in CLAUDE.md, and it holds for the question text too.
 FAQ = [
-    ("Is Luten a meditation app?",
-     "No. Luten is functional sound, not guided meditation. You tell it "
-     "how you feel and press play. No course, no breathing homework, no "
-     "gurus."),
     ("What is Luten?",
      "Luten is an iOS app that plays sound for sleep, focus, ADHD, "
      "stress and kids, and learns which sounds you actually stay with. "
      "It is made by One Life. The name is pronounced LOO-ten."),
+    ("Is Luten a meditation app?",
+     "No. Luten is functional sound, not guided meditation. You tell it "
+     "how you feel and press play. No course, no breathing homework, no "
+     "gurus."),
+    ("What sounds help you fall asleep?",
+     "People often choose steady sound with no beat and nothing that builds "
+     "or drops: brown noise, pink noise, rain, ocean, fan hum and low held "
+     "tones. Which one suits you is personal, so Luten lets you try them and "
+     "puts the ones you keep playing first. It also shows a sleep score from "
+     "Apple Health so you can see your nights."),
+    ("What is the difference between white noise, pink noise and brown noise?",
+     "White noise has equal energy at every frequency, so it sounds bright "
+     "and hissy, like static. Pink noise has less energy as the pitch rises, "
+     "so it sounds softer and more even, like steady rain. Brown noise drops "
+     "off faster still, so it sounds deep and rumbling, like a waterfall or "
+     "strong wind. Luten includes all three, each synthesised to its true "
+     "spectrum."),
+    ("What sound is good for focus while working?",
+     "Many people work to steady sound with no lyrics and no sudden changes, "
+     "such as cafe or library ambience, pink noise, brown noise, steady rain "
+     "or soft instrumental study music. Luten's Focus mode plays that kind of "
+     "sound and starts a focus timer, and ADHD mode adds a Pomodoro-style "
+     "timer."),
     ("Can sound help an ADHD or busy mind focus?",
      "Luten's ADHD mode plays steady, low-surprise sound with a timer, "
      "made for a restless mind. It is a wellness tool, not a medical "
      "device, and it does not treat any condition."),
-    ("What sounds help you sleep with a racing mind?",
-     "Most people reach for warm, beatless sound with nothing that "
-     "builds or drops in it: brown noise, low held tones, rain and "
-     "ocean. Luten also shows a sleep score from Apple Health so you can "
-     "see your nights."),
-    ("Does Luten have study and focus sound?",
-     "Yes. Focus mode queues steady study sound and starts a timer, so "
-     "you drop into work without falling down a playlist rabbit hole."),
+    ("How long should you listen to sleep sounds?",
+     "There is no set length, and Luten does not prescribe one. Let a sound "
+     "play until you stop it, or set a sleep timer so it fades out after the "
+     "time you choose."),
+    ("Is it safe to play sleep sounds all night?",
+     "Luten can play all night with the screen locked, or stop on a sleep "
+     "timer that fades the sound out. Every sound is instrumental with even "
+     "loudness, so nothing jumps in the night. Keep the volume low and "
+     "comfortable, and ask a doctor if you have questions about your hearing "
+     "or your sleep."),
+    ("What makes Luten different from other sleep sound apps?",
+     "Luten is sound, not guided meditation: you say how you feel and press "
+     "play, with no course to finish. It covers sleep, focus, stress, ADHD "
+     "and kids in one app, every sound is instrumental with even loudness, "
+     "and Sona, the companion that suggests sounds, runs on your iPhone. It "
+     "also shows a sleep score from Apple Health."),
     ("Does Luten work without a connection?",
      "Yes. Download the sounds you want and they play with no signal, on "
      "a plane, in a basement, anywhere. Nothing has to buffer before it "
@@ -110,7 +151,7 @@ FAQ = [
     ("How do I get Luten, and is it free?",
      "Luten is out now on the App Store for iPhone. It is a free "
      "download with an optional subscription, and every subscription "
-     "starts with a 7-day free trial."),
+     "starts with a 7-day free trial. Android is coming soon."),
 ]
 
 FAQ_PAGE = {
@@ -131,3 +172,12 @@ def blocks():
         '<script type="application/ld+json">%s</script>'
         % json.dumps(d, ensure_ascii=False, separators=(",", ":"))
         for d in (SOFTWARE_APP, FAQ_PAGE))
+
+
+def page_html(indent="        "):
+    """The visible FAQ items for /luten, in the page's .diff markup."""
+    from html import escape
+    return "\n".join(
+        '%s<div class="diff"><h4>%s</h4><p>%s</p></div>'
+        % (indent, escape(q, quote=False), escape(a, quote=False))
+        for q, a in FAQ)

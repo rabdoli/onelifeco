@@ -68,6 +68,26 @@
   status = 404
   force = true
 
+# Short legal URLs. The canonical pages stay at /privacypolicy/ and
+# /termsofservice/ because those are indexed and are the URLs in the App Store
+# listings; these catch anyone who types or links the short form.
+[[redirects]]
+  from = "/privacy"
+  to = "/privacypolicy/"
+  status = 301
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacypolicy/"
+  status = 301
+[[redirects]]
+  from = "/terms"
+  to = "/termsofservice/"
+  status = 301
+[[redirects]]
+  from = "/terms/"
+  to = "/termsofservice/"
+  status = 301
+
 # Missing paths must 404, not serve the homepage at 200.
 #
 # The old rule sent every unmatched path to /index.html with status 200, so

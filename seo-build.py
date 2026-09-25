@@ -24,6 +24,11 @@ src=open(SRC_FILE,encoding="utf-8").read()
 # offering a free-for-life waitlist that no longer exists.
 import luten_ld
 LUTEN_LD=luten_ld.blocks()
+# The visible /luten FAQ is rendered from the same list as its FAQPage markup,
+# so the two cannot drift. _source.html holds only a marker.
+_FAQ_MARK='<!--LUTEN_FAQ: generated from luten_ld.FAQ by seo-build.py; edit the questions there, not here-->'
+assert src.count(_FAQ_MARK)==1, "LUTEN_FAQ marker missing from _source.html"
+src=src.replace(_FAQ_MARK, luten_ld.page_html().lstrip())
 # /cassette carries its own SoftwareApplication + FAQPage, built the same way.
 import cassette_ld
 CASSETTE_LD=cassette_ld.blocks()
@@ -32,6 +37,8 @@ ROUTES={
    "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "cassette":("Cassette: AI Note Taker for Meetings, Lectures &amp; Voice Memos",
    "Cassette is a cassette deck for iPhone that records meetings, lectures and memos, then writes the transcript, summary, action items and follow-up email.", CASSETTE_LD),
+ "apps/spend":("Spend: Daily Expense Tracking App, Coming Soon &middot; One Life",
+   "Spend is a daily expense tracking app from One Life, the company behind Luten and Cassette. It is in development. Join the waitlist to hear when it launches.", None),
  "about":("About &middot; One Life",
    "One Life is a quiet company building simple apps that make daily life simpler. We stay invisible so the apps can shine. Meet the company behind Luten and Cassette.", None),
  "contact":("Contact &middot; One Life",
@@ -42,7 +49,8 @@ ROUTES={
    "How One Life handles your data in Luten, Cassette and on this website: local-first, privacy-respecting, and transparent.", None),
 }
 # home <div id> for each route (page-home is active in source)
-PAGEID={"home":"page-home","luten":"page-luten","cassette":"page-cassette","about":"page-about","contact":"page-contact",
+# Route keys may contain a slash ("apps/spend"): build() writes apps/spend/index.html.
+PAGEID={"home":"page-home","luten":"page-luten","cassette":"page-cassette","apps/spend":"page-spend","about":"page-about","contact":"page-contact",
         "termsofservice":"page-terms","privacypolicy":"page-privacy"}
 
 OG_IMAGE={"luten":"/luten/og-luten.png","cassette":"/cassette/og-cassette.png"}
@@ -50,7 +58,7 @@ OG_IMAGE={"luten":"/luten/og-luten.png","cassette":"/cassette/og-cassette.png"}
 HOME_TITLE="One Life &middot; We light the way."
 HOME_DESC="One Life is a quiet company building simple apps for daily life: Luten, sound for sleep and focus, and Cassette, an AI note taker for iPhone."
 
-ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-about","page-contact","page-terms","page-privacy"]
+ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-spend","page-about","page-contact","page-terms","page-privacy"]
 
 def _remove_div_block(h, pid):
     """Remove <div ... id="pid"> ... </div> including nested divs."""

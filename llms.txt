@@ -1,0 +1,66 @@
+# One Life
+
+> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone. Its second is Cassette, an AI note taker for iPhone.
+
+Website: https://www.onelifeco.app/
+Contact: contact@onelifeco.app
+
+## Apps and status
+
+- [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app. Android is coming soon.
+- [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Submitted to the App Store and awaiting release.
+- [Spend](https://www.onelifeco.app/apps/spend/): daily expense tracking. In development, with a waitlist.
+- Still and Move: in development. No details published yet.
+
+## Luten
+
+What it is: an iOS app that plays sound matched to how you feel. It is functional sound, not guided meditation. You pick a need, or tell Sona, the in-app companion, how you feel, and press play. There is no course to finish.
+
+Who it is for: people who want sound to sleep, work, study or wind down to, including people with ADHD or a busy, restless mind, and parents at a child's bedtime.
+
+Key features:
+- Five modes: Sleep, Focus, Stress, ADHD and Kids.
+- White noise, pink noise, brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes. Every sound is instrumental, with even loudness and crossfaded loops.
+- Sona, a sound companion that suggests a real track from how you describe your feelings. Sona runs on the iPhone, and what you type stays on the phone.
+- A sleep timer that fades the sound out, a focus timer, a Pomodoro-style timer in ADHD mode, and simple guided breathing.
+- A sleep score from Apple Health, with duration, deep sleep, REM, interruptions and vitals.
+- Background and lock-screen playback, offline downloads, a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
+
+Platforms: iPhone and Apple Watch. Android is coming soon.
+
+Pricing: free to download, with an optional subscription. Every subscription starts with a 7-day free trial.
+
+Privacy: Sona runs on the device. One Life runs no third-party advertising in its apps and does not sell personal information. Full details are in the Privacy Policy.
+
+Wellness: Luten is for relaxation, focus and rest. It is not a medical device, makes no medical claims and does not treat any condition.
+
+Download: https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392
+
+## Cassette
+
+What it is: an iPhone app styled as a cassette deck. Press Record in a meeting, lecture or conversation, and Cassette writes the transcript, a short summary, highlights, action items with owners and due dates when they are mentioned, and a follow-up email draft.
+
+Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 5 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
+
+Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
+
+Requirements: any iPhone on iOS 17 or later.
+
+## Pages
+
+- [Home](https://www.onelifeco.app/): the One Life company site.
+- [Luten](https://www.onelifeco.app/luten/): features, how it works, and answers to common questions about sleep and focus sound.
+- [Which Luten sound to start with](https://www.onelifeco.app/luten/quiz/): a two-question quiz that suggests one sound.
+- [White noise, pink noise and brown noise](https://www.onelifeco.app/luten/white-noise/)
+- [Rain sounds with no thunder and no music](https://www.onelifeco.app/luten/rain-sounds/)
+- [Fan sounds for sleeping](https://www.onelifeco.app/luten/fan-sounds/)
+- [Sounds for waking up at 3am](https://www.onelifeco.app/luten/3am/)
+- [Sleep sounds with no talking](https://www.onelifeco.app/luten/no-talking/)
+- [Luten press kit](https://www.onelifeco.app/luten/press)
+- [Cassette](https://www.onelifeco.app/cassette/)
+- [Cassette press kit](https://www.onelifeco.app/cassette/press)
+- [Spend waitlist](https://www.onelifeco.app/apps/spend/)
+- [About One Life](https://www.onelifeco.app/about/)
+- [Contact](https://www.onelifeco.app/contact/)
+- [Privacy Policy](https://www.onelifeco.app/privacypolicy/)
+- [Terms of Service](https://www.onelifeco.app/termsofservice/)
