@@ -23,7 +23,7 @@ Key features:
 - White noise, pink noise, brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes. Every sound is instrumental, with even loudness and crossfaded loops.
 - Sona, a sound companion that suggests a real track from how you describe your feelings. Sona runs on the iPhone, and what you type stays on the phone.
 - A sleep timer that fades the sound out, a focus timer, a Pomodoro-style timer in ADHD mode, and simple guided breathing.
-- A sleep score from Apple Health, with duration, deep sleep, REM, interruptions and vitals.
+- A sleep score built from your Apple Health data, with duration, deep sleep, REM, interruptions and vitals.
 - Background and lock-screen playback, offline downloads, a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
 
 Platforms: iPhone and Apple Watch. Android is coming soon.

@@ -101,8 +101,8 @@ FAQ = [
      "People often choose steady sound with no beat and nothing that builds "
      "or drops: brown noise, pink noise, rain, ocean, fan hum and low held "
      "tones. Which one suits you is personal, so Luten lets you try them and "
-     "puts the ones you keep playing first. It also shows a sleep score from "
-     "Apple Health so you can see your nights."),
+     "puts the ones you keep playing first. It also shows a sleep score built "
+     "from your Apple Health data so you can see your nights."),
     ("What is the difference between white noise, pink noise and brown noise?",
      "White noise has equal energy at every frequency, so it sounds bright "
      "and hissy, like static. Pink noise has less energy as the pitch rises, "
@@ -135,7 +135,7 @@ FAQ = [
      "play, with no course to finish. It covers sleep, focus, stress, ADHD "
      "and kids in one app, every sound is instrumental with even loudness, "
      "and Sona, the companion that suggests sounds, runs on your iPhone. It "
-     "also shows a sleep score from Apple Health."),
+     "also shows a sleep score built from your Apple Health data."),
     ("Does Luten work without a connection?",
      "Yes. Download the sounds you want and they play with no signal, on "
      "a plane, in a basement, anywhere. Nothing has to buffer before it "
