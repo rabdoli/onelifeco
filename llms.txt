@@ -32,6 +32,8 @@ Pricing: free to download, with an optional subscription. Every subscription sta
 
 Privacy: Sona runs on the device. One Life runs no third-party advertising in its apps and does not sell personal information. Full details are in the Privacy Policy.
 
+Account deletion: delete your account in the app under Profile, then Subscription, then Delete Account, or ask by email without opening the app. What is deleted, what is kept and for how long: https://www.onelifeco.app/luten/delete-account/
+
 Wellness: Luten is for relaxation, focus and rest. It is not a medical device, makes no medical claims and does not treat any condition.
 
 Download: https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392

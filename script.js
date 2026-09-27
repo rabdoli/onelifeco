@@ -687,8 +687,8 @@ addEventListener('scroll',onScroll,{passive:true});
 /* =========================================================
    7. ROUTING
    ========================================================= */
-var pages={home:'page-home',luten:'page-luten',cassette:'page-cassette','apps/spend':'page-spend',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
-var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',cassette:'Cassette · Press record. Get the notes.','apps/spend':'Spend · Coming soon',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
+var pages={home:'page-home',luten:'page-luten',cassette:'page-cassette','apps/spend':'page-spend','luten/delete-account':'page-delete-account',about:'page-about',contact:'page-contact',termsofservice:'page-terms',privacypolicy:'page-privacy'};
+var TITLES={home:'One Life · We light the way.',luten:'Luten · Sound for the mind.',cassette:'Cassette · Press record. Get the notes.','apps/spend':'Spend · Coming soon','luten/delete-account':'Delete your Luten account · One Life',about:'About · One Life',contact:'Contact · One Life',termsofservice:'Terms of Service · One Life',privacypolicy:'Privacy Policy · One Life'};
 function pathToRoute(){var p=location.pathname.replace(/^\/+|\/+$/g,'');return pages[p]?p:'home';}
 // render the page for a route (no history change)
 function render(route){if(!pages[route])route='home';
