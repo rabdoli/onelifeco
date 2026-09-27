@@ -112,9 +112,8 @@ replays a sample meeting and never touches the microphone.
   `cassette_ld.py` SAME_AS only once they are live.
 - `/cassette/press` is `cassette/press.html`, hand-written like `luten/press.html`
   and NOT built by seo-build.py, so its PostHog block is another hand-kept copy.
-  Its downloads live in `cassette/media/` (from make_cassette_assets.py). **Update
-  its "Release" row the day App Review approves Cassette**; until then it says the
-  app was submitted on 2026-09-16 with the date to follow.
+  Its downloads live in `cassette/media/` (from make_cassette_assets.py). Its "Release" row was
+  set on release day (2026-09-27) by `tools/cassette_release.py`.
 
 ## AI visibility files (added 2026-09-25)
 

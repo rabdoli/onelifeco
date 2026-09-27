@@ -27,7 +27,7 @@ APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
 # and drops the URL from the structured data. tools/cassette_release.py sets this
 # to True on release day and rebuilds; do not flip it by hand before the lookup
 # answers, and do not hand-edit the store links in _source.html.
-RELEASED = False
+RELEASED = True
 
 SAME_AS = [
     APP_STORE,

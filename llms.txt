@@ -8,7 +8,7 @@ Contact: contact@onelifeco.app
 ## Apps and status
 
 - [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app. Android is coming soon.
-- [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Submitted to the App Store and awaiting release.
+- [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Available now on the App Store for iPhone.
 - [Spend](https://www.onelifeco.app/apps/spend/): daily expense tracking. In development, with a waitlist.
 - Still and Move: in development. No details published yet.
 
@@ -45,6 +45,8 @@ Pricing: free to download and to record, with no minute meter. Transcripts and n
 Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
 
 Requirements: any iPhone on iOS 17 or later.
+
+Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404
 
 ## Pages
 
