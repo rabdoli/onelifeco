@@ -40,6 +40,8 @@ ROUTES={
    "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "luten/delete-account":("Delete Your Luten Account &middot; One Life",
    "How to delete your Luten account, in the app or by email without reinstalling it: what is deleted, what is kept and for how long, and how to reach us.", None),
+ "cassette/delete-account":("Delete Your Cassette Account &middot; One Life",
+   "How to delete your Cassette account, in the app or by email without reinstalling it: what is deleted, what is kept and for how long, and how to reach us.", None),
  "cassette":("Cassette: AI Note Taker for Meetings, Lectures &amp; Voice Memos",
    "Cassette is a cassette deck for iPhone that records meetings, lectures and memos, then writes the transcript, summary, action items and follow-up email.", CASSETTE_LD),
  "apps/spend":("Spend: Daily Expense Tracking App, Coming Soon &middot; One Life",
@@ -56,14 +58,15 @@ ROUTES={
 # home <div id> for each route (page-home is active in source)
 # Route keys may contain a slash ("apps/spend"): build() writes apps/spend/index.html.
 PAGEID={"home":"page-home","luten":"page-luten","cassette":"page-cassette","apps/spend":"page-spend","about":"page-about","contact":"page-contact",
-        "termsofservice":"page-terms","privacypolicy":"page-privacy","luten/delete-account":"page-delete-account"}
+        "termsofservice":"page-terms","privacypolicy":"page-privacy","luten/delete-account":"page-delete-account",
+        "cassette/delete-account":"page-cassette-delete-account"}
 
 OG_IMAGE={"luten":"/luten/og-luten.png","cassette":"/cassette/og-cassette.png"}
 
 HOME_TITLE="One Life &middot; We light the way."
 HOME_DESC="One Life is a quiet company building simple apps for daily life: Luten, sound for sleep and focus, and Cassette, an AI note taker for iPhone."
 
-ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-spend","page-about","page-contact","page-terms","page-privacy","page-delete-account"]
+ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-spend","page-about","page-contact","page-terms","page-privacy","page-delete-account","page-cassette-delete-account"]
 
 def _remove_div_block(h, pid):
     """Remove <div ... id="pid"> ... </div> including nested divs."""
