@@ -42,6 +42,8 @@ Download: https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392
 
 What it is: an iPhone app styled as a cassette deck. Press Record in a meeting, lecture or conversation, and Cassette writes the transcript, a short summary, highlights, action items with owners and due dates when they are mentioned, and a follow-up email draft.
 
+One tap to record: a tape can start from a Home Screen or Lock Screen widget, or from a Record button in Control Center, on the Lock Screen or on the Action button (iOS 18 or later), and the Dynamic Island shows the recording, where it can be paused or marked.
+
 Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 5 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
 
 Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
