@@ -501,6 +501,8 @@ a{color:inherit;text-decoration:none;}
 #page-cassette .luten-sub,#page-cassette .luten-get,#page-cassette .luten-back{background:rgba(12,5,7,.95);}
 #page-cassette .lf-card{background:linear-gradient(170deg,var(--cas-maroon),var(--cas-maroon-deep));}
 #page-cassette .diff{background:linear-gradient(170deg,rgba(44,14,18,.5),rgba(16,6,8,.72));}
+/* nine questions: three to a row, so none sits alone */
+@media(min-width:700px){#page-cassette .diff-list{grid-template-columns:repeat(3,1fr);}}
 #page-cassette .inside{background:rgba(16,6,8,.82);}
 
 .cas-mark{width:84px;height:84px;margin:0 auto 26px;filter:drop-shadow(0 18px 40px rgba(232,64,60,.28)) drop-shadow(0 0 22px rgba(255,200,121,.18));}
