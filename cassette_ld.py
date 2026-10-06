@@ -43,7 +43,7 @@ SOFTWARE_APP = {
     # The App Store files it under Productivity with Business second; Business is
     # the closest of Google's supported applicationCategory values.
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS 17.0 or later",
+    "operatingSystem": "iOS 17.0 or later, watchOS 10.0 or later",
     "url": f"{BASE}/cassette/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
@@ -95,6 +95,11 @@ FAQ = [
     ("Which iPhones does it work on?",
      "Any iPhone on iOS 17 or later. Notes by Apple Intelligence need an iPhone "
      "that supports it; other iPhones get simpler notes, written on the device."),
+    ("Does it work on Apple Watch?",
+     "Yes. The Apple Watch app records with the watch's microphone, with pause "
+     "and stop, and sends each tape to your iPhone, which writes the transcript "
+     "and the notes. Start one from a watch face complication or with Siri. It "
+     "needs watchOS 10 or later."),
     ("Can I share what it writes?",
      "Yes. Copy a whole tab in one tap, or save the email, the notes or the "
      "transcript as a PDF or a Word document."),
