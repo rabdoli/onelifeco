@@ -126,6 +126,11 @@ def build(route, title, desc, extra_ld):
     # canonical + og:url (exact root only, not og:image)
     h=h.replace('<link rel="canonical" href="https://www.onelifeco.app/" />','<link rel="canonical" href="'+url+'" />')
     h=h.replace('<meta property="og:url" content="https://www.onelifeco.app/" />','<meta property="og:url" content="'+url+'" />')
+    # Apple's Smart App Banner, /luten only (REVERB 7.10 in luten-app). Safari on
+    # iPhone and iPad shows a native Get/Open strip; every other browser ignores it.
+    # Lives here, not in a page file, so the next build cannot silently drop it.
+    if route=="luten":
+        h=h.replace('<!-- fonts -->', '<meta name="apple-itunes-app" content="app-id=6777673392" />\n<!-- fonts -->', 1)
     # extra JSON-LD (Luten SoftwareApplication) right after the structured-data graph
     if extra_ld:
         h=h.replace('<!-- fonts -->', extra_ld+'\n<!-- fonts -->', 1)
