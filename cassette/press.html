@@ -22,7 +22,10 @@
 <!-- Hand-written like /luten/press, and laid out the same way so the two kits read
      as one family: the navy is swapped for the deck's maroon and the accent for
      the tape red and cream. Every fact below was checked on 2026-09-16 against
-     the app's code and App Store Connect. The free tier is stated on purpose
+     the app's code and App Store Connect, and refreshed on 2026-10-16 against the
+     app source, copy107.json and copy108.json (marketing/tools/release) for the
+     10-paid push: platforms, 1.0.7, prices, the feature list, iPad and Mac screens.
+     The free tier is stated on purpose
      (Reza approved it for Cassette; the rule against it is Luten's). The "Release" row was set on
      release day (2026-09-27) by tools/cassette_release.py. -->
 <style>
@@ -64,6 +67,7 @@
   .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 18px; }
   .shots a { display: block; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.09); line-height: 0; }
   .shots img { width: 100%; height: auto; display: block; }
+  .shots.wide { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
   .icon-row { display: flex; align-items: center; gap: 20px; margin-bottom: 18px; }
   .icon-row img { width: 96px; height: 96px; border-radius: 22%; }
   .quote { border-left: 2px solid rgba(232,64,60,0.6); padding-left: 18px; color: rgba(255,255,255,0.75); font-size: 16px; margin-bottom: 16px; }
@@ -127,10 +131,16 @@ document.addEventListener('click', function (e) {
     <table>
       <tr><td>Name</td><td>Cassette (on the App Store as Cassette: AI Note Taker)</td></tr>
       <tr><td>Category</td><td>Productivity (also Business)</td></tr>
-      <tr><td>Platform</td><td>iPhone, iOS 17 and later; Apple Watch, watchOS 10 and later</td></tr>
+      <tr><td>Platform</td><td>iPhone, iPad, Apple Watch and Mac. One purchase covers all of them.</td></tr>
       <tr><td>Release</td><td>Released Sunday, September 27, 2026</td></tr>
-      <tr><td>Latest version</td><td>1.0.3, October 3, 2026: an Apple Watch app that records with the watch's microphone</td></tr>
-      <tr><td>Price</td><td>Free to download. Recording is free and unlimited, and transcripts and notes are free for 5 tapes a month. Cassette Premium is $1.99/week, $5.99/month, or $49.99/year with a 7-day free trial, or $79.99 once for Lifetime (US prices)</td></tr>
+      <tr><td>Latest version</td><td>1.0.7, 13 October 2026: one-tap SEND TO Apple Notes, OneNote, Notion, Evernote and Google Keep</td></tr>
+      <!-- The hour 1.0.8 is live on the App Store, replace the row above with (fill in the date):
+           <tr><td>Latest version</td><td>1.0.8, DD October 2026: three checks on every note, an honest fallback when notes cannot be written, and the iPhone Duo layout</td></tr>
+           and move the 1.0.7 SEND TO line into the feature list only. -->
+      <tr><td>Price</td><td>Free to download. Recording is free and unlimited, and transcripts and notes are free for 5 tapes a month. Cassette Premium is $1.99/week, $5.99/month, or $49.99/year with a 7-day free trial for new subscribers, or $79.99 once for Lifetime (US prices). One purchase covers iPhone, iPad and Mac</td></tr>
+      <!-- [only if 'lifetime' is a yes] In the row above, swap "$79.99 once for Lifetime" for
+           "$39.99 once for Lifetime until 31 October, then $79.99". Never "half price", never "was $79.99".
+           The $79.99 text stays live until Reza says lifetime. -->
       <tr><td>Developer</td><td>One Life, an independent studio. Cassette is A One Life Product</td></tr>
       <tr><td>App Store</td><td><a href="https://apps.apple.com/app/id6812001404">apps.apple.com/app/id6812001404</a> (live now)</td></tr>
       <tr><td>Website</td><td><a href="https://www.onelifeco.app/cassette/">onelifeco.app/cassette</a></td></tr>
@@ -179,7 +189,15 @@ document.addEventListener('click', function (e) {
     as a PDF or a Word document.</p>
 
     <h3>A lifetime option</h3>
-    <p>$79.99 once, no renewal, alongside the weekly, monthly and annual plans.</p>
+    <p>$79.99 once, no renewal, alongside the weekly, monthly and annual plans. One purchase covers
+    Cassette on iPhone, iPad and Mac.</p>
+    <!-- [only if 'lifetime' is a yes] Change the first sentence to
+         "$39.99 once until 31 October, then $79.99, no renewal, alongside the weekly, monthly and annual plans." -->
+
+    <h3>On the Mac, nothing joins the call</h3>
+    <p>Switch the deck to CALL and Cassette records what the Mac plays and the microphone together,
+    so a Zoom, Meet or Teams call is captured the way you hear it. No bot joins the call and no
+    picture is kept. Call recording needs macOS 15.2 or later.</p>
   </div>
 
   <h2>Feature summary</h2>
@@ -193,20 +211,31 @@ document.addEventListener('click', function (e) {
     <li>Start a tape with one tap from a Home Screen or Lock Screen widget, or from a Record button in Control Center, on the Lock Screen or on the Action button (iOS 18 or later), without opening the app</li>
     <li>The recording shows in the Dynamic Island, where it can be paused or marked</li>
     <li>An Apple Watch app records with the watch's microphone, with pause and stop, and sends each tape to the iPhone for its transcript and notes; a watch face complication or Siri starts one</li>
+    <li>SEND TO: one key at the end of a tape's notes or transcript sends them to Apple Notes, Microsoft OneNote, Notion, Evernote or Google Keep, organized, with the summary, decisions, action items with who and when, and key points (new in 1.0.7)</li>
+    <li>On iOS 26 and later the transcript is written while you record, so it is ready the moment you press STOP</li>
+    <li>Note templates, so the notes take the shape of the recording: meeting, 1:1, lecture, interview, client call, doctor's visit, brainstorm or voice note</li>
+    <li>Speakers are told apart on the device and get their names when people say them aloud; otherwise they are Speaker 1, Speaker 2, and any name can be changed from the transcript</li>
+    <li>Ask your tapes: a question asked across every tape, answered from what was really said, each line pointing at its moment</li>
+    <li>Study cards from lectures: terms and class questions, with the moment they were said</li>
+    <li>On-device only: one switch, and recordings, transcripts and notes never leave the device</li>
+    <li>Notes save as Markdown in Files, Cassette works with Shortcuts and Siri, and every tape exports at once</li>
+    <li>On iPad, the notes open beside the deck</li>
+    <li>On the Mac, Cassette records a video call (Zoom, Meet or Teams) from what the Mac plays plus the microphone, with nothing joining the call; macOS 15.2 or later, no picture kept</li>
     <li>Optional account with Sign in with Apple, Google or email; backup with Premium; delete a tape or the whole account inside the app</li>
   </ul>
 
   <h2>Positioning notes for writers</h2>
-  <div class="quote">Cassette records what the iPhone's microphone hears. It does not join video calls
-  as a bot, and a phone call pauses the recording rather than capturing it. Recording laws differ from
-  place to place, and Cassette's Terms ask people to get consent from the people they record.</div>
+  <div class="quote">On iPhone, Cassette records what the microphone hears, and a phone call pauses the
+  recording rather than capturing it. On the Mac it can also record what the Mac plays, so a video call
+  is captured without a bot joining it. Recording laws differ from place to place, and Cassette's Terms
+  ask people to get consent from the people they record.</div>
   <p class="note">Transcripts are machine-written and can contain mistakes, especially with poor audio
   or people talking over each other, and the notes are only as good as the transcript under them. The
   company would rather that be said plainly than have Cassette described as a perfect record of a
   meeting.</p>
 
   <h2>Screenshots</h2>
-  <p class="note">Click any image for the full resolution file (1320 by 2868 for iPhone). Free to use in coverage of Cassette.</p>
+  <p class="note">Click any image for the full resolution file (1320 by 2868 for iPhone, 2064 by 2752 for iPad, 2880 by 1800 for Mac). Free to use in coverage of Cassette.</p>
   <h3>App Store screenshots</h3>
   <div class="shots">
     <a href="/cassette/media/cassette-appstore-1-record.jpg"><img src="/cassette/media/thumb-appstore-1-record.webp" width="360" height="782" loading="lazy" alt="Press record. Get the notes. Cassette recording a meeting"></a>
@@ -222,6 +251,25 @@ document.addEventListener('click', function (e) {
     <a href="/cassette/media/cassette-screen-transcript.jpg"><img src="/cassette/screen-transcript.webp" width="540" height="1173" loading="lazy" alt="The Transcript tab with timestamps"></a>
     <a href="/cassette/media/cassette-screen-email.jpg"><img src="/cassette/screen-email.webp" width="540" height="1173" loading="lazy" alt="The Email tab with a recap addressed to the people named"></a>
     <a href="/cassette/media/cassette-screen-shelf.jpg"><img src="/cassette/screen-shelf.webp" width="540" height="1173" loading="lazy" alt="The Shelf with six tapes and a search field"></a>
+  </div>
+  <h3>iPad screens</h3>
+  <p class="note">The App Store cards for iPad, 2064 by 2752.</p>
+  <div class="shots">
+    <a href="/cassette/media/cassette-ipad-1-notes.jpg"><img src="/cassette/media/thumb-ipad-1-notes.webp" width="360" height="480" loading="lazy" alt="Your deck and your notes, side by side. Cassette on iPad with the notes open beside the deck"></a>
+    <a href="/cassette/media/cassette-ipad-2-transcript.jpg"><img src="/cassette/media/thumb-ipad-2-transcript.webp" width="360" height="480" loading="lazy" alt="Every word, and who said it. The Transcript tab on iPad with speaker names"></a>
+    <a href="/cassette/media/cassette-ipad-3-ask.jpg"><img src="/cassette/media/thumb-ipad-3-ask.webp" width="360" height="480" loading="lazy" alt="Ask your tapes. A question answered from what was said, on iPad"></a>
+    <a href="/cassette/media/cassette-ipad-4-email.jpg"><img src="/cassette/media/thumb-ipad-4-email.webp" width="360" height="480" loading="lazy" alt="The follow-up, already written. The Email tab on iPad"></a>
+    <a href="/cassette/media/cassette-ipad-5-study.jpg"><img src="/cassette/media/thumb-ipad-5-study.webp" width="360" height="480" loading="lazy" alt="Lectures turn into study cards. Study cards for a lecture on iPad"></a>
+  </div>
+  <h3>Mac screens</h3>
+  <p class="note">The App Store cards for Mac, 2880 by 1800.</p>
+  <div class="shots wide">
+    <a href="/cassette/media/cassette-mac-1-calls.jpg"><img src="/cassette/media/thumb-mac-1-calls.webp" width="540" height="338" loading="lazy" alt="Record your calls, no bot required. Cassette on the Mac recording a call"></a>
+    <a href="/cassette/media/cassette-mac-2-notes.jpg"><img src="/cassette/media/thumb-mac-2-notes.webp" width="540" height="338" loading="lazy" alt="Every meeting, summed up. The Notes tab on the Mac"></a>
+    <a href="/cassette/media/cassette-mac-3-sendto.jpg"><img src="/cassette/media/thumb-mac-3-sendto.webp" width="540" height="338" loading="lazy" alt="Your notes, in your notes app. SEND TO Apple Notes, OneNote, Notion, Evernote or Google Keep on the Mac"></a>
+    <a href="/cassette/media/cassette-mac-4-transcript.jpg"><img src="/cassette/media/thumb-mac-4-transcript.webp" width="540" height="338" loading="lazy" alt="Every word, and who said it. The Transcript tab on the Mac"></a>
+    <a href="/cassette/media/cassette-mac-5-ask.jpg"><img src="/cassette/media/thumb-mac-5-ask.webp" width="540" height="338" loading="lazy" alt="Ask your tapes. A question answered from what was said, on the Mac"></a>
+    <a href="/cassette/media/cassette-mac-6-email.jpg"><img src="/cassette/media/thumb-mac-6-email.webp" width="540" height="338" loading="lazy" alt="The follow-up, already written. The Email tab on the Mac"></a>
   </div>
   <h3>Apple Watch screens</h3>
   <p class="note">From Apple Watch Series 10 (46 mm), 416 by 496 PNG.</p>
@@ -244,8 +292,15 @@ document.addEventListener('click', function (e) {
     <p style="margin-bottom:0">Cassette is a cassette deck for iPhone that records meetings, lectures,
     interviews and voice memos, then writes the transcript, a summary, the highlights, the action items
     and a follow-up email, never with an outside AI service. Recording is free and unlimited, with no minute meter.
-    Cassette is A One Life Product, built by an independent studio, for iPhone and Apple Watch on the App Store.</p>
+    Cassette is A One Life Product, built by an independent studio, for iPhone, iPad, Apple Watch and Mac on the App Store.</p>
   </div>
+
+  <!-- [enable only if 'kit' is a yes] The code itself exists only after Reza says 'code'. Remove this
+       comment wrapper to publish the section:
+  <h2>For readers</h2>
+  <p>Readers can try Premium for 99 cents for the first month with the code CASSETTE (new subscribers; then $5.99 a month, cancel any time).
+  Redeem it at <a href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6812001404&amp;code=CASSETTE">apps.apple.com/redeem</a>, then open Cassette once.</p>
+  -->
 
   <h2>Contact</h2>
   <p>Press enquiries, interviews and Premium access for review:
