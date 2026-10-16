@@ -43,7 +43,7 @@ SOFTWARE_APP = {
     # The App Store files it under Productivity with Business second; Business is
     # the closest of Google's supported applicationCategory values.
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS 17.0 or later, watchOS 10.0 or later",
+    "operatingSystem": "iOS 17.0 or later, iPadOS 17.0 or later, macOS 14.0 or later, watchOS 10.0 or later",
     "url": f"{BASE}/cassette/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
@@ -170,7 +170,7 @@ def prerelease(h):
     close_old = '<span><small>Download on the</small><b>App Store</b></span></a>'
     j = h.index(close_old, i)
     h = h[:j] + '<span><small>Coming soon to the</small><b>App Store</b></span></span>' + h[j + len(close_old):]
-    h = once(h, 'On the App Store for iPhone, iOS 17 or later.',
-                'Coming soon to the App Store for iPhone, iOS 17 or later.')
+    h = once(h, 'On the App Store for iPhone, iPad and Mac: iOS 17 or later, macOS 14 or later.',
+                'Coming soon to the App Store for iPhone, iPad and Mac: iOS 17 or later, macOS 14 or later.')
     assert "id6812001404" not in h, "cassette prerelease: a store link survived"
     return h
