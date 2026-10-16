@@ -23,7 +23,10 @@ OUTPUTS
     cassette/screen-*.webp         five captures for the gallery
     cassette/media/                the press kit downloads: 1024px icon, the five
                                    App Store cards and the five plain screens at
-                                   full resolution, plus card thumbnails
+                                   full resolution, plus card thumbnails; since
+                                   2026-10-16 also the iPad and Mac App Store cards
+                                   (APP/AppStore/screenshots/cards105/ipad, cards106/mac
+                                   and the 1.0.7 SEND TO card in cards107/mac)
     icons/cassette-*.svg           feature icons, drawn from the app's own parts
     (stdout)                       the waveform envelope, pasted into script.js
 
@@ -201,6 +204,26 @@ def media():
         raw.save(os.path.join(OUT, "media", f"cassette-screen-{name}.jpg"), "JPEG", quality=92, optimize=True, progressive=True)
 
 
+def ipad_mac():
+    """The iPad and Mac cards for /cassette/press (added 2026-10-16): the sets that are
+    on the App Store, in store order. iPad is the 1.0.5 set. Mac is the 1.0.6 set with
+    the 1.0.7 SEND TO card third, where asc107.py placed it. Same JPEG and thumbnail
+    rule as media(); the Mac thumbnails are wider because the cards are landscape."""
+    sets = (
+        ("ipad", 360, [(f"cards105/ipad/{i}_{n}.png", n)
+                       for i, n in enumerate(("notes", "transcript", "ask", "email", "study"), 1)]),
+        ("mac", 540, [("cards106/mac/1_recording.png", "calls"), ("cards106/mac/2_notes.png", "notes"),
+                      ("cards107/mac/3_sendto.png", "sendto"), ("cards106/mac/3_transcript.png", "transcript"),
+                      ("cards106/mac/4_ask.png", "ask"), ("cards106/mac/5_email.png", "email")]),
+    )
+    for device, width, cards in sets:
+        for i, (rel, name) in enumerate(cards, 1):
+            card = Image.open(os.path.join(APP, "AppStore/screenshots", rel)).convert("RGB")
+            card.save(os.path.join(OUT, "media", f"cassette-{device}-{i}-{name}.jpg"), "JPEG", quality=90, optimize=True, progressive=True)
+            card.resize((width, round(width * card.height / card.width)), Image.LANCZOS).save(
+                os.path.join(OUT, "media", f"thumb-{device}-{i}-{name}.webp"), "WEBP", quality=80, method=6)
+
+
 def waveform(points=180):
     pcm = subprocess.run(["ffmpeg", "-v", "quiet", "-i", os.path.join(APP, "AppStore/screenshots/samples/relaunch.m4a"),
                           "-ac", "1", "-ar", "8000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
@@ -220,6 +243,7 @@ def main():
     qr()
     screens()
     media()
+    ipad_mac()
     waveform()
 
 

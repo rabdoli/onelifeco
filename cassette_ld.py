@@ -43,7 +43,7 @@ SOFTWARE_APP = {
     # The App Store files it under Productivity with Business second; Business is
     # the closest of Google's supported applicationCategory values.
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS 17.0 or later, watchOS 10.0 or later",
+    "operatingSystem": "iOS 17.0 or later, iPadOS 17.0 or later, macOS 14.0 or later, watchOS 10.0 or later",
     "url": f"{BASE}/cassette/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
@@ -153,7 +153,7 @@ def prerelease(h):
     # Organization graph: the Cassette brand's only sameAs is the store URL
     h = once(h, ',"sameAs":["https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"]}', '}')
     # hero: the button becomes the demo, the demo link becomes the status line
-    h = once(h, '<div class="lh-cta"><a href="https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404?ct=web_hero" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>',
+    h = once(h, '<div class="lh-cta"><a href="https://apps.apple.com/app/apple-store/id6812001404?pt=129004817&amp;ct=web_hero&amp;mt=8" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>',
                 '<div class="lh-cta"><a href="#try" class="btn-light">Try the deck <span class="arrow">&rarr;</span></a></div>')
     h = once(h, '<div class="cas-try-link"><a href="#try">Or try the deck right here</a></div>',
                 '<div class="cas-try-link">Coming soon to the App Store for iPhone</div>')
@@ -164,13 +164,13 @@ def prerelease(h):
     h = once(h, '>Download</p>\n      <h2>Get Cassette.</h2>', '>Coming Soon</p>\n      <h2>Get Cassette.</h2>')
     h = once(h, 'Free to download on the App Store. Scan the code or tap the badge.',
                 'Coming soon to the App Store, free to download. Until then, try the deck above.')
-    badge_open = '<a href="https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404?ct=web_badge" class="store-badge" target="_blank" rel="noopener" aria-label="Download Cassette on the App Store">'
+    badge_open = '<a href="https://apps.apple.com/app/apple-store/id6812001404?pt=129004817&amp;ct=web_badge&amp;mt=8" class="store-badge" target="_blank" rel="noopener" aria-label="Download Cassette on the App Store">'
     h = once(h, badge_open, '<span class="store-badge is-soon" aria-label="Cassette is coming soon to the App Store">')
     i = h.index('aria-label="Cassette is coming soon to the App Store">')
     close_old = '<span><small>Download on the</small><b>App Store</b></span></a>'
     j = h.index(close_old, i)
     h = h[:j] + '<span><small>Coming soon to the</small><b>App Store</b></span></span>' + h[j + len(close_old):]
-    h = once(h, 'On the App Store for iPhone, iOS 17 or later.',
-                'Coming soon to the App Store for iPhone, iOS 17 or later.')
+    h = once(h, 'On the App Store for iPhone, iPad and Mac: iOS 17 or later, macOS 14 or later.',
+                'Coming soon to the App Store for iPhone, iPad and Mac: iOS 17 or later, macOS 14 or later.')
     assert "id6812001404" not in h, "cassette prerelease: a store link survived"
     return h
