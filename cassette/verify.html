@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Verify your Cassette email</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* The page behind the VERIFY EMAIL key in Cassette's email: the deck, the ruled paper, one key.
+       It talks to Firebase Auth directly (the public web API key); the email's oobCode is the only secret. */
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #2B080D; font-family: Manrope, Helvetica, Arial, sans-serif; color: #2B2A28;
+           display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+    .deck { background: #E9E6E0; border: 3px solid #C9C5BE; border-radius: 28px; width: 100%; max-width: 460px; padding: 22px 22px 18px; }
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 14px; border-bottom: 1px solid rgba(0,0,0,.18); }
+    .top span { font-size: 19px; color: #3A3835; } .top b { font-weight: 800; }
+    .top img { width: 40px; height: 40px; border-radius: 10px; display: block; }
+    .paper { background: #F8F3E8; border: 1px solid #DDD6CA; border-radius: 10px; margin-top: 16px; position: relative; padding: 18px 20px 22px 66px; }
+    .paper::before { content: ''; position: absolute; left: 46px; top: 0; bottom: 0; width: 2px; background: #D17370; }
+    h1 { font-family: Caveat, cursive; font-weight: 600; font-size: 36px; line-height: 40px; margin: 0 0 8px; }
+    p { font-size: 15px; line-height: 24px; margin: 0 0 14px; }
+    label { display: block; font: 700 10px 'Space Mono', Menlo, monospace; letter-spacing: 1.6px; color: #B04A4A; margin: 14px 0 6px; }
+    .field { display: flex; border-bottom: 1px solid #D8D2C8; }
+    input { flex: 1; border: 0; background: transparent; font: 400 17px Manrope, sans-serif; padding: 6px 0; color: #2B2A28; outline: none; min-width: 0; }
+    .eye { border: 0; background: none; font: 700 10px 'Space Mono', monospace; letter-spacing: 1.4px; color: #6E6A63; cursor: pointer; }
+    .key { margin-top: 22px; background: #F6F4F0; border: 1px solid #D5D1CA; border-radius: 10px; box-shadow: 0 4px 0 #B9B6AF;
+           padding: 15px 30px; font: 700 13px 'Space Mono', Menlo, monospace; letter-spacing: 3px; color: #2B2A28; cursor: pointer; }
+    .key:active { transform: translateY(3px); box-shadow: 0 1px 0 #B9B6AF; }
+    .key:disabled { opacity: .5; }
+    .msg { font-size: 14px; color: #6E6A63; min-height: 22px; margin-top: 12px; } .msg.err { color: #B04A4A; }
+    .hide { display: none; }
+    .foot { text-align: center; font-size: 12px; color: #6E6A63; padding-top: 14px; }
+    .foot a { color: #2B2A28; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="top"><span>cassette <b>deck</b></span><img src="https://onelifeco.app/email/cassette-icon-email.png" alt="Cassette"></div>
+    <div class="paper">
+      <div<div id="loading"><h1>One moment</h1><p>Confirming your email.</p></div>
+      <div id="done" class="hide"><h1>Email confirmed</h1><p id="forEmail">Thanks. Your Cassette account is all set. Head back to the app.</p></div>
+      <div id="invalid" class="hide"><h1>This link has run out</h1><p>It may be old, or already used. If Cassette still asks you to verify, ask it for a new email.</p></div>
+    </div>
+     class="foot"><a href="https://onelifeco.app/termsofservice">Terms</a> · <a href="https://onelifeco.app/privacypolicy">Privacy</a> · <a href="mailto:cassette@onelifeco.app">Contact</a></div>
+  </div>
+  <script>
+    var API_KEY = 'AIzaSyDj6v4oO2yuwseopfnzZDkrPD5coio8W54';   // cassette-deck-app, Default Web App (public by design)
+    function $(id) { return document.getElementById(id); }
+    var oobCode = new URLSearchParams(location.search).get('oobCode');
+    (async function () {
+      try {
+        if (!oobCode) throw new Error('missing');
+        var r = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=' + API_KEY,
+          { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ oobCode: oobCode }) });
+        var d = await r.json();
+        if (!r.ok || d.error) throw new Error('invalid');
+        if (d.email) $('forEmail').textContent = d.email + ' is confirmed. Your Cassette account is all set. Head back to the app.';
+        $('loading').classList.add('hide'); $('done').classList.remove('hide');
+      } catch (e) { $('loading').classList.add('hide'); $('invalid').classList.remove('hide'); }
+    })();
+  </script>
+</body>
+</html>
