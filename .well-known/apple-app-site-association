@@ -4,5 +4,13 @@
       "69UXA6495G.app.cassette.deck",
       "69UXA6495G.app.luten.ios"
     ]
+  },
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["69UXA6495G.app.cassette.deck"],
+        "components": [{ "/": "/cassette/open*", "comment": "OPEN CASSETTE in Cassette's emails" }]
+      }
+    ]
   }
 }

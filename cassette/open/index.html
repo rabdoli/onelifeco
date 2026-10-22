@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Open Cassette</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Behind every OPEN CASSETTE key in Cassette's emails. With the app installed (from 1.0.11) iOS opens it
+       straight away and this page never shows; before that, and in mail apps that open links in their own
+       browser, it hands over to the app, and offers the App Store when the app isn't there. */
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #2B080D; font-family: Manrope, Helvetica, Arial, sans-serif; color: #2B2A28;
+           display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+    .deck { background: #E9E6E0; border: 3px solid #C9C5BE; border-radius: 28px; width: 100%; max-width: 420px; padding: 20px 20px 16px; }
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 14px; border-bottom: 1px solid rgba(0,0,0,.18); }
+    .top span { font-size: 18px; color: #3A3835; } .top b { font-weight: 800; }
+    .top img { width: 40px; height: 40px; border-radius: 10px; display: block; }
+    .paper { background: #F8F3E8; border: 1px solid #DDD6CA; border-radius: 10px; margin-top: 16px; position: relative; padding: 18px 18px 22px 58px; }
+    .paper::before { content: ''; position: absolute; left: 40px; top: 0; bottom: 0; width: 2px; background: #D17370; }
+    h1 { font-family: Caveat, cursive; font-weight: 600; font-size: 32px; line-height: 36px; margin: 0 0 8px; }
+    p { font-size: 15px; line-height: 23px; margin: 0 0 6px; }
+    .key { display: inline-block; margin-top: 16px; background: #F6F4F0; border: 1px solid #D5D1CA; border-radius: 10px; box-shadow: 0 4px 0 #B9B6AF;
+           padding: 14px 24px; font: 700 12px 'Space Mono', Menlo, monospace; letter-spacing: 2.5px; color: #2B2A28; text-decoration: none; white-space: nowrap; }
+    .small { font-size: 13px; color: #6E6A63; margin-top: 18px; }
+    .small a { color: #1B7C63; font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <div class="top"><span>cassette <b>deck</b></span><img src="https://www.onelifeco.app/email/cassette-icon-email.png" alt="Cassette"></div>
+    <div class="paper">
+      <h1>Opening Cassette</h1>
+      <p>If it doesn't open by itself, press the key.</p>
+      <a class="key" href="cassettedeck://open">OPEN CASSETTE</a>
+      <p class="small">Don't have it yet? <a href="https://apps.apple.com/app/id6812001404">Get Cassette on the App Store</a></p>
+    </div>
+  </div>
+  <script>
+    // Apple devices hand over to the app; anywhere else, the key and the store link are all there is.
+    if (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)) { setTimeout(function () { location.href = 'cassettedeck://open'; }, 150); }
+  </script>
+</body>
+</html>
