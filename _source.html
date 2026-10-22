@@ -102,6 +102,28 @@ document.addEventListener('click', function (e) {
     link_text: (a.textContent || '').trim().slice(0, 60)
   });
 }, true);
+
+// The same for Google Play, since Luten reached Android.
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('playstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+
+// On an Android phone an App Store button is a wall (8 of the first 65
+// pageviews came from Android), so a link carrying data-android-href goes to
+// Google Play there instead, with its own label.
+document.addEventListener('DOMContentLoaded', function () {
+  if (!/Android/i.test(navigator.userAgent)) return;
+  document.querySelectorAll('a[data-android-href]').forEach(function (a) {
+    a.href = a.getAttribute('data-android-href');
+    var t = a.getAttribute('data-android-text');
+    if (t && a.firstChild && a.firstChild.nodeType === 3) a.firstChild.nodeValue = t + ' ';
+  });
+});
 </script>
 </head>
 <body>
@@ -316,7 +338,7 @@ document.addEventListener('click', function (e) {
            on every subscription are both still stated in the FAQ and in the Get
            section below, which is where someone actually looks for them. .lh-cta
            carries margin-top:38px so the button spaces itself without the box. -->
-      <div class="lh-cta"><a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_hero" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>
+      <div class="lh-cta"><a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_hero" data-android-href="https://play.google.com/store/apps/details?id=app.luten.android&amp;utm_source=onelifeco&amp;utm_campaign=web_hero" data-android-text="Get it on Google Play" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>
       <!-- A second, lower-commitment action, added 2026-09-07. In the 14 days to
            that date this site took 16 iOS pageviews and NOT ONE of them tapped an
            App Store link, while all three recorded taps came from Windows, Mac and
@@ -446,7 +468,7 @@ document.addEventListener('click', function (e) {
       <h2>What you should know.</h2>
       <p class="lead">Honest details, no fine print games.</p>
       <div class="detail-list">
-        <div class="detail-row"><div class="k">Availability</div><div class="v">On the <b>App Store</b> for <b>iPhone</b>, with an Apple Watch app and iMessage stickers included. Android is coming soon.</div></div>
+        <div class="detail-row"><div class="k">Availability</div><div class="v">On the <b>App Store</b> for <b>iPhone</b>, with an Apple Watch app and iMessage stickers included, and on <b>Google Play</b> for <b>Android</b>.</div></div>
         <div class="detail-row"><div class="k">Wellness</div><div class="v">Luten is for <b>relaxation, focus and rest</b>. It makes no medical claims and is not a medical device.</div></div>
         <div class="detail-row"><div class="k">Privacy</div><div class="v"><b>Local-first.</b> Your profile and preferences sync securely so they survive a reinstall, with no cross-app tracking.</div></div>
         <div class="detail-row"><div class="k">In short</div><div class="v">Sound, not meditation, to help you sleep, focus and de-stress. Especially good for ADHD and restless minds.</div></div>
@@ -468,19 +490,19 @@ document.addEventListener('click', function (e) {
     <div class="wrap2">
       <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">Get Luten</p>
       <h2>Get Luten.</h2>
-      <p class="lead">Out now on the App Store, free to download. Scan the code or tap the badge.</p>
+      <p class="lead">Out now on the App Store and Google Play, free to download. Tap a badge, or scan the code with an iPhone.</p>
       <div class="get-row">
         <div class="store-badges">
           <a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_badge" class="store-badge" target="_blank" rel="noopener" aria-label="Download Luten on the App Store">
             <svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.99-1.45 1.4-2.85 1.42-2.93-.03-.01-2.73-1.05-2.76-4.15zM14.62 4.7c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45z"/></svg>
             <span><small>Download on the</small><b>App Store</b></span></a>
-          <span class="store-badge is-soon" aria-label="Android version coming soon">
+          <a href="https://play.google.com/store/apps/details?id=app.luten.android&amp;utm_source=onelifeco&amp;utm_campaign=web_badge" class="store-badge" target="_blank" rel="noopener" aria-label="Get Luten on Google Play">
             <svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.4.4 0 00-.7-.4l-1.86 3.22a11.5 11.5 0 00-9.76 0L5.26 5.9a.4.4 0 10-.7.4L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
-            <span><small>Coming soon for</small><b>Android</b></span></span>
+            <span><small>Get it on</small><b>Google Play</b></span></a>
         </div>
         <div class="qr"><div class="qr-code"><img src="/luten/luten-qr.svg" width="128" height="128" alt="QR code linking to Luten on the App Store" decoding="async"></div><span>Scan to download</span></div>
       </div>
-      <p class="get-note">Out now on the App Store for iPhone. Android is coming soon.</p>
+      <p class="get-note">Out now on the App Store for iPhone and on Google Play for Android.</p>
       <p class="get-note">Read <a href="/luten/white-noise/" style="color:#c0c1ff;">white noise, pink noise and brown noise</a>, <a href="/luten/rain-sounds/" style="color:#c0c1ff;">rain sounds with no thunder</a>, <a href="/luten/fan-sounds/" style="color:#c0c1ff;">fan sounds for sleeping</a>, <a href="/luten/3am/" style="color:#c0c1ff;">sounds for waking up at 3am</a> or <a href="/luten/no-talking/" style="color:#c0c1ff;">sleep sounds with no talking</a>, or see the <a href="/luten/press" style="color:#c0c1ff;">press kit</a>.</p>
     </div>
   </section>

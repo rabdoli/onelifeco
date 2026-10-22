@@ -103,6 +103,28 @@ document.addEventListener('click', function (e) {
     link_text: (a.textContent || '').trim().slice(0, 60)
   });
 }, true);
+
+// The same for Google Play, since Luten reached Android.
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('playstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+
+// On an Android phone an App Store button is a wall (8 of the first 65
+// pageviews came from Android), so a link carrying data-android-href goes to
+// Google Play there instead, with its own label.
+document.addEventListener('DOMContentLoaded', function () {
+  if (!/Android/i.test(navigator.userAgent)) return;
+  document.querySelectorAll('a[data-android-href]').forEach(function (a) {
+    a.href = a.getAttribute('data-android-href');
+    var t = a.getAttribute('data-android-text');
+    if (t && a.firstChild && a.firstChild.nodeType === 3) a.firstChild.nodeValue = t + ' ';
+  });
+});
 </script>
 </head>
 <body>

@@ -7,7 +7,7 @@ Contact: contact@onelifeco.app
 
 ## Apps and status
 
-- [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app. Android is coming soon.
+- [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app, and on Google Play for Android.
 - [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Available now on the App Store for iPhone.
 - [Spend](https://www.onelifeco.app/apps/spend/): daily expense tracking. In development, with a waitlist.
 - Still and Move: in development. No details published yet.
@@ -21,12 +21,12 @@ Who it is for: people who want sound to sleep, work, study or wind down to, incl
 Key features:
 - Five modes: Sleep, Focus, Stress, ADHD and Kids.
 - White noise, pink noise, brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes. Every sound is instrumental, with even loudness and crossfaded loops.
-- Sona, a sound companion that suggests a real track from how you describe your feelings. Sona runs on the iPhone, and what you type stays on the phone.
+- Sona, a sound companion that suggests a real track from how you describe your feelings. Sona runs on the phone, and what you type stays on the phone.
 - A sleep timer that fades the sound out, a focus timer, a Pomodoro-style timer in ADHD mode, and simple guided breathing.
-- A sleep score built from your Apple Health data, with duration, deep sleep, REM, interruptions and vitals.
-- Background and lock-screen playback, offline downloads, a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
+- On iPhone, a sleep score built from your Apple Health data, with duration, deep sleep, REM, interruptions and vitals.
+- Background and lock-screen playback and offline downloads, and on iPhone a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
 
-Platforms: iPhone and Apple Watch. Android is coming soon.
+Platforms: iPhone and Apple Watch (App Store), and Android phones (Google Play: https://play.google.com/store/apps/details?id=app.luten.android).
 
 Pricing: free to download, with an optional subscription. Every subscription starts with a 7-day free trial.
 

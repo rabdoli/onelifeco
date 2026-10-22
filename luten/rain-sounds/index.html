@@ -116,7 +116,7 @@
       "name": "How much does Luten cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Luten is free to download from the App Store. There is an optional subscription at $7.99 per month or $59.99 per year, and the annual plan starts with a 7 day free trial. A one-time lifetime option is $119.99."
+        "text": "Luten is free to download from the App Store and Google Play. There is an optional subscription at $7.99 per month or $59.99 per year, and the annual plan starts with a 7 day free trial. A one-time lifetime option is $119.99."
       }
     }
   ]
@@ -156,6 +156,14 @@ document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
   if (!a || !window.posthog) return;
   posthog.capture('appstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('playstore_click', {
     route: location.pathname,
     link_text: (a.textContent || '').trim().slice(0, 60)
   });
@@ -295,10 +303,11 @@ document.addEventListener('click', function (e) {
 
   <p>
     <a class="cta" href="https://apps.apple.com/app/id6777673392">Get Luten on the App Store</a>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=app.luten.android&amp;utm_source=onelifeco&amp;utm_campaign=web_rain_sounds">Get Luten on Google Play</a>
     <a class="cta" href="/luten/">More about Luten</a>
   </p>
   <p class="note">Free to download. Optional subscription at $7.99 a month or $59.99 a year, and the
-  annual plan starts with a 7 day free trial. Lifetime is $119.99, once. iPhone, iOS 17 and later.</p>
+  annual plan starts with a 7 day free trial. Lifetime is $119.99, once. iPhone on iOS 17 and later, and Android.</p>
   <p class="note">Luten is a wellness app, not a medical device. Nothing here is advice about
   treating a sleep or attention problem, and how long anyone listens is their own business.</p>
 

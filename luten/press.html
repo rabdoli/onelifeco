@@ -102,6 +102,14 @@ document.addEventListener('click', function (e) {
     link_text: (a.textContent || '').trim().slice(0, 60)
   });
 }, true);
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('playstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
 </script>
 </head>
 <body>
@@ -120,11 +128,12 @@ document.addEventListener('click', function (e) {
     <table>
       <tr><td>Name</td><td>Luten</td></tr>
       <tr><td>Category</td><td>Health &amp; Fitness (also Productivity)</td></tr>
-      <tr><td>Platform</td><td>iOS 17 and later. iPhone, with Apple Watch, home screen widget and iMessage extensions</td></tr>
+      <tr><td>Platform</td><td>iPhone on iOS 17 and later, with Apple Watch, home screen widget and iMessage extensions. Android phones on Android 7 and later</td></tr>
       <tr><td>Release date</td><td>Released Monday, August 17, 2026. Public launch Tuesday, August 18, 2026</td></tr>
-      <tr><td>Price</td><td>Free to download. $7.99/month, $59.99/year with a 7 day free trial, $119.99 one-time lifetime. Family $89.99/year, Student $29.99/year</td></tr>
+      <tr><td>Price</td><td>Free to download. $7.99/month, $59.99/year with a 7 day free trial, $119.99 one-time lifetime. Family $89.99/year (iPhone), Student $29.99/year</td></tr>
       <tr><td>Developer</td><td>One Life, an independent studio. Luten is A One Life Product</td></tr>
       <tr><td>App Store</td><td><a href="https://apps.apple.com/app/id6777673392">apps.apple.com/app/id6777673392</a> (live now)</td></tr>
+      <tr><td>Google Play</td><td><a href="https://play.google.com/store/apps/details?id=app.luten.android">play.google.com/store/apps/details?id=app.luten.android</a> (live now)</td></tr>
       <tr><td>Website</td><td><a href="https://www.onelifeco.app/luten/">onelifeco.app/luten</a></td></tr>
       <tr><td>Press contact</td><td><a href="mailto:hello@onelifeco.app">hello@onelifeco.app</a></td></tr>
     </table>
@@ -215,7 +224,7 @@ document.addEventListener('click', function (e) {
     Tell it how you feel in plain words and it answers with sound chosen for that state, then
     remembers what worked, all on your device and never shared. Sounds across sleep, focus,
     ADHD, stress and kids, with no vocals, no talking and no ads. Luten is A One Life Product,
-    built by an independent studio, and is available on the App Store now.</p>
+    built by an independent studio, and is available now on the App Store and Google Play.</p>
   </div>
 
   <h2>Contact</h2>

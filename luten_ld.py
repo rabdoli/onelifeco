@@ -29,6 +29,9 @@ when real ratings exist, not before.
 
 BASE = "https://www.onelifeco.app"
 APP_STORE = "https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392"
+# Live on Google Play from the Android launch. A 404 here would weaken sameAs,
+# so it went in only once the listing was public.
+GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=app.luten.android"
 
 # Every profile that is genuinely ours. Adding one we do not control, or one
 # that 404s, weakens the set rather than strengthening it.
@@ -40,6 +43,7 @@ SAME_AS = [
     "https://alternativeto.net/software/luten/",
     "https://www.saashub.com/luten",
     APP_STORE,
+    GOOGLE_PLAY,
     "https://www.instagram.com/lutenapp/",
     "https://www.tiktok.com/@lutenapp",
     "https://www.youtube.com/@lutenapp",
@@ -56,11 +60,11 @@ SOFTWARE_APP = {
     # The exact App Store title, so the two listings corroborate each other.
     "alternateName": "Luten: Sleep & Focus Sounds",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "iOS",
+    "operatingSystem": "iOS, Android",
     "url": f"{BASE}/luten/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
-    "description": ("A sound-first iOS app for a busy mind: ADHD, focus, study "
+    "description": ("A sound-first app for iPhone and Android, for a busy mind: ADHD, focus, study "
                     "and sleep. Tell it how you feel and press play. "
                     "Not another meditation app."),
     # `offers` is one of Google's required properties. The app is a free
@@ -90,7 +94,7 @@ SOFTWARE_APP = {
 # length. That is the line in CLAUDE.md, and it holds for the question text too.
 FAQ = [
     ("What is Luten?",
-     "Luten is an iOS app that plays sound for sleep, focus, ADHD, "
+     "Luten is an app for iPhone and Android that plays sound for sleep, focus, ADHD, "
      "stress and kids, and learns which sounds you actually stay with. "
      "It is made by One Life. The name is pronounced LOO-ten."),
     ("Is Luten a meditation app?",
@@ -101,8 +105,8 @@ FAQ = [
      "People often choose steady sound with no beat and nothing that builds "
      "or drops: brown noise, pink noise, rain, ocean, fan hum and low held "
      "tones. Which one suits you is personal, so Luten lets you try them and "
-     "puts the ones you keep playing first. It also shows a sleep score built "
-     "from your Apple Health data so you can see your nights."),
+     "puts the ones you keep playing first. On iPhone it also shows a sleep "
+     "score built from your Apple Health data so you can see your nights."),
     ("What is the difference between white noise, pink noise and brown noise?",
      "White noise has equal energy at every frequency, so it sounds bright "
      "and hissy, like static. Pink noise has less energy as the pitch rises, "
@@ -134,24 +138,24 @@ FAQ = [
      "Luten is sound, not guided meditation: you say how you feel and press "
      "play, with no course to finish. It covers sleep, focus, stress, ADHD "
      "and kids in one app, every sound is instrumental with even loudness, "
-     "and Sona, the companion that suggests sounds, runs on your iPhone. It "
-     "also shows a sleep score built from your Apple Health data."),
+     "and Sona, the companion that suggests sounds, runs on your phone. On "
+     "iPhone it also shows a sleep score built from your Apple Health data."),
     ("Does Luten work without a connection?",
      "Yes. Download the sounds you want and they play with no signal, on "
      "a plane, in a basement, anywhere. Nothing has to buffer before it "
      "starts."),
     ("Does Luten keep playing when I lock my phone?",
      "Yes. Playback carries on with the screen off, with full controls "
-     "on the lock screen and in Control Center, and a sleep timer if you "
-     "want one."),
+     "on the lock screen (and in Control Center on iPhone), and a sleep "
+     "timer if you want one."),
     ("Does Luten send my data anywhere?",
-     "Sona, the companion you talk to, runs entirely on your iPhone "
-     "using Apple's own on-device language tools. What you type stays on "
-     "the phone."),
+     "Sona, the companion you talk to, runs entirely on your phone, and "
+     "on iPhone it also uses Apple's own on-device language tools. What "
+     "you type stays on the phone."),
     ("How do I get Luten, and is it free?",
-     "Luten is out now on the App Store for iPhone. It is a free "
-     "download with an optional subscription, and every subscription "
-     "starts with a 7-day free trial. Android is coming soon."),
+     "Luten is out now on the App Store for iPhone and on Google Play "
+     "for Android. It is a free download with an optional subscription, "
+     "and every subscription starts with a 7-day free trial."),
 ]
 
 FAQ_PAGE = {
