@@ -38,8 +38,17 @@
     </div>
   </div>
   <script>
-    // Apple devices hand over to the app; anywhere else, the key and the store link are all there is.
+    // Apple devices hand over to the app. On Android the app opens this link itself once it is installed (an App
+    // Link, from Android build 10); when the page does show, the key opens the app or, if it isn't there, Google
+    // Play, and the store link points to Google Play. Anywhere else, the key and the store link are all there is.
     if (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)) { setTimeout(function () { location.href = 'cassettedeck://open'; }, 150); }
+    if (/Android/i.test(navigator.userAgent)) {
+      var play = 'https://play.google.com/store/apps/details?id=app.cassette.deck&utm_source=onelifeco&utm_campaign=open_page';
+      document.querySelector('.key').href = 'intent://open#Intent;scheme=cassettedeck;package=app.cassette.deck;S.browser_fallback_url=' + encodeURIComponent(play) + ';end';
+      var store = document.querySelector('.small a');
+      store.href = play;
+      store.textContent = 'Get Cassette on Google Play';
+    }
   </script>
 </body>
 </html>

@@ -43,7 +43,7 @@ ROUTES={
  "cassette/delete-account":("Delete Your Cassette Account &middot; One Life",
    "How to delete your Cassette account, in the app or by email without reinstalling it: what is deleted, what is kept and for how long, and how to reach us.", None),
  "cassette":("Cassette: AI Note Taker for Meetings, Lectures &amp; Voice Memos",
-   "Cassette is a cassette deck for iPhone that records meetings, lectures and memos, then writes the transcript, summary, action items and follow-up email.", CASSETTE_LD),
+   "Cassette is a cassette deck for iPhone and Android that records meetings, lectures and memos, then writes the transcript, summary, action items and follow-up email.", CASSETTE_LD),
  "apps/spend":("Spend: Daily Expense Tracking App, Coming Soon &middot; One Life",
    "Spend is a daily expense tracking app from One Life, the company behind Luten and Cassette. It is in development. Join the waitlist to hear when it launches.", None),
  "about":("About &middot; One Life",
@@ -64,7 +64,7 @@ PAGEID={"home":"page-home","luten":"page-luten","cassette":"page-cassette","apps
 OG_IMAGE={"luten":"/luten/og-luten.png","cassette":"/cassette/og-cassette.png"}
 
 HOME_TITLE="One Life &middot; We light the way."
-HOME_DESC="One Life is a quiet company building simple apps for daily life: Luten, sound for sleep and focus, and Cassette, an AI note taker for iPhone."
+HOME_DESC="One Life is a quiet company building simple apps for daily life: Luten, sound for sleep and focus, and Cassette, an AI note taker for iPhone and Android."
 
 ALL_PAGE_IDS=["page-home","page-luten","page-cassette","page-spend","page-about","page-contact","page-terms","page-privacy","page-delete-account","page-cassette-delete-account"]
 

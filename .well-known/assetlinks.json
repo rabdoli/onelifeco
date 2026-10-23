@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.cassette.deck",
+      "sha256_cert_fingerprints": ["94:84:C2:57:50:83:34:3B:87:97:46:3A:94:37:7F:DE:74:4C:E0:88:04:0C:63:1D:8F:BF:B3:93:E3:24:36:E0"]
+    }
+  }
+]

@@ -1,6 +1,6 @@
 # One Life
 
-> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone. Its second is Cassette, an AI note taker for iPhone.
+> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone. Its second is Cassette, an AI note taker for iPhone and Android.
 
 Website: https://www.onelifeco.app/
 Contact: contact@onelifeco.app
@@ -8,7 +8,7 @@ Contact: contact@onelifeco.app
 ## Apps and status
 
 - [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app, and on Google Play for Android.
-- [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Available now on the App Store for iPhone.
+- [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone and Android that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Available now on the App Store for iPhone and on Google Play for Android.
 - [Spend](https://www.onelifeco.app/apps/spend/): daily expense tracking. In development, with a waitlist.
 - Still and Move: in development. No details published yet.
 
@@ -40,7 +40,7 @@ Download: https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392
 
 ## Cassette
 
-What it is: an iPhone app styled as a cassette deck. Press Record in a meeting, lecture or conversation, and Cassette writes the transcript, a short summary, highlights, action items with owners and due dates when they are mentioned, and a follow-up email draft.
+What it is: an iPhone and Android app styled as a cassette deck. Press Record in a meeting, lecture or conversation, and Cassette writes the transcript, a short summary, highlights, action items with owners and due dates when they are mentioned, and a follow-up email draft.
 
 One tap to record: a tape can start from a Home Screen or Lock Screen widget, or from a Record button in Control Center, on the Lock Screen or on the Action button (iOS 18 or later), and the Dynamic Island shows the recording, where it can be paused or marked.
 
@@ -50,9 +50,11 @@ Pricing: free to download and to record, with no minute meter. Transcripts and n
 
 Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
 
-Requirements: any iPhone on iOS 17 or later.
+Android: the same deck on Google Play, Android 10 or later. Transcripts are written on the phone by the Whisper model that comes with the app, and the notes by Cassette's own notes model on phones with 8 GB of memory or more; other phones get simpler notes. The audio is never sent anywhere to be transcribed or written up.
 
-Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404
+Requirements: any iPhone on iOS 17 or later, or any Android phone on Android 10 or later.
+
+Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPhone, iPad, Mac) and https://play.google.com/store/apps/details?id=app.cassette.deck (Android)
 
 ## Pages
 

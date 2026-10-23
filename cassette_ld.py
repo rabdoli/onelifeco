@@ -20,6 +20,7 @@ tapes a month" on 2026-09-16, and it matches the App Store description.
 
 BASE = "https://www.onelifeco.app"
 APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
+GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=app.cassette.deck"
 
 # RELEASED is False until Apple's public lookup lists Cassette. Until then its App
 # Store URL is a 404 for every reader, so the build (seo-build.py, via
@@ -31,6 +32,7 @@ RELEASED = True
 
 SAME_AS = [
     APP_STORE,
+    GOOGLE_PLAY,
 ]
 
 SOFTWARE_APP = {
@@ -43,7 +45,7 @@ SOFTWARE_APP = {
     # The App Store files it under Productivity with Business second; Business is
     # the closest of Google's supported applicationCategory values.
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "iOS 17.0 or later, iPadOS 17.0 or later, macOS 14.0 or later, watchOS 10.0 or later",
+    "operatingSystem": "iOS 17.0 or later, iPadOS 17.0 or later, macOS 14.0 or later, watchOS 10.0 or later, Android 10 or later",
     "url": f"{BASE}/cassette/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
@@ -77,24 +79,27 @@ FAQ = [
      "notes are free for 5 tapes a month. Cassette Premium writes up every "
      "tape and backs up your shelf, and the annual plan starts with a 7-day "
      "free trial."),
-    ("Does my audio leave my iPhone?",
-     "The audio stays on your iPhone unless you sign in with Premium to back it up. "
-     "Transcripts come from Apple speech recognition, on the device wherever your iPhone "
+    ("Does my audio leave my phone?",
+     "The audio stays on your phone unless you sign in with Premium to back it up. "
+     "On iPhone, transcripts come from Apple speech recognition, on the device wherever your iPhone "
      "supports your language; otherwise that recording may be sent to Apple to transcribe. "
      "The notes are written by Apple's models, never by an outside AI service: on iOS 27 "
      "the transcript goes to Apple's Private Cloud Compute, which does not keep it, and on "
-     "earlier iPhones the notes are written on the device."),
+     "earlier iPhones the notes are written on the device. On Android, the transcript "
+     "and the notes are always written on the phone."),
     ("Do I need an account?",
      "No. Recording, transcripts and notes all work without one. Signing in "
      "keeps your purchase with you, and with Premium it backs up every tape so "
-     "it comes back on a new iPhone."),
+     "it comes back on a new phone."),
     ("What goes in the notes?",
      "A short summary, the highlights worth remembering, and the action items "
      "with owners and due dates when they are mentioned, plus a follow-up email "
      "draft for the people who came up."),
-    ("Which iPhones does it work on?",
+    ("Which phones does it work on?",
      "Any iPhone on iOS 17 or later. Notes by Apple Intelligence need an iPhone "
-     "that supports it; other iPhones get simpler notes, written on the device."),
+     "that supports it; other iPhones get simpler notes, written on the device. "
+     "On Android, any phone on Android 10 or later: phones with 8 GB of memory or "
+     "more get Cassette's own notes model, and others get simpler notes."),
     ("Does it work on Apple Watch?",
      "Yes. The Apple Watch app records with the watch's microphone, with pause "
      "and stop, and sends each tape to your iPhone, which writes the transcript "
@@ -104,7 +109,7 @@ FAQ = [
      "Yes. Copy a whole tab in one tap, or save the email, the notes or the "
      "transcript as a PDF or a Word document."),
     ("Does it keep recording with the screen off?",
-     "Yes. Lock your iPhone or switch apps and the tape keeps rolling. A phone "
+     "Yes. Lock your phone or switch apps and the tape keeps rolling. A phone "
      "call pauses it, and you pick up where you left off."),
     ("How do I delete my recordings?",
      "Open a tape and press Delete, or press and hold it on the shelf. Deleting "
