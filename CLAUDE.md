@@ -91,8 +91,9 @@ after Luten, and a working "try the deck" demo in script.js (section 6b) that
 replays a sample meeting and never touches the microphone.
 
 - **Cassette's free tier IS published, on purpose.** Reza approved "transcripts
-  and notes free for 5 tapes a month" on 2026-09-16; it matches the App Store
-  description. The never-publish-the-free-tier rule above is Luten's alone. Do
+  and notes free for 5 tapes a month" on 2026-09-16; on 2026-10-16 he cut it to
+  2 ("wall"), read by the app from cassette/config.json, so the page says 2 tapes
+  a month and must change whenever config.json does. The never-publish-the-free-tier rule above is Luten's alone. Do
   not "fix" the Cassette page by removing it, and do not copy the wording onto
   anything Luten.
 - Every image under `cassette/` and every `icons/cassette-*.svg` comes from

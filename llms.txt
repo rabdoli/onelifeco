@@ -46,7 +46,7 @@ One tap to record: a tape can start from a Home Screen or Lock Screen widget, or
 
 Apple Watch: an Apple Watch app records with the watch's microphone, with pause and stop, and sends each tape to the iPhone for its transcript and notes; a watch face complication or Siri starts one.
 
-Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 5 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
+Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 2 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
 
 Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
 

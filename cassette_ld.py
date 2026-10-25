@@ -76,7 +76,7 @@ if not RELEASED:
 FAQ = [
     ("Is Cassette free?",
      "Yes, to download and to record, with no minute meter. Transcripts and "
-     "notes are free for 5 tapes a month. Cassette Premium writes up every "
+     "notes are free for 2 tapes a month. Cassette Premium writes up every "
      "tape and backs up your shelf, and the annual plan starts with a 7-day "
      "free trial."),
     ("Does my audio leave my phone?",
