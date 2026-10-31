@@ -9,7 +9,10 @@
     "details": [
       {
         "appIDs": ["69UXA6495G.app.cassette.deck"],
-        "components": [{ "/": "/cassette/open*", "comment": "OPEN CASSETTE in Cassette's emails" }]
+        "components": [
+          { "/": "/cassette/open*", "comment": "OPEN CASSETTE in Cassette's emails" },
+          { "/": "/cassette/i/*", "comment": "A friend's invite: 3 extra free tapes" }
+        ]
       }
     ]
   }
