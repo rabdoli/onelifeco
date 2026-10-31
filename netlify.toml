@@ -88,6 +88,14 @@
   to = "/termsofservice/"
   status = 301
 
+# A friend's Cassette invite: www.onelifeco.app/cassette/i/<CODE>. One static page serves every code and reads it
+# from the path. With the app installed the link opens Cassette instead (apple-app-site-association lists
+# /cassette/i/*; assetlinks.json covers every path for Android). Must stay above the 404 catch-all.
+[[redirects]]
+  from = "/cassette/i/*"
+  to = "/cassette/i/index.html"
+  status = 200
+
 # Missing paths must 404, not serve the homepage at 200.
 #
 # The old rule sent every unmatched path to /index.html with status 200, so
