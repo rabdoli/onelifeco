@@ -33,6 +33,7 @@ RELEASED = True
 SAME_AS = [
     APP_STORE,
     GOOGLE_PLAY,
+    "https://www.producthunt.com/products/cassette-ai-note-taker",
 ]
 
 SOFTWARE_APP = {
