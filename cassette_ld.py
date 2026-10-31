@@ -88,6 +88,13 @@ FAQ = [
      "the transcript goes to Apple's Private Cloud Compute, which does not keep it, and on "
      "earlier iPhones the notes are written on the device. On Android, the transcript "
      "and the notes are always written on the phone."),
+    ("Does Cassette work offline?",
+     "Yes. You can record, and get the transcript and the notes, in airplane mode. "
+     "On Android everything is written on the phone. On iPhone, speech is recognised "
+     "on the device for the languages your iPhone supports there, and when Apple's "
+     "Private Cloud Compute can't be reached the notes are written on the iPhone "
+     "instead. Switch on On-device only in your profile and your tapes never leave "
+     "the iPhone."),
     ("Do I need an account?",
      "No. Recording, transcripts and notes all work without one. Signing in "
      "keeps your purchase with you, and with Premium it backs up every tape so "

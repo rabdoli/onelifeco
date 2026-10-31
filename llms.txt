@@ -48,7 +48,7 @@ Apple Watch: an Apple Watch app records with the watch's microphone, with pause 
 
 Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 2 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
 
-Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional.
+Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional. Cassette works offline: recording, transcripts and notes all work in airplane mode, and an On-device only switch keeps every tape on the iPhone.
 
 Android: the same deck on Google Play, Android 10 or later. Transcripts are written on the phone by the Whisper model that comes with the app, and the notes by Cassette's own notes model on phones with 8 GB of memory or more; other phones get simpler notes. The audio is never sent anywhere to be transcribed or written up.
 
@@ -69,6 +69,8 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Luten press kit](https://www.onelifeco.app/luten/press)
 - [Cassette](https://www.onelifeco.app/cassette/)
 - [Cassette press kit](https://www.onelifeco.app/cassette/press)
+- [Cassette vs Otter](https://www.onelifeco.app/cassette/vs-otter/): a sourced comparison, checked 31 October 2026
+- [Cassette vs Wispr Flow Notetaker](https://www.onelifeco.app/cassette/vs-wispr-flow/): a sourced comparison, checked 31 October 2026
 - [Spend waitlist](https://www.onelifeco.app/apps/spend/)
 - [About One Life](https://www.onelifeco.app/about/)
 - [Contact](https://www.onelifeco.app/contact/)
