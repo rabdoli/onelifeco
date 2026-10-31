@@ -514,6 +514,13 @@ a{color:inherit;text-decoration:none;}
 .cas-try-link a{color:var(--bark);font-size:15px;border-bottom:1px solid rgba(174,183,207,0.4);padding-bottom:2px;transition:color .4s var(--ease),border-color .4s var(--ease);}
 .cas-try-link a:hover{color:var(--lamp);border-color:var(--lamp);}
 #try{scroll-margin-top:calc(var(--nav-h) - 20px);}
+.cas-ph{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:9px 20px 9px 12px;border-radius:14px;
+  border:1px solid rgba(218,85,47,.45);background:rgba(218,85,47,.10);color:var(--lamp);text-align:left;line-height:1.1;
+  opacity:0;animation:fadeUp 1.6s var(--ease) 1.45s forwards;transition:background .4s var(--ease),border-color .4s var(--ease);}
+.cas-ph:hover{background:rgba(218,85,47,.20);border-color:rgba(218,85,47,.8);}
+.cas-ph svg{flex:none;display:block;}
+.cas-ph small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bark);margin-bottom:3px;}
+.cas-ph b{display:block;font-size:18px;font-weight:600;letter-spacing:.01em;}
 
 .station.side-left .cas-mark{margin-left:0;}.station.side-right .cas-mark{margin-left:auto;margin-right:0;}
 
@@ -651,5 +658,5 @@ a{color:inherit;text-decoration:none;}
 }
 @media(prefers-reduced-motion:reduce){
   .cas-wave svg,.cas-demo.rolling .cas-reel,.cas-lamp i{animation:none !important;}
-  .luten-hero .cas-mark.big,.cas-try-link{opacity:1 !important;animation:none !important;}
+  .luten-hero .cas-mark.big,.cas-try-link,.cas-ph{opacity:1 !important;animation:none !important;}
 }
