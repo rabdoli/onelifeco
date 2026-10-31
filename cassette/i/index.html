@@ -72,9 +72,18 @@
     var raw = parts[0] === 'cassette' && parts[1] === 'i' && parts[2] !== 'index.html' ? (parts[2] || '') : '';
     var code = decodeURIComponent(raw).toUpperCase().replace(/[^A-Z0-9]/g, '');
     if (code.length < 4 || code.length > 16) code = '';
+    // The heading names the friend once the server knows the code ("Reza sent you..."); until then, and for a code
+    // it doesn't know, it stays "A friend". The code itself is never shown as a name.
     if (code) {
-      document.getElementById('heading').textContent = code + ' sent you 3 extra free tapes';
-      document.title = code + ' sent you 3 extra free tapes';
+      fetch('https://us-central1-cassette-deck-app.cloudfunctions.net/redeemInvite', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: { code: code, preview: true } })
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        var name = j && j.result && j.result.status === 'found' && (j.result.inviterName || '').trim();
+        if (!name) return;
+        document.getElementById('heading').textContent = name + ' sent you 3 extra free tapes';
+        document.title = name + ' sent you 3 extra free tapes';
+      }).catch(function () {});
     }
     // Opened in a browser with the app already there (a link typed or pasted into the address bar never opens an
     // app): hand the code to Cassette directly. On Android, an intent that falls back to Google Play.
