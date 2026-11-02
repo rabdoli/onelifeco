@@ -527,6 +527,10 @@ a{color:inherit;text-decoration:none;}
 .cas-ph svg{flex:none;display:block;}
 .cas-ph small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bark);margin-bottom:3px;}
 .cas-ph b{display:block;font-size:18px;font-weight:600;letter-spacing:.01em;}
+.cas-ph + .cas-ph{margin-left:8px;}
+.cas-pl{border-color:rgba(0,170,69,.45);background:rgba(0,170,69,.10);}
+.cas-pl:hover{background:rgba(0,170,69,.20);border-color:rgba(0,170,69,.8);}
+@media (max-width:420px){.cas-ph{gap:9px;padding:8px 14px 8px 9px;}.cas-ph svg{width:24px;height:24px;}.cas-ph b{font-size:15px;}.cas-ph + .cas-ph{margin-left:6px;}}
 
 .station.side-left .cas-mark{margin-left:0;}.station.side-right .cas-mark{margin-left:auto;margin-right:0;}
 
