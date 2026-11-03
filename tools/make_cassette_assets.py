@@ -20,6 +20,7 @@ OUTPUTS
     cassette/cassette-icon.png     the page mark (320px, shown at up to 148px)
     cassette/og-cassette.png       1200x630 social card, laid out like og-luten.png
     cassette/cassette-qr.svg       App Store QR, ct=web_qr
+    cassette/cassette-play-qr.svg  Google Play QR, utm_campaign=web_qr (beside it since 2026-11-02)
     cassette/screen-*.webp         five captures for the gallery
     cassette/media/                the press kit downloads: 1024px icon, the five
                                    App Store cards and the five plain screens at
@@ -51,6 +52,7 @@ OUT = os.path.join(ROOT, "cassette")
 ICONS = os.path.join(ROOT, "icons")
 
 APP_STORE = "https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404"
+PLAY_STORE = "https://play.google.com/store/apps/details?id=app.cassette.deck"
 
 # The feature icons are drawn from the app's own parts, so the page looks like the thing it sells:
 # a plastic key face (Palette.panel* and keyEdge), the notes paper with its red margin rule, the app
@@ -183,6 +185,16 @@ def qr():
     print("qr version", qr.version, "encodes", APP_STORE + "?ct=web_qr")
 
 
+def play_qr():
+    """The Google Play code beside the App Store one, so a desktop visitor with an Android phone
+    has something to scan too. Play Console reads utm_source and utm_campaign from the link."""
+    url = PLAY_STORE + "&utm_source=onelifeco&utm_campaign=web_qr"
+    qr = segno.make(url, error="m")
+    qr.save(os.path.join(OUT, "cassette-play-qr.svg"), scale=10, dark="#15110a", light="#f6f3ec",
+            svgclass="segno", lineclass="qrline", xmldecl=True)
+    print("play qr version", qr.version, "encodes", url)
+
+
 def screens():
     for name in ("deck", "notes", "transcript", "email", "shelf"):
         im = Image.open(os.path.join(APP, "AppStore/screenshots/captures", f"raw-{name}.png")).convert("RGB")
@@ -241,6 +253,7 @@ def main():
             f.write(key_svg(glyph))
     icon()
     qr()
+    play_qr()
     screens()
     media()
     ipad_mac()
