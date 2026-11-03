@@ -1,6 +1,6 @@
 # One Life
 
-> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone. Its second is Cassette, an AI note taker for iPhone and Android.
+> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone and Android. Its second is Cassette, an AI note taker for iPhone and Android.
 
 Website: https://www.onelifeco.app/
 Contact: contact@onelifeco.app

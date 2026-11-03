@@ -338,7 +338,13 @@ document.addEventListener('DOMContentLoaded', function () {
            on every subscription are both still stated in the FAQ and in the Get
            section below, which is where someone actually looks for them. .lh-cta
            carries margin-top:38px so the button spaces itself without the box. -->
-      <div class="lh-cta"><a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_hero" data-android-href="https://play.google.com/store/apps/details?id=app.luten.android&amp;utm_source=onelifeco&amp;utm_campaign=web_hero" data-android-text="Get it on Google Play" class="btn-light" target="_blank" rel="noopener">Download on the App Store <span class="arrow">&rarr;</span></a></div>
+      <!-- Two stores, two buttons, added 2026-11-02 (Reza: "add Play store link and
+           QR code as well"). Until then the one button turned into a Play link on
+           Android phones only, through data-android-href in script.js, so nobody on
+           a desktop or an iPhone could see that Luten is on Android at all. Both
+           buttons now show everywhere, which is also why the App Store one no
+           longer carries data-android-href: it would make a second Play button. -->
+      <div class="lh-cta lh-cta-stores"><a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_hero" class="btn-light" target="_blank" rel="noopener"><span class="lh-pre">Download on the </span>App Store <span class="arrow">&rarr;</span></a><a href="https://play.google.com/store/apps/details?id=app.luten.android&amp;utm_source=onelifeco&amp;utm_campaign=web_hero" class="btn-light" target="_blank" rel="noopener"><span class="lh-pre">Get it on </span>Google Play <span class="arrow">&rarr;</span></a></div>
       <!-- A second, lower-commitment action, added 2026-09-07. In the 14 days to
            that date this site took 16 iOS pageviews and NOT ONE of them tapped an
            App Store link, while all three recorded taps came from Windows, Mac and
@@ -353,10 +359,17 @@ document.addEventListener('DOMContentLoaded', function () {
            action above the fold sent every one of those people to a web App
            Store page they cannot install from, and the QR that solves it sat
            at the very bottom of a long page. Hidden on touch devices, where
-           the badge is already the right answer and a QR is nonsense. -->
-      <div class="lh-qr" aria-hidden="false">
-        <div class="qr-code"><img src="/luten/luten-qr.svg" width="104" height="104" alt="QR code linking to Luten on the App Store" decoding="async"></div>
-        <span>Scan with your iPhone</span>
+           the badge is already the right answer and a QR is nonsense. The
+           Android code beside it was added 2026-11-02 with the Play button. -->
+      <div class="lh-qrs">
+        <div class="lh-qr" aria-hidden="false">
+          <div class="qr-code"><img src="/luten/luten-qr.svg" width="104" height="104" alt="QR code linking to Luten on the App Store" decoding="async"></div>
+          <span>Scan with your iPhone</span>
+        </div>
+        <div class="lh-qr" aria-hidden="false">
+          <div class="qr-code"><img src="/luten/luten-play-qr.svg" width="104" height="104" alt="QR code linking to Luten on Google Play" decoding="async"></div>
+          <span>Scan with Android</span>
+        </div>
       </div>
     </div>
     <div class="luten-waves" id="lutenWave"></div>
@@ -490,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="wrap2">
       <p class="eyebrow" style="display:block;text-align:center;margin-bottom:16px;">Get Luten</p>
       <h2>Get Luten.</h2>
-      <p class="lead">Out now on the App Store and Google Play, free to download. Tap a badge, or scan the code with an iPhone.</p>
+      <p class="lead">Out now on the App Store and Google Play, free to download. Tap a badge, or scan a code with your phone.</p>
       <div class="get-row">
         <div class="store-badges">
           <a href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_badge" class="store-badge" target="_blank" rel="noopener" aria-label="Download Luten on the App Store">
@@ -500,7 +513,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.4.4 0 00-.7-.4l-1.86 3.22a11.5 11.5 0 00-9.76 0L5.26 5.9a.4.4 0 10-.7.4L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
             <span><small>Get it on</small><b>Google Play</b></span></a>
         </div>
-        <div class="qr"><div class="qr-code"><img src="/luten/luten-qr.svg" width="128" height="128" alt="QR code linking to Luten on the App Store" decoding="async"></div><span>Scan to download</span></div>
+        <div class="qrs">
+          <div class="qr"><div class="qr-code"><img src="/luten/luten-qr.svg" width="128" height="128" alt="QR code linking to Luten on the App Store" decoding="async"></div><span>iPhone</span></div>
+          <div class="qr"><div class="qr-code"><img src="/luten/luten-play-qr.svg" width="128" height="128" alt="QR code linking to Luten on Google Play" decoding="async"></div><span>Android</span></div>
+        </div>
       </div>
       <p class="get-note">Out now on the App Store for iPhone and on Google Play for Android.</p>
       <p class="get-note">Read <a href="/luten/white-noise/" style="color:#c0c1ff;">white noise, pink noise and brown noise</a>, <a href="/luten/rain-sounds/" style="color:#c0c1ff;">rain sounds with no thunder</a>, <a href="/luten/fan-sounds/" style="color:#c0c1ff;">fan sounds for sleeping</a>, <a href="/luten/3am/" style="color:#c0c1ff;">sounds for waking up at 3am</a> or <a href="/luten/no-talking/" style="color:#c0c1ff;">sleep sounds with no talking</a>, or see the <a href="/luten/press" style="color:#c0c1ff;">press kit</a>.</p>

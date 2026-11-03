@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the App Store QR on the Luten page.
+"""Regenerate the App Store and Google Play QR codes on the Luten page.
 
 WHY THIS FILE EXISTS
 
@@ -28,6 +28,13 @@ call to action sent desktop visitors to a page they cannot install from. This
 token is how we find out whether that actually converts anyone, rather than
 assuming it does.
 
+THE GOOGLE PLAY CODE (added 2026-11-02)
+
+Reza asked for the Play link and a QR beside the App Store ones. The Play code
+carries utm_source and utm_campaign, the two parameters Play Console reads into
+its store listing acquisition report, with the same campaign names as the Play
+links on the page: web_hero, web_badge, and web_qr for this code.
+
     python3 tools/make_qr.py
 """
 import segno
@@ -38,18 +45,24 @@ DARK = "#15110a"
 LIGHT = "#f6f3ec"
 SCALE = 10
 
-URL = ("https://apps.apple.com/us/app/luten-sleep-focus-sounds/"
-       "id6777673392?ct=web_qr")
-OUT = "luten/luten-qr.svg"
+CODES = [
+    ("luten/luten-qr.svg",
+     "https://apps.apple.com/us/app/luten-sleep-focus-sounds/"
+     "id6777673392?ct=web_qr"),
+    ("luten/luten-play-qr.svg",
+     "https://play.google.com/store/apps/details?id=app.luten.android"
+     "&utm_source=onelifeco&utm_campaign=web_qr"),
+]
 
 
 def main() -> None:
     # error='m' keeps the code readable if the cream tile is partly obscured,
     # without inflating the module count enough to hurt at 104px.
-    qr = segno.make(URL, error="m")
-    qr.save(OUT, scale=SCALE, dark=DARK, light=LIGHT,
-            svgclass="segno", lineclass="qrline", xmldecl=True)
-    print(f"wrote {OUT}  version={qr.version}  encodes {URL}")
+    for out, url in CODES:
+        qr = segno.make(url, error="m")
+        qr.save(out, scale=SCALE, dark=DARK, light=LIGHT,
+                svgclass="segno", lineclass="qrline", xmldecl=True)
+        print(f"wrote {out}  version={qr.version}  encodes {url}")
 
 
 if __name__ == "__main__":
