@@ -72,6 +72,10 @@ To verify a build: every route must ship only its own `page-*` section, keep its
 own title and canonical, keep `/luten` on `og-luten.png`, parse as valid JSON-LD,
 and carry no banned copy.
 
+## Who the legal pages name (2026-11-04)
+
+The Terms and Privacy Policy name **Reza Abdoli, an individual trading as One Life**, under California law. They used to name "One Life Company", but the App Store and Google Play both list him as an individual, and no record of a registered company was found. Google links these Terms from the Play listing once he declares trader status, so the two have to agree. If a company is ever registered, change those clauses and the stores together. "One Life Company" survives only as a brand alias in the Organization JSON-LD; never write it as the party to a contract. His street address and personal email never go on these pages.
+
 ## The Luten page carries launch badges
 
 Fazier, Uneed, Product Hunt and SaaSHub, in `_source.html`. Add a new one only
