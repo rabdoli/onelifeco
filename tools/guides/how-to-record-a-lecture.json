@@ -103,7 +103,7 @@
           "p": "If it guessed wrong, for example a seminar it took for a meeting, choose **Lecture or class** and the notes are written again."
         },
         {
-          "p": "On phones that can't run the full notes model, you get simpler notes. The transcript and the recording are still there."
+          "p": "On an iPhone without Apple Intelligence or an Android phone with less than 8 GB of memory, you get the recording, the transcript and a few lines heard clearly, word for word, instead of these notes and cards."
         }
       ]
     },
@@ -114,7 +114,7 @@
           "ul": [
             "**Go back to the moment.** Tap a line of the transcript to jump to it, then press PLAY to hear how it was said.",
             "**Review with cards.** Cassette makes review cards from the key terms, so you can test yourself without writing them.",
-            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep in one tap, or to Apple Notes on iPhone.",
+            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep in one tap, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone.",
             "**Ask your tapes.** Type a question like \"what's due this week?\" and get an answer from your own recordings, with the sources."
           ]
         },
@@ -138,11 +138,11 @@
     },
     {
       "q": "Does it work without Wi-Fi?",
-      "a": "Yes. Recording, the transcript and the notes all work in airplane mode, which helps in a basement lecture hall. On iPhone, the transcript needs a language your phone can handle on the device."
+      "a": "Yes. Recording, the transcript and the notes all work in airplane mode, which helps in a basement lecture hall. On iPhone, the transcript needs a language your phone can handle on the device, with its speech model downloaded. On Android, the notes model arrives over Wi-Fi once after you install, so open Cassette on Wi-Fi before class."
     },
     {
       "q": "Can I keep the recording private?",
-      "a": "The notes are never written by an outside AI service, and your recording stays on your phone unless you sign in to Premium and back it up. One exception on iPhone: in a language the phone can't transcribe on the device, Apple's speech recognition does it."
+      "a": "Notes are never written by an outside AI service. On Android, the audio only leaves the phone if you sign in with Premium, which backs tapes up. On iPhone there are more cases: Apple's servers transcribe a tape the phone can't do on the device, the notes can be written on Apple's Private Cloud Compute on iOS 27, and tapes go in iCloud and computer backups and in your Premium backup. To stop all of that, turn on On-device only in your Cassette profile."
     },
     {
       "q": "Is Cassette free for lectures?",
