@@ -28,6 +28,7 @@ control the host. If the file stops being served, submissions start failing with
 USE
     python3 tools/indexnow.py            # submit every URL in sitemap.xml
     python3 tools/indexnow.py --dry-run  # print what would be sent
+    python3 tools/indexnow.py URL URL    # submit only these, the usual case after a new page
 Run it after publishing a NEW page. Do not run it on a schedule for unchanged
 pages: the protocol is for telling engines about changes, and spamming it with
 a static list is what gets a host ignored.
@@ -54,16 +55,17 @@ def urls_from_sitemap(path=SITEMAP):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("urls", nargs="*")
     args = ap.parse_args()
 
-    urls = urls_from_sitemap()
+    urls = args.urls or urls_from_sitemap()
     body = {
         "host": HOST,
         "key": KEY,
         "keyLocation": f"https://{HOST}/{KEY}.txt",
         "urlList": urls,
     }
-    print(f"{len(urls)} URLs from {SITEMAP}")
+    print(f"{len(urls)} URLs" + ("" if args.urls else f" from {SITEMAP}"))
     for u in urls:
         print("  ", u)
     if args.dry_run:
