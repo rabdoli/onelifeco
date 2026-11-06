@@ -1,0 +1,204 @@
+{
+  "slug": "apple-watch-voice-recorder",
+  "keyword": "apple watch voice recorder",
+  "title": "Apple Watch Voice Recorder: How to Record and Get Notes",
+  "description": "Record your voice on Apple Watch with Voice Memos and find the recording on iPhone, or record in Cassette to get a transcript and notes.",
+  "h1": "How to use your Apple Watch as a voice recorder",
+  "answer": "Apple Watch comes with a voice recorder. Open Voice Memos on the watch, tap the Record button, and tap Stop when you finish. With iCloud, the recording shows up under Watch Recordings in Voice Memos on your iPhone. If you want a transcript and notes as well, Cassette records from the watch and sends each tape to your iPhone, which writes them.",
+  "published": "2026-11-06",
+  "updated": "2026-11-06",
+  "single_os": "Apple Watch only pairs with iPhone, so this guide is about iPhone and Apple Watch.",
+  "related": [
+    "transcribe-voice-memos",
+    "how-to-record-a-lecture"
+  ],
+  "sections": [
+    {
+      "h": "Record with Voice Memos, the app already on your watch",
+      "blocks": [
+        {
+          "p": "If you only want to save what you said, you may not need to install anything. These are [Apple's steps](https://support.apple.com/guide/watch/voice-memos-apd441786282/watchos):"
+        },
+        {
+          "ol": [
+            "Open the **Voice Memos** app on your Apple Watch.",
+            "Tap the **Record** button.",
+            "Tap the **Stop** button to end the recording.",
+            "To listen on the watch, tap the recording, then tap **Play**."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Find a watch recording on your iPhone",
+      "blocks": [
+        {
+          "p": "With iCloud, you can play what you recorded on your paired iPhone and on other devices signed in to your Apple Account. Open Voice Memos on the iPhone, iPad or Mac and choose **Watch Recordings**."
+        },
+        {
+          "p": "If a recording isn't there, [check two things](https://support.apple.com/guide/voice-memos/see-your-recordings-on-all-your-apple-devices-vma6cc4d0571/mac):"
+        },
+        {
+          "ul": [
+            "Each device is signed in to the same Apple Account.",
+            "Voice Memos is on for iCloud. On iPhone, go to Settings, tap your name, tap iCloud, tap See All, then turn on Voice Memos."
+          ]
+        },
+        {
+          "p": "It only works in one direction. Apple says recordings made on other devices don't appear on the watch."
+        },
+        {
+          "p": "Apple's watch page doesn't mention transcripts. To get text, open the recording in Voice Memos on an iPhone 12 or later, tap the More button and look for [Copy Transcript](https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios), in the languages Apple lists. Either way, you get every word. With Apple Intelligence, Writing Tools can summarize it, but you do that yourself for each recording."
+        }
+      ]
+    },
+    {
+      "h": "Record on your wrist with Cassette and get notes",
+      "blocks": [
+        {
+          "p": "Cassette is a tape deck for iPhone with an Apple Watch app. It needs an iPhone, because that is where the writing happens. The watch records and the iPhone does the rest. It needs watchOS 10 or later on the watch and iOS 17 or later on the iPhone."
+        },
+        {
+          "p": "Install Cassette on your iPhone. [Apple says](https://support.apple.com/guide/watch/get-apps-apd99e3c6a68/watchos) the watch version installs by default. If it doesn't show up, open the Apple Watch app on your iPhone, tap My Watch, tap Apps, scroll to Available Apps and tap Install."
+        },
+        {
+          "ol": [
+            "**Press RECORD** on the watch. It uses the watch's microphone, and the first time it asks for permission to use it.",
+            "**Press PAUSE** to hold the tape if you need to, and press it again to carry on with the same tape.",
+            "**Press STOP.** The tape goes to your iPhone, and the watch shows SENDING until it arrives, then ON IPHONE.",
+            "**Read the notes on your iPhone.** The tape lands on your shelf with the others, with its transcript and notes."
+          ]
+        },
+        {
+          "p": "The watch doesn't play tapes back or show notes. Once your iPhone has a tape, its audio leaves the watch, and you listen on the phone."
+        },
+        {
+          "shots": [
+            "ios-shelf"
+          ],
+          "alts": [
+            "The shelf in Cassette on iPhone, with six tapes shown as labelled cassettes, each with its date and length."
+          ]
+        },
+        {
+          "cta": "mid"
+        },
+        {
+          "p": "If your iPhone is out of reach, the tape stays on the watch and goes across later. If it keeps saying SENDING, bring the two close together and open Cassette on both."
+        }
+      ]
+    },
+    {
+      "h": "Start a tape faster",
+      "blocks": [
+        {
+          "p": "On a wrist, every extra tap counts. Two quick ways work on any supported watch, and both begin recording right away."
+        },
+        {
+          "ul": [
+            "**From the watch face.** [Touch and hold the face](https://support.apple.com/guide/watch/add-complications-to-the-watch-face-apd8d0b9c582/watchos), tap Edit and swipe left to the last screen. Tap a complication, turn the Digital Crown to Cassette's Record, press the Crown to save, then tap the face. Not every face offers complications.",
+            "**With Siri.** On the watch, say \"Start a tape in Cassette.\""
+          ]
+        }
+      ]
+    },
+    {
+      "h": "What the iPhone writes from a watch tape",
+      "blocks": [
+        {
+          "p": "A watch tape is treated like any other tape. Cassette picks the kind of notes from what it hears, so a thought spoken to yourself in English usually becomes a voice note, with a short gist, a list of to-dos with the day if you named one, and any ideas."
+        },
+        {
+          "shots": [
+            "ios-notes-voicenote"
+          ],
+          "alts": [
+            "A voice note in Cassette on iPhone: a short gist, four to-dos with dates and one idea."
+          ]
+        },
+        {
+          "p": "The watch has no language setting. Tapes are heard in the recording language you chose on your iPhone."
+        },
+        {
+          "p": "An iPhone without Apple Intelligence, or on a version before iOS 26, gets the recording, the transcript and a few lines quoted from the tape, with no summary, to-dos, outline, terms, review cards or template choice. A tape in another language gets a plain summary lifted from its own sentences instead. If Apple Intelligence is only turned off, turn it on and Cassette can write the notes."
+        }
+      ]
+    },
+    {
+      "h": "Which one should you use?",
+      "blocks": [
+        {
+          "ul": [
+            "**Use Voice Memos** if you only want the audio, you want to play it back on your wrist, or you want it on your Mac through iCloud.",
+            "**Use Cassette** if what you need afterwards is a list: the to-dos, the gist, and a transcript you can tap to reach a moment on the tape."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Get a clearer recording from your wrist",
+      "blocks": [
+        {
+          "ul": [
+            "**Talk toward the watch.** It tends to work best for your own voice, because your wrist can come up close to your mouth.",
+            "**Keep your sleeve off it.** Cloth rubbing on the watch can end up on the tape.",
+            "**Use your phone for a whole room.** For a long class or a meeting with several voices, a phone laid on the table is usually closer to the people talking.",
+            "**Check the battery first.** Recording for a long time is a poor match for a watch that is nearly flat."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does Apple Watch have a voice recorder?",
+      "a": "Yes. Voice Memos is Apple's recorder on the watch, and you can play recordings back there too."
+    },
+    {
+      "q": "How long can you record on Apple Watch?",
+      "a": "Apple's Voice Memos page gives no limit. Cassette sets no time limit on the watch either, so what's left of the battery and storage decides. If the watch fills up, the tape stops and keeps what was saved."
+    },
+    {
+      "q": "Does a call stop a Cassette recording on the watch?",
+      "a": "A call pauses the tape, and what you have so far is kept. It carries on by itself afterwards when the system allows it. If not, the watch asks you to press PAUSE to go on."
+    },
+    {
+      "q": "Does Cassette work on Apple Watch without an iPhone?",
+      "a": "You need an iPhone with Cassette installed. The watch can record while the iPhone is out of reach, but the transcript and notes are only written once the tape gets to the iPhone."
+    },
+    {
+      "q": "Can Cassette transcribe a recording I already made in Voice Memos?",
+      "a": "No. Cassette only transcribes tapes it recorded itself, so start the tape in Cassette."
+    },
+    {
+      "q": "Is it free?",
+      "a": "Voice Memos comes with the watch. In Cassette, recording is free. A tape under {short_tape_minutes} minutes gets its transcript and notes free, longer tapes count toward the {free_tapes} free tapes a month, and Premium covers the ones after that."
+    },
+    {
+      "q": "Where does a Cassette watch tape go?",
+      "a": "From the watch to your iPhone, then it follows the iPhone's rules. Notes are never written by an outside AI service. The iPhone transcribes the tape itself when your language and its speech model allow it, and otherwise Apple's servers do. On iOS 27, Apple's Private Cloud Compute can write the notes. Tapes on the iPhone are also included in iCloud and computer backups if you make them, and in your account backup if you sign in with Premium. On-device only, under Privacy in your Cassette profile on iPhone, stops this for new tapes once they reach the iPhone. If the iPhone can't hear a language itself, that tape stays a recording."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Watch User Guide: Record and play voice memos",
+      "url": "https://support.apple.com/guide/watch/voice-memos-apd441786282/watchos"
+    },
+    {
+      "name": "Voice Memos User Guide: See your recordings on all your Apple devices",
+      "url": "https://support.apple.com/guide/voice-memos/see-your-recordings-on-all-your-apple-devices-vma6cc4d0571/mac"
+    },
+    {
+      "name": "Apple Support: View a Voice Memos transcription on iPhone",
+      "url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios"
+    },
+    {
+      "name": "Apple Watch User Guide: Get apps in the App Store",
+      "url": "https://support.apple.com/guide/watch/get-apps-apd99e3c6a68/watchos"
+    },
+    {
+      "name": "Apple Watch User Guide: Add complications to the watch face",
+      "url": "https://support.apple.com/guide/watch/add-complications-to-the-watch-face-apd8d0b9c582/watchos"
+    }
+  ]
+}
