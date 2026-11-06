@@ -46,9 +46,11 @@ One tap to record: a tape can start from a Home Screen or Lock Screen widget, or
 
 Apple Watch: an Apple Watch app records with the watch's microphone, with pause and stop, and sends each tape to the iPhone for its transcript and notes; a watch face complication or Siri starts one.
 
-Pricing: free to download and to record, with no minute meter. Transcripts and notes are free for 2 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
+Pricing: free to download and to record, with no minute meter. Tapes under 3 minutes get their transcript and notes free, and longer ones get them free for 2 tapes a month. Cassette Premium writes up every tape and backs up your recordings, billed weekly, monthly or annually; the annual plan starts with a 7-day free trial.
 
-Privacy: audio stays on the iPhone unless the user signs in with Premium to back it up. Transcripts come from Apple speech recognition, on the device where the language is supported. Notes are written by Apple's models, never by an outside AI service. An account is optional. Cassette works offline: recording, transcripts and notes all work in airplane mode, and an On-device only switch keeps every tape on the iPhone.
+Privacy: tapes are stored on the phone, and an account is optional. On iPhone, tapes are included in iCloud and computer backups if the user has them on, and a user who signs in with Premium backs tapes up to their account. Transcripts come from Apple speech recognition, on the device where the language is supported; otherwise that recording may be sent to Apple to transcribe. Notes are written by Apple's models, never by an outside AI service: on iOS 27 with Apple Intelligence through Apple's Private Cloud Compute, which does not keep the transcript, and on earlier iPhones on the device. An On-device only switch stops all of this and keeps every tape on the iPhone.
+
+Offline: recording always works in airplane mode. Transcripts and notes do too once the language has downloaded, and on Android once the notes model has arrived over Wi-Fi after install. Full notes need an iPhone with Apple Intelligence on iOS 26 or later; other iPhones get the recording, the transcript and a few lines quoted from the tape.
 
 Android: the same deck on Google Play, Android 10 or later. Transcripts are written on the phone by the Whisper model that comes with the app, and the notes by Cassette's own notes model on phones with 8 GB of memory or more; other phones get simpler notes. The audio is never sent anywhere to be transcribed or written up.
 

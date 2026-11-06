@@ -6,7 +6,7 @@
   "h1": "How to transcribe voice memos on iPhone or Android",
   "answer": "On iPhone 12 or later, open Voice Memos, tap the recording, tap the More button and choose Copy Transcript. Paste the text wherever you want it. On Android it depends on the phone: Pixel's Recorder and Samsung's Voice Recorder can both write a transcript, on the phones and in the languages they support. If you also want your to-dos pulled out of what you said, Cassette does that, but only for tapes you record in it. It can't open a recording you already have.",
   "published": "2026-11-05",
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "related": [
     "how-to-record-a-lecture",
     "apple-watch-voice-recorder"
@@ -100,7 +100,7 @@
           "cta": "mid"
         },
         {
-          "p": "That list needs a phone that can run the full notes model. An iPhone without Apple Intelligence or an Android phone with less than 8 GB of memory gets simpler notes: a few lines quoted from the tape, with no gist or to-do list. Tapes in other languages get more general notes. The transcript and the recording are there either way."
+          "p": "That list needs a phone that can run the full notes model. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets simpler notes: a few lines quoted from the tape, with no gist or to-do list. Tapes in other languages get more general notes. The transcript and the recording are there either way."
         },
         {
           "p": "To start faster, add the Cassette widget to your Home Screen. On iOS 18 or later, Control Center can start a tape too, and so can the Action button on iPhones that have one."

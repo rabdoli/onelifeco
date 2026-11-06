@@ -195,7 +195,7 @@ def shot(name, write):
             fail(f"screen file missing: {src}")
         im = Image.open(src)
         im = unmask(im) if info["os"] == "iPhone" else im.convert("RGB")
-        w = 620
+        w = min(620, im.width)  # never enlarge: watch captures are 416 wide
         im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         im.save(dst, "WEBP", quality=82, method=6)

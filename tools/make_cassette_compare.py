@@ -120,7 +120,7 @@ PAGES = [
              "On the Mac, Cassette records what the Mac plays and your microphone. Nothing joins the call.",
              "Otter's notetaker joins Zoom, Microsoft Teams and Google Meet to write and share notes. [2]"),
             ("Free plan",
-             "Unlimited recording. Transcripts and notes for 2 tapes a month.",
+             "Unlimited recording. Transcripts and notes for tapes under 3 minutes and for 2 longer tapes a month.",
              "300 transcription minutes a month, up to 30 minutes per conversation, the 25 most recent kept. [2]"),
             ("Paid plan",
              CASSETTE_PRICE,
@@ -180,7 +180,7 @@ PAGES = [
              "Yes: recording, the transcript and the notes, once the language and the notes model have downloaded.",
              "Wispr does not say."),
             ("Free plan",
-             "Unlimited recording. Transcripts and notes for 2 tapes a month.",
+             "Unlimited recording. Transcripts and notes for tapes under 3 minutes and for 2 longer tapes a month.",
              "Included in Flow Free, with a weekly meeting limit. Recordings under five minutes don't count. [1]"),
             ("Paid plan",
              CASSETTE_PRICE,
@@ -286,7 +286,7 @@ def page(p):
   <p>Whichever you choose, ask everyone before you record. Some places require everyone's consent, and it is the decent thing to do.</p>
 
   <h2>Try Cassette</h2>
-  <p>Free to download. Recording is free and unlimited, and the transcript and notes are free for 2 tapes a month.</p>
+  <p>Free to download. Recording is free and unlimited. Tapes under 3 minutes get their transcript and notes free, and longer ones get them free for 2 tapes a month.</p>
   <p><a class="cta" href="{CASSETTE_STORE[0]}" target="_blank" rel="noopener">Download on the App Store</a><a class="cta" href="{CASSETTE_STORE[1]}" target="_blank" rel="noopener">Get it on Google Play</a></p>
   <p><a href="/cassette/">More about Cassette</a> &middot; <a href="/cassette/guides/">Guides</a> &middot; <a href="/cassette/{'vs-wispr-flow' if p['slug'] == 'vs-otter' else 'vs-otter'}/">Cassette vs {'Wispr Flow Notetaker' if p['slug'] == 'vs-otter' else 'Otter'}</a></p>
 

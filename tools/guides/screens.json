@@ -28,5 +28,7 @@
   "android-email": {"file": "android2/email.png", "os": "Android"},
   "android-shelf": {"file": "android2/shelf.png", "os": "Android"},
   "android-templates": {"file": "android2/templates.png", "os": "Android"},
-  "android-language": {"file": "android2/language.png", "os": "Android"}
+  "android-language": {"file": "android2/language.png", "os": "Android"},
+  "watch-rec": {"file": "watch-rec.png", "os": "Apple Watch"},
+  "watch-tapes": {"file": "watch-tapes.png", "os": "Apple Watch"}
 }

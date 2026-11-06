@@ -77,17 +77,22 @@ if not RELEASED:
 
 FAQ = [
     ("Is Cassette free?",
-     "Yes, to download and to record, with no minute meter. Transcripts and "
-     "notes are free for 2 tapes a month. Cassette Premium writes up every "
+     "Yes, to download and to record, with no minute meter. Tapes under 3 minutes "
+     "get their transcript and notes free, and longer ones get them free for 2 "
+     "tapes a month. Cassette Premium writes up every "
      "tape and backs up your shelf, and the annual plan starts with a 7-day "
      "free trial."),
     ("Does my audio leave my phone?",
-     "The audio stays on your phone unless you sign in with Premium to back it up. "
+     "Your tapes are stored on your phone, and there are a few ways they can leave it. "
+     "On iPhone they are included in your iCloud and computer backups, if you use them. "
+     "If you sign in with Premium, on iPhone or Android, they are backed up to your account, "
+     "where only you can open them. "
      "On iPhone, transcripts come from Apple speech recognition, on the device wherever your iPhone "
      "supports your language; otherwise that recording may be sent to Apple to transcribe. "
      "The notes are written by Apple's models, never by an outside AI service: on iOS 27 "
      "the transcript goes to Apple's Private Cloud Compute, which does not keep it, and on "
-     "earlier iPhones the notes are written on the device. On Android, the transcript "
+     "earlier iPhones the notes are written on the device. Switch on On-device only in your "
+     "profile and none of this happens on iPhone. On Android, the transcript "
      "and the notes are always written on the phone."),
     ("Does Cassette work offline?",
      "Yes. You can record, and get the transcript and the notes, in airplane mode. "

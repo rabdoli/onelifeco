@@ -70,6 +70,16 @@
           ]
         },
         {
+          "shots": [
+            "watch-rec",
+            "watch-tapes"
+          ],
+          "alts": [
+            "Cassette recording on Apple Watch, with REC SIDE A, the tape counter and meters above the RECORD, PAUSE and STOP keys.",
+            "The tapes list in Cassette on Apple Watch, each tape showing its date, time and length, marked ON IPHONE."
+          ]
+        },
+        {
           "p": "The watch doesn't play tapes back or show notes. Once your iPhone has a tape, its audio leaves the watch, and you listen on the phone."
         },
         {
