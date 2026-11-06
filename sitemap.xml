@@ -70,6 +70,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.onelifeco.app/luten/guides/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.onelifeco.app/luten/guides/how-to-set-a-sleep-timer/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.onelifeco.app/luten/white-noise/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -1,0 +1,4 @@
+{
+  "ios-sleep-timer": {"file": "ios-sleep-timer.png", "os": "iPhone"},
+  "android-sleep-timer": {"file": "android-sleep-timer.png", "os": "Android"}
+}

@@ -1,0 +1,141 @@
+{
+  "slug": "how-to-set-a-sleep-timer",
+  "keyword": "sleep timer iphone",
+  "also_targets": ["sleep timer android", "sleep timer spotify", "sleep timer apple music"],
+  "title": "How to Set a Sleep Timer on iPhone or Android",
+  "description": "Stop music and sounds on a timer: the built-in way on iPhone, what to do on Android, Spotify and Apple Music, and how the timer in Luten fades out.",
+  "h1": "How to set a sleep timer on iPhone or Android",
+  "answer": "On iPhone, open the Clock app, tap Timers, set a time, tap When Timer Ends, choose Stop Playing, then tap Set and Start. On Android, look in the app that is playing: Spotify and YouTube each have their own timer. In Luten, tap Sleep timer in the player and pick a length, and the sound fades out, then pauses.",
+  "published": "2026-11-06",
+  "updated": "2026-11-06",
+  "related": [],
+  "sections": [
+    {
+      "h": "On iPhone: use the Clock app",
+      "blocks": [
+        {
+          "p": "You don't need to install anything. The timer in Clock can stop what is playing instead of ringing."
+        },
+        {
+          "ol": [
+            "Start your music, podcast or sound.",
+            "Open the **Clock** app and tap **Timers**.",
+            "Set the length you want.",
+            "Tap **When Timer Ends**, then tap **Stop Playing** at the bottom of the list of sounds.",
+            "Tap **Set**, then tap **Start**."
+          ]
+        },
+        {
+          "p": "Apple describes this for [audio or video in general](https://support.apple.com/guide/iphone/set-timers-iph8241d6b2a/ios), not one app, and says the timer keeps going if you open another app or the iPhone goes to sleep."
+        },
+        {
+          "p": "Check that When Timer Ends says Stop Playing each time you start one. Some people on [Apple's forums](https://discussions.apple.com/thread/255223516) report it going back to a sound, which means an alarm instead of silence."
+        }
+      ]
+    },
+    {
+      "h": "On Android: use the timer in the app that is playing",
+      "blocks": [
+        {
+          "p": "Google's Clock app rings when a timer ends. [Google's help](https://support.google.com/clock/faq/6273949?hl=en) covers alarms, timers and bedtime sounds, and doesn't describe a way to stop music you are already playing. If your phone has a different clock app, check it. Otherwise, look in the app playing the sound."
+        },
+        {
+          "ul": [
+            "**Spotify, on iPhone or Android:** open the Now Playing screen, tap the three-dot menu, scroll down and tap **Sleep Timer**. On a podcast, tap the moon icon beside the play button. [Spotify's steps](https://newsroom.spotify.com/2022-08-02/how-to-make-spotifys-sleep-timer-part-of-any-bedtime-routine/) include stopping at the end of the current track.",
+            "**YouTube, on iPhone or Android:** open the video, tap the settings icon in the player, tap **Sleep timer** and choose a length. [Google says](https://support.google.com/youtube/answer/15397997?hl=en&co=GENIE.Platform%3DAndroid) playback pauses when it runs out and you get a silent notification.",
+            "**Any other app:** look in the player's menu. Some players keep a sleep timer there, and the name changes from app to app."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "In Luten: a timer that fades out",
+      "blocks": [
+        {
+          "p": "Luten is a sound app for iPhone and Android, and the timer is part of the player, so there is nothing else to set up."
+        },
+        {
+          "ol": [
+            "Play a sound and open the player.",
+            "Tap **Sleep timer**.",
+            "Pick a length. The button then shows the minutes left. To turn it off, tap the button again, then tap **Cancel**."
+          ]
+        },
+        {
+          "shots": [
+            "ios-sleep-timer",
+            "android-sleep-timer"
+          ],
+          "alts": [
+            "The Luten player on iPhone with the Sleep timer button tapped and its length options showing.",
+            "The Luten player on Android with the Sleep timer button tapped and its length options showing."
+          ]
+        },
+        {
+          "p": "When the time is up, the sound gets quieter over about 20 seconds and then pauses. It pauses rather than closing, so you can press play and carry on whenever you like."
+        },
+        {
+          "p": "The timer keeps counting with the phone locked. On Android, a battery saver on some phones can stop apps running in the background, so check that setting if a timer doesn't behave."
+        },
+        {
+          "p": "By default the player moves on through the list. To stay on one sound, tap the repeat button until it shows a 1."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "Which one to use",
+      "blocks": [
+        {
+          "ul": [
+            "**You only want your music or podcast to stop:** the built-in way is enough. Clock on iPhone, or the timer in your music app.",
+            "**You want the ending to be gradual:** the Apple, Spotify and YouTube steps above don't mention a fade. The timer in Luten fades by design.",
+            "**You want a sound app in the first place:** Luten is made for that, with no ads and the timer in the player."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long should I set a sleep timer for?",
+      "a": "That is up to you. We don't recommend a length. Pick what suits you, and change it whenever you like."
+    },
+    {
+      "q": "Does Apple Music have a sleep timer?",
+      "a": "On iPhone, Apple's guides don't describe one in the Music app, so use the Clock timer above, which stops what is playing. On Android, check the menu in the Apple Music player."
+    },
+    {
+      "q": "Does a sleep timer keep running with the screen locked?",
+      "a": "On iPhone, Apple says the Clock timer continues when the iPhone goes to sleep. The timer in Luten also keeps counting with the phone locked, on iPhone and on Android, apart from the battery savers mentioned above."
+    },
+    {
+      "q": "Can I cancel a sleep timer?",
+      "a": "Yes. In Clock, tap Timers, swipe left on the timer and tap the button that appears. In Luten, tap the button that shows the minutes left, then tap Cancel."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Set timers in Clock on iPhone",
+      "url": "https://support.apple.com/guide/iphone/set-timers-iph8241d6b2a/ios"
+    },
+    {
+      "name": "Apple Support Community: timer When Timer Ends setting reverting",
+      "url": "https://discussions.apple.com/thread/255223516"
+    },
+    {
+      "name": "Clock Help (Google)",
+      "url": "https://support.google.com/clock/faq/6273949?hl=en"
+    },
+    {
+      "name": "Spotify newsroom: How to make Spotify's Sleep Timer part of any bedtime routine",
+      "url": "https://newsroom.spotify.com/2022-08-02/how-to-make-spotifys-sleep-timer-part-of-any-bedtime-routine/"
+    },
+    {
+      "name": "YouTube Help: Set a sleep timer",
+      "url": "https://support.google.com/youtube/answer/15397997?hl=en&co=GENIE.Platform%3DAndroid"
+    }
+  ]
+}

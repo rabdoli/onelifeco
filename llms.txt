@@ -66,6 +66,8 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Fan sounds for sleeping](https://www.onelifeco.app/luten/fan-sounds/)
 - [Sounds for waking up at 3am](https://www.onelifeco.app/luten/3am/)
 - [Sleep sounds with no talking](https://www.onelifeco.app/luten/no-talking/)
+- [Luten guides](https://www.onelifeco.app/luten/guides/): practical step by step guides to sound on iPhone and Android
+- [How to set a sleep timer on iPhone or Android](https://www.onelifeco.app/luten/guides/how-to-set-a-sleep-timer/)
 - [Luten press kit](https://www.onelifeco.app/luten/press)
 - [Cassette](https://www.onelifeco.app/cassette/)
 - [Cassette press kit](https://www.onelifeco.app/cassette/press)

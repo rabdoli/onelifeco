@@ -133,6 +133,18 @@ replays a sample meeting and never touches the microphone.
   guides copy the block from press.html. All other pages stay in the project shared with the Luten app, and nothing
   under /cassette arrives there after 5 Nov 2026.
 
+## Luten guides (added 2026-11-05)
+
+- `/luten/guides/` and `/luten/guides/<slug>/` are built by `tools/make_luten_guides.py` from one JSON file per guide in
+  `tools/luten_guides/`. Edit the JSON, then run the generator, then `python3 seo-build.py` (it puts the guide list on /luten
+  from `tools/luten_guides/_links.html`). The generator owns only the /luten/guides/ lines in sitemap.xml and llms.txt.
+- It checks the finished page, not only the JSON, and refuses to build on: the free tier or catalogue size, health claims
+  including soft ones, a listening length or an outcome attached to one, prices, a near copy of another guide or of a
+  hand-written Luten page. If a check fails, fix the guide, never the check.
+- A scheduled task (`luten-guide-daily`) publishes one guide a day from these files at about 6:30 AM PT, on Reza's yes of
+  5 Nov 2026. Cassette's task pushes to main about 5:01 AM PT. Pull before pushing, add files by name, and neither task
+  touches the other product's paths.
+
 ## AI visibility files (added 2026-09-25)
 
 - **The /luten FAQ has ONE source: `luten_ld.FAQ`.** `_source.html` holds only a
