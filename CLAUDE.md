@@ -16,7 +16,7 @@ published copy, grep both repos.** Keep the two files in step.
 not how many are free, not what a subscription unlocks. Not "16 sounds are free
 forever", not "two free sounds in every section", not "unlocks the rest", not
 "the full library", not "hundreds of sounds". "Free download, optional
-subscription, 7-day trial on the annual plan" is the most that is ever said about
+subscription, 7-day trial on every subscription" is the most that is ever said about
 pricing mechanics. A count is not a "pricing term". The point is that someone
 should open the app and find out, not weigh a number against the price before
 they have heard anything.
