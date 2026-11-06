@@ -65,7 +65,8 @@
      PAGE VIEWS are trustworthy and UNIQUE VISITORS are not. Count events, not
      people. In exchange GeoIP works again, so country is available.
 
-     This is the same PostHog project as the Luten iOS app, because the API key
+     /cassette routes swap in Cassette's own project key at build time (seo-build.py).
+     Everything else is the same PostHog project as the Luten iOS app, because the API key
      available here is scoped to one project. Web events carry no $app_build, so
      the tester and App Review filters in luten-app/tools/analytics/*.py are not
      affected. Any query counting PEOPLE across the whole project mixes website

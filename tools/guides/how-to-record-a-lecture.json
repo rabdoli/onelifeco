@@ -1,0 +1,155 @@
+{
+  "slug": "how-to-record-a-lecture",
+  "keyword": "how to record a lecture on iphone",
+  "title": "How to Record a Lecture on iPhone or Android and Get Notes",
+  "description": "Record a lecture on your phone, mark what matters and get notes you can study from. Steps for iPhone and Android, with the built-in apps and with Cassette.",
+  "h1": "How to record a lecture on iPhone or Android",
+  "answer": "Ask your professor first, sit near the front, lay your phone flat with its bottom edge toward the speaker, and press record. The recorder that came with your phone gets you the audio. To get notes as well, use an app that writes them: in Cassette you press RECORD, tap MARK at the parts that matter and press STOP, and the outline, key terms and exam talk are written for you.",
+  "published": "2026-11-05",
+  "updated": "2026-11-05",
+  "sections": [
+    {
+      "h": "Before class: get a recording you can use",
+      "blocks": [
+        {
+          "p": "A clear recording comes down to a few small things you do before the professor starts."
+        },
+        {
+          "ul": [
+            "**Ask first.** Check the syllabus or ask after class. Schools and professors have their own rules about recording.",
+            "**Sit close.** Distance hurts a recording more than anything else. A few rows from the front beats the back of the room.",
+            "**Lay the phone flat, bottom edge toward the speaker.** The main microphone on most phones is on that edge. Keep it off a desk you will be typing or tapping on.",
+            "**Silence it.** Turn on Do Not Disturb so buzzes don't end up on the tape.",
+            "**Check battery and storage.** A long class is a poor time to find out either one is low."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Record with the app your phone came with",
+      "blocks": [
+        {
+          "p": "If you only want to listen again later, you may not need anything new."
+        },
+        {
+          "p": "**On iPhone,** open Voice Memos, which may be in the Utilities folder, and tap the red button. Tap it again when class ends. On iPhone 12 or later you can also [view a transcript](https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios) in the languages Apple supports."
+        },
+        {
+          "p": "**On Android,** look for the recorder app from your phone's maker. The name and features change from brand to brand, so open it and check whether it does more than save the audio."
+        },
+        {
+          "p": "Either way you end up with a long recording. Finding the ten minutes that mattered still means listening through it, and writing the notes is still your job."
+        }
+      ]
+    },
+    {
+      "h": "Record with Cassette and get the notes too",
+      "blocks": [
+        {
+          "p": "Cassette looks like a tape deck, and it works like one. It runs on iPhone and Android, and the steps are the same on both."
+        },
+        {
+          "ol": [
+            "**Press RECORD.** The tape keeps rolling when your screen locks, so you can put the phone down and listen.",
+            "**Tap MARK when something matters,** like when the professor says it will be on the exam. Each mark holds that moment on the tape.",
+            "**Press STOP.** Cassette writes the transcript and the notes on its own, with no outside AI service."
+          ]
+        },
+        {
+          "shots": [
+            "ios-rec",
+            "android-rec"
+          ],
+          "alts": [
+            "Cassette recording a lecture on iPhone, with the MARK and STOP keys on the deck.",
+            "Cassette recording on an Android phone, with the same deck."
+          ]
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "What you get when you press STOP",
+      "blocks": [
+        {
+          "p": "Cassette picks the kind of notes from what it hears. For a class it writes:"
+        },
+        {
+          "ul": [
+            "A short **summary** of the class.",
+            "What is **due**, with the day, when the professor says one.",
+            "An **outline** of what was covered, with times.",
+            "The key **terms** and what they mean.",
+            "What was said to be **on the exam**, in its own section, in the professor's words.",
+            "**Examples** and the **questions the class asked**."
+          ]
+        },
+        {
+          "shots": [
+            "ios-notes-lecture",
+            "android-notes-lecture"
+          ],
+          "alts": [
+            "Lecture notes in Cassette on iPhone, with a summary and what is due.",
+            "Lecture notes in Cassette on Android, with a summary and what is due."
+          ]
+        },
+        {
+          "p": "If it guessed wrong, for example a seminar it took for a meeting, choose **Lecture or class** and the notes are written again."
+        },
+        {
+          "p": "On phones that can't run the full notes model, you get simpler notes. The transcript and the recording are still there."
+        }
+      ]
+    },
+    {
+      "h": "Turn the notes into study time",
+      "blocks": [
+        {
+          "ul": [
+            "**Go back to the moment.** Tap a line of the transcript to jump to it, then press PLAY to hear how it was said.",
+            "**Review with cards.** Cassette makes review cards from the key terms, so you can test yourself without writing them.",
+            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep in one tap, or to Apple Notes on iPhone.",
+            "**Ask your tapes.** Type a question like \"what's due this week?\" and get an answer from your own recordings, with the sources."
+          ]
+        },
+        {
+          "shots": [
+            "ios-study",
+            "android-study"
+          ],
+          "alts": [
+            "A review card made from a lecture's key terms in Cassette on iPhone.",
+            "A review card made from a lecture's key terms in Cassette on Android."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I record a lecture with my phone locked?",
+      "a": "Yes. Cassette keeps recording when the screen locks, on iPhone and on Android."
+    },
+    {
+      "q": "Does it work without Wi-Fi?",
+      "a": "Yes. Recording, the transcript and the notes all work in airplane mode, which helps in a basement lecture hall. On iPhone, the transcript needs a language your phone can handle on the device."
+    },
+    {
+      "q": "Can I keep the recording private?",
+      "a": "The notes are never written by an outside AI service, and your recording stays on your phone unless you sign in to Premium and back it up. One exception on iPhone: in a language the phone can't transcribe on the device, Apple's speech recognition does it."
+    },
+    {
+      "q": "Is Cassette free for lectures?",
+      "a": "Recording is free and unlimited. A lecture usually runs longer than {short_tape_minutes} minutes, so its transcript and notes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: View a Voice Memos transcription on iPhone",
+      "url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios"
+    }
+  ]
+}

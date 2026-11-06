@@ -120,6 +120,19 @@ replays a sample meeting and never touches the microphone.
   Its downloads live in `cassette/media/` (from make_cassette_assets.py). Its "Release" row was
   set on release day (2026-09-27) by `tools/cassette_release.py`.
 
+## Cassette guides and Cassette's analytics (added 2026-11-05)
+
+- `/cassette/guides/` and `/cassette/guides/<slug>/` are built by `tools/make_cassette_guides.py` from one JSON file per
+  guide in `tools/guides/`. Edit the JSON, then run the generator, then `python3 seo-build.py` (it puts the guide list on
+  /cassette from `tools/guides/_links.html`). The generator also owns the guide lines in sitemap.xml and llms.txt, and it
+  refuses to build a guide that fails its checks: dashes, typed prices or free-tier numbers (use `{free_tapes}` and
+  `{short_tape_minutes}`, read from cassette/config.json), a near copy of another guide, screens from one system only.
+- A scheduled task (`cassette-guide-daily`) publishes one guide a day from these files, on Reza's yes of 5 Nov 2026.
+- **Every /cassette page reports to Cassette's own PostHog project** (phc_ytWb), so Cassette's reports can read them. In
+  seo-build.py the /cassette routes swap the key; cassette/press.html and cassette/i/ hold it directly; the compare pages and
+  guides copy the block from press.html. All other pages stay in the project shared with the Luten app, and nothing
+  under /cassette arrives there after 5 Nov 2026.
+
 ## AI visibility files (added 2026-09-25)
 
 - **The /luten FAQ has ONE source: `luten_ld.FAQ`.** `_source.html` holds only a

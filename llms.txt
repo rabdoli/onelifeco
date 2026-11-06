@@ -71,6 +71,8 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Cassette press kit](https://www.onelifeco.app/cassette/press)
 - [Cassette vs Otter](https://www.onelifeco.app/cassette/vs-otter/): a sourced comparison, checked 31 October 2026
 - [Cassette vs Wispr Flow Notetaker](https://www.onelifeco.app/cassette/vs-wispr-flow/): a sourced comparison, checked 31 October 2026
+- [Cassette guides](https://www.onelifeco.app/cassette/guides/): step by step recording and notes guides for iPhone and Android
+- [How to record a lecture on iPhone or Android](https://www.onelifeco.app/cassette/guides/how-to-record-a-lecture/)
 - [Spend waitlist](https://www.onelifeco.app/apps/spend/)
 - [About One Life](https://www.onelifeco.app/about/)
 - [Contact](https://www.onelifeco.app/contact/)

@@ -288,7 +288,7 @@ def page(p):
   <h2>Try Cassette</h2>
   <p>Free to download. Recording is free and unlimited, and the transcript and notes are free for 2 tapes a month.</p>
   <p><a class="cta" href="{CASSETTE_STORE[0]}" target="_blank" rel="noopener">Download on the App Store</a><a class="cta" href="{CASSETTE_STORE[1]}" target="_blank" rel="noopener">Get it on Google Play</a></p>
-  <p><a href="/cassette/">More about Cassette</a> &middot; <a href="/cassette/{'vs-wispr-flow' if p['slug'] == 'vs-otter' else 'vs-otter'}/">Cassette vs {'Wispr Flow Notetaker' if p['slug'] == 'vs-otter' else 'Otter'}</a></p>
+  <p><a href="/cassette/">More about Cassette</a> &middot; <a href="/cassette/guides/">Guides</a> &middot; <a href="/cassette/{'vs-wispr-flow' if p['slug'] == 'vs-otter' else 'vs-otter'}/">Cassette vs {'Wispr Flow Notetaker' if p['slug'] == 'vs-otter' else 'Otter'}</a></p>
 
   <h2>Sources</h2>
   <ul class="sources">{src}</ul>

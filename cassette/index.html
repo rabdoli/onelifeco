@@ -66,7 +66,8 @@
      PAGE VIEWS are trustworthy and UNIQUE VISITORS are not. Count events, not
      people. In exchange GeoIP works again, so country is available.
 
-     This is the same PostHog project as the Luten iOS app, because the API key
+     /cassette routes swap in Cassette's own project key at build time (seo-build.py).
+     Everything else is the same PostHog project as the Luten iOS app, because the API key
      available here is scoped to one project. Web events carry no $app_build, so
      the tester and App Review filters in luten-app/tools/analytics/*.py are not
      affected. Any query counting PEOPLE across the whole project mixes website
@@ -74,7 +75,7 @@
      would be cleaner and is a two-minute job in the PostHog UI. -->
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_p6G3z2vRAvtDDUM6S7rwfZnLmuVwGwnkWnUuPQRcf8ny', {
+posthog.init('phc_ytWbL5vu4WVreMF4sDktXhvkSzLz6EtjguPb6CuC73iA', {
   api_host: 'https://us.i.posthog.com',
   persistence: 'memory',
   person_profiles: 'identified_only',
@@ -382,6 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
       <p class="get-note">On the App Store for iPhone, iPad and Mac: iOS 17 or later, macOS 14 or later. On Google Play for Android 10 or later.</p>
       <p class="get-note">Writing about Cassette? See the <a href="/cassette/press" style="color:#ffb4a8;">press kit</a>.</p>
+      <p class="get-note">Guides: <a href="/cassette/guides/how-to-record-a-lecture/" style="color:#ffb4a8;">How to record a lecture on iPhone or Android</a>. <a href="/cassette/guides/" style="color:#ffb4a8;">All guides</a>.</p>
       <p class="get-note">Choosing a note taker? Compare <a href="/cassette/vs-otter/" style="color:#ffb4a8;">Cassette and Otter</a>, or <a href="/cassette/vs-wispr-flow/" style="color:#ffb4a8;">Cassette and Wispr Flow Notetaker</a>.</p>
       <p class="get-note">Cassette: AI Note Taker launched on <a href="https://www.producthunt.com/products/cassette-ai-note-taker" target="_blank" rel="noopener" style="color:#ffb4a8;">Product Hunt</a> on 29 October 2026 and on <a href="https://peerlist.io/luten/project/cassette-ai-note-taker" target="_blank" rel="noopener" style="color:#ffb4a8;">Peerlist Launchpad</a> on 2 November 2026.</p>
     </div>
