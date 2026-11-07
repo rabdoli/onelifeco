@@ -139,6 +139,8 @@ BANNED = [
     # Product claims and filler.
     (r"\b(best|#1|number one|most accurate|100%|only app|unlike any)\b.{0,30}\b(app|apps|sound|sounds|timer)\b", "a superlative about the product"),
     (r"\bguarantee[sd]?\b|\bnever wake\b|\bwon't wake\b", "a promise the app can't keep"),
+    (r"\bno vocals\b|\bevery sound is instrumental\b|\buniform loudness\b|\bevery track\b.{0,30}\bloudness\b", "untrue of every track: say no narration and no lyrics, and nearly every track"),
+    (r"\boffline\b|\bairplane mode\b", "offline needs a subscription, which can't be said without the free tier"),
     (r"\bdelve\b|\bin today's fast-paced\b|\bgame.?changer\b|\bseamless(ly)?\b|\brevolutionary\b", "filler"),
     (r"\bcassette\b", "the other product"),
 ]
