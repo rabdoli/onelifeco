@@ -89,9 +89,9 @@ PAGES = [
         "them": "Otter",
         "title": "Cassette vs Otter: a private, offline note taker compared (2026)",
         "desc": ("Cassette and Otter both turn conversations into transcripts and notes. Cassette works in airplane mode "
-                 "with no outside AI service; Otter transcribes in its cloud and joins online meetings."),
+                 "once your language has downloaded, with no outside AI service; Otter transcribes in its cloud and joins online meetings."),
         "tag": ("Both turn a conversation into a transcript and notes. The difference is where that happens: Cassette writes "
-                "them without an outside AI service and works in airplane mode, while Otter transcribes in its cloud and "
+                "them without an outside AI service and, once your language has downloaded, works in airplane mode, while Otter transcribes in its cloud and "
                 "can join your online meetings for you."),
         "pick_us": [
             "You record in the room: lectures, interviews, meetings around a table.",
@@ -152,7 +152,7 @@ PAGES = [
                  "Apple Watch and Android and works offline; Wispr Notetaker runs on Mac and Windows."),
         "tag": ("Neither one sends a bot into your calls. Wispr Notetaker lives on your Mac or Windows PC next to Wispr's "
                 "dictation; Cassette is a recorder for your phone, your wrist and your Mac that writes the notes without "
-                "an outside AI service, even in airplane mode."),
+                "an outside AI service, even in airplane mode once your language has downloaded."),
         "pick_us": [
             "You record on your phone or Apple Watch: lectures, interviews, meetings in a room.",
             "You want the transcript and the notes written with no outside AI service, offline too.",

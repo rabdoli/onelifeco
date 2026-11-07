@@ -95,8 +95,9 @@ FAQ = [
      "profile and none of this happens on iPhone. On Android, the transcript "
      "and the notes are always written on the phone."),
     ("Does Cassette work offline?",
-     "Yes. You can record, and get the transcript and the notes, in airplane mode. "
-     "On Android everything is written on the phone. On iPhone, speech is recognised "
+     "Recording always works in airplane mode. Transcripts and notes do too once the "
+     "language has downloaded, and on Android once the notes model has arrived over "
+     "Wi-Fi after install. On Android everything is written on the phone. On iPhone, speech is recognised "
      "on the device for the languages your iPhone supports there, and when Apple's "
      "Private Cloud Compute can't be reached the notes are written on the iPhone "
      "instead. Switch on On-device only in your profile and your tapes never leave "
