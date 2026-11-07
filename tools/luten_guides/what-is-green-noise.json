@@ -1,0 +1,213 @@
+{
+  "slug": "what-is-green-noise",
+  "keyword": "green noise",
+  "also_targets": [
+    "what is green noise",
+    "is green noise real",
+    "what is green noise sound like",
+    "green noise vs white noise",
+    "green noise vs pink noise",
+    "green noise vs brown noise",
+    "green noise youtube",
+    "green noise app"
+  ],
+  "title": "What Is Green Noise? What the Name Means and Where to Find It",
+  "description": "Green noise has no fixed definition. Who says what, how it differs from white, pink and brown noise, and where to find or make it.",
+  "h1": "What is green noise?",
+  "answer": "Green noise is a loose name for steady noise with extra level around the middle of the frequency range. It has no fixed definition: we found no standard for it, and the sources below place it anywhere from around 500 Hz to about 2,900 Hz. Wikipedia has a short clip labelled green noise that you can play. To make your own, you can try the Equalizer in Background Sounds on iPhone, or Audacity on a computer. Luten has nothing labelled green noise.",
+  "published": "2026-11-06",
+  "updated": "2026-11-06",
+  "single_os": "No screens: this guide is about what a term means and about outside tools, and no Luten screen shows green noise.",
+  "related": [],
+  "sections": [
+    {
+      "h": "What the name means",
+      "blocks": [
+        {
+          "p": "Most noise colours are borrowed from light. [Wikipedia](https://en.wikipedia.org/wiki/Colors_of_noise) says the habit began with white noise, and that other colours followed, often because the spectrum resembles that colour of light. Brown is the exception: it is named after Brownian motion."
+        },
+        {
+          "p": "So nothing about the sound is green. The name describes where the level sits across frequencies. Frequency is heard as pitch and measured in hertz (Hz): low numbers are rumble and high numbers are hiss. In nearly every use we read, green means somewhere around the middle."
+        }
+      ]
+    },
+    {
+      "h": "Does green noise have a fixed definition?",
+      "blocks": [
+        {
+          "p": "No. Wikipedia files it under informal names. It says the International Electrotechnical Commission defines white and pink noise, and US Federal Standard 1037C defines white, pink, blue and black. Green isn't in either list as Wikipedia gives them. Here is who says what."
+        },
+        {
+          "ul": [
+            "**Joseph S. Wisniewski, in a 1996 Usenet post.** [His FAQ](https://web.archive.org/web/20110430151608/https://www.ptpart.co.uk/colors-of-noise) says it was defined by \"some folks\" producing tapes, and calls it, supposedly, \"the background noise of the world\": a long-term average of the spectrum at outdoor sites. He describes it as close to pink noise with extra level around 500 Hz, then asks if anyone has the actual spectrum.",
+            "**J. Russell Lemon, in a comment printed with that FAQ.** He recalls a US government spec for testing communication channels, flat from 500 Hz to about 2 kHz. He is going from memory, and our search found no copy of it.",
+            "**Daniel Lau, Gonzalo Arce and Neal Gallagher, in a [1998 paper](https://scholars.uky.edu/en/publications/green-noise-digital-halftoning/) in Proceedings of the IEEE.** They define green noise as the mid-frequency part of white noise. Their subject is dot patterns for printing images, not sound.",
+            "**John D. Cook, a consultant in mathematics and statistics, on [his blog](https://www.johndcook.com/blog/2016/04/27/green-noise-and-barks/) in 2016.** He quotes a source saying these colours aren't rigorously defined. Mapping the rainbow onto the range of hearing, he gets about 1612 to 2919 Hz, and says that is his reading of a vague description.",
+            "**Wikipedia** also lists bounded Brownian noise as a meaning, with no source given."
+          ]
+        },
+        {
+          "p": "Wikipedia's 500 Hz comes from Wisniewski's FAQ. Cook's range starts more than three times higher. Read any exact figure as one author's choice."
+        }
+      ]
+    },
+    {
+      "h": "Green noise vs white, pink and brown noise",
+      "blocks": [
+        {
+          "p": "White, pink and brown are each described by one slope across the whole range. Green is described by a region instead."
+        },
+        {
+          "ul": [
+            "**White:** flat. The same power per hertz all the way up.",
+            "**Pink:** falls about 3 decibels per octave as the pitch rises.",
+            "**Brown:** falls about 6 decibels per octave.",
+            "**Green:** no agreed slope. Extra level, or all of the level, sits in a band around the middle, depending on whose version it is."
+          ]
+        },
+        {
+          "p": "Two files made to the definition of brown noise should measure alike. Two files called green noise may not. See our page on [white, pink and brown noise](/luten/white-noise/) for those colours."
+        }
+      ]
+    },
+    {
+      "h": "Where to find or make green noise",
+      "blocks": [
+        {
+          "p": "None of these is the official version, because there isn't one."
+        },
+        {
+          "h3": "Hear a sample on Wikipedia"
+        },
+        {
+          "p": "The Wikipedia article has a short clip labelled as Wisniewski's version. [The file](https://commons.wikimedia.org/wiki/File:GreenNoise.ogg) is marked public domain, and the uploader doesn't say how it was made."
+        },
+        {
+          "h3": "On iPhone: Background Sounds with the Equalizer"
+        },
+        {
+          "p": "The Apple pages we read don't use the name green noise. They describe an [Equalizer that changes the levels of chosen frequencies](https://support.apple.com/en-us/109346), on iOS 26 or later. [Apple's steps](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios) come to this:"
+        },
+        {
+          "ol": [
+            "Open **Settings**, tap **Accessibility**, tap **Audio & Visual**, tap **Background Sounds**, then turn it on.",
+            "Tap the current sound and choose a noise. [Apple lists](https://support.apple.com/en-us/126977) balanced, bright and dark noise.",
+            "Tap **Equalizer** and turn it on.",
+            "Drag across the **Tone** grid to pick a range of frequencies. **Broad** covers wider ranges and **Focused** more specific ones."
+          ]
+        },
+        {
+          "p": "Apple's pages don't say where the middle is on the grid, and they don't describe this as a way to make green noise, so go by ear."
+        },
+        {
+          "h3": "On a computer: make it in Audacity"
+        },
+        {
+          "p": "[Audacity](https://www.audacityteam.org/) says it is free and open source, and runs on Windows, macOS and Linux. Its [noise generator](https://www.audacityteam.org/manual/generators/noise) offers white, pink and Brownian, so green is up to you. These steps follow Wisniewski's description."
+        },
+        {
+          "ol": [
+            "Choose **Generate**, then **Noise**. Set **Type** to Pink, and **Amplitude** well below the default of 0.8, because the next step adds level. Set **Duration** to the file length you want.",
+            "With the noise selected, choose **Effect**, then **EQ and filters**, then [Filter Curve EQ](https://www.audacityteam.org/manual/effects/eq-and-filters/filter-curve-eq).",
+            "Click the curve near 500 Hz to add a point and drag it up, with a point each side to keep the hump gentle. No height is agreed, so go by ear.",
+            "Choose [File, then Export audio](https://www.audacityteam.org/manual/menu-bar/file) to save an ordinary audio file."
+          ]
+        },
+        {
+          "p": "Turn your volume down before you press play."
+        },
+        {
+          "h3": "On Android"
+        },
+        {
+          "p": "A search of Google's help pages turned up nothing on green noise when we looked, so we can't point to a built-in way. Use the clip, a file you made, or a video or app."
+        },
+        {
+          "h3": "Videos and apps"
+        },
+        {
+          "p": "YouTube, the App Store and Google Play all have videos or apps using the name. The label is the maker's, and the titles we looked at don't say which version they mean. Judge by ear."
+        }
+      ]
+    },
+    {
+      "h": "Is there green noise in Luten?",
+      "blocks": [
+        {
+          "p": "Luten has nothing labelled green noise. The noise colours it names are white, pink and brown, and we don't claim any of them is green. If you want green noise by name, use one of the ways above."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is green noise real?",
+      "a": "The name is real and widely used. What is missing is one agreed definition, so two people can mean different sounds by it."
+    },
+    {
+      "q": "What does green noise sound like?",
+      "a": "There is no one answer, because versions differ. Wikipedia has a short clip labelled green noise that you can play and judge for yourself."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Wikipedia: Colors of noise",
+      "url": "https://en.wikipedia.org/wiki/Colors_of_noise"
+    },
+    {
+      "name": "Wikimedia Commons: GreenNoise.ogg",
+      "url": "https://commons.wikimedia.org/wiki/File:GreenNoise.ogg"
+    },
+    {
+      "name": "Joseph S. Wisniewski: Colors of noise pseudo FAQ, version 1.3 (1996), with J. Russell Lemon's comment, archived copy",
+      "url": "https://web.archive.org/web/20110430151608/https://www.ptpart.co.uk/colors-of-noise"
+    },
+    {
+      "name": "Lau, Arce and Gallagher: Green-noise digital halftoning, Proceedings of the IEEE, 1998 (abstract)",
+      "url": "https://scholars.uky.edu/en/publications/green-noise-digital-halftoning/"
+    },
+    {
+      "name": "John D. Cook: Green noise and Barks (2016)",
+      "url": "https://www.johndcook.com/blog/2016/04/27/green-noise-and-barks/"
+    },
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Apple Support: article covering Background Sounds and the Equalizer",
+      "url": "https://support.apple.com/en-us/109346"
+    },
+    {
+      "name": "Apple Support: accessibility features for older adults",
+      "url": "https://support.apple.com/en-us/126977"
+    },
+    {
+      "name": "Audacity: home page",
+      "url": "https://www.audacityteam.org/"
+    },
+    {
+      "name": "Audacity Manual: Noise",
+      "url": "https://www.audacityteam.org/manual/generators/noise"
+    },
+    {
+      "name": "Audacity Manual: Filter Curve EQ",
+      "url": "https://www.audacityteam.org/manual/effects/eq-and-filters/filter-curve-eq"
+    },
+    {
+      "name": "Audacity Manual: File menu",
+      "url": "https://www.audacityteam.org/manual/menu-bar/file"
+    },
+    {
+      "name": "YouTube: search results for green noise",
+      "url": "https://www.youtube.com/results?search_query=green+noise"
+    },
+    {
+      "name": "Google Play: search results for green noise",
+      "url": "https://play.google.com/store/search?q=green%20noise&c=apps"
+    }
+  ]
+}

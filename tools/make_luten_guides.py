@@ -371,6 +371,7 @@ FOOT = """
   <footer>
     Luten is A One Life Product. It is a wellness app, not a medical device, and nothing here is advice about treating a
     sleep or attention problem. <a href="https://www.onelifeco.app/luten/">onelifeco.app/luten</a> &middot;
+    <a href="https://www.onelifeco.app/luten/guides/">Guides</a> &middot;
     <a href="https://www.onelifeco.app/privacypolicy">Privacy</a> &middot;
     <a href="https://www.onelifeco.app/termsofservice">Terms</a>
   </footer>

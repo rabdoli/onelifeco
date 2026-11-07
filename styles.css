@@ -245,7 +245,7 @@ a{color:inherit;text-decoration:none;}
 /* ---------- FOOTER ---------- */
 .footer{background:rgba(6,6,9,.88);backdrop-filter:blur(6px);position:relative;z-index:3;
   padding:clamp(70px,9vh,110px) clamp(20px,5vw,64px) 44px;border-top:1px solid rgba(201,169,110,.14);}
-.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;}
+.footer-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:40px;}
 .footer-brand .nav-logo{margin-bottom:20px;}
 .footer-brand p{font-size:13.5px;color:var(--bark);max-width:280px;}
 .footer-col h5{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-bottom:20px;font-weight:500;}

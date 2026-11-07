@@ -76,7 +76,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.onelifeco.app/luten/guides/what-is-green-noise/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.onelifeco.app/luten/guides/how-to-set-a-sleep-timer/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.onelifeco.app/luten/guides/how-to-do-box-breathing/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.onelifeco.app/luten/guides/how-to-do-4-7-8-breathing/</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

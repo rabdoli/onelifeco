@@ -1,4 +1,8 @@
 {
   "ios-sleep-timer": {"file": "ios-sleep-timer.png", "os": "iPhone"},
-  "android-sleep-timer": {"file": "android-sleep-timer.png", "os": "Android"}
+  "android-sleep-timer": {"file": "android-sleep-timer.png", "os": "Android"},
+  "ios-box-breathing": {"file": "ios-box-breathing.png", "os": "iPhone"},
+  "android-box-breathing": {"file": "android-box-breathing.png", "os": "Android"},
+  "ios-478-breathing": {"file": "ios-478-breathing.png", "os": "iPhone"},
+  "android-478-breathing": {"file": "android-478-breathing.png", "os": "Android"}
 }
