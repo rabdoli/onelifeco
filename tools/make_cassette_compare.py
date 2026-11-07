@@ -12,11 +12,24 @@ honest "who should pick which"; Cassette's own claims checked against the app's 
 transcripts, On-device only, Private Cloud Compute on iOS 27). Prices are US App Store prices.
 Lifetime has no number here on purpose: it had a launch price until 31 October 2026.
 """
+from pathlib import Path
+import json
 import html, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://www.onelifeco.app"
 CHECKED = "31 October 2026"
+
+
+def guide_links(count=5):
+    """The newest guides: these pages are indexed, and traffic pages must point at the new ones (Rasty's step 4)."""
+    guides = []
+    for f in (Path(__file__).resolve().parent / "guides").glob("*.json"):
+        g = json.loads(f.read_text(encoding="utf-8"))
+        if "slug" in g:
+            guides.append(g)
+    guides.sort(key=lambda g: (g["published"], g["slug"]), reverse=True)
+    return "".join(f'<li><a href="/cassette/guides/{g["slug"]}/">{g["h1"]}</a></li>' for g in guides[:count])
 
 
 def posthog():
@@ -289,6 +302,9 @@ def page(p):
   <p>Free to download. Recording is free and unlimited. Tapes under 3 minutes get their transcript and notes free, and longer ones get them free for 2 tapes a month.</p>
   <p><a class="cta" href="{CASSETTE_STORE[0]}" target="_blank" rel="noopener">Download on the App Store</a><a class="cta" href="{CASSETTE_STORE[1]}" target="_blank" rel="noopener">Get it on Google Play</a></p>
   <p><a href="/cassette/">More about Cassette</a> &middot; <a href="/cassette/guides/">Guides</a> &middot; <a href="/cassette/{'vs-wispr-flow' if p['slug'] == 'vs-otter' else 'vs-otter'}/">Cassette vs {'Wispr Flow Notetaker' if p['slug'] == 'vs-otter' else 'Otter'}</a></p>
+
+  <h2>Guides</h2>
+  <ul>{guide_links()}</ul>
 
   <h2>Sources</h2>
   <ul class="sources">{src}</ul>
