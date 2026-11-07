@@ -1,0 +1,151 @@
+{
+  "slug": "lecture-recording-app",
+  "keyword": "lecture recording app",
+  "title": "Lecture Recording App: What to Look For on iPhone and Android",
+  "description": "How to pick an app to record lectures and take notes: what the free built-in apps do, eight things that matter for a class, and how Cassette does.",
+  "h1": "How to choose a lecture recording app",
+  "answer": "Start with what your phone already has. On iPhone 12 or later, Voice Memos and the Notes app record and write a transcript, and Notes can add a summary on iPhones with Apple Intelligence. A Pixel's Recorder and a Galaxy's Voice Recorder also write transcripts, and summaries on newer models. If you want notes made for a class, with an outline, key terms and what is on the exam, look for an app that keeps recording with the screen locked, lets you mark moments, works offline and gets the notes out to where you study. Cassette does those on iPhone and Android.",
+  "published": "2026-11-07",
+  "updated": "2026-11-07",
+  "related": [
+    "how-to-record-a-lecture",
+    "transcribe-voice-memos"
+  ],
+  "sections": [
+    {
+      "h": "First, check the free apps on your phone",
+      "blocks": [
+        {
+          "p": "You may not need to download anything. Here is what the built-in apps say they do, from their makers' own help pages."
+        },
+        {
+          "ul": [
+            "**iPhone, Notes app.** In a note, tap the attachments button, then [Record Audio](https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios). Apple lists the transcript for iPhone 12 and later, when the iPhone's language is set to English, Spanish, Portuguese, Italian, French, German, Japanese, Korean or Chinese. With Apple Intelligence, you can also tap **Summary** to see the main points.",
+            "**iPhone, Voice Memos.** It records and shows a [transcript](https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios) on the same iPhones.",
+            "**Pixel, Recorder.** It writes a [transcript](https://support.google.com/pixelphone/answer/16267698?hl=en) as you record. Google lists summaries for Pixel 8 and later, for recordings of 5 minutes up to 1 hour of speech, and says they are made in the cloud.",
+            "**Samsung Galaxy, Voice Recorder.** With [Transcript assist](https://www.samsung.com/us/support/answer/ANS10000942/) it writes a transcript and a summary, on select phones and tablets with One UI 6.1 or higher."
+          ]
+        },
+        {
+          "p": "If you mostly want to listen again later, or read a transcript, one of these may be enough. The question is what you want after class: a recording, a wall of text, or study notes."
+        }
+      ]
+    },
+    {
+      "h": "What to look for in a lecture recording app",
+      "blocks": [
+        {
+          "p": "A class is not a meeting. It runs long, the useful part is often two sentences, and you will study from it weeks later. These are the things worth checking before you trust an app with a semester."
+        },
+        {
+          "ol": [
+            "**It keeps recording with the screen locked.** You should be able to put the phone down and listen. Test it once before a real class.",
+            "**You can mark a moment.** When the professor says \"this will be on the exam\", one tap should hold that spot, so you don't hunt through an hour of audio later.",
+            "**The notes are made for a class.** A summary is a start. For studying you want an outline with times, the key terms, homework with the day it is due, and what was said about the exam.",
+            "**It works without Wi-Fi.** Lecture halls are often in basements. Check what still works in airplane mode.",
+            "**You know where the audio goes.** Read whether the recording is sent to a server to be transcribed or summarized.",
+            "**You can get the notes out.** Copying, a PDF, or a send to the notes app you already use.",
+            "**It helps you review.** Jumping from a line of notes to that moment of the recording saves a lot of time.",
+            "**The cost is clear.** Know what is free and what a long class costs before the semester starts."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "How Cassette handles each one",
+      "blocks": [
+        {
+          "p": "Cassette is a recorder styled as a tape deck, for iPhone and Android. You press RECORD, tap MARK at the parts that matter and press STOP. Here is how it does on the list above."
+        },
+        {
+          "ul": [
+            "**Locked screen:** the tape keeps recording when the screen locks, on both systems.",
+            "**Marks:** tap MARK during class to hold that moment on the tape.",
+            "**Class notes:** Cassette picks the kind of notes from what it hears. For a class it writes a summary, what is due, an outline with times, key terms, examples, the questions the class asked, and what was said to be on the exam, in the professor's words."
+          ]
+        },
+        {
+          "shots": [
+            "ios-notes-exam",
+            "android-notes-exam"
+          ],
+          "alts": [
+            "Lecture notes in Cassette on iPhone, with key terms, what is on the exam and review cards.",
+            "Lecture notes in Cassette on Android, with the outline, key terms and what is on the exam."
+          ]
+        },
+        {
+          "p": "If it took your seminar for a meeting, open the notes template and pick **Lecture or class**, and the notes are written again in seconds."
+        },
+        {
+          "shots": [
+            "ios-templates",
+            "android-templates"
+          ],
+          "alts": [
+            "The notes template list in Cassette on iPhone, with Lecture or class among the choices.",
+            "The same notes template list in Cassette on Android."
+          ]
+        },
+        {
+          "cta": "mid"
+        },
+        {
+          "ul": [
+            "**Offline:** recording, the transcript and the notes work in airplane mode. On iPhone the transcript needs a language your phone can handle on the device, with its speech model downloaded. On Android the notes model arrives over Wi-Fi once after you install, so open Cassette on Wi-Fi before your first class.",
+            "**Where the audio goes:** notes are never written by an outside AI service. On Android the audio is never sent anywhere to be transcribed or written up. On iPhone, Apple's servers transcribe a tape the phone can't do on the device, the notes can be written on Apple's Private Cloud Compute on iOS 27, and tapes go in iCloud and computer backups. Signed-in Premium backs tapes up on both systems. On iPhone, On-device only stops all of that.",
+            "**Getting notes out:** send them to Notion, OneNote, Evernote or Google Keep in one tap, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone. SHARE also saves them as PDF or Word.",
+            "**Review:** tap a line of the transcript to jump to that moment, review cards are made from the key terms, and you can type a question to your tapes, like \"what's due this week?\"",
+            "**Cost:** recording is free, with no minute meter. A class is usually longer than {short_tape_minutes} minutes, so its transcript and notes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that."
+          ]
+        },
+        {
+          "p": "The full notes need a phone that can run the notes model. On an iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, you get the recording, the transcript and a few lines heard clearly, with no summary, outline, terms, review cards or template choice."
+        }
+      ]
+    },
+    {
+      "h": "What no app can fix",
+      "blocks": [
+        {
+          "ul": [
+            "**A far away microphone.** Sit near the front and lay the phone flat, bottom edge toward the speaker. Our [lecture recording steps](/cassette/guides/how-to-record-a-lecture/) cover the rest.",
+            "**Your school's rules.** Ask your professor or check the syllabus before you record."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is there a free lecture recording app?",
+      "a": "Yes. Voice Memos and Notes on iPhone, Recorder on Pixel and Voice Recorder on Galaxy phones record for free and write transcripts on the phones and languages their makers list. In Cassette, recording is free. A tape under {short_tape_minutes} minutes gets its transcript and notes free, and {free_tapes} longer tapes a month do too."
+    },
+    {
+      "q": "Can a lecture recording app make study notes, not just a transcript?",
+      "a": "Some can. Cassette writes notes for a class with an outline, key terms, homework and what is on the exam, and makes review cards from the terms, on phones that can run its notes model."
+    },
+    {
+      "q": "Does Cassette work for a lecture in another language?",
+      "a": "It transcribes many languages. Pick the recording language in Cassette before you record. Notes for a tape in another language are more general than the English lecture notes shown here."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Record and transcribe audio in Notes on iPhone",
+      "url": "https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios"
+    },
+    {
+      "name": "Apple Support: View a Voice Memos transcription on iPhone",
+      "url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios"
+    },
+    {
+      "name": "Pixel Phone Help: Create, edit and manage transcriptions",
+      "url": "https://support.google.com/pixelphone/answer/16267698?hl=en"
+    },
+    {
+      "name": "Samsung Support: Use Voice Recorder with Galaxy AI",
+      "url": "https://www.samsung.com/us/support/answer/ANS10000942/"
+    }
+  ]
+}
