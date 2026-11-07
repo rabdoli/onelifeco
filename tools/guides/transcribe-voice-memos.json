@@ -2,11 +2,11 @@
   "slug": "transcribe-voice-memos",
   "keyword": "transcribe voice memos iphone",
   "title": "How to Transcribe Voice Memos on iPhone or Android",
-  "description": "Turn a voice memo into text with the tools already on your phone. Steps for iPhone, Mac, Pixel and Samsung, and what Cassette adds for new recordings.",
+  "description": "Turn a voice memo into text with the tools already on your phone. Steps for iPhone, Mac, Pixel and Samsung, and what Cassette adds.",
   "h1": "How to transcribe voice memos on iPhone or Android",
-  "answer": "On iPhone 12 or later, open Voice Memos, tap the recording, tap the More button and choose Copy Transcript. Paste the text wherever you want it. On Android it depends on the phone: Pixel's Recorder and Samsung's Voice Recorder can both write a transcript, on the phones and in the languages they support. If you also want your to-dos pulled out of what you said, Cassette does that, but only for tapes you record in it. It can't open a recording you already have.",
+  "answer": "On iPhone 12 or later, open Voice Memos, tap the recording, tap the More button and choose Copy Transcript. Paste the text wherever you want it. On Android it depends on the phone: Pixel's Recorder and Samsung's Voice Recorder can both write a transcript, on the phones and in the languages they support. If you also want your to-dos pulled out of what you said, Cassette does that. On iPhone, iPad and Mac it also takes a recording you already have: share the memo to Cassette on iPhone or iPad, or drag the file onto its Shelf on a Mac. On Android, Cassette writes up only tapes it records itself.",
   "published": "2026-11-05",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "related": [
     "lecture-recording-app",
     "how-to-record-a-lecture",
@@ -75,10 +75,23 @@
           "p": "A transcript gives you every word, including the \"um\" and the part where you changed your mind. If you talk to your phone to remember things, what you want is usually the list, not the wall of text."
         },
         {
-          "p": "That is what Cassette is for. It runs on iPhone and Android, and it works like a tape deck. It does have one limit you should know first: **it transcribes tapes it recorded itself.** There is no way to bring in a memo from another app, so for recordings you already have, use the steps above."
+          "p": "That is what Cassette is for. It runs on iPhone, iPad, Mac and Android, and it works like a tape deck. On iPhone, iPad and Mac it can also take a memo you already have. **Cassette for Android can't add a file yet.** On Android it writes up only tapes it records itself, so for recordings you already have there, use the steps above."
         },
         {
-          "p": "For the next memo:"
+          "h3": "A memo you already have (iPhone, iPad and Mac)"
+        },
+        {
+          "ol": [
+            "**On iPhone or iPad,** share the memo from **Voice Memos**, **Files** or another app and choose **Cassette**. Or open Cassette and press **ADD FILE** on the Shelf.",
+            "**On a Mac,** drag the file onto the Shelf, or click **ADD FILE**. A long recording dragged straight from Voice Memos has to go to the Desktop first. Drag it there, then drag it from the Desktop onto the Shelf.",
+            "**Open Cassette** if you shared from another app. The file is now a tape on the Shelf, and Cassette writes its transcript and notes, the same as for a tape it recorded."
+          ]
+        },
+        {
+          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. Your original file isn't changed. Cassette keeps its own copy and shows the file's name on the tape, and the free tier counts it the same way as a tape you record."
+        },
+        {
+          "h3": "The next memo"
         },
         {
           "ol": [
@@ -101,7 +114,7 @@
           "cta": "mid"
         },
         {
-          "p": "That list needs a phone that can run the full notes model. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets simpler notes: a few lines quoted from the tape, with no gist or to-do list. Tapes in other languages get more general notes. The transcript and the recording are there either way."
+          "p": "That list needs a device that can run the full notes model. An iPhone, iPad or Mac without Apple Intelligence or on a version before 26, or an Android phone with less than 8 GB of memory, gets simpler notes: a few lines quoted from the tape, with no gist or to-do list. Tapes in other languages get more general notes. The transcript and the recording are there either way."
         },
         {
           "p": "To start faster, add the Cassette widget to your Home Screen. On iOS 18 or later, Control Center can start a tape too, and so can the Action button on iPhones that have one."
@@ -149,11 +162,11 @@
   "faq": [
     {
       "q": "Can I transcribe a voice memo I already recorded?",
-      "a": "If it's in Voice Memos or Pixel's Recorder, yes, with the steps above. On a Galaxy, try Transcript assist on the recording in Voice Recorder. Cassette can't do this, because it only transcribes its own tapes."
+      "a": "If it's in Voice Memos or Pixel's Recorder, yes, with the steps above. On a Galaxy, try Transcript assist on the recording in Voice Recorder. Cassette can do it on iPhone, iPad and Mac. On iPhone and iPad, share the file to Cassette or press ADD FILE on the Shelf. On a Mac, drag it onto the Shelf or click ADD FILE. It gets a transcript and notes like any tape. Cassette for Android can't add a file yet."
     },
     {
       "q": "Can I transcribe voice memos for free?",
-      "a": "Apple's and Google's pages mention no fee for transcription, and Samsung says its basic Galaxy AI features are free. In Cassette, a tape under {short_tape_minutes} minutes gets its transcript and notes free. Longer tapes count toward the {free_tapes} free tapes a month, and Premium covers the ones after that."
+      "a": "Apple's and Google's pages mention no fee for transcription, and Samsung says its basic Galaxy AI features are free. In Cassette, a tape under {short_tape_minutes} minutes gets its transcript and notes free. Longer tapes count toward the {free_tapes} free tapes a month, and Premium covers the ones after that. A file you add on iPhone, iPad or Mac counts the same way."
     },
     {
       "q": "Does Cassette need the internet to transcribe?",
