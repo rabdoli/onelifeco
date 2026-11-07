@@ -50,8 +50,8 @@ CASSETTE_LD=cassette_ld.blocks()
 if not cassette_ld.RELEASED:
     src=cassette_ld.prerelease(src)
 ROUTES={
- "luten":("Luten: Sound for ADHD, Focus &amp; Sleep That Learns You",
-   "Luten is a sound-first iOS app for a busy mind: ADHD, focus, study and sleep. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
+ "luten":("Luten: Sleep &amp; Focus Sounds That Learn You",
+   "Luten is a sound-first app for iPhone and Android, with sections for Sleep, Focus, Stress, ADHD and Kids. Tell it how you feel and press play. Not another meditation app.", LUTEN_LD),
  "luten/delete-account":("Delete Your Luten Account &middot; One Life",
    "How to delete your Luten account, in the app or by email without reinstalling it: what is deleted, what is kept and for how long, and how to reach us.", None),
  "cassette/delete-account":("Delete Your Cassette Account &middot; One Life",

@@ -34,11 +34,11 @@ APPSTORE = "https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392"
 # ---------------------------------------------------------------- the questions
 
 Q1 = [
-    ("sleep",  "Get back to sleep",              "It is the middle of the night and you are awake."),
-    ("start",  "Start something I keep putting off", "The task is not hard. Beginning it is."),
-    ("focus",  "Concentrate with people around",  "An office, a shared flat, a cafe, a library that is not quiet."),
-    ("down",   "Come down from a day",            "You finished hours ago and your head did not."),
-    ("child",  "Settle a child",                  "Bedtime, a nap, or a car that needs to stay calm."),
+    ("sleep",  "Awake in the middle of the night", "The room is dark and you are up."),
+    ("start",  "A task I keep putting off", "Something you keep meaning to begin."),
+    ("focus",  "Working with people around",  "An office, a shared flat, a cafe, a library that is not quiet."),
+    ("down",   "After a long day", "The day is over."),
+    ("child",  "A child's bedtime", "Bedtime, a nap or a car ride."),
 ]
 
 Q2 = [
@@ -55,19 +55,19 @@ Q2 = [
 RESULTS = {
  ("sleep","voice"): ("Three In The Morning",
    "Very low cello and double bass, one dark chord held with almost no movement in it.",
-   "Nothing in the Luten catalog has a voice in it. No narration, no singing, no one telling you to relax. This one was written for the exact hour you are awake in."),
+   "It has no narration and no lyrics. No one telling you to relax. This one was written for the exact hour you are awake in."),
  ("sleep","tune"): ("Deep Pink Noise",
    "Pink noise with the highs taken away. Deep and close.",
-   "No melody to follow, because there is no melody. Pink noise sits between the hiss of white and the rumble of brown, and this version has the top rolled off so it stays soft across a long night."),
+   "No melody to follow, because there is no melody. Pink noise sits between the hiss of white and the rumble of brown, and this version has the top rolled off so it stays soft."),
  ("sleep","change"): ("The Long Middle",
    "A single sustained cello note, almost motionless from the first second to the last.",
-   "It does not build and it does not resolve. There is nothing coming that you need to stay awake for."),
+   "It does not build and it does not resolve."),
 
  ("start","voice"): ("Parallel Play",
    "Sparse felt piano over distant room tone. Company without conversation.",
-   "Some people find it easier to begin when the room does not feel empty. This is that room, and nobody in it is going to talk to you."),
+   "Sound from a room. Nobody in it will talk to you."),
  ("start","tune"): ("Steady Brown Noise",
-   "Brown noise held completely level. One thing to hold on to.",
+   "Brown noise held completely level.",
    "Brown noise is a preference, not a treatment, and we will not tell you otherwise. What is true is that this one is synthesised to its actual spectral slope rather than made by pulling the treble off a recording, and it does not move."),
  ("start","change"): ("One Thing At A Time",
    "One sustained reed organ tone with the slightest movement in it.",
@@ -75,16 +75,16 @@ RESULTS = {
 
  ("focus","voice"): ("Pure White Noise",
    "Flat, even white noise. The same from the first second to the last.",
-   "The worst office sound is a conversation you can almost make out, because your brain keeps trying to finish the sentence. Covering speech is a question of acoustics rather than wellness, and broadband noise is the plainest tool for it."),
+   "Broadband noise and nothing else. No tune, no tempo and no voice."),
  ("focus","tune"): ("Page Turns",
    "Pages turning in a still room, sparse and quiet, like a library desk nearby.",
-   "No tempo anywhere in it. Lo-fi has a beat, and a beat is a thing to follow. Half an hour in you are nodding along instead of reading."),
+   "No tempo anywhere in it. Lo-fi has a beat, and a beat is a thing to follow."),
  ("focus","change"): ("Steady Pink Noise",
-   "Pink noise held perfectly level, with nothing to notice.",
-   "Deliberately uneventful. There is nothing in here worth turning your head for."),
+   "Pink noise held perfectly level.",
+   "Deliberately uneventful."),
 
  ("down","voice"): ("Low Cedar Stillness",
-   "Solo cello, long slow bows in the low register, woody and grounding.",
+   "Solo cello, long slow bows in the low register, woody and warm.",
    "One instrument, no words, no guide. If wordless choirs still read as voices to you, this has none of that either."),
  ("down","tune"): ("The Long Exhale",
    "A descending pad whose fall is always longer than its rise.",
@@ -95,13 +95,13 @@ RESULTS = {
 
  ("child","voice"): ("Kiri no Komoriuta",
    "A Japanese lullaby on solo koto, sparse and full of space, with a breathy shakuhachi far away.",
-   "The lullabies in Luten come from all over the world and every one of them is instrumental, so nothing is being sung at a child in a language they are meant to understand."),
+   "The lullabies in Luten come from all over the world and none of them has words, so nobody is singing."),
  ("child","tune"): ("Soft White Noise",
-   "White noise with the top softened. Gentler over a long night.",
-   "For a child who settles to a hush rather than a song. No tune, nothing that ends."),
+   "White noise with the top softened.",
+   "A hush, not a song. No tune, nothing that ends."),
  ("child","change"): ("Bíum Bíum",
    "An Icelandic lullaby on harmonium, sustained and very still, the reeds just audible.",
-   "It circles rather than develops. Nothing in it wakes anybody up."),
+   "It circles rather than develops."),
 }
 
 SECTION_OF = {"sleep":"Sleep","start":"ADHD","focus":"Focus","down":"Stress","child":"Kids"}
@@ -159,7 +159,7 @@ def build():
 
     title = "Which Luten sound should you start with?"
     desc  = ("Two questions about what you are trying to do and what ruins it for you, "
-             "and a named sound to start with. No talking, no vocals, no ads, no bright screen.")
+             "and a named sound to start with. No narration, no lyrics, no ads, no bright screen.")
 
     # Question markup
     q1 = "\n".join(
@@ -253,7 +253,7 @@ def build():
   <div class="quiz">
     <div class="step on" id="s1">
       <div class="qh">1 of 2</div>
-      <h2 style="margin-top:0">What are you trying to do?</h2>
+      <h2 style="margin-top:0">What is the moment?</h2>
 {q1}
     </div>
 
@@ -273,7 +273,7 @@ def build():
 
   <h2>What the app does with this</h2>
   <p>The version above is two taps and a fixed answer. In Luten you say how you feel in your
-  own words, and Sona reads it on the phone itself using Apple's on-device language tools.
+  own words, and Sona reads it on the phone itself.
   Nothing you type is sent anywhere. It also learns which sounds you keep and which you skip,
   so the answer stops being generic.</p>
   <p>Luten is free to download on the App Store for iPhone. The subscription is optional and
@@ -290,12 +290,11 @@ def build():
   <h2>Questions people ask before they download</h2>
   <div class="card">
     <h3>Is there any talking?</h3>
-    <p>No. There are no vocals anywhere in the catalog. No narration, no guided meditation,
+    <p>No. There is no narration and there are no lyrics. No narration, no guided meditation,
     no course.</p>
 
     <h3>Does it play with the screen off?</h3>
-    <p>Yes. Audio keeps going in the background and on the lock screen, sounds download for
-    offline playback, and the player stays black while it plays.</p>
+    <p>Yes. Audio keeps going in the background and on the lock screen, and the player stays black while it plays.</p>
 
     <h3>Are these claims about what sound does to me?</h3>
     <p>No, and deliberately not. The descriptions above say what a sound is, not what it will

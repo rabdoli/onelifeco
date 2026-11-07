@@ -22,7 +22,7 @@ never the free tier or the catalogue size, no health claims including soft ones,
 an outcome attached to one. Prices never appear: they change, and the store shows the current one. If a check fails, fix
 the guide, never the check.
 """
-import glob, html, json, os, re, sys
+import glob, html, json, os, re, subprocess, sys
 
 from PIL import Image
 
@@ -523,6 +523,10 @@ def main():
     the_hub = hub(everyone)
     check_words("hub", the_hub)
     print(f"checked {len(everyone)} guides")
+    # The hand-written pages and /luten get the same kind of check, since readers go from a guide straight to them.
+    pages_ok = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "check_luten_pages.py")])
+    if pages_ok.returncode:
+        fail("a Luten page breaks the copy rules: fix that sentence, never the check")
     if only_check:
         return
     for slug, markup in rendered.items():

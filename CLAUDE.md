@@ -141,6 +141,7 @@ replays a sample meeting and never touches the microphone.
 - It checks the finished page, not only the JSON, and refuses to build on: the free tier or catalogue size, health claims
   including soft ones, a listening length or an outcome attached to one, prices, a near copy of another guide or of a
   hand-written Luten page. If a check fails, fix the guide, never the check.
+- `tools/check_luten_pages.py` reads /luten, the hand-written Luten pages, the quiz and the press kit for the same rules, and the generator runs it, so a banned line on any of them stops a guide from building. Fix the sentence, never the check. Those pages say "no narration and no lyrics" and never "no vocals" (a few tracks have wordless voices or a cafe murmur), "nearly every track" for loudness, nothing about offline, no prices outside the press kit, and Sona is not called a companion.
 - A scheduled task (`luten-guide-daily`) publishes one guide a day from these files at about 6:30 AM PT, on Reza's yes of
   5 Nov 2026. Cassette's task pushes to main about 5:01 AM PT. Pull before pushing, add files by name, and neither task
   touches the other product's paths.

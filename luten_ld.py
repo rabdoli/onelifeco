@@ -64,8 +64,7 @@ SOFTWARE_APP = {
     "url": f"{BASE}/luten/",
     "sameAs": SAME_AS,
     "downloadUrl": APP_STORE,
-    "description": ("A sound-first app for iPhone and Android, for a busy mind: ADHD, focus, study "
-                    "and sleep. Tell it how you feel and press play. "
+    "description": ("A sound-first app for iPhone and Android, with sections for Sleep, Focus, Stress, ADHD and Kids. Tell it how you feel and press play. "
                     "Not another meditation app."),
     # `offers` is one of Google's required properties. The app is a free
     # download with in-app subscriptions, so price 0 is the honest value.
@@ -94,14 +93,13 @@ SOFTWARE_APP = {
 # length. That is the line in CLAUDE.md, and it holds for the question text too.
 FAQ = [
     ("What is Luten?",
-     "Luten is an app for iPhone and Android that plays sound for sleep, focus, ADHD, "
-     "stress and kids, and learns which sounds you actually stay with. "
+     "Luten is an app for iPhone and Android that plays sound, with sections for Sleep, Focus, Stress, ADHD and Kids, and learns which sounds you keep. "
      "It is made by One Life. The name is pronounced LOO-ten."),
     ("Is Luten a meditation app?",
-     "No. Luten is functional sound, not guided meditation. You tell it "
+     "No. Luten is sound, not guided meditation. You tell it "
      "how you feel and press play. No course, no breathing homework, no "
      "gurus."),
-    ("What sounds help you fall asleep?",
+    ("What sounds do people play at bedtime?",
      "People often choose steady sound with no beat and nothing that builds "
      "or drops: brown noise, pink noise, rain, ocean, fan hum and low held "
      "tones. Which one suits you is personal, so Luten lets you try them and "
@@ -114,44 +112,34 @@ FAQ = [
      "off faster still, so it sounds deep and rumbling, like a waterfall or "
      "strong wind. Luten includes all three, each synthesised to its true "
      "spectrum."),
-    ("What sound is good for focus while working?",
+    ("What sounds do people play while working?",
      "Many people work to steady sound with no lyrics and no sudden changes, "
      "such as cafe or library ambience, pink noise, brown noise, steady rain "
      "or soft instrumental study music. Luten's Focus mode plays that kind of "
      "sound and starts a focus timer, and ADHD mode adds a Pomodoro-style "
      "timer."),
-    ("Can sound help an ADHD or busy mind focus?",
-     "Luten's ADHD mode plays steady, low-surprise sound with a timer, "
-     "made for a restless mind. It is a wellness tool, not a medical "
-     "device, and it does not treat any condition."),
+    ("Does Luten have a section for ADHD?",
+     "Yes. Luten's ADHD section plays steady, low-surprise sound with a timer. It is a wellness tool, not a medical device, and it does not treat any condition."),
     ("How long should you listen to sleep sounds?",
      "There is no set length, and Luten does not prescribe one. Let a sound "
      "play until you stop it, or set a sleep timer so it fades out after the "
      "time you choose."),
-    ("Is it safe to play sleep sounds all night?",
-     "Luten can play all night with the screen locked, or stop on a sleep "
-     "timer that fades the sound out. Every sound is instrumental with even "
-     "loudness, so nothing jumps in the night. Keep the volume low and "
+    ("Can I leave sounds playing overnight?",
+     "Luten keeps playing with the screen locked until you stop it, or it stops on a sleep timer that fades the sound out. No sound has narration or lyrics, and nearly every track has even loudness. Keep the volume low and "
      "comfortable, and ask a doctor if you have questions about your hearing "
      "or your sleep."),
     ("What makes Luten different from other sleep sound apps?",
      "Luten is sound, not guided meditation: you say how you feel and press "
      "play, with no course to finish. It covers sleep, focus, stress, ADHD "
-     "and kids in one app, every sound is instrumental with even loudness, "
-     "and Sona, the companion that suggests sounds, runs on your phone. On "
+     "and kids in one app, no sound has narration or lyrics, nearly every track has even loudness, and Sona, who suggests sounds, runs on your phone. On "
      "iPhone it also shows a sleep score built from your Apple Health data."),
-    ("Does Luten work without a connection?",
-     "Yes. Download the sounds you want and they play with no signal, on "
-     "a plane, in a basement, anywhere. Nothing has to buffer before it "
-     "starts."),
     ("Does Luten keep playing when I lock my phone?",
      "Yes. Playback carries on with the screen off, with full controls "
      "on the lock screen (and in Control Center on iPhone), and a sleep "
      "timer if you want one."),
     ("Does Luten send my data anywhere?",
-     "Sona, the companion you talk to, runs entirely on your phone, and "
-     "on iPhone it also uses Apple's own on-device language tools. What "
-     "you type stays on the phone."),
+     "Sona, who suggests sounds, runs entirely on your phone, and "
+     "on iPhone it also uses Apple's own on-device language tools. What you type stays on the phone. Your profile and preferences sync to your account so they survive a reinstall."),
     ("How do I get Luten, and is it free?",
      "Luten is out now on the App Store for iPhone and on Google Play "
      "for Android. It is a free download with an optional subscription, "

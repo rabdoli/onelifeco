@@ -1,30 +1,30 @@
 # One Life
 
-> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound for sleep, focus, stress and ADHD on iPhone and Android. Its second is Cassette, an AI note taker for iPhone and Android.
+> One Life is a small company that builds simple apps for daily life. The apps are the products people use; One Life stays in the background, and each app carries the credit "a One Life product". Its first app is Luten, sound with sections for sleep, focus, stress and ADHD on iPhone and Android. Its second is Cassette, an AI note taker for iPhone and Android.
 
 Website: https://www.onelifeco.app/
 Contact: contact@onelifeco.app
 
 ## Apps and status
 
-- [Luten](https://www.onelifeco.app/luten/): sound for the mind, for sleep, focus, stress, ADHD and kids. Available now on the App Store for iPhone, with an Apple Watch app, and on Google Play for Android.
+- [Luten](https://www.onelifeco.app/luten/): sound for the mind, with sections for Sleep, Focus, Stress, ADHD and Kids. Available now on the App Store for iPhone, with an Apple Watch app, and on Google Play for Android.
 - [Cassette](https://www.onelifeco.app/cassette/): a cassette deck for iPhone and Android that records meetings, lectures and voice memos, then writes the transcript, summary, action items and a follow-up email. Available now on the App Store for iPhone and on Google Play for Android.
 - [Spend](https://www.onelifeco.app/apps/spend/): daily expense tracking. In development, with a waitlist.
 - Still and Move: in development. No details published yet.
 
 ## Luten
 
-What it is: an iOS app that plays sound matched to how you feel. It is functional sound, not guided meditation. You pick a need, or tell Sona, the in-app companion, how you feel, and press play. There is no course to finish.
+What it is: an app for iPhone and Android that plays sound picked by how you feel. It is sound, not guided meditation. You pick a need, or tell Sona, the in-app chat, how you feel, and press play. There is no course to finish.
 
-Who it is for: people who want sound to sleep, work, study or wind down to, including people with ADHD or a busy, restless mind, and parents at a child's bedtime.
+Who it is for: people who want sound to sleep, work, study or wind down to, and parents at a child's bedtime.
 
 Key features:
 - Five modes: Sleep, Focus, Stress, ADHD and Kids.
-- White noise, pink noise, brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes. Every sound is instrumental, with even loudness and crossfaded loops.
-- Sona, a sound companion that suggests a real track from how you describe your feelings. Sona runs on the phone, and what you type stays on the phone.
+- White noise, pink noise, brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes. No sound has narration or lyrics, nearly every track has even loudness, and loops are crossfaded.
+- Sona, a chat that suggests a real track from how you describe your feelings. Sona runs on the phone, and what you type stays on the phone.
 - A sleep timer that fades the sound out, a focus timer, a Pomodoro-style timer in ADHD mode, and simple guided breathing.
 - On iPhone, a sleep score built from your Apple Health data, with duration, deep sleep, REM, interruptions and vitals.
-- Background and lock-screen playback and offline downloads, and on iPhone a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
+- Background and lock-screen playback, and on iPhone a home-screen widget, an Apple Watch app, iMessage stickers and family profiles.
 
 Platforms: iPhone and Apple Watch (App Store), and Android phones (Google Play: https://play.google.com/store/apps/details?id=app.luten.android).
 

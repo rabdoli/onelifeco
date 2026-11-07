@@ -7,11 +7,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Which Luten sound should you start with? | Luten</title>
-<meta name="description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta name="description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No narration, no lyrics, no ads, no bright screen." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.onelifeco.app/luten/quiz/" />
 <meta property="og:title" content="Which Luten sound should you start with?" />
-<meta property="og:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta property="og:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No narration, no lyrics, no ads, no bright screen." />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Luten" />
 <meta property="og:url" content="https://www.onelifeco.app/luten/quiz/" />
@@ -20,7 +20,7 @@
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Which Luten sound should you start with?" />
-<meta name="twitter:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No talking, no vocals, no ads, no bright screen." />
+<meta name="twitter:description" content="Two questions about what you are trying to do and what ruins it for you, and a named sound to start with. No narration, no lyrics, no ads, no bright screen." />
 <meta name="twitter:image" content="https://luten-cc112.web.app/luten/og-image.png" />
 <style>
   :root { color-scheme: dark; }
@@ -120,6 +120,14 @@ document.addEventListener('click', function (e) {
     link_text: (a.textContent || '').trim().slice(0, 60)
   });
 }, true);
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href*="play.google.com"]');
+  if (!a || !window.posthog) return;
+  posthog.capture('playstore_click', {
+    route: location.pathname,
+    link_text: (a.textContent || '').trim().slice(0, 60)
+  });
+}, true);
 </script>
 </head>
 <body>
@@ -138,12 +146,12 @@ document.addEventListener('click', function (e) {
   <div class="quiz">
     <div class="step on" id="s1">
       <div class="qh">1 of 2</div>
-      <h2 style="margin-top:0">What are you trying to do?</h2>
-      <button class="opt" data-q="1" data-v="sleep"><b>Get back to sleep</b><span>It is the middle of the night and you are awake.</span></button>
-      <button class="opt" data-q="1" data-v="start"><b>Start something I keep putting off</b><span>The task is not hard. Beginning it is.</span></button>
-      <button class="opt" data-q="1" data-v="focus"><b>Concentrate with people around</b><span>An office, a shared flat, a cafe, a library that is not quiet.</span></button>
-      <button class="opt" data-q="1" data-v="down"><b>Come down from a day</b><span>You finished hours ago and your head did not.</span></button>
-      <button class="opt" data-q="1" data-v="child"><b>Settle a child</b><span>Bedtime, a nap, or a car that needs to stay calm.</span></button>
+      <h2 style="margin-top:0">What is the moment?</h2>
+      <button class="opt" data-q="1" data-v="sleep"><b>Awake in the middle of the night</b><span>The room is dark and you are up.</span></button>
+      <button class="opt" data-q="1" data-v="start"><b>A task I keep putting off</b><span>Something you keep meaning to begin.</span></button>
+      <button class="opt" data-q="1" data-v="focus"><b>Working with people around</b><span>An office, a shared flat, a cafe, a library that is not quiet.</span></button>
+      <button class="opt" data-q="1" data-v="down"><b>After a long day</b><span>The day is over.</span></button>
+      <button class="opt" data-q="1" data-v="child"><b>A child&#x27;s bedtime</b><span>Bedtime, a nap or a car ride.</span></button>
     </div>
 
     <div class="step" id="s2">
@@ -164,7 +172,7 @@ document.addEventListener('click', function (e) {
 
   <h2>What the app does with this</h2>
   <p>The version above is two taps and a fixed answer. In Luten you say how you feel in your
-  own words, and Sona reads it on the phone itself using Apple's on-device language tools.
+  own words, and Sona reads it on the phone itself.
   Nothing you type is sent anywhere. It also learns which sounds you keep and which you skip,
   so the answer stops being generic.</p>
   <p>Luten is free to download on the App Store for iPhone. The subscription is optional and
@@ -176,47 +184,47 @@ document.addEventListener('click', function (e) {
   <p class="note">Fifteen combinations, so you can read them without answering anything.</p>
   <div class="all-results">
     <div class="card res" id="r-sleep-voice">
-      <div class="reskey">Get back to sleep &middot; A voice ruins it</div>
+      <div class="reskey">Awake in the middle of the night &middot; A voice ruins it</div>
       <h3>Three In The Morning</h3>
       <p class="sound">Very low cello and double bass, one dark chord held with almost no movement in it.</p>
-      <p>Nothing in the Luten catalog has a voice in it. No narration, no singing, no one telling you to relax. This one was written for the exact hour you are awake in.</p>
+      <p>It has no narration and no lyrics. No one telling you to relax. This one was written for the exact hour you are awake in.</p>
       <p class="note">In the Sleep section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_voice" target="_blank" rel="noopener">Open Three In The Morning in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-sleep-tune">
-      <div class="reskey">Get back to sleep &middot; A tune ruins it</div>
+      <div class="reskey">Awake in the middle of the night &middot; A tune ruins it</div>
       <h3>Deep Pink Noise</h3>
       <p class="sound">Pink noise with the highs taken away. Deep and close.</p>
-      <p>No melody to follow, because there is no melody. Pink noise sits between the hiss of white and the rumble of brown, and this version has the top rolled off so it stays soft across a long night.</p>
+      <p>No melody to follow, because there is no melody. Pink noise sits between the hiss of white and the rumble of brown, and this version has the top rolled off so it stays soft.</p>
       <p class="note">In the Sleep section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_tune" target="_blank" rel="noopener">Open Deep Pink Noise in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-sleep-change">
-      <div class="reskey">Get back to sleep &middot; A change ruins it</div>
+      <div class="reskey">Awake in the middle of the night &middot; A change ruins it</div>
       <h3>The Long Middle</h3>
       <p class="sound">A single sustained cello note, almost motionless from the first second to the last.</p>
-      <p>It does not build and it does not resolve. There is nothing coming that you need to stay awake for.</p>
+      <p>It does not build and it does not resolve.</p>
       <p class="note">In the Sleep section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_sleep_change" target="_blank" rel="noopener">Open The Long Middle in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-start-voice">
-      <div class="reskey">Start something I keep putting off &middot; A voice ruins it</div>
+      <div class="reskey">A task I keep putting off &middot; A voice ruins it</div>
       <h3>Parallel Play</h3>
       <p class="sound">Sparse felt piano over distant room tone. Company without conversation.</p>
-      <p>Some people find it easier to begin when the room does not feel empty. This is that room, and nobody in it is going to talk to you.</p>
+      <p>Sound from a room. Nobody in it will talk to you.</p>
       <p class="note">In the ADHD section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_voice" target="_blank" rel="noopener">Open Parallel Play in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-start-tune">
-      <div class="reskey">Start something I keep putting off &middot; A tune ruins it</div>
+      <div class="reskey">A task I keep putting off &middot; A tune ruins it</div>
       <h3>Steady Brown Noise</h3>
-      <p class="sound">Brown noise held completely level. One thing to hold on to.</p>
+      <p class="sound">Brown noise held completely level.</p>
       <p>Brown noise is a preference, not a treatment, and we will not tell you otherwise. What is true is that this one is synthesised to its actual spectral slope rather than made by pulling the treble off a recording, and it does not move.</p>
       <p class="note">In the ADHD section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_tune" target="_blank" rel="noopener">Open Steady Brown Noise in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-start-change">
-      <div class="reskey">Start something I keep putting off &middot; A change ruins it</div>
+      <div class="reskey">A task I keep putting off &middot; A change ruins it</div>
       <h3>One Thing At A Time</h3>
       <p class="sound">One sustained reed organ tone with the slightest movement in it.</p>
       <p>The whole track is the first second. Nothing arrives later.</p>
@@ -224,39 +232,39 @@ document.addEventListener('click', function (e) {
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_start_change" target="_blank" rel="noopener">Open One Thing At A Time in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-focus-voice">
-      <div class="reskey">Concentrate with people around &middot; A voice ruins it</div>
+      <div class="reskey">Working with people around &middot; A voice ruins it</div>
       <h3>Pure White Noise</h3>
       <p class="sound">Flat, even white noise. The same from the first second to the last.</p>
-      <p>The worst office sound is a conversation you can almost make out, because your brain keeps trying to finish the sentence. Covering speech is a question of acoustics rather than wellness, and broadband noise is the plainest tool for it.</p>
+      <p>Broadband noise and nothing else. No tune, no tempo and no voice.</p>
       <p class="note">In the Focus section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_voice" target="_blank" rel="noopener">Open Pure White Noise in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-focus-tune">
-      <div class="reskey">Concentrate with people around &middot; A tune ruins it</div>
+      <div class="reskey">Working with people around &middot; A tune ruins it</div>
       <h3>Page Turns</h3>
       <p class="sound">Pages turning in a still room, sparse and quiet, like a library desk nearby.</p>
-      <p>No tempo anywhere in it. Lo-fi has a beat, and a beat is a thing to follow. Half an hour in you are nodding along instead of reading.</p>
+      <p>No tempo anywhere in it. Lo-fi has a beat, and a beat is a thing to follow.</p>
       <p class="note">In the Focus section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_tune" target="_blank" rel="noopener">Open Page Turns in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-focus-change">
-      <div class="reskey">Concentrate with people around &middot; A change ruins it</div>
+      <div class="reskey">Working with people around &middot; A change ruins it</div>
       <h3>Steady Pink Noise</h3>
-      <p class="sound">Pink noise held perfectly level, with nothing to notice.</p>
-      <p>Deliberately uneventful. There is nothing in here worth turning your head for.</p>
+      <p class="sound">Pink noise held perfectly level.</p>
+      <p>Deliberately uneventful.</p>
       <p class="note">In the Focus section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_focus_change" target="_blank" rel="noopener">Open Steady Pink Noise in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-down-voice">
-      <div class="reskey">Come down from a day &middot; A voice ruins it</div>
+      <div class="reskey">After a long day &middot; A voice ruins it</div>
       <h3>Low Cedar Stillness</h3>
-      <p class="sound">Solo cello, long slow bows in the low register, woody and grounding.</p>
+      <p class="sound">Solo cello, long slow bows in the low register, woody and warm.</p>
       <p>One instrument, no words, no guide. If wordless choirs still read as voices to you, this has none of that either.</p>
       <p class="note">In the Stress section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_voice" target="_blank" rel="noopener">Open Low Cedar Stillness in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-down-tune">
-      <div class="reskey">Come down from a day &middot; A tune ruins it</div>
+      <div class="reskey">After a long day &middot; A tune ruins it</div>
       <h3>The Long Exhale</h3>
       <p class="sound">A descending pad whose fall is always longer than its rise.</p>
       <p>Shaped rather than composed. It is a slow shape repeating, not a piece of music going somewhere.</p>
@@ -264,7 +272,7 @@ document.addEventListener('click', function (e) {
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_tune" target="_blank" rel="noopener">Open The Long Exhale in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-down-change">
-      <div class="reskey">Come down from a day &middot; A change ruins it</div>
+      <div class="reskey">After a long day &middot; A change ruins it</div>
       <h3>Empty And Still</h3>
       <p class="sound">A near-silent sine pad, mostly space.</p>
       <p>Closer to a quiet room than to a track. Most of it is the space between.</p>
@@ -272,26 +280,26 @@ document.addEventListener('click', function (e) {
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_down_change" target="_blank" rel="noopener">Open Empty And Still in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-child-voice">
-      <div class="reskey">Settle a child &middot; A voice ruins it</div>
+      <div class="reskey">A child&#x27;s bedtime &middot; A voice ruins it</div>
       <h3>Kiri no Komoriuta</h3>
       <p class="sound">A Japanese lullaby on solo koto, sparse and full of space, with a breathy shakuhachi far away.</p>
-      <p>The lullabies in Luten come from all over the world and every one of them is instrumental, so nothing is being sung at a child in a language they are meant to understand.</p>
+      <p>The lullabies in Luten come from all over the world and none of them has words, so nobody is singing.</p>
       <p class="note">In the Kids section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_voice" target="_blank" rel="noopener">Open Kiri no Komoriuta in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-child-tune">
-      <div class="reskey">Settle a child &middot; A tune ruins it</div>
+      <div class="reskey">A child&#x27;s bedtime &middot; A tune ruins it</div>
       <h3>Soft White Noise</h3>
-      <p class="sound">White noise with the top softened. Gentler over a long night.</p>
-      <p>For a child who settles to a hush rather than a song. No tune, nothing that ends.</p>
+      <p class="sound">White noise with the top softened.</p>
+      <p>A hush, not a song. No tune, nothing that ends.</p>
       <p class="note">In the Kids section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_tune" target="_blank" rel="noopener">Open Soft White Noise in Luten <span>&rarr;</span></a>
     </div>
     <div class="card res" id="r-child-change">
-      <div class="reskey">Settle a child &middot; A change ruins it</div>
+      <div class="reskey">A child&#x27;s bedtime &middot; A change ruins it</div>
       <h3>Bíum Bíum</h3>
       <p class="sound">An Icelandic lullaby on harmonium, sustained and very still, the reeds just audible.</p>
-      <p>It circles rather than develops. Nothing in it wakes anybody up.</p>
+      <p>It circles rather than develops.</p>
       <p class="note">In the Kids section of Luten.</p>
       <a class="cta" href="https://apps.apple.com/us/app/luten-sleep-focus-sounds/id6777673392?ct=web_quiz_child_change" target="_blank" rel="noopener">Open Bíum Bíum in Luten <span>&rarr;</span></a>
     </div>
@@ -300,12 +308,11 @@ document.addEventListener('click', function (e) {
   <h2>Questions people ask before they download</h2>
   <div class="card">
     <h3>Is there any talking?</h3>
-    <p>No. There are no vocals anywhere in the catalog. No narration, no guided meditation,
+    <p>No. There is no narration and there are no lyrics. No narration, no guided meditation,
     no course.</p>
 
     <h3>Does it play with the screen off?</h3>
-    <p>Yes. Audio keeps going in the background and on the lock screen, sounds download for
-    offline playback, and the player stays black while it plays.</p>
+    <p>Yes. Audio keeps going in the background and on the lock screen, and the player stays black while it plays.</p>
 
     <h3>Are these claims about what sound does to me?</h3>
     <p>No, and deliberately not. The descriptions above say what a sound is, not what it will
