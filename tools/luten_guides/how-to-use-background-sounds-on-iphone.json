@@ -1,0 +1,173 @@
+{
+  "slug": "how-to-use-background-sounds-on-iphone",
+  "keyword": "background sounds iphone",
+  "also_targets": ["white noise iphone", "background sounds iphone timer", "background sounds iphone not working"],
+  "title": "How to Use Background Sounds on iPhone",
+  "description": "Turn on the noise and nature sounds built into iPhone, play them under your music, set the timer, and see where an app like Luten fits.",
+  "h1": "How to use Background Sounds on iPhone",
+  "answer": "Background Sounds is built into iPhone. Open Settings, tap Accessibility, tap Audio & Visual, tap Background Sounds, then turn it on. Tap the sound to pick another, such as rain or ocean, and drag the slider to set the volume. On iOS 26 or later there is also a timer and an Equalizer. You don't need an app for this. A sound app such as Luten adds its own player, sounds such as cafe, library and world soundscapes, and Android.",
+  "published": "2026-11-07",
+  "updated": "2026-11-07",
+  "related": [
+    "how-to-set-a-sleep-timer",
+    "what-is-green-noise"
+  ],
+  "sections": [
+    {
+      "h": "Turn on Background Sounds",
+      "blocks": [
+        {
+          "p": "Apple added Background Sounds in iOS 15. It sits in the accessibility settings, which is why many people never find it."
+        },
+        {
+          "ol": [
+            "Open the **Settings** app.",
+            "Tap **Accessibility**, then **Audio & Visual**, then **Background Sounds**.",
+            "Turn on **Background Sounds**.",
+            "Tap **Sound**, then pick one.",
+            "Drag the volume slider until it sounds right."
+          ]
+        },
+        {
+          "p": "[Apple's steps](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios) give ocean waves and rain as examples, and Apple also [lists](https://support.apple.com/en-us/126977) balanced, bright and dark noise. The list can change between versions, so check the one on your phone."
+        }
+      ]
+    },
+    {
+      "h": "Turn it on faster",
+      "blocks": [
+        {
+          "p": "Going through Settings each time gets old. Apple describes two shortcuts."
+        },
+        {
+          "ul": [
+            "**Control Center:** add the Background Sounds button to Control Center. [Press and hold it](https://support.apple.com/en-us/109346), then tap Background Sounds to start or stop, or pick another sound. Scroll down to Background Sounds Settings for the rest.",
+            "**The Accessibility Shortcut:** Apple's page links to [Quickly turn accessibility features on or off](https://support.apple.com/guide/iphone/quickly-turn-accessibility-features-on-or-off-iph3e2e31a5/ios), which lets you start it with a triple-click."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Play it under music or a podcast",
+      "blocks": [
+        {
+          "p": "In the same Background Sounds screen, turn on **Use When Media is Playing**. Then drag the **Volume with Media** slider to set how loud it is next to your music. This is something Background Sounds does well, and it is the main reason to use it over an app."
+        }
+      ]
+    },
+    {
+      "h": "Set a timer",
+      "blocks": [
+        {
+          "p": "On iOS 26 or later, Background Sounds has its own timer:"
+        },
+        {
+          "ol": [
+            "In the Background Sounds screen, tap **Stop Sound with a Timer** (on iOS 26 it is called **Stop Sounds with a Timer**).",
+            "Turn on **Timer**.",
+            "Pick **At a specific time** or **After an amount of time**, then choose an option."
+          ]
+        },
+        {
+          "p": "On earlier versions you won't see this option. Apple's page for that [timer](https://support.apple.com/en-us/109346) doesn't say whether the sound fades out."
+        }
+      ]
+    },
+    {
+      "h": "Change the tone with the Equalizer",
+      "blocks": [
+        {
+          "p": "Also on iOS 26 or later, tap **Equalizer** and turn it on. Drag across the **Tone** grid to pick a range of frequencies, or choose **Broad** for wider ranges and **Focused** for narrower ones. The **Balance** slider moves the sound left or right. Our guide to [green noise](/luten/guides/what-is-green-noise/) uses this to shape a noise by ear."
+        }
+      ]
+    },
+    {
+      "h": "If Background Sounds won't play or keeps stopping",
+      "blocks": [
+        {
+          "p": "Apple's page doesn't have a troubleshooting section, but these settings on it are the first places to look:"
+        },
+        {
+          "ul": [
+            "**It stops when the phone locks:** check **Stop Sounds When Locked**. If it is on, the sound turns off each time you lock the phone.",
+            "**It goes quiet when music starts:** turn on **Use When Media is Playing**, and check the **Volume with Media** slider isn't all the way down.",
+            "**It stops on its own:** check the timer setting, and whether **Always use these settings** is on.",
+            "**You can't hear it at all:** check the Background Sounds volume slider, and the phone's volume too."
+          ]
+        },
+        {
+          "p": "If none of these helps, Apple Support is the place to ask, because the feature is part of iOS."
+        }
+      ]
+    },
+    {
+      "h": "Where a sound app fits",
+      "blocks": [
+        {
+          "p": "Background Sounds is built in, and for many people it is enough. It is also iPhone, iPad, Mac and Vision Pro only, and kept in Settings with Apple's own set of sounds."
+        },
+        {
+          "p": "Luten is a sound app for iPhone and Android. It has white, pink and brown noise, rain, ocean, fan, cafe, library, forest and world soundscapes, with no narration or lyrics, and it runs no third-party ads. You pick a section such as Sleep or Focus, tap a sound and it plays, with the phone locked too."
+        },
+        {
+          "p": "Its sleep timer is in the player. Tap **Sleep timer** and pick a length. When the time is up, the sound gets quieter over about 20 seconds and then pauses."
+        },
+        {
+          "shots": [
+            "ios-sleep-timer",
+            "android-sleep-timer"
+          ],
+          "alts": [
+            "The Luten player on iPhone with the Sleep timer button tapped and its length options showing.",
+            "The Luten player on Android with the Sleep timer button tapped and its length options showing."
+          ]
+        },
+        {
+          "p": "On Android, a battery saver on some phones can stop apps running in the background, so check that setting if a timer doesn't behave."
+        },
+        {
+          "cta": "mid"
+        },
+        {
+          "p": "One difference to know: Luten is made to be the only thing playing, so starting it pauses your music. If you want a sound under your own music or podcast, Background Sounds with Use When Media is Playing is the better tool."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Where is Background Sounds on iPhone?",
+      "a": "In Settings, under Accessibility, then Audio & Visual, then Background Sounds. You can also add a button for it to Control Center."
+    },
+    {
+      "q": "Does Background Sounds have a timer?",
+      "a": "On iOS 26 or later, yes. Tap the timer option in the Background Sounds screen. On earlier versions, there isn't one there."
+    },
+    {
+      "q": "Can I play Background Sounds with music?",
+      "a": "Yes. Turn on Use When Media is Playing, then set the Volume with Media slider."
+    },
+    {
+      "q": "Is there Background Sounds on Android?",
+      "a": "Background Sounds is an Apple feature. On Android, use a sound app, such as Luten, or a video or music app that has the sound you want."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Apple Support: Use Background Sounds",
+      "url": "https://support.apple.com/en-us/109346"
+    },
+    {
+      "name": "Apple Support: accessibility features for older adults",
+      "url": "https://support.apple.com/en-us/126977"
+    },
+    {
+      "name": "Apple Support: Quickly turn accessibility features on or off on iPhone",
+      "url": "https://support.apple.com/guide/iphone/quickly-turn-accessibility-features-on-or-off-iph3e2e31a5/ios"
+    }
+  ]
+}

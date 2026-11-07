@@ -8,7 +8,9 @@
   "answer": "On iPhone, open the Clock app, tap Timers, set a time, tap When Timer Ends, choose Stop Playing, then tap Set and Start. On Android, look in the app that is playing: Spotify and YouTube each have their own timer. In Luten, tap Sleep timer in the player and pick a length, and the sound fades out, then pauses.",
   "published": "2026-11-06",
   "updated": "2026-11-06",
-  "related": [],
+  "related": [
+    "how-to-use-background-sounds-on-iphone"
+  ],
   "sections": [
     {
       "h": "On iPhone: use the Clock app",

@@ -18,7 +18,9 @@
   "published": "2026-11-06",
   "updated": "2026-11-06",
   "single_os": "No screens: this guide is about what a term means and about outside tools, and no Luten screen shows green noise.",
-  "related": [],
+  "related": [
+    "how-to-use-background-sounds-on-iphone"
+  ],
   "sections": [
     {
       "h": "What the name means",
