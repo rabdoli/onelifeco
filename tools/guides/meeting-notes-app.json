@@ -1,0 +1,184 @@
+{
+  "slug": "meeting-notes-app",
+  "keyword": "meeting notes app",
+  "title": "Meeting Notes App for iPhone and Android: How to Choose",
+  "description": "How to pick a meeting notes app: what your phone and your call app already do, eight things that matter for meetings, and how Cassette does.",
+  "h1": "How to choose a meeting notes app",
+  "answer": "Start with the free tools. The Notes app on iPhone can record a meeting and transcribe it, and with Apple Intelligence it can sum it up. A Pixel's Recorder and a Galaxy's Voice Recorder transcribe too, and newer models add a summary. Zoom and Google Meet write meeting notes on eligible paid plans. If you want notes for every meeting, around a table or on any call, with what was decided, who owns each task and by when, and a draft of the follow-up email, pick an app that needs no bot in the call and sends the notes where your team keeps them. Cassette works that way on iPhone and Android.",
+  "published": "2026-11-08",
+  "updated": "2026-11-08",
+  "related": [
+    "transcribe-voice-memos",
+    "apple-watch-voice-recorder",
+    "lecture-recording-app"
+  ],
+  "sections": [
+    {
+      "h": "First, check what you already have",
+      "blocks": [
+        {
+          "p": "A new app may not be needed. Here is what each built-in option offers, as its maker describes it."
+        },
+        {
+          "ul": [
+            "**iPhone, Notes app.** Open a note, then the attachments menu, and choose [Record Audio](https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios). Transcripts work on iPhone 12 or newer, in the languages Apple names. On a phone with Apple Intelligence, a **Summary** button gives the main points.",
+            "**Pixel, Recorder.** Google's app [transcribes](https://support.google.com/pixelphone/answer/16267698?hl=en) what it records. Pixel 8 or newer can summarize a recording between 5 minutes and 1 hour of speech, and Google says that step runs in the cloud.",
+            "**Samsung Galaxy, Voice Recorder.** [Transcript assist](https://www.samsung.com/us/support/answer/ANS10000942/) adds a transcript and a summary, on the Galaxy phones and tablets Samsung lists.",
+            "**Zoom.** [Meeting summary with AI](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057960) sends a summary after the meeting, on Zoom Workplace plans, once an admin turns it on.",
+            "**Google Meet.** [Take notes for me](https://support.google.com/meet/answer/14754931?hl=en) works when the organizer has an eligible Google Workspace edition or Google AI plan. Google also offers it for [in person meetings](https://support.google.com/meet/answer/17020724?hl=en) through the Meet app."
+          ]
+        },
+        {
+          "p": "If all your meetings are on one call app and your plan includes its notes, that may be enough. The gaps tend to be meetings in a room, calls on a different app each time, and notes that end up somewhere other than where your team works."
+        }
+      ]
+    },
+    {
+      "h": "What to look for in a meeting notes app",
+      "blocks": [
+        {
+          "p": "A good meeting note answers three questions a week later: what did we decide, who is doing what, and by when. Run any app past this list before your next big meeting."
+        },
+        {
+          "ol": [
+            "**It works in the room and on calls.** Half of meetings still happen around a table. The app should record both, without a bot joining your call.",
+            "**Actions have an owner and a date.** \"Send the deck\" is less use than \"Tom: send the deck, this week\".",
+            "**Decisions are kept apart.** You should find what was decided without reading the whole summary.",
+            "**You can check it against the tape.** A note is a guess about what was said. Jumping to that moment of the recording settles it.",
+            "**It drafts the follow-up.** The email after a meeting is the job most people put off.",
+            "**The notes go where your team works.** Notion, OneNote, a notes app, or a plain copy and paste.",
+            "**You know where the recording ends up.** Find out whether your audio is uploaded to a server for the transcript or the notes.",
+            "**The price is plain.** Find out how much of an hour long meeting the free tier covers before you depend on it."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "How Cassette does on that list",
+      "blocks": [
+        {
+          "p": "Cassette looks like a tape deck and runs on iPhone and Android. Put your phone on the table, press RECORD, and press STOP when the meeting ends. Locking the screen doesn't stop the tape."
+        },
+        {
+          "ul": [
+            "**No bot:** Cassette records the room through your phone's microphone, so nothing joins the call and nobody gets an invite from a note taker.",
+            "**Meeting notes:** Cassette works out what kind of recording it is. A meeting gets a summary, what was decided, the actions, the key points and the questions left open.",
+            "**Owners and dates:** each action shows the person and the day when someone says them, and the time on the tape it was said."
+          ]
+        },
+        {
+          "shots": [
+            "ios-notes-meeting",
+            "android-notes-meeting"
+          ],
+          "alts": [
+            "Meeting notes in Cassette on iPhone, with a summary and two actions, each with a person and when it is due.",
+            "Meeting notes in Cassette on Android, with the summary, the actions with people and dates, and key points."
+          ]
+        },
+        {
+          "p": "**The follow-up email** is written too. Open EMAIL on the tape and the subject, the people and a summary are already there, with the next steps by owner below, ready to share."
+        },
+        {
+          "shots": [
+            "ios-email",
+            "android-email"
+          ],
+          "alts": [
+            "A follow-up email drafted by Cassette on iPhone, with the subject, the people and the meeting summary.",
+            "A follow-up email drafted by Cassette on Android, with the subject, the people and the next steps."
+          ]
+        },
+        {
+          "cta": "mid"
+        },
+        {
+          "ul": [
+            "**Check it against the tape:** every transcript line is a link to its moment. Tap it, then PLAY, and hear it for yourself.",
+            "**Notes where your team works:** pick Notion, OneNote, Evernote or Google Keep once, and each meeting goes there with one tap. Apple Notes is there on iPhone, and Samsung Notes on Samsung phones. SHARE makes a PDF or a Word file.",
+            "**Finding it later:** ask your tapes something like \"what did we decide about pricing?\" and Cassette answers from your own recordings, showing where it found it.",
+            "**Where the recording goes:** no outside AI service ever writes the notes. Android phones transcribe and write everything themselves, and send no audio off for it. iPhones send a tape to Apple to transcribe when the phone can't do it on the device, iOS 27 may write the notes on Apple's Private Cloud Compute, and iCloud and computer backups include tapes. Signing in with Premium backs up tapes on either system. The On-device only switch on iPhone turns all of this off.",
+            "**Price:** recording costs nothing and has no time limit. Most meetings run past {short_tape_minutes} minutes, so each one's transcript and notes uses one of the {free_tapes} free tapes a month. Premium writes up the rest."
+          ]
+        },
+        {
+          "shots": [
+            "ios-sendto"
+          ],
+          "alts": [
+            "Cassette meeting notes on iPhone with a Send notes to Apple Notes button and a Sent stamp."
+          ]
+        },
+        {
+          "p": "Full notes depend on the phone. An iPhone before iOS 26 or without Apple Intelligence, or an Android phone under 8 GB of memory, still records and transcribes a meeting in English, and shows a few lines it heard clearly. It skips the summary, actions, follow-up email and template choice. On Android, the full meeting notes with owners and dates are written for meetings in English."
+        }
+      ]
+    },
+    {
+      "h": "Meetings on a call",
+      "blocks": [
+        {
+          "p": "On a Mac, Cassette can record the call itself. Turn the switch on the deck to **CALL** and it records what your Mac plays, the other people on Zoom, Google Meet or Microsoft Teams, together with your microphone. Nothing joins the call. macOS asks once to allow screen and system audio recording, and this needs macOS 15.2 or later."
+        },
+        {
+          "p": "On a phone, the simplest way is to take the call on speaker, or on a laptop, with the phone on the desk next to it."
+        }
+      ]
+    },
+    {
+      "h": "Get a recording worth taking notes from",
+      "blocks": [
+        {
+          "ul": [
+            "**Put the phone in the middle.** Distance hurts a recording more than anything else. Keep it off a table people tap or type on.",
+            "**Say names and dates out loud.** \"Priya, can you have it by Friday?\" gives the notes an owner and a day to write down."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is there a free meeting notes app?",
+      "a": "Yes. The recorders built into iPhone, Pixel and Galaxy phones transcribe for free, on the models and languages listed above. Cassette records for free with no limit, writes up any tape under {short_tape_minutes} minutes free, and writes up {free_tapes} longer tapes a month free."
+    },
+    {
+      "q": "Can a meeting notes app work without joining the call?",
+      "a": "Yes. Cassette listens through your phone's microphone in the room, and on a Mac its CALL switch records what the Mac plays and your microphone, so no bot joins."
+    },
+    {
+      "q": "Does Cassette know who said what?",
+      "a": "On iPhone, iPad and Mac, the transcript is labeled by speaker, and you can tap a speaker's name to change it. On Android it isn't split by speaker yet. On both, each action takes the name of the person given the task in the meeting."
+    },
+    {
+      "q": "What if it wrote the wrong kind of notes?",
+      "a": "Open the notes template and pick another, such as **1:1** or **Sales or client call**, and the notes are written again."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Record and transcribe audio in Notes on iPhone",
+      "url": "https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios"
+    },
+    {
+      "name": "Pixel Phone Help: Create, edit and manage transcriptions",
+      "url": "https://support.google.com/pixelphone/answer/16267698?hl=en"
+    },
+    {
+      "name": "Samsung Support: Use Voice Recorder with Galaxy AI",
+      "url": "https://www.samsung.com/us/support/answer/ANS10000942/"
+    },
+    {
+      "name": "Zoom Support: Enabling or disabling meeting summary with AI",
+      "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057960"
+    },
+    {
+      "name": "Google Meet Help: Take notes for me in Google Meet",
+      "url": "https://support.google.com/meet/answer/14754931?hl=en"
+    },
+    {
+      "name": "Google Meet Help: Use Take notes for me for in person meetings",
+      "url": "https://support.google.com/meet/answer/17020724?hl=en"
+    }
+  ]
+}
