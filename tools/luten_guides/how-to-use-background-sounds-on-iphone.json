@@ -1,7 +1,11 @@
 {
   "slug": "how-to-use-background-sounds-on-iphone",
   "keyword": "background sounds iphone",
-  "also_targets": ["white noise iphone", "background sounds iphone timer", "background sounds iphone not working"],
+  "also_targets": [
+    "white noise iphone",
+    "background sounds iphone timer",
+    "background sounds iphone not working"
+  ],
   "title": "How to Use Background Sounds on iPhone",
   "description": "Turn on the noise and nature sounds built into iPhone, play them under your music, set the timer, and see where an app like Luten fits.",
   "h1": "How to use Background Sounds on iPhone",
@@ -10,7 +14,8 @@
   "updated": "2026-11-07",
   "related": [
     "how-to-set-a-sleep-timer",
-    "what-is-green-noise"
+    "what-is-green-noise",
+    "how-to-choose-a-white-noise-app"
   ],
   "sections": [
     {

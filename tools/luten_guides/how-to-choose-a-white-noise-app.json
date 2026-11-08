@@ -1,0 +1,158 @@
+{
+  "slug": "how-to-choose-a-white-noise-app",
+  "keyword": "white noise app",
+  "also_targets": [
+    "white noise app for iphone",
+    "white noise app android",
+    "white noise app no ads"
+  ],
+  "title": "How to Choose a White Noise App for iPhone or Android",
+  "description": "What to check before you settle on a white noise app: playback when locked, the loop, the timer, ads, sign-up and privacy. Plus the built-in options.",
+  "h1": "How to choose a white noise app",
+  "answer": "Try what your phone already has first: on iPhone, Background Sounds in Settings plays noise and rain with no app at all, and on Android, the Bedtime tab in Google's Clock app can play sleep sounds from a media app. If you want an app, test a few things in the first evening: it keeps playing with the screen locked, you can't hear where the sound repeats, the timer fades out, no ads cut in, and it doesn't ask you to sign up before you hear anything. Then read its privacy section on the store page.",
+  "published": "2026-11-08",
+  "updated": "2026-11-08",
+  "related": [
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-set-a-sleep-timer",
+    "what-is-green-noise"
+  ],
+  "sections": [
+    {
+      "h": "Start with what is already on your phone",
+      "blocks": [
+        {
+          "p": "You may not need an app. Both systems have something built in, and it is already on your phone."
+        },
+        {
+          "ul": [
+            "**iPhone:** [Apple's steps](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios): open **Settings**, tap **Accessibility**, then **Audio & Visual**, then **Background Sounds**, and turn it on. Apple [lists](https://support.apple.com/en-us/126977) balanced, bright and dark noise among the sounds, along with rain and ocean. Our [Background Sounds guide](/luten/guides/how-to-use-background-sounds-on-iphone/) has every step, the timer and the fixes for when it stops.",
+            "**Android:** open Google's **Clock** app and tap **Bedtime**. Under **Sleep sounds**, tap the current sound to choose another, then pick an app and a sound. [Google's help](https://support.google.com/clock/answer/9887159?hl=en) says you can also use sounds stored on your phone. If your phone has a different clock app, look for a bedtime section there."
+          ]
+        },
+        {
+          "p": "Background Sounds can also play under your music or a podcast. If that is what you want, it may be all you need."
+        }
+      ]
+    },
+    {
+      "h": "What to test in any white noise app",
+      "blocks": [
+        {
+          "p": "Store pages all look alike. These checks show the difference, and you can run them yourself before you rely on an app."
+        },
+        {
+          "ol": [
+            "**Lock the phone.** Start a sound, lock the screen and leave it. The sound should keep going, and you should see play and pause on the lock screen. On Android, a battery saver on some phones can stop apps running in the background, so check that setting if it stops.",
+            "**Listen for the repeat.** Many noise tracks are a recording of a set length played on a loop. Listen through the point where it starts again. A click, a short gap or a sound you can pick out each time is easy to notice once you've heard it.",
+            "**Try the timer.** Set the shortest one and wait. Does the sound fade or stop dead? Does it pause, so you can press play again, or close the app?",
+            "**Look for ads.** On Google Play, a **Contains ads** label sits under the Install button or price. [Google says](https://support.google.com/googleplay/answer/6270207?hl=en) the developer declares it. On the App Store, play a few sounds and watch for an ad between them.",
+            "**Check for voices and music.** Some tracks open with a spoken intro or have music mixed in. Play a few right from the start.",
+            "**Notice what it asks first.** Some apps want an account or a subscription screen before you hear anything. If an app has a subscription, read what it includes on the store page before you start one.",
+            "**Read the privacy section.** On the App Store, scroll to **App Privacy**. [Apple says](https://support.apple.com/en-us/102399) it shows what data the app may collect, whether it is linked to you and whether it is used to track you, as reported by the developer. On Google Play, tap **Data safety**, then **See details**. [Google describes](https://support.google.com/googleplay/answer/11416267?hl=en) it as the developer's own account of what is collected and shared."
+          ]
+        },
+        {
+          "p": "If you aren't sure which kind of noise you want, our page on [white, pink and brown noise](/luten/white-noise/) explains the names, and the [green noise guide](/luten/guides/what-is-green-noise/) covers a newer one."
+        }
+      ]
+    },
+    {
+      "h": "How Luten does on the same tests",
+      "blocks": [
+        {
+          "p": "Luten is a sound app for iPhone and Android, made by us, so here it is against the same list. Run the tests on it too."
+        },
+        {
+          "ul": [
+            "**Locked phone:** it keeps playing with the screen locked. The battery saver note above applies on Android.",
+            "**Timer:** tap **Sleep timer** in the player and pick a length. For a sound you tapped, when the time is up, the sound gets quieter over about 20 seconds and then pauses. Open the app and press play to carry on.",
+            "**Ads:** Luten runs no third-party ads.",
+            "**Voices:** no sound has narration or lyrics.",
+            "**Sign-up:** a new install starts without an account. You answer a few setup questions, or tap **Skip for now**, and you can hear a sound before making one. You can add an account later in Profile.",
+            "**Sounds:** white, pink and brown noise, plus rain, ocean, fan, cafe, library, forest and world soundscapes, grouped into Sleep, Focus, Stress, ADHD and Kids."
+          ]
+        },
+        {
+          "shots": [
+            "ios-sleep-timer",
+            "android-sleep-timer"
+          ],
+          "alts": [
+            "The Luten player on iPhone playing a rain sound, with the Sleep timer button tapped and its length options showing.",
+            "The Luten player on Android playing a rain sound, with the Sleep timer button tapped and its length options showing."
+          ]
+        },
+        {
+          "p": "When you tap a sound, the player moves on through the list unless you change it. To stay on one sound, tap the repeat button until it shows a 1."
+        },
+        {
+          "cta": "mid"
+        },
+        {
+          "p": "Where it falls short: Luten is made to be the only thing playing, so starting it pauses your music. For noise under a podcast, Background Sounds on iPhone is the right tool. For privacy, read Luten's App Privacy and Data safety sections like any other app's. One Life, which makes it, doesn't sell personal information."
+        }
+      ]
+    },
+    {
+      "h": "Which way to go",
+      "blocks": [
+        {
+          "ul": [
+            "**You want noise and nothing else:** start with Background Sounds on iPhone, or the Bedtime sounds in Google's Clock app on Android.",
+            "**You want it under your music:** Background Sounds, with **Use When Media is Playing** turned on.",
+            "**You want more kinds of sound, a timer that fades and no ads:** try an app, and run the tests above on it in the first evening. Luten is one to try."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is there a white noise app built into iPhone?",
+      "a": "Yes, in a way. Background Sounds is a setting rather than an app: Settings, Accessibility, Audio & Visual, Background Sounds. Apple lists balanced, bright and dark noise among its sounds."
+    },
+    {
+      "q": "Does Android have built-in white noise?",
+      "a": "Google's Clock app has Sleep sounds in its Bedtime tab, which plays a sound from an app you choose or a sound stored on your phone. Phones from other makers may have a different clock app, so check yours."
+    },
+    {
+      "q": "How can I tell if a white noise app has ads?",
+      "a": "On Google Play, look for the Contains ads label under the Install button or price. On the App Store, play a few sounds and see. Luten runs no third-party ads."
+    },
+    {
+      "q": "Can a white noise app play while I listen to music?",
+      "a": "Many sound apps pause your music when they start, and Luten does. On iPhone, Background Sounds can play under music: turn on Use When Media is Playing in its settings."
+    },
+    {
+      "q": "Will a white noise app keep playing when the screen locks?",
+      "a": "It should, and it is worth checking in the first evening. Luten keeps playing with the phone locked. On Android, a battery saver on some phones can stop background apps, so check that setting if sound stops."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Apple Support: accessibility features for older adults",
+      "url": "https://support.apple.com/en-us/126977"
+    },
+    {
+      "name": "Clock Help (Google): Set a bedtime schedule",
+      "url": "https://support.google.com/clock/answer/9887159?hl=en"
+    },
+    {
+      "name": "Google Play Help: apps that contain ads",
+      "url": "https://support.google.com/googleplay/answer/6270207?hl=en"
+    },
+    {
+      "name": "Apple Support: About privacy information on the App Store",
+      "url": "https://support.apple.com/en-us/102399"
+    },
+    {
+      "name": "Google Play Help: Data safety section",
+      "url": "https://support.google.com/googleplay/answer/11416267?hl=en"
+    }
+  ]
+}

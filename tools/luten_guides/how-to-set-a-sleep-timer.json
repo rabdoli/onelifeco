@@ -1,7 +1,11 @@
 {
   "slug": "how-to-set-a-sleep-timer",
   "keyword": "sleep timer iphone",
-  "also_targets": ["sleep timer android", "sleep timer spotify", "sleep timer apple music"],
+  "also_targets": [
+    "sleep timer android",
+    "sleep timer spotify",
+    "sleep timer apple music"
+  ],
   "title": "How to Set a Sleep Timer on iPhone or Android",
   "description": "Stop music and sounds on a timer: the built-in way on iPhone, what to do on Android, Spotify and Apple Music, and how the timer in Luten fades out.",
   "h1": "How to set a sleep timer on iPhone or Android",
@@ -9,7 +13,8 @@
   "published": "2026-11-06",
   "updated": "2026-11-06",
   "related": [
-    "how-to-use-background-sounds-on-iphone"
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-choose-a-white-noise-app"
   ],
   "sections": [
     {
