@@ -1,0 +1,156 @@
+{
+  "slug": "study-sounds",
+  "keyword": "study sounds",
+  "also_targets": [
+    "sounds for studying",
+    "study sounds app",
+    "rain sounds for studying"
+  ],
+  "title": "Study Sounds: What People Mean and How to Set Them Up",
+  "description": "What study sounds usually are, how to set them up on iPhone or Android, the built-in Background Sounds option, and how the Focus timer in Luten plays them.",
+  "h1": "Study sounds: what people mean and how to set them up",
+  "answer": "Study sounds has no fixed meaning. People use it for steady background audio while they work: noise such as white or brown noise, rain, a cafe or library, nature, or music with no lyrics. To set one up, pick a sound, turn on Do Not Disturb so notifications stay quiet, and set a timer so it stops on its own. On iPhone, Background Sounds in Settings plays noise and rain with no app at all. In Luten, open Focus from the Home screen, pick what you are working on and a length, and tap play: the sound starts with the timer.",
+  "published": "2026-11-09",
+  "updated": "2026-11-09",
+  "single_os": "No screens: there is no capture of the Focus screen on either system yet, so the steps are written without images.",
+  "related": [
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-choose-a-white-noise-app",
+    "what-is-green-noise"
+  ],
+  "sections": [
+    {
+      "h": "What counts as study sounds",
+      "blocks": [
+        {
+          "p": "There is no standard list. When people search for study sounds, they usually mean something they can leave running in the background, with nothing to follow. These are the common kinds:"
+        },
+        {
+          "ul": [
+            "**Noise:** white, pink or brown noise. A steady hiss or rumble with no tune. Our [green noise guide](/luten/guides/what-is-green-noise/) explains what the color names mean.",
+            "**Rain and water:** rain on a window, a stream, the ocean.",
+            "**Places:** the murmur of a cafe, or the quiet room sound of a library.",
+            "**Nature:** wind, birds, a forest.",
+            "**Music with no lyrics:** lo-fi beats, ambient music, soft piano."
+          ]
+        },
+        {
+          "p": "Which one suits you is a matter of taste, and it can change from day to day. Try a few and keep the ones you don't find yourself skipping."
+        }
+      ]
+    },
+    {
+      "h": "How to set it up on iPhone or Android",
+      "blocks": [
+        {
+          "p": "Whatever you play it with, a few settings make the difference between a sound that stays in the background and one that interrupts you."
+        },
+        {
+          "ol": [
+            "**Pick a sound with no words.** Many study tracks are instrumental, but some open with a spoken intro or have singing mixed in. Play the first part before you start work.",
+            "**Silence notifications.** On iPhone, open Control Center, tap **Focus**, then tap **Do Not Disturb**. [Apple's steps](https://support.apple.com/guide/iphone/turn-a-focus-on-or-off-iph5c3f5b77b/ios) also show how to choose when it ends. On Android, pull down from the top of the screen and tap the **Do Not Disturb** tile. [Google says](https://support.google.com/android/answer/9069335?hl=en) settings can vary by phone.",
+            "**Set a timer that stops the sound.** Some apps have one in the player. On iPhone, the Clock app can stop whatever is playing; our [sleep timer guide](/luten/guides/how-to-set-a-sleep-timer/) has the steps, and they work at any time of day.",
+            "**Check for ads.** An ad cutting in halfway through breaks the background. Play a few tracks and watch for one.",
+            "**Lock the phone and listen.** The sound should keep going with the screen off. On Android, if it stops, look in the phone's battery settings for the app: some phones limit apps in the background, and the names change from brand to brand."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "On iPhone: Background Sounds, with no app",
+      "blocks": [
+        {
+          "p": "iPhone has noise and nature sounds built in, and they can play under your own music."
+        },
+        {
+          "ol": [
+            "Open the **Settings** app.",
+            "Tap **Accessibility**, then **Audio & Visual**, then **Background Sounds**, and turn it on.",
+            "Tap the sound to choose another, and drag the slider to set the volume.",
+            "To keep it playing with music or a video, turn on **Use When Media is Playing**.",
+            "To have it stop by itself, tap **Stop Sound with a Timer** and turn on **Timer**."
+          ]
+        },
+        {
+          "p": "These steps are from [Apple's guide](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios). Our [Background Sounds guide](/luten/guides/how-to-use-background-sounds-on-iphone/) covers the rest, including what to do when it stops. On Android, use a sound or music app."
+        }
+      ]
+    },
+    {
+      "h": "In Luten: the Focus timer",
+      "blocks": [
+        {
+          "p": "Luten is a sound app for iPhone and Android. Its Focus screen puts the sound and the timer together, so you set one thing instead of two."
+        },
+        {
+          "ol": [
+            "Open **Focus** from the Home screen. If Focus is the section you picked when you set up Luten, it is also a tab at the bottom.",
+            "Under **What will you work on?**, tap the kind of work. **Reading** is the one labelled for study, research and books. Your choice affects which sounds come first.",
+            "Tap one of the lengths above the timer.",
+            "Tap the play button in the middle of the timer. The sound starts with the countdown, so there is nothing else to press."
+          ]
+        },
+        {
+          "p": "When the countdown reaches zero, a bell rings and the sound fades out, so it doesn't carry on after you've finished. You can turn the bell off in Profile."
+        },
+        {
+          "ul": [
+            "**Deep Focus Mode:** this switch is on to start with. While the timer runs, it fills the screen and the tabs are hidden. Use its pause button to pause, and to end early, hold the screen for three seconds, so a stray tap doesn't stop it. With the switch off, tap the timer to pause it.",
+            "**Keep screen awake:** with this switch on, the screen stays on while the timer runs.",
+            "**Focus Sounds:** below the timer is a list of sounds you can tap to play instead of a timed session. It has music with no lyrics, noise, nature and room sounds such as a cafe or library."
+          ]
+        },
+        {
+          "p": "On recent iPhones with Live Activities allowed for Luten, the countdown also shows on the Lock Screen while it runs."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "Which way to go",
+      "blocks": [
+        {
+          "ul": [
+            "**You want plain noise or rain under your own music:** Background Sounds on iPhone, with Use When Media is Playing turned on.",
+            "**You already have a playlist you like:** keep it, and add Do Not Disturb and a timer from the steps above.",
+            "**You want the sound and the timer in one place, with no ads:** try the Focus screen in Luten."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which study sounds should I pick?",
+      "a": "There isn't one answer. Noise, rain, a cafe, nature and music with no lyrics are all common choices. Try a few and keep what you don't find yourself changing."
+    },
+    {
+      "q": "How long should I listen to study sounds?",
+      "a": "That is up to you. We don't recommend a length. Set a timer for the block of work you have planned, and change it whenever you like."
+    },
+    {
+      "q": "Can I play study sounds under my own music?",
+      "a": "On iPhone, yes: Background Sounds can play with other media when Use When Media is Playing is on. Luten is made to be the only thing playing, so other audio usually pauses when it starts."
+    },
+    {
+      "q": "Do study sounds keep playing with the screen locked?",
+      "a": "On iPhone, Luten keeps playing with the screen locked. On Android it is built to keep playing too; if it stops, check the phone's battery settings for Luten. For any other app, lock the phone and listen, as in the steps above."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Turn on or schedule a Focus on iPhone",
+      "url": "https://support.apple.com/guide/iphone/turn-a-focus-on-or-off-iph5c3f5b77b/ios"
+    },
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Android Help: Limit interruptions with Modes & Do Not Disturb on Android",
+      "url": "https://support.google.com/android/answer/9069335?hl=en"
+    }
+  ]
+}
