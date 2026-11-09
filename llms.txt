@@ -69,6 +69,7 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Sounds for waking up at 3am](https://www.onelifeco.app/luten/3am/)
 - [Sleep sounds with no talking](https://www.onelifeco.app/luten/no-talking/)
 - [Luten guides](https://www.onelifeco.app/luten/guides/): practical step by step guides to sound on iPhone and Android
+- [Study sounds: what people mean and how to set them up](https://www.onelifeco.app/luten/guides/study-sounds/)
 - [How to choose a white noise app](https://www.onelifeco.app/luten/guides/how-to-choose-a-white-noise-app/)
 - [How to use Background Sounds on iPhone](https://www.onelifeco.app/luten/guides/how-to-use-background-sounds-on-iphone/)
 - [What is green noise?](https://www.onelifeco.app/luten/guides/what-is-green-noise/)
@@ -81,6 +82,7 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Cassette vs Otter](https://www.onelifeco.app/cassette/vs-otter/): a sourced comparison, checked 31 October 2026
 - [Cassette vs Wispr Flow Notetaker](https://www.onelifeco.app/cassette/vs-wispr-flow/): a sourced comparison, checked 31 October 2026
 - [Cassette guides](https://www.onelifeco.app/cassette/guides/): step by step recording and notes guides for iPhone and Android
+- [How to transcribe a meeting without a bot in the call](https://www.onelifeco.app/cassette/guides/meeting-transcription-app/)
 - [How to choose a meeting notes app](https://www.onelifeco.app/cassette/guides/meeting-notes-app/)
 - [How to choose a lecture recording app](https://www.onelifeco.app/cassette/guides/lecture-recording-app/)
 - [How to use your Apple Watch as a voice recorder](https://www.onelifeco.app/cassette/guides/apple-watch-voice-recorder/)

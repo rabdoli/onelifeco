@@ -27,19 +27,25 @@
   </url>
   <url>
     <loc>https://www.onelifeco.app/cassette/guides/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.onelifeco.app/cassette/guides/meeting-transcription-app/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.onelifeco.app/cassette/guides/meeting-notes-app/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.onelifeco.app/cassette/guides/lecture-recording-app/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -57,7 +63,7 @@
   </url>
   <url>
     <loc>https://www.onelifeco.app/cassette/guides/how-to-record-a-lecture/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -83,9 +89,15 @@
   </url>
   <url>
     <loc>https://www.onelifeco.app/luten/guides/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.onelifeco.app/luten/guides/study-sounds/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.onelifeco.app/luten/guides/how-to-choose-a-white-noise-app/</loc>

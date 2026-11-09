@@ -8,10 +8,10 @@
   "published": "2026-11-05",
   "updated": "2026-11-07",
   "related": [
+    "meeting-transcription-app",
     "meeting-notes-app",
     "lecture-recording-app",
-    "how-to-record-a-lecture",
-    "apple-watch-voice-recorder"
+    "how-to-record-a-lecture"
   ],
   "sections": [
     {

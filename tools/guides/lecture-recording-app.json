@@ -6,7 +6,7 @@
   "h1": "How to choose a lecture recording app",
   "answer": "Start with what your phone already has. On iPhone 12 or later, Voice Memos and the Notes app record and write a transcript, and Notes can add a summary on iPhones with Apple Intelligence. A Pixel's Recorder and a Galaxy's Voice Recorder also write transcripts, and summaries on newer models. If you want notes made for a class, with an outline, key terms and what is on the exam, look for an app that keeps recording with the screen locked, lets you mark moments, works offline and gets the notes out to where you study. Cassette does those on iPhone and Android.",
   "published": "2026-11-07",
-  "updated": "2026-11-07",
+  "updated": "2026-11-09",
   "related": [
     "how-to-record-a-lecture",
     "transcribe-voice-memos"
@@ -94,7 +94,7 @@
           "ul": [
             "**Offline:** recording, the transcript and the notes work in airplane mode. On iPhone the transcript needs a language your phone can handle on the device, with its speech model downloaded. On Android the notes model arrives over Wi-Fi once after you install, so open Cassette on Wi-Fi before your first class.",
             "**Where the audio goes:** notes are never written by an outside AI service. On Android the audio is never sent anywhere to be transcribed or written up. On iPhone, Apple's servers transcribe a tape the phone can't do on the device, the notes can be written on Apple's Private Cloud Compute on iOS 27, and tapes go in iCloud and computer backups. Signed-in Premium backs tapes up on both systems. On iPhone, On-device only stops all of that.",
-            "**Getting notes out:** send them to Notion, OneNote, Evernote or Google Keep in one tap, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone. SHARE also saves them as PDF or Word.",
+            "**Getting notes out:** send them to Notion, OneNote, Evernote or Google Keep, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone. SHARE also saves them as PDF or Word.",
             "**Review:** tap a line of the transcript to jump to that moment, review cards are made from the key terms, and you can type a question to your tapes, like \"what's due this week?\"",
             "**Cost:** recording is free, with no minute meter. A class is usually longer than {short_tape_minutes} minutes, so its transcript and notes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that."
           ]

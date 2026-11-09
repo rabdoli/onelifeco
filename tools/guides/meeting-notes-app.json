@@ -6,11 +6,11 @@
   "h1": "How to choose a meeting notes app",
   "answer": "Start with the free tools. The Notes app on iPhone can record a meeting and transcribe it, and with Apple Intelligence it can sum it up. A Pixel's Recorder and a Galaxy's Voice Recorder transcribe too, and newer models add a summary. Zoom and Google Meet write meeting notes on eligible paid plans. If you want notes for every meeting, around a table or on any call, with what was decided, who owns each task and by when, and a draft of the follow-up email, pick an app that needs no bot in the call and sends the notes where your team keeps them. Cassette works that way on iPhone and Android.",
   "published": "2026-11-08",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "related": [
+    "meeting-transcription-app",
     "transcribe-voice-memos",
-    "apple-watch-voice-recorder",
-    "lecture-recording-app"
+    "apple-watch-voice-recorder"
   ],
   "sections": [
     {
@@ -95,7 +95,7 @@
         {
           "ul": [
             "**Check it against the tape:** every transcript line is a link to its moment. Tap it, then PLAY, and hear it for yourself.",
-            "**Notes where your team works:** pick Notion, OneNote, Evernote or Google Keep once, and each meeting goes there with one tap. Apple Notes is there on iPhone, and Samsung Notes on Samsung phones. SHARE makes a PDF or a Word file.",
+            "**Notes where your team works:** pick Notion, OneNote, Evernote or Google Keep once, and send each meeting there from the tape. Apple Notes is there on iPhone, and Samsung Notes on Samsung phones. SHARE makes a PDF or a Word file.",
             "**Finding it later:** ask your tapes something like \"what did we decide about pricing?\" and Cassette answers from your own recordings, showing where it found it.",
             "**Where the recording goes:** no outside AI service ever writes the notes. Android phones transcribe and write everything themselves, and send no audio off for it. iPhones send a tape to Apple to transcribe when the phone can't do it on the device, iOS 27 may write the notes on Apple's Private Cloud Compute, and iCloud and computer backups include tapes. Signing in with Premium backs up tapes on either system. The On-device only switch on iPhone turns all of this off.",
             "**Price:** recording costs nothing and has no time limit. Most meetings run past {short_tape_minutes} minutes, so each one's transcript and notes uses one of the {free_tapes} free tapes a month. Premium writes up the rest."

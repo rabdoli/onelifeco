@@ -6,7 +6,7 @@
   "h1": "How to record a lecture on iPhone or Android",
   "answer": "Ask your professor first, sit near the front, lay your phone flat with its bottom edge toward the speaker, and press record. The recorder that came with your phone gets you the audio. To get notes as well, use an app that writes them: in Cassette you press RECORD, tap MARK at the parts that matter and press STOP, and the outline, key terms and exam talk are written for you.",
   "published": "2026-11-05",
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "related": [
     "lecture-recording-app",
     "transcribe-voice-memos",
@@ -116,7 +116,7 @@
           "ul": [
             "**Go back to the moment.** Tap a line of the transcript to jump to it, then press PLAY to hear how it was said.",
             "**Review with cards.** Cassette makes review cards from the key terms, so you can test yourself without writing them.",
-            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep in one tap, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone.",
+            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone.",
             "**Ask your tapes.** Type a question like \"what's due this week?\" and get an answer from your own recordings, with the sources."
           ]
         },
