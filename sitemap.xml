@@ -27,9 +27,15 @@
   </url>
   <url>
     <loc>https://www.onelifeco.app/cassette/guides/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.onelifeco.app/cassette/guides/voice-recorder-app/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.onelifeco.app/cassette/guides/meeting-transcription-app/</loc>
