@@ -6,8 +6,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>White noise, pink noise and brown noise | Luten</title>
-<meta name="description" content="What the noise colours actually mean, why white noise sounds hissy and brown noise sounds deep, what green noise is not, and how to pick one by ear instead of by chart." />
+<title>White noise vs pink noise vs brown noise | Luten</title>
+<meta name="description" content="Brown noise vs white noise, pink noise vs white noise, pink noise vs brown noise: what each colour is, the numbers behind the difference, and how to pick one by ear." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.onelifeco.app/luten/white-noise/" />
 <meta property="og:title" content="White noise, pink noise and brown noise" />
@@ -74,6 +74,30 @@
     },
     {
       "@type": "Question",
+      "name": "What is the difference between brown noise and white noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to about 60 decibels per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between pink noise and white noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is the reference signal engineers use when they tune speakers and rooms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between pink noise and brown noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both fall as the frequency rises. Brown falls twice as steeply, 6 decibels per octave against pink's 3. Pink keeps some high end and sounds like steady rain; brown loses most of it and sounds like a distant rumble. They are the closest pair of the three, so the difference is easiest to hear back to back."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is brown noise better than white noise?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -101,7 +125,7 @@
       "name": "Does Luten have white, pink and brown noise?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing. They are synthesised to a measured spectral slope rather than made by taking a recording and pulling the treble off it."
+        "text": "Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing. Luten's own white, pink and brown noise is synthesised to the defined slope rather than made by taking a recording and pulling the treble off it."
       }
     }
   ]
@@ -188,14 +212,36 @@ document.addEventListener('click', function (e) {
     A waterfall through a wall, a ship's engine room, the inside of a plane.</p>
   </div>
 
+  <h2>Side by side: the three comparisons people search</h2>
+  <p>Each pair is a question about the slope. The numbers below are the definitions, not opinions.</p>
+  <div class="card">
+    <h3>Brown noise vs white noise</h3>
+    <p>The two ends of these three. White is flat. Brown falls 6 decibels per octave, and across
+    the roughly ten octaves of human hearing that adds up to about 60 decibels per hertz between
+    the bottom and the top. White is mostly hiss; brown is mostly rumble. The name is not about the colour at
+    all: it comes from Brownian motion, named after the botanist Robert Brown, and some engineers
+    call the same thing red noise.</p>
+    <h3>Pink noise vs white noise</h3>
+    <p>Pink falls 3 decibels per octave, about 30 decibels per hertz across the range of hearing,
+    and white does not fall at all. Because each octave up is twice as wide, that gives pink equal
+    power in every octave, so to most ears it sounds
+    level, while white sounds tilted toward the top. Pink is also the reference signal used to
+    tune speakers and rooms, which is why it turns up in audio gear as often as in sound apps.</p>
+    <h3>Pink noise vs brown noise</h3>
+    <p>The closest pair. Both fall as the frequency rises, and brown falls twice as steeply. Pink
+    keeps some of the top end and sits near steady rain; brown loses most of it and sits near a
+    distant rumble. Played one at a time they are easy to confuse. Played back to back, the
+    difference is plain.</p>
+  </div>
+
   <h2>Why white noise sounds so much brighter than it measures</h2>
   <p>This is the part that surprises people, and it explains the whole family. Equal power per
   hertz is not equal power to a human ear, because hearing works in octaves and each octave upward
   covers twice as many hertz as the one below it. The octave from 5,000 to 10,000 hertz contains
   as much bandwidth as everything below 5,000 put together.</p>
   <p>So a spectrum that is flat on paper puts most of its energy in the top few octaves, which is
-  where hiss lives. White noise measures flat and hears bright. Pink noise corrects for exactly
-  that, which is why it is the one that sounds "even" to most people, and why it is the reference
+  where hiss lives. White noise measures flat and hears bright. Pink noise corrects for that
+  bandwidth, which is why it sounds more even to most people, and why it is the reference
   engineers use when they tune a room.</p>
   <p>Brown goes past even and lands on dark. Nothing is wrong with any of them. They are three
   points on one slope, and which one sounds right to you is a matter of ears.</p>
@@ -206,6 +252,7 @@ document.addEventListener('click', function (e) {
   <ul>
     <li><strong>Green noise</strong> has no standard definition. It is a loose name for noise weighted toward the middle of the range, and sources disagree on where that is. Useful as a description, not as a specification. <a href="/luten/guides/what-is-green-noise/">Who says what about green noise</a>.</li>
     <li><strong>Blue and violet noise</strong> run the other way, rising with frequency instead of falling. They are real definitions and are rarely what somebody is looking for.</li>
+    <li><strong>Black noise</strong> has no agreed definition either. Some writers mean silence, some mean near silence with the odd random sound. Check what a source means before comparing it with the others.</li>
     <li><strong>Grey noise</strong> is shaped to a curve of human hearing so it sounds equally loud across the range. Definitions of it vary between sources.</li>
   </ul>
 
@@ -217,7 +264,7 @@ document.addEventListener('click', function (e) {
   a spectrum nobody measured, uneven level between one track and the next, and a short recording
   looping with an audible seam where the end meets the start. Once you have heard the seam, you listen for it.</p>
   <p>Noise is one of the few things in audio that can simply be generated to its definition. When
-  it is, the colour is the colour, and it can run as long as you like without a join.</p>
+  it is, the colour is the colour.</p>
 
   <h2>What we won't claim</h2>
   <p>Brown noise in particular has been attached to a lot of claims in the last few years. Luten makes no claim about what any colour does, and it does not rank them.</p>
@@ -235,8 +282,8 @@ document.addEventListener('click', function (e) {
     <p>In that order, without changing the volume. The slope is obvious when you hear the three
     in sequence and almost invisible when you hear one alone.</p>
 
-    <h3>2. Give each one a moment</h3>
-    <p>What sounds good in the first four seconds is not always what you want left on.</p>
+    <h3>2. Do not judge on the first impression alone</h3>
+    <p>What sounds good at first is not always what you want left on.</p>
 
     <h3>3. Check it at the volume you would actually use</h3>
     <p>The colours change character when quiet. Brown thins out, white gets harsher relative to
@@ -250,9 +297,8 @@ document.addEventListener('click', function (e) {
   <h2>Where Luten sits</h2>
   <p>Luten is sound for the mind, and noise is the part of it where the engineering is checkable rather than a matter of taste.</p>
   <ul>
-    <li><strong>White, pink and brown, synthesised to a measured spectral slope</strong>, not a recording with the treble pulled off and a label attached.</li>
+    <li><strong>Luten's own white, pink and brown, synthesised to the defined slope</strong>, not a recording with the treble pulled off and a label attached.</li>
     <li><strong>Variants of each</strong>, since a slope is a starting point: white warmed, softened, widened, or swelling and settling very slowly.</li>
-    <li><strong>Seamless loops.</strong> The join is not there to find, however long you leave it running.</li>
     <li><strong>Even loudness on nearly every track</strong>, so moving between tracks rarely means reaching for the volume.</li>
     <li><strong>No narration and no lyrics</strong>, no ads, and nothing that announces the next thing.</li>
     <li><strong>A player that stays dark</strong>, plus background audio.</li>
@@ -272,6 +318,12 @@ document.addEventListener('click', function (e) {
     <h3>What is the difference between white, pink and brown noise?</h3>
     <p>They differ in how the energy is spread across frequency. White noise has equal power at every frequency, so the high end dominates and it reads as bright and hissy. Pink noise rolls the top off at 3 decibels per octave, which puts equal power in every octave and sounds more balanced. Brown noise rolls it off twice as steeply, at 6 decibels per octave, which is why it sounds deep and distant, closer to a waterfall heard through a wall than to a radio between stations.</p>
 
+    <h3>What is the difference between brown noise and white noise?</h3>
+    <p>Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to about 60 decibels per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour.</p>
+    <h3>What is the difference between pink noise and white noise?</h3>
+    <p>Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is the reference signal engineers use when they tune speakers and rooms.</p>
+    <h3>What is the difference between pink noise and brown noise?</h3>
+    <p>Both fall as the frequency rises. Brown falls twice as steeply, 6 decibels per octave against pink's 3. Pink keeps some high end and sounds like steady rain; brown loses most of it and sounds like a distant rumble. They are the closest pair of the three, so the difference is easiest to hear back to back.</p>
     <h3>Is brown noise better than white noise?</h3>
     <p>Luten makes no claim about what any colour does. People's preferences differ a great deal. The useful test is your own ears, not a chart.</p>
 
@@ -282,7 +334,7 @@ document.addEventListener('click', function (e) {
     <p>Because equal power per hertz is not equal power to a human ear. Hearing works in octaves, and each octave upward covers twice the range of hertz as the one below it, so the top octaves carry most of the energy in a flat spectrum. White noise measures flat and hears bright. That is not a fault in the sound, it is the difference between a measurement and an ear.</p>
 
     <h3>Does Luten have white, pink and brown noise?</h3>
-    <p>Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing. They are synthesised to a measured spectral slope rather than made by taking a recording and pulling the treble off it.</p>
+    <p>Yes, all three, along with variants of each: white noise warmed, softened, widened or slowly breathing. Luten's own white, pink and brown noise is synthesised to the defined slope rather than made by taking a recording and pulling the treble off it.</p>
   </div>
 
   <p class="note">Also worth reading:
