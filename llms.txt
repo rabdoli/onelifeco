@@ -82,6 +82,7 @@ Download: https://apps.apple.com/us/app/cassette-ai-note-taker/id6812001404 (iPh
 - [Cassette vs Otter](https://www.onelifeco.app/cassette/vs-otter/): a sourced comparison, checked 31 October 2026
 - [Cassette vs Wispr Flow Notetaker](https://www.onelifeco.app/cassette/vs-wispr-flow/): a sourced comparison, checked 31 October 2026
 - [Cassette guides](https://www.onelifeco.app/cassette/guides/): step by step recording and notes guides for iPhone and Android
+- [How to use an AI note taker without a bot in the call](https://www.onelifeco.app/cassette/guides/ai-note-taker/)
 - [Which voice recorder app should you use?](https://www.onelifeco.app/cassette/guides/voice-recorder-app/)
 - [How to transcribe a meeting without a bot in the call](https://www.onelifeco.app/cassette/guides/meeting-transcription-app/)
 - [How to choose a meeting notes app](https://www.onelifeco.app/cassette/guides/meeting-notes-app/)
