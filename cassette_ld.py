@@ -35,6 +35,12 @@ SAME_AS = [
     GOOGLE_PLAY,
     "https://www.producthunt.com/products/cassette-ai-note-taker",
     "https://peerlist.io/luten/project/cassette-ai-note-taker",
+    # Cassette's own site and profiles, live since 13 Nov 2026 (Reza's yes to the link line, 13 Nov).
+    "https://cassetteainotetaker.com/",
+    "https://www.instagram.com/cassetteainotetaker",
+    "https://www.tiktok.com/@cassetteainotetaker",
+    "https://www.youtube.com/@cassetteainotetaker",
+    "https://www.facebook.com/cassetteainotetaker",
 ]
 
 SOFTWARE_APP = {
