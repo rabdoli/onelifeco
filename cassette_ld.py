@@ -122,8 +122,9 @@ FAQ = [
      "On Android, any phone on Android 10 or later: phones with 8 GB of memory or "
      "more get Cassette's own notes model, and others get simpler notes."),
     ("Does it work on Apple Watch?",
-     "Yes. The Apple Watch app records with the watch's microphone, with pause "
-     "and stop, and sends each tape to your iPhone, which writes the transcript "
+     "Yes. The Apple Watch app records with the watch's microphone using two "
+     "keys, RECORD and EJECT, then MARK and STOP while it records, and sends "
+     "each tape to your iPhone, which writes the transcript "
      "and the notes. Start one from a watch face complication or with Siri. It "
      "needs watchOS 10 or later."),
     ("Can I share what it writes?",
