@@ -91,8 +91,8 @@
             "ios-lock-rec"
           ],
           "alts": [
-            "Cassette recording with the app closed: the Dynamic Island opened to REC, SIDE A, the time, MARKS 01 and the PAUSE and MARK keys.",
-            "The iPhone Lock Screen with Cassette's tape running: REC, the timer at 0:34, SIDE A and MARKS 00."
+            "Cassette recording with the app closed: the Dynamic Island opened to REC, SIDE A, the time, the marks count and the PAUSE and MARK keys.",
+            "The iPhone Lock Screen with Cassette's tape running: REC, the timer, SIDE A and the marks count."
           ]
         },
         {
