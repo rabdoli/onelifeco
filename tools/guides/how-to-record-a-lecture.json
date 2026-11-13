@@ -13,7 +13,8 @@
     "voice-recorder-app",
     "lecture-recording-app",
     "transcribe-voice-memos",
-    "apple-watch-voice-recorder"
+    "apple-watch-voice-recorder",
+    "action-button-voice-recorder"
   ],
   "sections": [
     {

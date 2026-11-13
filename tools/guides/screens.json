@@ -30,5 +30,9 @@
   "android-templates": {"file": "android2/templates.png", "os": "Android"},
   "android-language": {"file": "android2/language.png", "os": "Android"},
   "watch-rec": {"file": "watch-rec.png", "os": "Apple Watch"},
-  "watch-tapes": {"file": "watch-tapes.png", "os": "Apple Watch"}
+  "watch-tapes": {"file": "watch-tapes.png", "os": "Apple Watch"},
+  "ios-controls-list": {"file": "controls-list-record.png", "os": "iPhone"},
+  "ios-action-record": {"file": "action-button-record.png", "os": "iPhone"},
+  "ios-island-mark": {"file": "island-pause-mark.png", "os": "iPhone"},
+  "ios-lock-rec": {"file": "lock-screen-rec.png", "os": "iPhone"}
 }
