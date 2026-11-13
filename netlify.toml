@@ -111,3 +111,37 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+# Cassette's guides and comparison pages moved to cassetteainotetaker.com (Reza, 13 Nov 2026: the new site is live
+# and the guides live there). 301, forced, because the old pages still exist as files here. /cassette/ itself stays
+# (the dark page), and so do config.json, /cassette/i/*, /cassette/open/*, reset, verify, /email/* and delete-account.
+[[redirects]]
+  from = "/cassette/guides"
+  to = "https://cassetteainotetaker.com/guides/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cassette/guides/*"
+  to = "https://cassetteainotetaker.com/guides/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cassette/vs-otter/*"
+  to = "https://cassetteainotetaker.com/vs/otter/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cassette/vs-otter"
+  to = "https://cassetteainotetaker.com/vs/otter/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cassette/vs-wispr-flow/*"
+  to = "https://cassetteainotetaker.com/vs/wispr-flow/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/cassette/vs-wispr-flow"
+  to = "https://cassetteainotetaker.com/vs/wispr-flow/"
+  status = 301
+  force = true
