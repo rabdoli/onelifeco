@@ -4,14 +4,15 @@
   "also_targets": [
     "sleep timer android",
     "sleep timer spotify",
-    "sleep timer apple music"
+    "sleep timer apple music",
+    "does tidal have a sleep timer"
   ],
   "title": "How to Set a Sleep Timer on iPhone or Android",
-  "description": "Stop music and sounds on a timer: the built-in way on iPhone, what to do on Android, Spotify and Apple Music, and how the timer in Luten fades out.",
+  "description": "Stop music and sounds on a timer: the built-in way on iPhone, what to do on Android, Spotify, Tidal and Apple Music, and how the timer in Luten fades out.",
   "h1": "How to set a sleep timer on iPhone or Android",
-  "answer": "On iPhone, open the Clock app, tap Timers, set a time, tap When Timer Ends, choose Stop Playing, then tap Set and Start. On Android, look in the app that is playing: Spotify and YouTube each have their own timer. In Luten, tap Sleep timer in the player and pick a length, and the sound fades out, then pauses.",
+  "answer": "On iPhone, open the Clock app, tap Timers, set a time, tap When Timer Ends, choose Stop Playing, then tap Set and Start. On Android, look in the app that is playing: Spotify and YouTube each have their own timer. In Luten, tap Sleep timer in the player and pick a length. With a sound you tapped from a list, it fades out, then pauses.",
   "published": "2026-11-06",
-  "updated": "2026-11-06",
+  "updated": "2026-11-14",
   "related": [
     "how-to-use-background-sounds-on-iphone",
     "how-to-choose-a-white-noise-app",
@@ -49,8 +50,9 @@
         },
         {
           "ul": [
-            "**Spotify, on iPhone or Android:** open the Now Playing screen, tap the three-dot menu, scroll down and tap **Sleep Timer**. On a podcast, tap the moon icon beside the play button. [Spotify's steps](https://newsroom.spotify.com/2022-08-02/how-to-make-spotifys-sleep-timer-part-of-any-bedtime-routine/) include stopping at the end of the current track.",
+            "**Spotify, on iPhone or Android:** open the Now Playing screen, tap the three-dot menu, scroll down and tap **Sleep Timer**. On a podcast, tap the moon icon beside the play button. [Spotify's steps](https://newsroom.spotify.com/2022-08-02/how-to-make-spotifys-sleep-timer-part-of-any-bedtime-routine/) include stopping at the end of the current track. Spotify added in 2025 that the timer can also be controlled from its desktop app and from a Wear OS watch.",
             "**YouTube, on iPhone or Android:** open the video, tap the settings icon in the player, tap **Sleep timer** and choose a length. [Google says](https://support.google.com/youtube/answer/15397997?hl=en&co=GENIE.Platform%3DAndroid) playback pauses when it runs out and you get a silent notification.",
+            "**Tidal:** [Tidal's help centre](https://support.tidal.com/hc/en-us/search?query=sleep+timer) had no article on a sleep timer when we searched it on 14 November 2026, so we can't give you Tidal's own steps. On iPhone, use Clock as above, which stops what is playing.",
             "**Any other app:** look in the player's menu. Some players keep a sleep timer there, and the name changes from app to app."
           ]
         }
@@ -64,7 +66,7 @@
         },
         {
           "ol": [
-            "Play a sound and open the player.",
+            "Tap a sound in a list and open the player.",
             "Tap **Sleep timer**.",
             "Pick a length. The button then shows the minutes left. To turn it off, tap the button again, then tap **Cancel**."
           ]
@@ -80,7 +82,7 @@
           ]
         },
         {
-          "p": "When the time is up, the sound gets quieter over about 20 seconds and then pauses. It pauses rather than closing, so you can press play and carry on."
+          "p": "When the time is up, a sound you tapped from a list gets quieter over about 20 seconds and then pauses. It pauses rather than closing, so you can press play and carry on."
         },
         {
           "p": "The timer keeps counting with the phone locked. On Android, a battery saver on some phones can stop apps running in the background, so check that setting if a timer doesn't behave."
@@ -116,6 +118,14 @@
       "a": "On iPhone, Apple's guides don't describe one in the Music app, so use the Clock timer above, which stops what is playing. On Android, check the menu in the Apple Music player."
     },
     {
+      "q": "Does Tidal have a sleep timer?",
+      "a": "Tidal's help centre doesn't describe one. On iPhone, use the Clock timer above: Apple describes it for audio in general, not one app."
+    },
+    {
+      "q": "Does Spotify have a sleep timer on desktop?",
+      "a": "Spotify said in August 2025 that you can control the sleep timer from its desktop app as well as your phone. Its page doesn't give the desktop steps, so check the menus in the desktop app."
+    },
+    {
       "q": "Does a sleep timer keep running with the screen locked?",
       "a": "On iPhone, Apple says the Clock timer continues when the iPhone goes to sleep. The timer in Luten also keeps counting with the phone locked, on iPhone and on Android, apart from the battery savers mentioned above."
     },
@@ -140,6 +150,10 @@
     {
       "name": "Spotify newsroom: How to make Spotify's Sleep Timer part of any bedtime routine",
       "url": "https://newsroom.spotify.com/2022-08-02/how-to-make-spotifys-sleep-timer-part-of-any-bedtime-routine/"
+    },
+    {
+      "name": "TIDAL Support: search results for sleep timer",
+      "url": "https://support.tidal.com/hc/en-us/search?query=sleep+timer"
     },
     {
       "name": "YouTube Help: Set a sleep timer",
