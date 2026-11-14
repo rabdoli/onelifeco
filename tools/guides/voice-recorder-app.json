@@ -11,7 +11,8 @@
     "transcribe-voice-memos",
     "how-to-record-a-lecture",
     "apple-watch-voice-recorder",
-    "action-button-voice-recorder"
+    "action-button-voice-recorder",
+    "voice-memo-playback-speed"
   ],
   "sections": [
     {

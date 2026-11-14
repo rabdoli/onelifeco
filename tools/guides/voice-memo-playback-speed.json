@@ -1,0 +1,167 @@
+{
+  "slug": "voice-memo-playback-speed",
+  "keyword": "speed up voice memo playback",
+  "title": "How to Speed Up or Slow Down a Voice Memo on iPhone or Android",
+  "description": "Play a voice recording faster or slower: the speed slider in Voice Memos on iPhone and Mac, what to check on Android, and the SPEED knob in Cassette.",
+  "h1": "How to speed up or slow down a voice memo",
+  "answer": "On iPhone, open the recording in Voice Memos, tap the More button, tap Options and drag the speed slider toward the rabbit to play faster or the tortoise to play slower. It changes only how the memo plays, not the recording, and Voice Memos keeps that speed for that memo. On Android, the recorder app depends on your phone's maker, so open a recording and look in its menu for a speed setting. In Cassette, on iPhone and Android, turn the SPEED knob on the deck anywhere from 0.5x to 2.0x and press PLAY.",
+  "published": "2026-11-14",
+  "updated": "2026-11-14",
+  "related": [
+    "transcribe-voice-memos",
+    "voice-recorder-app",
+    "how-to-record-a-lecture"
+  ],
+  "sections": [
+    {
+      "h": "Why change the speed",
+      "blocks": [
+        {
+          "ul": [
+            "**Faster** gets you through a long lecture, meeting or voice note in less time. Many people find speech still easy to follow a little above normal speed.",
+            "**Slower** helps you catch a name, a number or a word you missed, or follow someone who talks fast or in a language you are learning."
+          ]
+        },
+        {
+          "p": "Start a little faster or slower than normal and adjust from there. The right speed depends on the speaker and on how closely you need to listen."
+        }
+      ]
+    },
+    {
+      "h": "On iPhone: Voice Memos",
+      "blocks": [
+        {
+          "p": "Voice Memos, the recorder that came with your iPhone, has its own speed slider. Apple's steps:"
+        },
+        {
+          "ol": [
+            "**Open Voice Memos.** It may be in the Utilities folder.",
+            "**Tap the recording** you want to play, tap the More button, then tap **Options**.",
+            "**Drag the slider** toward the tortoise for slower, or toward the rabbit for faster.",
+            "**Tap Done,** then tap Play."
+          ]
+        },
+        {
+          "p": "Changing the speed doesn't change the recording itself. Voice Memos keeps the speed you chose with that one memo and uses it each time you play it, without changing your other memos. To go back to normal, open Options again and tap **Reset**, which also turns off the other playback options for that memo."
+        },
+        {
+          "p": "In the same Options you can also turn on **Skip Silence**, which jumps over the gaps in a recording. Together with a faster speed it can shorten a long memo a lot."
+        }
+      ]
+    },
+    {
+      "h": "On a Mac: Voice Memos",
+      "blocks": [
+        {
+          "p": "Select the recording in Voice Memos, click the Playback Settings button and drag the **Playback Speed** slider left or right. Click Done, then Play. Apple says these settings carry over between your devices on macOS 26, iOS 26 or later when you are signed in to the same Apple Account."
+        }
+      ]
+    },
+    {
+      "h": "On Android: your phone's recorder",
+      "blocks": [
+        {
+          "p": "Android phones come with different recorder apps depending on the maker, such as Recorder on Pixel phones and Voice Recorder on Samsung Galaxy phones. Google's and Samsung's own help pages for these apps explain recording, playing and sharing, but neither page we read today describes a playback speed setting."
+        },
+        {
+          "p": "So check on your phone: open a recording, start it playing and look on the playback screen and in its menu for a speed option. Menus and features change from model to model and between app versions."
+        }
+      ]
+    },
+    {
+      "h": "In Cassette: the SPEED knob",
+      "blocks": [
+        {
+          "p": "Cassette looks like a tape deck, and its deck has a **SPEED** knob next to the microphone grille. It is the same on iPhone and Android."
+        },
+        {
+          "ol": [
+            "**Turn SPEED.** Drag the knob to turn it. It goes from 0.5x to 2.0x, clicks at every 0.1x, and shows the speed under it.",
+            "**Press PLAY.** The tape opens and plays at that speed.",
+            "**Change it while you listen.** Tap **cassette deck** at the top of the screen to go back to the deck while the tape keeps playing, then turn the knob. The tape speeds up or slows down as it plays."
+          ]
+        },
+        {
+          "shots": [
+            "ios-rec",
+            "android-rec"
+          ],
+          "alts": [
+            "The Cassette deck on iPhone, with the SPEED knob at 1.0x on the right, beside GAIN and the microphone grille.",
+            "The Cassette deck on an Android phone, with the same SPEED knob at 1.0x."
+          ]
+        },
+        {
+          "p": "SPEED changes only how a tape plays. The recording itself stays as it was. It applies to every tape you play, and it goes back to 1.0x each time Cassette starts, so you never open the app to a tape playing at a speed you forgot about."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "Skip the listening when you can",
+      "blocks": [
+        {
+          "p": "Speeding up is one way to get through a recording. Another is not to listen to most of it. When you press STOP, Cassette writes a transcript, so you can read instead of listening."
+        },
+        {
+          "ul": [
+            "**Find the moment.** Tap a line of the transcript to jump to it, then press PLAY to hear how it was said, at whatever speed you set.",
+            "**Mark while you record.** Tap MARK when something matters, and each mark holds that moment on the tape, so you can go straight back to it.",
+            "**Read the notes.** Cassette also writes notes, such as a summary and to-dos. On an iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, you get the recording, the transcript and a few lines heard clearly instead."
+          ]
+        },
+        {
+          "shots": [
+            "ios-transcript",
+            "android-transcript"
+          ],
+          "alts": [
+            "A tape's transcript in Cassette on iPhone, line by line with times.",
+            "A tape's transcript in Cassette on Android, line by line with times."
+          ]
+        },
+        {
+          "p": "Already have a recording from Voice Memos? On iPhone, iPad and Mac, Cassette can bring in an audio file you already have: share it to Cassette on iPhone or iPad, press ADD FILE on the Shelf, or drag it onto the Shelf on a Mac (a long recording dragged from Voice Memos on a Mac has to go to the Desktop first). It becomes a tape you can play with the SPEED knob, with a transcript and notes under the same free tape rule, and the original file isn't changed."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does speeding up a voice memo change the recording?",
+      "a": "No. In Voice Memos, Apple says changing the playback speed doesn't affect the recording itself. In Cassette, the SPEED knob changes only playback too."
+    },
+    {
+      "q": "Why does my voice memo play at a different speed than the others?",
+      "a": "In Voice Memos on iPhone, the speed you choose stays with that one recording. Open the memo, tap the More button, tap Options and move the slider back, or tap Reset."
+    },
+    {
+      "q": "How fast can Cassette play a tape?",
+      "a": "From half speed, 0.5x, up to double speed, 2.0x, on iPhone and Android. The knob clicks at every 0.1x. It starts at 1.0x each time you open the app."
+    },
+    {
+      "q": "Is it free?",
+      "a": "Recording is free and unlimited. A tape shorter than {short_tape_minutes} minutes gets its transcript and notes free. Longer tapes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Play a recording in Voice Memos on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-it-back-iphebbd067ce/ios"
+    },
+    {
+      "name": "Apple Support: Play a recording in Voice Memos on Mac",
+      "url": "https://support.apple.com/guide/voice-memos/play-a-recording-vma2c8c0a040/mac"
+    },
+    {
+      "name": "Google Pixel Help: Create, edit & delete a recording on your Pixel device",
+      "url": "https://support.google.com/pixelphone/answer/16267367"
+    },
+    {
+      "name": "Samsung Support: How to record, play back, and share voice recordings on your Samsung Galaxy phone",
+      "url": "https://www.samsung.com/sg/support/mobile-devices/how-to-record-play-back-and-share-voice-recordings-on-your-samsung-galaxy-phone/"
+    }
+  ]
+}

@@ -15,7 +15,8 @@
     "meeting-notes-app",
     "lecture-recording-app",
     "how-to-record-a-lecture",
-    "action-button-voice-recorder"
+    "action-button-voice-recorder",
+    "voice-memo-playback-speed"
   ],
   "sections": [
     {
