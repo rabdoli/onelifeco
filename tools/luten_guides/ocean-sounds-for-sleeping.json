@@ -1,0 +1,152 @@
+{
+  "slug": "ocean-sounds-for-sleeping",
+  "keyword": "ocean sounds for sleeping",
+  "also_targets": [
+    "ocean sounds",
+    "ocean sounds for sleeping no ads",
+    "ocean sounds for sleeping black screen"
+  ],
+  "title": "Ocean Sounds for Sleeping on iPhone and Android",
+  "description": "Find ocean sounds at bedtime: the one built into iPhone, Sleep sounds in Google's Clock app, what to listen for in a track, and the Ocean list in Luten.",
+  "h1": "Ocean sounds for sleeping on iPhone and Android",
+  "answer": "iPhone has an ocean sound built in. Open Settings, tap Accessibility, then Audio & Visual, then Background Sounds, turn it on, tap Sound and pick an ocean sound. On Android phones that use Google's Clock app, open the Bedtime tab and choose a sound under Sleep sounds, which plays a sound from another app or from your phone. In Luten, open Sleep, tap Ocean above the list and tap a sound.",
+  "published": "2026-11-15",
+  "updated": "2026-11-15",
+  "single_os": "No screens: no capture of the Sleep screen's Ocean list exists yet, so the steps are written without images.",
+  "related": [
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-set-a-sleep-timer",
+    "how-to-choose-a-white-noise-app"
+  ],
+  "sections": [
+    {
+      "h": "On iPhone: the ocean sound in Background Sounds",
+      "blocks": [
+        {
+          "p": "You don't need an app for a plain ocean sound on iPhone. Apple's Background Sounds give ocean waves and rain as examples, and they live in the accessibility settings."
+        },
+        {
+          "ol": [
+            "Open the **Settings** app.",
+            "Tap **Accessibility**, then **Audio & Visual**, then **Background Sounds**.",
+            "Turn on **Background Sounds**.",
+            "Tap the sound, then pick an ocean sound.",
+            "Drag the slider to set the volume."
+          ]
+        },
+        {
+          "p": "To keep it playing with the screen locked, leave **Stop Sounds When Locked** off. On iOS 26 or later, the same screen has **Stop Sound with a Timer** (on iOS 26 it is called **Stop Sounds with a Timer**), which can turn it off at a set time or after a set amount of time. These are all on [Apple's page](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios)."
+        },
+        {
+          "p": "Background Sounds is Apple's own set, kept in Settings. If you want a choice of shores, or waves mixed with something else, you need an app. More on the shortcuts and settings in our [Background Sounds guide](/luten/guides/how-to-use-background-sounds-on-iphone/)."
+        }
+      ]
+    },
+    {
+      "h": "On Android: Sleep sounds in the Clock app",
+      "blocks": [
+        {
+          "p": "On phones that use Google's Clock app, the Bedtime tab can start a sound for you."
+        },
+        {
+          "ol": [
+            "Open the **Clock** app and tap **Bedtime**.",
+            "Under **Sleep sounds**, tap the current sound or **Choose another sound**.",
+            "Pick the app and the sound you want, or a sound file on your phone."
+          ]
+        },
+        {
+          "p": "[Google's help page](https://support.google.com/clock/faq/6273949?hl=en) says sleep sounds only play when you turn them on, and that the sound comes from a media app or from your device. It doesn't list an ocean sound of its own, so you still need an ocean track in an app or a file. If your phone has a different clock app, look for a bedtime section in it."
+        }
+      ]
+    },
+    {
+      "h": "What changes from one ocean track to another",
+      "blocks": [
+        {
+          "p": "\"Ocean\" covers several quite different sounds, and a title may not say which one you are getting. These are the differences worth listening for."
+        },
+        {
+          "ul": [
+            "**How close the shore is.** Waves breaking a few steps away have a hiss and a crash in every wave. Surf heard from further back blurs into a steadier roar.",
+            "**How regular the waves are.** Each wave is a swell and a break. Some recordings have an even rhythm, others have big and small waves mixed. Listen through several waves before you decide.",
+            "**Above or under the water.** Underwater recordings are muffled and low, with no breaking waves at all.",
+            "**What else is in it.** Gulls, wind, rain, a boat or a piano are sometimes added to ocean tracks. Check the description, then listen for them.",
+            "**Noise shaped like surf.** Some tracks are noise that swells and fades in the shape of waves, rather than a recording of a beach."
+          ]
+        },
+        {
+          "p": "Two more checks. Skip to the end of a track to hear how it finishes or joins back to the start, because a short recording on repeat can bring back the same big wave you already noticed. And play it at the volume you will really use, since a quiet track can sound thinner than it did at full volume."
+        },
+        {
+          "p": "If you play ocean videos on YouTube, a \"no ads\" title doesn't decide whether ads play. Our [rain sounds page](/luten/rain-sounds/) covers what YouTube's own help says about that, and the ways round it."
+        }
+      ]
+    },
+    {
+      "h": "Ocean sounds in Luten",
+      "blocks": [
+        {
+          "p": "Luten is a sound app for iPhone and Android, with no ads. Its Sleep section has an Ocean filter that lists the sounds with names such as ocean, waves, sea or shore."
+        },
+        {
+          "ol": [
+            "On the **Home** screen, tap **Sleep**.",
+            "Tap **Ocean** in the row of filters above the list.",
+            "Tap a sound."
+          ]
+        },
+        {
+          "p": "Luten is free to download, with an optional subscription that starts with a 7-day free trial."
+        },
+        {
+          "p": "The list keeps the kinds above as separate tracks rather than one mix. **Soothing Waves** is slow waves on a quiet shore. **Deep Sea** is an underwater ambience. **Rain and Waves** mixes light rain with gentle waves. **Pink Noise Waves** puts pink noise over waves on sand. **Ocean Brown Noise** is made by Luten: brown noise that swells and recedes in the shape of surf."
+        },
+        {
+          "p": "Luten is built to keep playing with the phone locked. On Android, a battery saver on some phones can stop apps running in the background, so check that setting if a sound stops."
+        },
+        {
+          "p": "By default, when a sound ends the player moves on to the next one in Sleep, which may not be an ocean sound. To stay on one ocean track, tap the repeat button until it shows a 1."
+        },
+        {
+          "p": "To have it stop on its own, tap **Sleep timer** in the player and pick a length. When the time is up, a sound you tapped from a list gets quieter over about 20 seconds and then pauses. Our [sleep timer guide](/luten/guides/how-to-set-a-sleep-timer/) has the details."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is there an ocean sound built into iPhone?",
+      "a": "Yes. Background Sounds in Settings, under Accessibility and then Audio & Visual, includes an ocean sound. You don't need to install anything."
+    },
+    {
+      "q": "Does Android have built-in ocean sounds?",
+      "a": "Google's Clock app doesn't list an ocean sound of its own. On phones with that app, Bedtime can start a sleep sound, and Google says that sound comes from a media app or a file on your phone."
+    },
+    {
+      "q": "Can I play ocean sounds with the screen off?",
+      "a": "On iPhone, Background Sounds keeps playing when locked as long as Stop Sounds When Locked is off. Luten is built to keep playing with the phone locked. On Android, a battery saver on some phones can stop apps running in the background, so check that setting if a sound stops."
+    },
+    {
+      "q": "How long should I leave ocean sounds on?",
+      "a": "That is up to you. We don't recommend a length. If you want them to stop on their own, use a timer."
+    },
+    {
+      "q": "What is the difference between ocean sounds and brown noise?",
+      "a": "An ocean recording has waves in it, each one a swell and a break. Brown noise is a steady, deep rumble with no events in it. Some tracks, such as Ocean Brown Noise in Luten, are noise shaped to rise and fall like surf. Our [white noise page](/luten/white-noise/) explains the noise colours."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Clock Help (Google): Listen to peaceful sounds",
+      "url": "https://support.google.com/clock/faq/6273949?hl=en"
+    }
+  ]
+}
