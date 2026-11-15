@@ -34,5 +34,7 @@
   "ios-controls-list": {"file": "controls-list-record.png", "os": "iPhone"},
   "ios-action-record": {"file": "action-button-record.png", "os": "iPhone"},
   "ios-island-mark": {"file": "island-pause-mark.png", "os": "iPhone"},
-  "ios-lock-rec": {"file": "lock-screen-rec.png", "os": "iPhone"}
+  "ios-lock-rec": {"file": "lock-screen-rec.png", "os": "iPhone"},
+  "mac-rec": {"file": "mac-recording.png", "os": "Mac"},
+  "mac-notes": {"file": "mac-notes.png", "os": "Mac"}
 }

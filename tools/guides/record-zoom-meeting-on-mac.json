@@ -1,0 +1,152 @@
+{
+  "slug": "record-zoom-meeting-on-mac",
+  "keyword": "how to record a zoom meeting on mac",
+  "title": "How to Record a Zoom Meeting on a Mac, With Audio",
+  "description": "Record a Zoom meeting on your Mac with everyone's voice: Zoom's own Record button, the Mac's screen recorder, and Cassette's CALL switch.",
+  "h1": "How to record a Zoom meeting on a Mac, with audio",
+  "answer": "If you are the host, or the host lets you, click Record in the Zoom app and choose Record on this Computer. Zoom saves a video and an audio file when the meeting ends. If you can't use Zoom's button, or you want notes as well as the file, record on your own Mac: in Cassette, set the deck's switch to CALL and press RECORD. It records what your Mac plays, which is everyone on the call, together with your microphone, and nothing joins the meeting. When you press STOP it writes the transcript and the notes.",
+  "published": "2026-11-15",
+  "updated": "2026-11-15",
+  "single_os": "Recording the call itself is a Mac feature in Cassette, so this guide is about the Mac.",
+  "related": [
+    "meeting-transcription-app",
+    "take-meeting-notes-with-ai",
+    "meeting-notes-app"
+  ],
+  "sections": [
+    {
+      "h": "Record with Zoom's own Record button",
+      "blocks": [
+        {
+          "p": "The Zoom app for Mac can record a meeting to your computer, on a free account too. Zoom's help page on [starting a computer recording](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0076922) sets out the steps:"
+        },
+        {
+          "ol": [
+            "**Start or join the meeting** in the Zoom app for Mac.",
+            "**Click Record** in the meeting controls. If a menu opens, choose **Record on this Computer**.",
+            "**End the meeting.** Zoom converts the recording and opens its folder when it's done: an MP4 with the video and an M4A with the audio only."
+          ]
+        },
+        {
+          "p": "There is one catch. Only the host can record unless the host allows it. If you are a guest, the host has to choose **Allow Record** next to your name. Zoom also asks the people in the meeting to agree to being recorded."
+        },
+        {
+          "p": "Leave your Mac open and awake until the conversion finishes. Zoom warns that closing the laptop or shutting down during it can leave the files damaged."
+        }
+      ]
+    },
+    {
+      "h": "Record with the Mac's screen recorder",
+      "blocks": [
+        {
+          "p": "The Mac has a screen recorder built in. Press **Shift-Command-5**, choose to record the whole screen or part of it, open **Options** to pick a microphone, then click **Record**. Stop it from the menu bar. Apple's page on [recording the screen on Mac](https://support.apple.com/en-us/102618) covers the steps. QuickTime Player can also record the screen, from **File > New Screen Recording**."
+        },
+        {
+          "p": "For a call, mind the sound. The microphone records your voice. It hears the other people only as far as your speakers carry them, and not at all through headphones. Apple says the **Include System Audio** option, which records what the Mac plays, needs macOS 27 or later. You also end up with a video file, and the notes are still your job."
+        }
+      ]
+    },
+    {
+      "h": "Record the call with Cassette and get notes",
+      "blocks": [
+        {
+          "p": "Cassette looks like a tape deck. On a Mac the deck has a switch marked **MIC** and **CALL**. With CALL, Cassette records what your Mac plays, which is the people on the Zoom call, together with your microphone. No bot joins the meeting and the host doesn't have to allow anything in Zoom, because Cassette never connects to Zoom. It hears the call the way you do. It works the same for Google Meet, Microsoft Teams, FaceTime or any other call app."
+        },
+        {
+          "ol": [
+            "**Open Cassette on your Mac** and check the switch is on **CALL**. It is when you first install it.",
+            "**The first time,** allow Cassette when macOS asks for Screen and System Audio Recording. This needs macOS 15.2 or later. Cassette keeps no picture of your screen, only the sound.",
+            "**Join the Zoom call** and press **RECORD**. Or wait for the notice: when Zoom starts using the microphone, Cassette can say **A Zoom call started**, with **Record** and **Not now**. Clicking Record or the notice itself starts the tape. Not now records nothing.",
+            "**Tell the others** you are recording. Zoom doesn't know Cassette is recording, so it won't tell them for you.",
+            "**Press M** or tap MARK when something matters, so you can find that moment later.",
+            "**Press STOP** when the call ends. Cassette writes the transcript and the notes with Apple's own models, never an outside AI service."
+          ]
+        },
+        {
+          "shots": [
+            "mac-rec"
+          ],
+          "alts": [
+            "Cassette recording a call on a Mac, with the switch on CALL and both the MIC and CALL meters lit."
+          ]
+        },
+        {
+          "p": "If macOS hasn't allowed Cassette to record the call's sound, Cassette says **Recording your mic only** and records your microphone, with a button that opens the right place in System Settings."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "What you get when you press STOP",
+      "blocks": [
+        {
+          "p": "Open the tape and you have the recording, a transcript with a time on every line, and the meeting notes: a summary, what was decided, and the to-dos with who does them and when. Cassette also fills in a follow-up email for you to send."
+        },
+        {
+          "shots": [
+            "mac-notes"
+          ],
+          "alts": [
+            "A meeting's to-dos in Cassette on a Mac, with who does each one, when it is due and the time it was said."
+          ]
+        },
+        {
+          "ul": [
+            "**Go back to the moment.** Tap a line of the transcript to jump to it, then press PLAY.",
+            "**Keep it with your other notes.** Send the notes to Apple Notes, OneNote, Notion, Evernote or Google Keep, or save them as a PDF or a Word file.",
+            "**Ask your tapes.** Type a question like \"what did we agree on pricing?\" and get an answer from your own recordings."
+          ]
+        },
+        {
+          "p": "These notes need Apple Intelligence. A Mac without it, or on a version before macOS 26, gets the recording, the transcript and simpler notes written on the Mac instead."
+        }
+      ]
+    },
+    {
+      "h": "Already recorded it in Zoom? Get notes from the file",
+      "blocks": [
+        {
+          "p": "If the host recorded the meeting, or you did with Zoom's button, you don't have to record it again. Drag the M4A or MP4 file onto the Shelf in Cassette, or press **ADD FILE**. It becomes a tape with a transcript and notes, and Zoom's file isn't changed. Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I record a Zoom meeting on a Mac if I'm not the host?",
+      "a": "With Zoom's own button, only if the host allows it. Cassette records on your Mac without connecting to Zoom, so it needs no permission from the host. Tell the others you are recording."
+    },
+    {
+      "q": "Why does my Mac screen recording have no sound from the call?",
+      "a": "The screen recorder records a microphone. Recording what the Mac plays, the other people on the call, needs the Include System Audio option, which Apple says needs macOS 27 or later. Cassette's CALL switch records it on macOS 15.2 or later."
+    },
+    {
+      "q": "What if I never allowed Screen and System Audio Recording?",
+      "a": "Cassette records your microphone only and says so, with a button that opens the right place in System Settings: Privacy & Security, then Screen & System Audio Recording."
+    },
+    {
+      "q": "Can I stop Cassette offering to record calls?",
+      "a": "Yes. Turn off Offer to record calls in your Cassette profile, under After each tape."
+    },
+    {
+      "q": "Is it free?",
+      "a": "Recording is free and unlimited. A call of {short_tape_minutes} minutes or more counts toward the {free_tapes} free tapes a month for its transcript and notes, and Premium covers every tape after that."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Zoom Support: Starting a computer recording",
+      "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0076922"
+    },
+    {
+      "name": "Zoom Support: Providing consent to be recorded",
+      "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059819"
+    },
+    {
+      "name": "Apple Support: How to record the screen on Mac",
+      "url": "https://support.apple.com/en-us/102618"
+    }
+  ]
+}
