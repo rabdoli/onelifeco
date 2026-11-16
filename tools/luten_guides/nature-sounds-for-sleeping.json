@@ -1,0 +1,158 @@
+{
+  "slug": "nature-sounds-for-sleeping",
+  "keyword": "nature sounds for sleeping",
+  "also_targets": [
+    "nature sounds for sleeping no music",
+    "nature sounds for sleep",
+    "nature sounds"
+  ],
+  "title": "Nature Sounds for Sleeping, With or Without Music",
+  "description": "Find nature sounds at bedtime on iPhone and Android: what is built in, the kinds of nature recording and what is mixed into them, and how to find them in Luten.",
+  "h1": "Nature sounds for sleeping, with or without music",
+  "answer": "iPhone has a small set of sounds built in. Open Settings, tap Accessibility, then Audio & Visual, then Background Sounds, turn it on and pick a sound such as rain or ocean. On Android phones that use Google's Clock app, Bedtime can start a sleep sound from another app or from sounds on your device. For anything the built-in set doesn't have, you need an app or a recording. In Luten, open Sleep and look through the list: Rain and Ocean narrow it, and the other nature sounds sit in All.",
+  "published": "2026-11-16",
+  "updated": "2026-11-16",
+  "single_os": "No screens: no capture of the Sleep list showing these sounds exists yet, so the steps are written without images.",
+  "related": [
+    "ocean-sounds-for-sleeping",
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-set-a-sleep-timer"
+  ],
+  "sections": [
+    {
+      "h": "On iPhone: nature sounds in Background Sounds",
+      "blocks": [
+        {
+          "p": "Apple's Background Sounds are a small set kept in Settings, and Apple's own pages name ocean and rain among them, next to noise sounds. Go to **Settings**, then **Accessibility**, **Audio & Visual** and **Background Sounds**, switch it on and choose one by name. You can also start them from Control Center, as [Apple's article](https://support.apple.com/en-us/109346) shows."
+        },
+        {
+          "p": "Leave **Stop Sounds When Locked** off if you want it to carry on with the screen off. Since iOS 26 there is a timer on that screen too. [Apple's page](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios) lists every setting, and our [Background Sounds guide](/luten/guides/how-to-use-background-sounds-on-iphone/) walks through them."
+        },
+        {
+          "p": "Apple's pages don't list the whole set, and it has changed between iOS versions, so open the sound menu to see what yours has. If the sound you want isn't there, such as crickets or frogs by a pond, you need an app or a recording."
+        }
+      ]
+    },
+    {
+      "h": "On Android: Sleep sounds in the Clock app",
+      "blocks": [
+        {
+          "p": "Google's Clock app has a Bedtime tab, and in it a Sleep sounds option. Per [Google's help page](https://support.google.com/clock/faq/6273949?hl=en), it plays something you pick from a media app or from sounds on your device, and only when you turn it on. It is a way to start a nature recording at bedtime, not a source of one."
+        }
+      ]
+    },
+    {
+      "h": "The kinds of nature sound, and what gets mixed in",
+      "blocks": [
+        {
+          "p": "\"Nature sounds\" covers very different recordings. A title may not tell you everything that is in one, so these are the things worth listening for."
+        },
+        {
+          "ul": [
+            "**Rain.** From light drizzle to a heavy shower, on leaves, a roof, a tent or a window. Some rain tracks have thunder in them and some don't. Our [rain sounds page](/luten/rain-sounds/) goes through the differences.",
+            "**Sea and waves.** Close surf, distant surf, or underwater. Our [ocean sounds guide](/luten/guides/ocean-sounds-for-sleeping/) covers those.",
+            "**Running and still water.** Streams and rivers are a steady rush. A pond is quieter, with wildlife over the water.",
+            "**Night creatures.** Crickets, frogs and other insects. These are rhythmic chirps rather than a smooth wash, and they change from one recording to the next.",
+            "**Birds.** Birdsong comes and goes, so there are gaps and calls of different loudness.",
+            "**Wind.** A breeze through trees rises and falls. Strong gusts can be sudden.",
+            "**Fire.** A campfire or fireplace, a steady bed with pops and cracks on top."
+          ]
+        },
+        {
+          "p": "Some recordings mix two or three of these, such as rain with birds, or frogs with wind."
+        }
+      ]
+    },
+    {
+      "h": "Nature sounds with no music",
+      "blocks": [
+        {
+          "p": "Some \"nature sounds for sleeping\" videos and playlists lay nature over music: a piano, a pad, or a slow melody. If you want only the recording, these checks help."
+        },
+        {
+          "ol": [
+            "Read the description, not only the title. A title such as \"Forest Night\" can hide a piano underneath.",
+            "Listen past the first minute, in case music comes in after the opening.",
+            "Skip to the middle and the end. A track that starts as plain rain can change.",
+            "Listen at the volume you will really use, since quiet music under a recording can be hard to pick out at first."
+          ]
+        },
+        {
+          "p": "If you play nature videos on YouTube, a \"no ads\" title doesn't decide whether ads play. Our [rain sounds page](/luten/rain-sounds/) covers what YouTube's own help says about that."
+        }
+      ]
+    },
+    {
+      "h": "Nature sounds in Luten",
+      "blocks": [
+        {
+          "p": "Luten is a sound app for iPhone and Android with no third-party ads, and its Sleep section has nature recordings among its noise and music."
+        },
+        {
+          "ol": [
+            "On the **Home** screen, tap **Sleep**.",
+            "Tap **Rain** or **Ocean** in the row of filters above the list to see only those, or stay on **All** for the rest.",
+            "Tap a sound."
+          ]
+        },
+        {
+          "p": "Luten is free to download, with an optional subscription that starts with a 7-day free trial."
+        },
+        {
+          "p": "There is no Nature filter, so on **All** look for the names. **Night Crickets** is crickets on a summer night. **By the Pond** is water and wildlife beside a still pond. **Frogs and Wind** is frogs with a soft breeze. **Campfire in the Woods** is a fire in a quiet forest. **Snow Rain and Birds** is light rain with distant birdsong. **Fireside Crackle** is made by Luten: a close fireplace crackle."
+        },
+        {
+          "p": "The same list also has piano, cello and other music. If you want nature only, play a few seconds of a sound before you settle on it."
+        },
+        {
+          "p": "Luten is built to keep playing when you lock the phone. On Android, battery savers on some brands can stop apps running in the background, so if a sound cuts out there, look at that setting first."
+        },
+        {
+          "p": "When one track finishes, Luten goes on to the next in the Sleep list, and that one could be music or noise. To stay on the same nature recording, tap the repeat button in the player until a small 1 appears."
+        },
+        {
+          "p": "For a stop time, open the player and choose **Sleep timer**. A sound started from a list fades down for about 20 seconds at the end and then pauses. See our [sleep timer guide](/luten/guides/how-to-set-a-sleep-timer/)."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does iPhone have nature sounds built in?",
+      "a": "Yes, a small set. Background Sounds, found in Settings under Accessibility and Audio & Visual, has sounds such as rain and ocean. Open its sound menu to see the full list on your iOS version."
+    },
+    {
+      "q": "Does Android have built-in nature sounds?",
+      "a": "On phones with Google's Clock app, Bedtime can start a sleep sound, and Google says you choose it from a media app or from sounds on your device. The nature sound itself comes from that app or file."
+    },
+    {
+      "q": "How do I find nature sounds with no music?",
+      "a": "Read the title and any description, listen past the first minute, and skip to the middle and the end, in case music comes in later. In Luten, play a few seconds before you settle on a sound, because the Sleep list has music in it too."
+    },
+    {
+      "q": "How long should I play nature sounds?",
+      "a": "We don't recommend a length; that choice is yours. A timer can stop them for you."
+    },
+    {
+      "q": "Do nature sounds have thunder in them?",
+      "a": "Some do. Rain and storm recordings vary, and thunder is a loud, sudden sound in an otherwise steady track. If you don't want it, look for rain described as having no thunder."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Apple Support: Play background sounds on iPhone",
+      "url": "https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios"
+    },
+    {
+      "name": "Apple Support: Use Background Sounds",
+      "url": "https://support.apple.com/en-us/109346"
+    },
+    {
+      "name": "Clock Help (Google): Listen to peaceful sounds",
+      "url": "https://support.google.com/clock/faq/6273949?hl=en"
+    }
+  ]
+}
