@@ -8,6 +8,7 @@
   "published": "2026-11-05",
   "updated": "2026-11-07",
   "related": [
+    "interview-transcription-app",
     "take-meeting-notes-with-ai",
     "ai-note-taker",
     "voice-recorder-app",
@@ -17,8 +18,7 @@
     "how-to-record-a-lecture",
     "action-button-voice-recorder",
     "voice-memo-playback-speed",
-    "record-zoom-meeting-on-mac",
-    "interview-transcription-app"
+    "record-zoom-meeting-on-mac"
   ],
   "sections": [
     {

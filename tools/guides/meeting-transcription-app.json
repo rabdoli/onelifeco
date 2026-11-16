@@ -8,11 +8,11 @@
   "published": "2026-11-09",
   "updated": "2026-11-09",
   "related": [
+    "interview-transcription-app",
     "meeting-notes-app",
     "transcribe-voice-memos",
     "how-to-record-a-lecture",
-    "record-zoom-meeting-on-mac",
-    "interview-transcription-app"
+    "record-zoom-meeting-on-mac"
   ],
   "sections": [
     {
