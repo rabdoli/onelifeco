@@ -1,0 +1,158 @@
+{
+  "slug": "audio-to-text",
+  "keyword": "audio to text",
+  "title": "Audio to Text: Turn a Recording You Have Into a Transcript",
+  "description": "Turn an audio file into text: Word's Transcribe for MP3, M4A and WAV files, or Cassette on iPhone, iPad and Mac for a transcript and notes.",
+  "h1": "How to turn audio into text",
+  "answer": "If you have Microsoft 365, open a document in Word for the web, go to Home, then the Dictate menu, then Transcribe, and choose Upload audio. Word reads MP3, M4A, WAV and MP4 files and writes a transcript with each speaker apart. If the recording is still in Voice Memos or a phone's recorder app, that app may already have a transcript. For a transcript and notes on your iPhone, iPad or Mac, bring the file into Cassette: share it to Cassette and open Cassette, press ADD FILE on the Shelf, or drag it onto the Shelf on a Mac. It becomes a tape, and Cassette writes the transcript and the notes.",
+  "published": "2026-11-17",
+  "updated": "2026-11-17",
+  "single_os": "Bringing in an audio file you already have is a feature of Cassette on iPhone, iPad and Mac, so this guide is about those.",
+  "related": [
+    "transcribe-voice-memos",
+    "interview-transcription-app",
+    "meeting-transcription-app"
+  ],
+  "sections": [
+    {
+      "h": "First, check where the recording is",
+      "blocks": [
+        {
+          "p": "You may not need to move the file at all."
+        },
+        {
+          "ul": [
+            "**In Voice Memos or a phone's recorder.** Voice Memos on iPhone 12 or later, Pixel's Recorder and Samsung's Voice Recorder can write a transcript of their own recordings, on the phones and in the languages they support. Our guide to [transcribing voice memos](/cassette/guides/transcribe-voice-memos/) has the steps for each.",
+            "**A file somewhere else.** A recording from another app, a file someone sent you, a lecture or interview saved as an MP3: that is what the rest of this guide is for."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "With Microsoft 365: Transcribe in Word",
+      "blocks": [
+        {
+          "p": "Word for the web can turn an uploaded file into text. Microsoft's page on [transcribing your recordings](https://support.microsoft.com/en-us/word/transcribe-your-recordings) lists these steps."
+        },
+        {
+          "ol": [
+            "Sign in to Microsoft 365 in Microsoft Edge or Chrome, and open a document in Word for the web.",
+            "Go to **Home**, open the **Dictate** menu and choose **Transcribe**.",
+            "In the Transcribe pane, choose **Upload audio** and pick the file. Word takes .wav, .mp4, .m4a and .mp3.",
+            "Keep the pane open while it works. Microsoft says it can take up to about the length of the recording.",
+            "Choose **Add all to document** to put the whole transcript in the page, or add one section at a time."
+          ]
+        },
+        {
+          "p": "Things to know first. Word for Windows has it too for work accounts. It needs a Microsoft 365 subscription and an internet connection, and Microsoft sets a limit of 300 minutes of uploaded audio a month. Your file is sent to Microsoft to be transcribed and saved in a Transcribed Files folder in your OneDrive. Speakers are labelled Speaker 1, Speaker 2 and so on, which you can rename. What you get is a transcript: the summary and the to-dos are still yours to write."
+        }
+      ]
+    },
+    {
+      "h": "On iPhone, iPad or Mac: bring the file into Cassette",
+      "blocks": [
+        {
+          "p": "Cassette is a recorder that looks like a tape deck. It can also take a recording you already have and treat it like a tape it made itself, with a transcript and notes."
+        },
+        {
+          "ul": [
+            "**On iPhone or iPad,** open the file in Files, Voice Memos or the app it is in, tap Share, choose **Cassette**, then open Cassette. Or open Cassette and press **ADD FILE** on the Shelf, then pick the file.",
+            "**On a Mac,** drag the file onto the Shelf, or click **ADD FILE**. A long recording dragged straight from Voice Memos has to go to the Desktop first. Drag it there, then drag it from the Desktop onto the Shelf."
+          ]
+        },
+        {
+          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. It keeps its own copy, so your original file isn't changed, and the tape carries the file's name until the notes give it a title. A note on the deck says the tape was added, with UNDO if you picked the wrong file."
+        },
+        {
+          "shots": [
+            "ios-addfile",
+            "mac-addfile"
+          ],
+          "alts": [
+            "Cassette on iPhone after a file was added: the note says Tape added, writing its transcript and notes now, and that the original file isn't changed.",
+            "The same note in Cassette on a Mac, over the Shelf with its ADD FILE key."
+          ]
+        },
+        {
+          "p": "If a tape is recording, ADD FILE asks you to stop it first. A file shared or dropped meanwhile waits until you press STOP, then gets written up."
+        },
+        {
+          "cta": "mid"
+        }
+      ]
+    },
+    {
+      "h": "Get the text out",
+      "blocks": [
+        {
+          "p": "Open the tape and choose **TRANSCRIPT**. Each line has its time on the tape beside it. Tap a line to go to that moment, then press PLAY to hear it."
+        },
+        {
+          "shots": [
+            "ios-transcript"
+          ],
+          "alts": [
+            "The TRANSCRIPT tab of a tape in Cassette on iPhone, with the language it was heard in, TRANSCRIBE AGAIN IN, and timed lines."
+          ]
+        },
+        {
+          "ul": [
+            "**Copy it.** On the TRANSCRIPT tab, tap SHARE and choose **Copy**, then paste it wherever you want.",
+            "**Save it as a file.** The same sheet has **Save as PDF** and **Save as Word**.",
+            "**Wrong language?** A file is heard in the language you speak, as set in your Cassette profile, or, if you list more than one, in whichever of them it hears. If it got it wrong, tap **TRANSCRIBE AGAIN IN** at the top of the transcript and pick the right language."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "The notes Cassette writes from the file",
+      "blocks": [
+        {
+          "p": "A transcript of an hour is a lot of reading. Cassette also picks the kind of notes from what it hears: a meeting gets what was decided and who is doing what, a lecture gets an outline and key terms, an interview gets each question with its answer, and a voice note gets your to-dos. If it picked the wrong kind, tap **CHANGE** beside Type at the top of the notes and choose another, and the notes are written again."
+        },
+        {
+          "p": "From there you can send the notes to Notion, OneNote, Evernote, Google Keep or Apple Notes, and ask your tapes a question later."
+        },
+        {
+          "p": "Full notes depend on the device. An iPhone, iPad or Mac without Apple Intelligence or on a version before 26 gets the recording, the transcript and a few lines heard clearly, with no summary, to-dos, outline, terms, review cards or template choice."
+        }
+      ]
+    },
+    {
+      "h": "Get a cleaner transcript from any tool",
+      "blocks": [
+        {
+          "ul": [
+            "**Start from the best copy.** A file that has been sent through a chat app a few times may be squeezed. Use the original if you can.",
+            "**Check names and numbers first.** They are where speech to text slips most, so look at them before you share the text.",
+            "**Listen where it matters.** If a line looks wrong, go to that moment and hear it. The recording is how you settle it."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I turn an MP3 into text on my iPhone?",
+      "a": "Yes. Share the MP3 to Cassette from Files or the app it is in and open Cassette, or press ADD FILE on Cassette's Shelf. It becomes a tape, and Cassette writes its transcript and notes. The original file isn't changed."
+    },
+    {
+      "q": "Is it free?",
+      "a": "In Cassette, a file under {short_tape_minutes} minutes gets its transcript and notes free. Longer files count toward the {free_tapes} free tapes a month, the same as tapes you record, and Premium covers the ones after that. Word's Transcribe comes with a Microsoft 365 subscription."
+    },
+    {
+      "q": "Does my recording leave my device?",
+      "a": "In Word, yes: Microsoft says the file is sent to Microsoft to be transcribed and saved in your OneDrive. In Cassette, if your device can't transcribe the file's language itself, the recording may be sent to Apple to transcribe. On version 27, the notes can be written on Apple's Private Cloud Compute. On iPhone and iPad, tapes are also in iCloud and computer backups if you have them on, and on every device in your backup if you sign in with Premium. To stop all of that, turn on On-device only in your Cassette profile."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Microsoft Support: Transcribe your recordings",
+      "url": "https://support.microsoft.com/en-us/word/transcribe-your-recordings"
+    },
+    {
+      "name": "Apple Support: View a Voice Memos transcription on iPhone",
+      "url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios"
+    }
+  ]
+}

@@ -36,5 +36,7 @@
   "ios-island-mark": {"file": "island-pause-mark.png", "os": "iPhone"},
   "ios-lock-rec": {"file": "lock-screen-rec.png", "os": "iPhone"},
   "mac-rec": {"file": "mac-recording.png", "os": "Mac"},
-  "mac-notes": {"file": "mac-notes.png", "os": "Mac"}
+  "mac-notes": {"file": "mac-notes.png", "os": "Mac"},
+  "ios-addfile": {"file": "addfile-iphone.png", "os": "iPhone"},
+  "mac-addfile": {"file": "addfile-mac.png", "os": "Mac"}
 }
