@@ -1,12 +1,12 @@
 {
   "slug": "transcribe-voice-memos",
-  "keyword": "transcribe voice memos iphone",
-  "title": "How to Transcribe Voice Memos on iPhone or Android",
-  "description": "Turn a voice memo into text with the tools already on your phone. Steps for iPhone, Mac, Pixel and Samsung, and what Cassette adds.",
-  "h1": "How to transcribe voice memos on iPhone or Android",
-  "answer": "On iPhone 12 or later, open Voice Memos, tap the recording, tap the More button and choose Copy Transcript. Paste the text wherever you want it. On Android it depends on the phone: Pixel's Recorder and Samsung's Voice Recorder can both write a transcript, on the phones and in the languages they support. If you also want your to-dos pulled out of what you said, Cassette does that. On iPhone, iPad and Mac it also takes a recording you already have: share the memo to Cassette on iPhone or iPad, or drag the file onto its Shelf on a Mac. On Android, Cassette writes up only tapes it records itself.",
+  "keyword": "transcribe voice memos",
+  "title": "How to Transcribe Voice Memos to Text on iPhone or Android",
+  "description": "Turn a voice memo into text with the tools already on your phone. Steps for iPhone, Mac, Pixel and Samsung, and how Cassette adds a to-do list.",
+  "h1": "How to transcribe voice memos to text on iPhone or Android",
+  "answer": "Yes, you can turn a voice memo into text for free. On iPhone 12 or later, open Voice Memos, tap the recording, tap the More button and choose Copy Transcript, then paste it wherever you want. On a Mac, open the same memo in Voice Memos and click the Transcription button. On Android it depends on the phone: Pixel's Recorder and Samsung's Voice Recorder can both write a transcript, on the phones and in the languages they support. If you want your to-dos pulled out of what you said, not just the words, Cassette does that. On iPhone, iPad and Mac it also takes a memo you already have.",
   "published": "2026-11-05",
-  "updated": "2026-11-07",
+  "updated": "2026-11-18",
   "related": [
     "audio-to-text",
     "interview-transcription-app",
@@ -33,21 +33,30 @@
             "Open **Voice Memos**. It may be in the Utilities folder.",
             "Tap the memo you want as text.",
             "Tap the **More** button.",
-            "Choose **Copy Transcript** to take all of it, or **View Transcript** to read it and select only a part.",
+            "Choose **Copy Transcript** to take all of it, or **View Transcript** to read it, select only a part and tap **Copy**.",
             "Paste the text into a message, a note or a document."
           ]
         },
         {
-          "p": "Old memos work too. Apple says a recording made on iOS 17 or earlier gets transcribed when you open it, as long as it has speech in it."
+          "p": "Old memos work too. Apple says a recording made on iOS 17 or earlier is transcribed when you open it, as long as it has speech in it."
         },
         {
           "p": "Apple lists English, Spanish, Portuguese, Italian, French, German, Japanese, Korean and Chinese, and transcription isn't offered in every country or region. If you don't see the option, update iOS, then check that your iPhone, language and region are covered."
         },
         {
+          "h3": "Find a memo by what was said"
+        },
+        {
+          "p": "Tap the **Search** button in Voice Memos and type a word. Apple says the list shows memos whose title or transcript has it. In the transcript, selecting a word moves the playback to that point."
+        },
+        {
+          "p": "On iOS 27, on iPhone 15 Pro or later, Apple says Writing Tools can summarize a transcript or fix its spelling. Without those, you get the words as they were said."
+        },
+        {
           "h3": "Or record in the Notes app"
         },
         {
-          "p": "For a new recording, the Notes app can [record and transcribe](https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios) on the same iPhones. In a note, tap the attachments button and choose **Record Audio**. When you finish, tap the recording to review the transcript, and use **Add Transcript to Note** to keep the text in the note."
+          "p": "For a new recording, the Notes app can [record and transcribe](https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios) on the same iPhones. In a note, tap the **Attachments** button and choose **Record Audio**. When you finish, tap the recording, tap the **Transcription** button, then tap **More** and choose **Add Transcript to Note** to keep the text in the note."
         }
       ]
     },
@@ -55,10 +64,10 @@
       "h": "On a Mac: open the same memo there",
       "blocks": [
         {
-          "p": "If Voice Memos syncs through iCloud on the same Apple Account, your iPhone's memos show up in [Voice Memos on a Mac](https://support.apple.com/guide/voice-memos/view-a-transcription-of-a-recording-vm4a03609f0d/mac). Click the recording, click the Transcription button, then select the text and copy it."
+          "p": "If Voice Memos syncs through iCloud on the same Apple Account, your iPhone's memos show up in [Voice Memos on a Mac](https://support.apple.com/guide/voice-memos/view-a-transcription-of-a-recording-vm4a03609f0d/mac). Click the recording, click the **Transcription** button, then select the text, Control-click it and choose **Copy**."
         },
         {
-          "p": "This also helps if your iPhone is too old. Apple says the Mac app transcribes a recording made on a device that doesn't support transcription, as long as it includes speech."
+          "p": "This also helps if your iPhone is too old. Apple says the Mac app transcribes a recording made on a device that doesn't support transcription, as long as it has speech in it."
         }
       ]
     },
@@ -70,8 +79,8 @@
         },
         {
           "ul": [
-            "**Pixel:** open the [Recorder app](https://support.google.com/pixelphone/answer/16267698?hl=en), tap a recording and tap **Transcript**. To transcribe it in a different language, tap **More**, then **Transcribe again**. Google notes that doing this may process the audio on its servers.",
-            "**Samsung Galaxy:** open [Voice Recorder](https://www.samsung.com/us/support/answer/ANS10000942/), select the recording, tap the **Transcript assist** icon (four stars) and tap **Transcribe**. Samsung says this needs a select phone or tablet on Android 14 with One UI 6.1 or higher. You can move the text to Samsung Notes from the **More options** menu.",
+            "**Pixel:** open the [Recorder app](https://support.google.com/pixelphone/answer/16267698?hl=en), tap a recording and tap **Transcript**. To transcribe it in a different language, tap **More**, then **Transcribe again**, and pick the language. Google notes that doing this may process the audio on its servers.",
+            "**Samsung Galaxy:** open [Voice Recorder](https://www.samsung.com/us/support/answer/ANS10000942/), select the recording, tap the **Transcript assist** icon (four stars) and tap **Transcribe**. Samsung says this needs a select phone or tablet on Android 14 with One UI 6.1 or higher. To keep the text, tap **More options**, then **Add to Samsung Notes**.",
             "**Other phones:** open your recorder and look for a transcript option. If there isn't one, it only saves the audio."
           ]
         }
@@ -84,7 +93,7 @@
           "p": "A transcript gives you every word, including the \"um\" and the part where you changed your mind. If you talk to your phone to remember things, what you want is usually the list, not the wall of text."
         },
         {
-          "p": "That is what Cassette is for. It runs on iPhone, iPad, Mac and Android, and it works like a tape deck. On iPhone, iPad and Mac it can also take a memo you already have. **Cassette for Android can't add a file yet.** On Android it writes up only tapes it records itself, so for recordings you already have there, use the steps above."
+          "p": "That is what Cassette is for. It runs on iPhone, iPad, Mac and Android, and it works like a tape deck: you record a tape, and it writes the transcript and the notes. On iPhone, iPad and Mac it can also take a memo you already have."
         },
         {
           "h3": "A memo you already have (iPhone, iPad and Mac)"
@@ -97,7 +106,17 @@
           ]
         },
         {
-          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. Your original file isn't changed. Cassette keeps its own copy and shows the file's name on the tape, and the free tier counts it the same way as a tape you record."
+          "shots": [
+            "ios-addfile",
+            "mac-addfile"
+          ],
+          "alts": [
+            "Cassette on iPhone after a file was added: the note says Tape added, writing its transcript and notes now, and that the original file isn't changed.",
+            "The same note in Cassette on a Mac, over the Shelf with its ADD FILE key."
+          ]
+        },
+        {
+          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. Your original file isn't changed. Cassette keeps its own copy, and the free tier counts it the same way as a tape you record."
         },
         {
           "h3": "The next memo"
@@ -106,7 +125,7 @@
           "ol": [
             "**Press RECORD** and say what's on your mind.",
             "**Press STOP.** Cassette writes the transcript and the notes on its own.",
-            "**Read the notes.** A memo to yourself in English usually gets the gist, a list of to-dos with the day if you said one, and any ideas."
+            "**Read the notes.** A memo to yourself in English usually gets a list of to-dos, with the day if you said one, and any ideas."
           ]
         },
         {
@@ -115,15 +134,15 @@
             "android-notes-voicenote"
           ],
           "alts": [
-            "Voice note in Cassette on iPhone: a short gist, four to-dos with dates and one idea.",
-            "The same voice note in Cassette on Android, with the gist, to-dos with dates and one idea."
+            "Voice note in Cassette on iPhone: four to-dos with their days and two ideas.",
+            "The same voice note in Cassette on Android: four to-dos with their days and two ideas."
           ]
         },
         {
           "cta": "mid"
         },
         {
-          "p": "That list needs a device that can run the full notes model. An iPhone, iPad or Mac without Apple Intelligence or on a version before 26, or an Android phone with less than 8 GB of memory, gets simpler notes: a few lines quoted from the tape, with no gist or to-do list. Tapes in other languages get more general notes. The transcript and the recording are there either way."
+          "p": "Those notes need a device that can write them. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets the recording, the transcript and a few lines heard clearly, with no to-dos. The to-do list is written for English tapes. A tape in another language gets more general notes: a short summary and key points, with no to-dos. The transcript and the recording are there either way."
         },
         {
           "p": "To start faster, add the Cassette widget to your Home Screen. On iOS 18 or later, Control Center can start a tape too, and so can the Action button on iPhones that have one."
@@ -142,14 +161,15 @@
             "android-transcript"
           ],
           "alts": [
-            "A meeting transcript in Cassette on iPhone, with the time beside each line.",
-            "A meeting transcript in Cassette on Android, with the time beside each line."
+            "A transcript in Cassette on iPhone, with the time beside each line.",
+            "A transcript in Cassette on Android, with the time beside each line."
           ]
         },
         {
           "ul": [
-            "**Copy it.** On that tab, tap SHARE and choose **Copy Transcript**.",
-            "**Save it as a file.** The same menu saves it as PDF or Word."
+            "**Copy it.** On that tab, tap **SHARE** and choose **Copy** on iPhone, or **Copy Transcript** on Android, then paste it.",
+            "**Save it as a file.** The same place has **Save as PDF** and **Save as Word**.",
+            "**Wrong language?** Tap **TRANSCRIBE AGAIN IN** at the top of the transcript and pick the right one."
           ]
         }
       ]
@@ -170,8 +190,12 @@
   ],
   "faq": [
     {
+      "q": "Can you turn a voice memo into text on iPhone?",
+      "a": "Yes. On iPhone 12 or later, Voice Memos writes a transcript in the languages Apple lists. Tap the memo, tap More and choose Copy Transcript. On an older iPhone, open the memo in Voice Memos on a Mac signed in to the same Apple Account."
+    },
+    {
       "q": "Can I transcribe a voice memo I already recorded?",
-      "a": "If it's in Voice Memos or Pixel's Recorder, yes, with the steps above. On a Galaxy, try Transcript assist on the recording in Voice Recorder. Cassette can do it on iPhone, iPad and Mac. On iPhone and iPad, share the file to Cassette or press ADD FILE on the Shelf. On a Mac, drag it onto the Shelf or click ADD FILE. It gets a transcript and notes like any tape. Cassette for Android can't add a file yet."
+      "a": "If it's in Voice Memos or Pixel's Recorder, yes, with the steps above. On a Galaxy, try Transcript assist on the recording in Voice Recorder. Cassette can do it on iPhone, iPad and Mac. On iPhone and iPad, share the file to Cassette or press ADD FILE on the Shelf. On a Mac, drag it onto the Shelf or click ADD FILE. It gets a transcript and notes like any tape."
     },
     {
       "q": "Can I transcribe voice memos for free?",
@@ -179,7 +203,7 @@
     },
     {
       "q": "Does Cassette need the internet to transcribe?",
-      "a": "Not on Android, where the speech model comes with the app. On iPhone, it works in airplane mode for a language your phone supports on the device, once that language's speech model has downloaded."
+      "a": "Not on Android, where the speech model comes with the app. On a phone with 8 GB of memory or more, the notes model arrives over Wi-Fi once after you install it, and then the notes need no connection either. On iPhone, it works in airplane mode for a language your phone supports on the device, once that language's speech model has downloaded."
     },
     {
       "q": "What if Cassette hears the wrong language?",
@@ -187,7 +211,7 @@
     },
     {
       "q": "Does my voice memo leave my phone in Cassette?",
-      "a": "Notes are never written by an outside AI service. On Android, the audio is never sent anywhere to be transcribed or written up, and it only leaves the phone if you sign in with Premium, which backs tapes up. On iPhone there are more cases. If the phone can't transcribe a tape on the device, Apple's servers do it. On iOS 27, the notes can be written on Apple's Private Cloud Compute. Tapes also go in iCloud and computer backups, and in your account backup if you sign in with Premium. To stop all of that, turn on On-device only under Privacy in your iPhone's Cassette profile."
+      "a": "Notes are written on the device or by Apple's own models, never by an outside AI service. On Android, the audio is never sent anywhere to be transcribed or written up, and it only leaves the phone if you sign in with Premium, which backs tapes up. On iPhone there are more cases. If the phone can't transcribe a tape on the device, Apple's servers do it. On iOS 27, the notes can be written on Apple's Private Cloud Compute. Tapes also go in iCloud and computer backups, and in your account backup if you sign in with Premium. To stop all of that, turn on On-device only under Privacy in your iPhone's Cassette profile."
     }
   ],
   "sources": [
