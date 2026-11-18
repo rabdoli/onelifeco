@@ -153,7 +153,7 @@
     },
     {
       "q": "Is Cassette free for lectures?",
-      "a": "Recording is free and unlimited. A lecture usually runs longer than {short_tape_minutes} minutes, so its transcript and notes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that."
+      "a": "Recording is free and unlimited. A lecture usually runs longer than {short_tape_minutes} minutes, so its transcript and notes count toward the {free_tapes} free tapes a month, and Premium covers every tape after that. Students at a college or university pay $24.99 a year for Premium ($0.48 a week) with a school email."
     }
   ],
   "sources": [
