@@ -9,24 +9,29 @@
     "green noise vs pink noise",
     "green noise vs brown noise",
     "green noise youtube",
-    "green noise app"
+    "green noise app",
+    "green noise vs blue noise",
+    "green noise no ads",
+    "green noise black screen"
   ],
   "title": "What Is Green Noise? What the Name Means and Where to Find It",
-  "description": "Green noise has no fixed definition. Who says what, how it differs from white, pink and brown noise, and where to find or make it.",
+  "description": "Green noise has no fixed definition. Who says what, how it differs from white, pink, brown and blue noise, and where to find or make it.",
   "h1": "What is green noise?",
   "answer": "Green noise is a loose name for steady noise with extra level around the middle of the frequency range. It has no fixed definition: we found no standard for it, and the sources below place it anywhere from around 500 Hz to about 2,900 Hz. Wikipedia has a short clip labelled green noise that you can play. To make your own, you can try the Equalizer in Background Sounds on iPhone, or Audacity on a computer. Luten has nothing labelled green noise.",
   "published": "2026-11-06",
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "single_os": "No screens: this guide is about what a term means and about outside tools, and no Luten screen shows green noise.",
   "related": [
-    "how-to-use-background-sounds-on-iphone"
+    "how-to-use-background-sounds-on-iphone",
+    "how-to-choose-a-white-noise-app",
+    "study-sounds"
   ],
   "sections": [
     {
       "h": "What the name means",
       "blocks": [
         {
-          "p": "Most noise colours are borrowed from light. [Wikipedia](https://en.wikipedia.org/wiki/Colors_of_noise) says the habit began with white noise, and that other colours followed, often because the spectrum resembles that colour of light. Brown is the exception: it is named after Brownian motion."
+          "p": "Many noise colours are borrowed from light. [Wikipedia](https://en.wikipedia.org/wiki/Colors_of_noise) says the habit began with white noise, and that other colours followed, often because the spectrum resembles that colour of light. Brown is the exception: it is named after Brownian motion."
         },
         {
           "p": "So nothing about the sound is green. The name describes where the level sits across frequencies. Frequency is heard as pitch and measured in hertz (Hz): low numbers are rumble and high numbers are hiss. In nearly every use we read, green means somewhere around the middle."
@@ -45,7 +50,7 @@
             "**J. Russell Lemon, in a comment printed with that FAQ.** He recalls a US government spec for testing communication channels, flat from 500 Hz to about 2 kHz. He is going from memory, and our search found no copy of it.",
             "**Daniel Lau, Gonzalo Arce and Neal Gallagher, in a [1998 paper](https://scholars.uky.edu/en/publications/green-noise-digital-halftoning/) in Proceedings of the IEEE.** They define green noise as the mid-frequency part of white noise. Their subject is dot patterns for printing images, not sound.",
             "**John D. Cook, a consultant in mathematics and statistics, on [his blog](https://www.johndcook.com/blog/2016/04/27/green-noise-and-barks/) in 2016.** He quotes a source saying these colours aren't rigorously defined. Mapping the rainbow onto the range of hearing, he gets about 1612 to 2919 Hz, and says that is his reading of a vague description.",
-            "**Wikipedia** also lists bounded Brownian noise as a meaning, with no source given."
+            "**Wikipedia** also lists bounded Brownian noise, with no source given, and vocal spectrum noise for testing audio circuits, which matches Lemon's recollection above."
           ]
         },
         {
@@ -54,16 +59,18 @@
       ]
     },
     {
-      "h": "Green noise vs white, pink and brown noise",
+      "h": "Green noise vs white, pink, brown and blue noise",
       "blocks": [
         {
-          "p": "White, pink and brown are each described by one slope across the whole range. Green is described by a region instead."
+          "p": "White, pink, brown, blue and violet are each described by one slope across the frequencies they cover. Green is described by a region instead."
         },
         {
           "ul": [
             "**White:** flat. The same power per hertz all the way up.",
             "**Pink:** falls about 3 decibels per octave as the pitch rises.",
             "**Brown:** falls about 6 decibels per octave.",
+            "**Blue:** rises about 3 decibels per octave, so it leans to the high end.",
+            "**Violet:** rises about 6 decibels per octave.",
             "**Green:** no agreed slope. Extra level, or all of the level, sits in a band around the middle, depending on whose version it is."
           ]
         },
@@ -129,6 +136,18 @@
         },
         {
           "p": "YouTube, the App Store and Google Play all have videos or apps using the name. The label is the maker's, and the titles we looked at don't say which version they mean. Judge by ear."
+        },
+        {
+          "h3": "With no ads or a black screen"
+        },
+        {
+          "p": "If you want green noise with no ads, or with the phone locked instead of a black screen video playing, these are the ways we found."
+        },
+        {
+          "ul": [
+            "**YouTube.** [YouTube's help](https://support.google.com/youtube/answer/6308116) says background play needs a YouTube Premium membership and isn't available in the Shorts player. The same page says Premium lets you watch without ads before and during a video, though you may still see promotions the creator built into the video. Our [rain sounds page](/luten/rain-sounds/) covers the other ways round ads.",
+            "**iPhone.** Background Sounds is built in. [Apple's steps](https://support.apple.com/guide/iphone/play-background-sounds-iphb2cfa052c/ios) include a **Stop Sounds When Locked** switch: leave it off if you want the sound to keep playing with the screen locked. Our [Background Sounds guide](/luten/guides/how-to-use-background-sounds-on-iphone/) has the full steps."
+          ]
         }
       ]
     },
@@ -147,11 +166,15 @@
   "faq": [
     {
       "q": "Is green noise real?",
-      "a": "The name is real and widely used. What is missing is one agreed definition, so two people can mean different sounds by it."
+      "a": "The name is real, and many apps and videos use it. What is missing is one agreed definition, so two people can mean different sounds by it."
     },
     {
       "q": "What does green noise sound like?",
       "a": "There is no one answer, because versions differ. Wikipedia has a short clip labelled green noise that you can play and judge for yourself."
+    },
+    {
+      "q": "Is green noise the same as blue noise?",
+      "a": "No. Blue noise rises about 3 decibels per octave, so it leans to the high end. Green noise, in most versions we read, sits around the middle."
     }
   ],
   "sources": [
@@ -210,6 +233,10 @@
     {
       "name": "Google Play: search results for green noise",
       "url": "https://play.google.com/store/search?q=green%20noise&c=apps"
+    },
+    {
+      "name": "YouTube Help: Use your YouTube Premium benefits",
+      "url": "https://support.google.com/youtube/answer/6308116"
     }
   ]
 }
