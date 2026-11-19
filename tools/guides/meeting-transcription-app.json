@@ -1,12 +1,12 @@
 {
   "slug": "meeting-transcription-app",
   "keyword": "meeting transcription app",
-  "title": "Meeting Transcription App: Transcribe Meetings Without a Bot",
-  "description": "Get a transcript of any meeting, in a room or on a call, on iPhone, Android or Mac: what Zoom, Teams and Meet do, and how Cassette does it with no bot.",
-  "h1": "How to transcribe a meeting without a bot in the call",
-  "answer": "If the whole meeting is on Zoom, Microsoft Teams or Google Meet, check your plan first: each can write a transcript on its own, on the plans and settings its maker lists. For a meeting around a table, a call on a different app each time, or one where you'd rather nothing joined, record it on your own device. Cassette does that on iPhone and Android: press RECORD, press STOP, and the transcript is written with a time on every line, so you can tap any line to go to that moment and press PLAY. On a Mac it can record the call itself, and on iPhone, iPad and Mac it can also transcribe a recording you already have.",
+  "title": "Meeting Transcription App: Record and Transcribe Meetings",
+  "description": "Record and transcribe a meeting on iPhone, Android or Mac, in a room or on a call: what Zoom, Teams and Meet do, and how Cassette does it with no bot.",
+  "h1": "How to record and transcribe a meeting, with no bot in the call",
+  "answer": "If the whole meeting is on Zoom, Microsoft Teams or Google Meet, check your plan first: each can write a transcript on its own, on the plans and settings its maker lists. For a meeting around a table, a call on a different app each time, or one where you'd rather nothing joined, your phone is enough to record and transcribe it. Cassette does that on iPhone and Android: press RECORD, press STOP, and the transcript is written with a time on every line, so you can tap any line to go to that moment and press PLAY. On a Mac it can record the call itself, and on iPhone, iPad and Mac it can also transcribe a recording you already have.",
   "published": "2026-11-09",
-  "updated": "2026-11-09",
+  "updated": "2026-11-19",
   "related": [
     "audio-to-text",
     "interview-transcription-app",
@@ -25,8 +25,8 @@
         {
           "ul": [
             "**Zoom.** [Audio transcription](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0064927) works on cloud recordings, on Pro, Business, Education and Enterprise accounts, with cloud recording and audio transcripts turned on. Lines carry the speaker's name, and you can edit them on the web.",
-            "**Microsoft Teams.** [Live transcription](https://support.microsoft.com/en-us/teams/meetings/start-stop-and-download-live-transcripts-in-microsoft-teams-meetings) is started from the meeting controls in Teams for desktop. Afterwards the transcript is in the meeting's Recap, and the organizer can download it.",
-            "**Google Meet.** [Transcripts](https://support.google.com/meet/answer/12849897?hl=en) are on certain Google Workspace editions. They are saved to the organizer's Google Drive, and a link is emailed after the meeting."
+            "**Microsoft Teams.** [Live transcription](https://support.microsoft.com/en-us/teams/meetings/start-stop-and-download-live-transcripts-in-microsoft-teams-meetings) is started from More actions, then Transcribe, in the meeting controls in Teams for desktop. It also starts when you record the meeting. Afterwards the transcript is in the meeting's Recap, and by default the organizer and co-organizers can download it.",
+            "**Google Meet.** [Transcripts](https://support.google.com/meet/answer/12849897?hl=en) are on certain Google Workspace editions. They are saved in the organizer's Google Drive, in the Google Meet folder, and a link is emailed to the organizer after the meeting."
           ]
         },
         {
@@ -35,16 +35,16 @@
       ]
     },
     {
-      "h": "Transcribe a meeting in the room with Cassette",
+      "h": "Record and transcribe a meeting in the room with Cassette",
       "blocks": [
         {
-          "p": "Cassette looks like a tape deck and runs on iPhone and Android. It records through your phone's microphone, so nothing joins a call and nobody gets an invite."
+          "p": "Cassette looks like a tape deck and runs on iPhone and Android. It records through your phone's microphone, so nothing joins a call and nobody gets an invite. You don't need a separate recording device: a phone in the middle of the table hears a small meeting well."
         },
         {
           "ol": [
             "**Put the phone in the middle of the table** and press RECORD. You can lock the screen: the tape keeps going.",
             "**Tap MARK** when something important is said, so you can find that moment later.",
-            "**Press STOP** when the meeting ends. Cassette writes the transcript, then the meeting notes, with no outside AI service."
+            "**Press STOP** when the meeting ends. Cassette writes the transcript, then the meeting notes."
           ]
         },
         {
@@ -59,6 +59,9 @@
         },
         {
           "cta": "mid"
+        },
+        {
+          "p": "The notes need a device that can write them. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets the recording, the transcript and a few lines heard clearly. A tape in English gets no summary or actions there; a tape in another language gets a short summary and key points. The transcript and the recording are there either way."
         }
       ]
     },
@@ -103,7 +106,7 @@
           "p": "On iPhone, iPad and Mac, Cassette can bring in a meeting someone else recorded, or one you made in another app. Share the file to Cassette on iPhone or iPad, press ADD FILE on the Shelf, or drag it onto the Shelf on a Mac. It becomes a tape with a transcript and notes, and the original file isn't changed."
         },
         {
-          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. On a Mac, drag a long recording from Voice Memos to the Desktop first, then onto the Shelf. Cassette for Android can't bring in files yet."
+          "p": "Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. On a Mac, drag a long recording from Voice Memos to the Desktop first, then onto the Shelf."
         }
       ]
     },
@@ -111,7 +114,7 @@
       "h": "Get the transcript out",
       "blocks": [
         {
-          "p": "With the transcript open, press SHARE. On both iPhone and Android you can copy it, save it as a PDF or a Word file, save it as Markdown, or share the audio itself."
+          "p": "With the transcript open, press SHARE. On iPhone the phone's share sheet opens with **Copy** and Cassette's own rows: **Save as PDF**, **Save as Word**, **Save as Markdown** and **Share Audio**. On Android, SHARE offers PDF, Word, Markdown and the audio too."
         },
         {
           "p": "To keep transcripts with the rest of your notes, send them to Notion, OneNote, Evernote or Google Keep, to Apple Notes on iPhone, iPad and Mac, or to Samsung Notes on a Samsung phone."
@@ -125,7 +128,7 @@
           "ul": [
             "**Distance matters most.** Keep the phone close to the people talking and off a table people tap or type on.",
             "**One person at a time.** Crosstalk is hard for any transcript, written by a person or a machine.",
-            "**Use the right language.** On iPhone, pick the language people speak in Profile, under Recording language. If a tape was heard in the wrong one, open it and choose TRANSCRIBE AGAIN IN."
+            "**Use the right language.** On iPhone, pick the language people speak in Profile, under Languages you speak. If a tape was heard in the wrong one, open it and choose TRANSCRIBE AGAIN IN."
           ]
         }
       ]
@@ -137,12 +140,16 @@
       "a": "Cassette records for free with no time limit. A tape under {short_tape_minutes} minutes is transcribed free, and {free_tapes} longer tapes a month are too. Most meetings are longer, and Premium covers every tape after that. Zoom, Teams and Meet include transcripts on the plans their makers list."
     },
     {
+      "q": "Do I need a meeting transcription device?",
+      "a": "Not for most meetings. A phone in the middle of the table, close to the people talking, records a small room well, and Cassette transcribes it on the phone. For a big room or a long table, move the phone nearer whoever talks most, or record a call on a Mac with the CALL switch."
+    },
+    {
       "q": "Does the transcript work without the internet?",
-      "a": "On Android, the phone writes the transcript itself, with no audio sent anywhere for it. On iPhone, the transcript is written on the device in the languages it supports there, once that language's speech model is downloaded. Otherwise Apple's servers write it. To keep everything on the iPhone, turn on On-device only in your Cassette profile."
+      "a": "On Android, the phone writes the transcript itself, with no audio sent anywhere for it. The notes model arrives over Wi-Fi once after you install it on a phone with 8 GB of memory or more, and then the notes need no connection either. On iPhone, the transcript is written on the device in the languages it supports there, once that language's speech model is downloaded. Otherwise Apple's servers write it. To keep everything on the iPhone, turn on On-device only in your Cassette profile."
     },
     {
       "q": "Do I get notes as well as the transcript?",
-      "a": "Yes, on an iPhone with Apple Intelligence on iOS 26 or later, and on an Android phone with 8 GB of memory or more: a summary, what was decided, the actions with owners, and a draft follow-up email. Other phones get the recording, the transcript and a few lines heard clearly, with no summary or actions."
+      "a": "Yes, on an iPhone with Apple Intelligence on iOS 26 or later, and on an Android phone with 8 GB of memory or more. A meeting in English gets a summary, what was decided, the actions with owners, and a draft follow-up email. A meeting in another language gets simpler notes, without meeting sections such as what was decided. Other phones get the recording, the transcript and a few lines heard clearly; for a tape in another language, also a short summary and key points."
     },
     {
       "q": "Will people in the meeting know they are being recorded?",
