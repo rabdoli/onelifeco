@@ -61,7 +61,7 @@
           "cta": "mid"
         },
         {
-          "p": "The notes need a device that can write them. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets the recording, the transcript and a few lines heard clearly. A tape in English gets no summary or actions there; a tape in another language gets a short summary and key points. The transcript and the recording are there either way."
+          "p": "The notes need a device that can write them. An iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, gets the recording, the transcript and a few lines heard clearly. A tape in English gets no summary or actions there. A tape in another language gets a short summary and key points. The transcript and the recording are there either way."
         }
       ]
     },
@@ -149,7 +149,7 @@
     },
     {
       "q": "Do I get notes as well as the transcript?",
-      "a": "Yes, on an iPhone with Apple Intelligence on iOS 26 or later, and on an Android phone with 8 GB of memory or more. A meeting in English gets a summary, what was decided, the actions with owners, and a draft follow-up email. A meeting in another language gets simpler notes, without meeting sections such as what was decided. Other phones get the recording, the transcript and a few lines heard clearly; for a tape in another language, also a short summary and key points."
+      "a": "Yes, on an iPhone with Apple Intelligence on iOS 26 or later, and on an Android phone with 8 GB of memory or more. A meeting in English gets a summary, what was decided, the actions with owners, and a draft follow-up email. A meeting in another language gets simpler notes, without meeting sections such as what was decided. Other phones get the recording, the transcript and a few lines heard clearly. A tape in another language also gets a short summary and key points."
     },
     {
       "q": "Will people in the meeting know they are being recorded?",
