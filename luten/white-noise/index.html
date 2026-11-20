@@ -7,7 +7,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>White noise vs pink noise vs brown noise | Luten</title>
-<meta name="description" content="Brown noise vs white noise, pink noise vs white noise, pink noise vs brown noise: what each colour is, the numbers behind the difference, and how to pick one by ear." />
+<meta name="description" content="What is brown noise, what is pink noise, and how each differs from white noise: the numbers behind the colours, and how to pick one by ear." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.onelifeco.app/luten/white-noise/" />
 <meta property="og:title" content="White noise, pink noise and brown noise" />
@@ -66,6 +66,30 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What is brown noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brown noise is random noise whose power falls 6 decibels per octave as the frequency rises, so most of its energy sits in the low end and it sounds like a deep rumble. It is named after Brownian motion, the random movement of particles described by the botanist Robert Brown, not after the colour, and some engineers call it red noise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is pink noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pink noise is random noise whose power falls 3 decibels per octave, which gives it equal power in every octave. It sounds fuller and more even than white noise, without the hiss, and it is a standard reference signal engineers use to tune speakers and rooms. It is also called 1/f noise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What frequency is brown noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No single frequency. Like white and pink noise, brown noise covers the whole range of hearing at once. What makes it brown is the tilt: its power falls 6 decibels each time the frequency doubles, so the low end carries far more energy than the top."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What is the difference between white, pink and brown noise?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -77,7 +101,7 @@
       "name": "What is the difference between brown noise and white noise?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to about 60 decibels per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour."
+        "text": "Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to a difference of about 60 decibels in power per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour."
       }
     },
     {
@@ -85,7 +109,7 @@
       "name": "What is the difference between pink noise and white noise?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is the reference signal engineers use when they tune speakers and rooms."
+        "text": "Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is a standard reference signal engineers use when they tune speakers and rooms."
       }
     },
     {
@@ -199,17 +223,20 @@ document.addEventListener('click', function (e) {
   <p>All three are broadband noise. What separates them is the slope: how the energy falls away as
   the frequency rises.</p>
   <div class="card">
-    <h3>White noise</h3>
+    <h3>What is white noise?</h3>
     <p>Equal power at every frequency. Flat on a meter, bright and hissy to an ear. Think of an
-    untuned radio, or air escaping.</p>
+    untuned radio, or air escaping. The name is borrowed from white light, which mixes every
+    visible colour at once.</p>
 
-    <h3>Pink noise</h3>
+    <h3>What is pink noise?</h3>
     <p>Falls 3 decibels per octave, which works out as equal power in every octave. Fuller and
-    more even than white, without the top-end hiss. Steady rain and distant surf sit near here.</p>
+    more even than white, without the top-end hiss.
+    Engineers also call it 1/f noise, because its power per hertz halves each time the frequency doubles.</p>
 
-    <h3>Brown noise</h3>
+    <h3>What is brown noise?</h3>
     <p>Falls 6 decibels per octave, twice as steep. Deep and dark, more felt than heard.
-    A waterfall through a wall, a ship's engine room, the inside of a plane.</p>
+    A waterfall through a wall, a ship's engine room, the inside of a plane. It is not one low
+    tone: it still covers the whole range of hearing, with most of its energy at the bottom.</p>
   </div>
 
   <h2>Side by side: the three comparisons people search</h2>
@@ -217,15 +244,15 @@ document.addEventListener('click', function (e) {
   <div class="card">
     <h3>Brown noise vs white noise</h3>
     <p>The two ends of these three. White is flat. Brown falls 6 decibels per octave, and across
-    the roughly ten octaves of human hearing that adds up to about 60 decibels per hertz between
+    the roughly ten octaves of human hearing that adds up to a difference of about 60 decibels in power per hertz between
     the bottom and the top. White is mostly hiss; brown is mostly rumble. The name is not about the colour at
     all: it comes from Brownian motion, named after the botanist Robert Brown, and some engineers
     call the same thing red noise.</p>
     <h3>Pink noise vs white noise</h3>
-    <p>Pink falls 3 decibels per octave, about 30 decibels per hertz across the range of hearing,
+    <p>Pink falls 3 decibels per octave, a difference of about 30 decibels in power per hertz across the range of hearing,
     and white does not fall at all. Because each octave up is twice as wide, that gives pink equal
     power in every octave, so to most ears it sounds
-    level, while white sounds tilted toward the top. Pink is also the reference signal used to
+    level, while white sounds tilted toward the top. Pink is also a standard reference signal used to
     tune speakers and rooms, which is why it turns up in audio gear as often as in sound apps.</p>
     <h3>Pink noise vs brown noise</h3>
     <p>The closest pair. Both fall as the frequency rises, and brown falls twice as steeply. Pink
@@ -241,8 +268,8 @@ document.addEventListener('click', function (e) {
   as much bandwidth as everything below 5,000 put together.</p>
   <p>So a spectrum that is flat on paper puts most of its energy in the top few octaves, which is
   where hiss lives. White noise measures flat and hears bright. Pink noise corrects for that
-  bandwidth, which is why it sounds more even to most people, and why it is the reference
-  engineers use when they tune a room.</p>
+  bandwidth, which is why it sounds more even to most people, and why engineers often use it
+  as a reference when they tune a room.</p>
   <p>Brown goes past even and lands on dark. Nothing is wrong with any of them. They are three
   points on one slope, and which one sounds right to you is a matter of ears.</p>
 
@@ -291,7 +318,7 @@ document.addEventListener('click', function (e) {
 
     <h3>4. Skip to the last ten seconds of the track</h3>
     <p>The end is where the loop either joins cleanly or does not, and where an outro voice would
-    live. It is the least tested part of any sound app.</p>
+    live.</p>
   </div>
 
   <h2>Where Luten sits</h2>
@@ -315,13 +342,19 @@ document.addEventListener('click', function (e) {
 
   <h2>Common questions</h2>
   <div class="card">
+    <h3>What is brown noise?</h3>
+    <p>Brown noise is random noise whose power falls 6 decibels per octave as the frequency rises, so most of its energy sits in the low end and it sounds like a deep rumble. It is named after Brownian motion, the random movement of particles described by the botanist Robert Brown, not after the colour, and some engineers call it red noise.</p>
+    <h3>What is pink noise?</h3>
+    <p>Pink noise is random noise whose power falls 3 decibels per octave, which gives it equal power in every octave. It sounds fuller and more even than white noise, without the hiss, and it is a standard reference signal engineers use to tune speakers and rooms. It is also called 1/f noise.</p>
+    <h3>What frequency is brown noise?</h3>
+    <p>No single frequency. Like white and pink noise, brown noise covers the whole range of hearing at once. What makes it brown is the tilt: its power falls 6 decibels each time the frequency doubles, so the low end carries far more energy than the top.</p>
     <h3>What is the difference between white, pink and brown noise?</h3>
     <p>They differ in how the energy is spread across frequency. White noise has equal power at every frequency, so the high end dominates and it reads as bright and hissy. Pink noise rolls the top off at 3 decibels per octave, which puts equal power in every octave and sounds more balanced. Brown noise rolls it off twice as steeply, at 6 decibels per octave, which is why it sounds deep and distant, closer to a waterfall heard through a wall than to a radio between stations.</p>
 
     <h3>What is the difference between brown noise and white noise?</h3>
-    <p>Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to about 60 decibels per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour.</p>
+    <p>Of these three, they are the two ends. White noise is flat, with equal power at every frequency, so it sounds bright and hissy. Brown noise falls 6 decibels per octave, which across the roughly ten octaves of human hearing adds up to a difference of about 60 decibels in power per hertz between the bottom and the top, so it sounds like a low rumble. The name comes from Brownian motion, not the colour.</p>
     <h3>What is the difference between pink noise and white noise?</h3>
-    <p>Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is the reference signal engineers use when they tune speakers and rooms.</p>
+    <p>Pink noise falls 3 decibels per octave and white noise does not fall at all. That gives pink equal power in every octave, so to most ears it sounds even, while white sounds tilted toward the hiss. Pink is a standard reference signal engineers use when they tune speakers and rooms.</p>
     <h3>What is the difference between pink noise and brown noise?</h3>
     <p>Both fall as the frequency rises. Brown falls twice as steeply, 6 decibels per octave against pink's 3. Pink keeps some high end and sounds like steady rain; brown loses most of it and sounds like a distant rumble. They are the closest pair of the three, so the difference is easiest to hear back to back.</p>
     <h3>Is brown noise better than white noise?</h3>
