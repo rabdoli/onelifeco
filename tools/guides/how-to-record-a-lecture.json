@@ -1,34 +1,34 @@
 {
   "slug": "how-to-record-a-lecture",
-  "keyword": "how to record a lecture on iphone",
-  "title": "How to Record a Lecture on iPhone or Android and Get Notes",
-  "description": "Record a lecture on your phone, mark what matters and get notes you can study from. Steps for iPhone and Android, with the built-in apps and with Cassette.",
-  "h1": "How to record a lecture on iPhone or Android",
-  "answer": "Ask your professor first, sit near the front, lay your phone flat with its bottom edge toward the speaker, and press record. The recorder that came with your phone gets you the audio. To get notes as well, use an app that writes them: in Cassette you press RECORD, tap MARK at the parts that matter and press STOP, and the outline, key terms and exam talk are written for you.",
+  "keyword": "how to record lectures",
+  "title": "How to Record Lectures on iPhone, Android or Mac, With Notes",
+  "description": "The best way to record lectures on a phone, iPad or laptop, and get notes you can study from. Steps with the free built-in apps and with Cassette.",
+  "h1": "How to record lectures on iPhone, Android, iPad or Mac",
+  "answer": "Ask your professor first, sit near the front, lay your phone flat with its bottom edge toward the speaker, and press record. The recorder that came with your phone or laptop gets you the audio for free: Voice Memos on iPhone, iPad and Mac, your phone maker's recorder on Android, Sound Recorder on Windows. To get notes as well, use an app that writes them: in Cassette you press RECORD, tap MARK at the parts that matter and press STOP, and the outline, key terms and what is on the exam are written for you.",
   "published": "2026-11-05",
-  "updated": "2026-11-09",
+  "updated": "2026-11-20",
   "related": [
-    "audio-to-text",
-    "take-meeting-notes-with-ai",
-    "ai-note-taker",
-    "voice-recorder-app",
     "lecture-recording-app",
+    "audio-to-text",
     "transcribe-voice-memos",
+    "voice-memo-playback-speed",
+    "action-button-voice-recorder",
     "apple-watch-voice-recorder",
-    "action-button-voice-recorder"
+    "voice-recorder-app",
+    "ai-note-taker"
   ],
   "sections": [
     {
       "h": "Before class: get a recording you can use",
       "blocks": [
         {
-          "p": "A clear recording comes down to a few small things you do before the professor starts."
+          "p": "The best way to record lectures comes down to a few small things you do before the professor starts. They matter more than which app you use."
         },
         {
           "ul": [
             "**Ask first.** Check the syllabus or ask after class. Schools and professors have their own rules about recording.",
             "**Sit close.** Distance hurts a recording more than anything else. A few rows from the front beats the back of the room.",
-            "**Lay the phone flat, bottom edge toward the speaker.** The main microphone on most phones is on that edge. Keep it off a desk you will be typing or tapping on.",
+            "**Lay the phone flat, bottom edge toward the speaker.** The main microphone on most phones is on that edge. Keep it off a desk you will be typing or tapping on. On a laptop, keep the keyboard quiet or the clicks end up on the recording.",
             "**Silence it.** Turn on Do Not Disturb so buzzes don't end up on the tape.",
             "**Check battery and storage.** A long class is a poor time to find out either one is low."
           ]
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "h": "Record with the app your phone came with",
+      "h": "Record with the app your phone or laptop came with",
       "blocks": [
         {
           "p": "If you only want to listen again later, you may not need anything new."
@@ -46,6 +46,12 @@
         },
         {
           "p": "**On Android,** look for the recorder app from your phone's maker. The name and features change from brand to brand, so open it and check whether it does more than save the audio."
+        },
+        {
+          "p": "**On a Mac,** Voice Memos is there too. Apple's page on [making a recording on Mac](https://support.apple.com/guide/voice-memos/create-a-recording-vmaa4b813415/mac) says it records with the built-in microphone, a headset or an external mic. Click Record to start."
+        },
+        {
+          "p": "**On a Windows laptop,** open [Sound Recorder](https://support.microsoft.com/en-us/windows/apps/sound-recorder-app-for-windows-faq) from Start. Microsoft says each recording can run up to three hours, and you can keep working in other apps while it records."
         },
         {
           "p": "Either way you end up with a long recording. Finding the ten minutes that mattered still means listening through it, and writing the notes is still your job."
@@ -62,7 +68,7 @@
           "ol": [
             "**Press RECORD.** The tape keeps rolling when your screen locks, so you can put the phone down and listen.",
             "**Tap MARK when something matters,** like when the professor says it will be on the exam. Each mark holds that moment on the tape.",
-            "**Press STOP.** Cassette writes the transcript and the notes on its own, with no outside AI service."
+            "**Press STOP.** Cassette writes the transcript, then the notes."
           ]
         },
         {
@@ -81,10 +87,34 @@
       ]
     },
     {
+      "h": "On an iPad or a Mac, or with a recording you already have",
+      "blocks": [
+        {
+          "p": "**On an iPad,** Cassette has the same deck as on iPhone: press RECORD, tap MARK, press STOP. An iPad flat on the desk records a lecture as well as a phone does, if it is close to the speaker."
+        },
+        {
+          "p": "**On a Mac,** slide the switch on the deck to **MIC**, so Cassette records the room through the Mac's microphone only, and press RECORD. It starts on CALL, since a Mac tape is usually a call. The **CALL** side is for a class you join over Zoom or Teams: it records what the Mac plays together with your microphone. Our guide to [recording a Zoom meeting on a Mac](/cassette/guides/record-zoom-meeting-on-mac/) has those steps."
+        },
+        {
+          "p": "**Recorded the class in another app?** On iPhone, iPad and Mac, Cassette can bring in the file. Share it to Cassette on iPhone or iPad, press **ADD FILE** on the Shelf, or drag it onto the Shelf on a Mac. It becomes a tape with a transcript and notes, under the same free tape rule, and the original file isn't changed. Cassette reads M4A, MP3, WAV, AAC, FLAC, Opus and the sound in MP4. On a Mac, drag a long recording from Voice Memos to the Desktop first, then onto the Shelf."
+        },
+        {
+          "shots": [
+            "ios-addfile",
+            "mac-addfile"
+          ],
+          "alts": [
+            "Cassette on iPhone after a file was added: the note says the tape was added and the original file isn't changed.",
+            "The same note in Cassette on a Mac, over the Shelf with its ADD FILE key."
+          ]
+        }
+      ]
+    },
+    {
       "h": "What you get when you press STOP",
       "blocks": [
         {
-          "p": "Cassette picks the kind of notes from what it hears. For a class it writes:"
+          "p": "Cassette picks the kind of notes from what it hears. For a class in English it writes:"
         },
         {
           "ul": [
@@ -107,10 +137,13 @@
           ]
         },
         {
-          "p": "If it guessed wrong, for example a seminar it took for a meeting, choose **Lecture or class** and the notes are written again."
+          "p": "If it guessed wrong, for example a seminar it took for a meeting, tap **CHANGE** beside Type at the top of the notes, choose **Lecture or class**, and the notes are written again. This lecture layout is for tapes in English. A class in another language still gets its transcript and general notes, without the outline and exam sections."
         },
         {
-          "p": "On an iPhone without Apple Intelligence or on a version before iOS 26, or an Android phone with less than 8 GB of memory, you get the recording, the transcript and a few lines heard clearly, word for word, instead of these notes and cards."
+          "p": "On Android, picking the type for you and changing it need a phone with 8 GB of memory or more, once Cassette's notes model is on it."
+        },
+        {
+          "p": "On an iPhone or iPad without Apple Intelligence or on a version before 26, or an Android phone with less than 8 GB of memory, you get the recording, the transcript and a few lines heard clearly. A class in English gets no summary there. A class in another language gets a short summary and key points. There is no outline, terms or review cards on those devices."
         }
       ]
     },
@@ -119,10 +152,10 @@
       "blocks": [
         {
           "ul": [
-            "**Go back to the moment.** Tap a line of the transcript to jump to it, then press PLAY to hear how it was said.",
+            "**Go back to the moment.** Tap a line of the transcript to go to that moment on the tape, then press PLAY to hear how it was said.",
             "**Review with cards.** Cassette makes review cards from the key terms, so you can test yourself without writing them.",
-            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep, to Apple Notes on iPhone, or to Samsung Notes on a Samsung phone.",
-            "**Ask your tapes.** Type a question like \"what's due this week?\" and get an answer from your own recordings, with the sources."
+            "**Keep them with your other notes.** Send the notes to Notion, OneNote, Evernote or Google Keep, to Apple Notes on iPhone, iPad and Mac, or to Samsung Notes on a Samsung phone.",
+            "**Ask your tapes.** On a phone that writes full notes, type a question like \"what's due this week?\" and get an answer from your own recordings."
           ]
         },
         {
@@ -140,16 +173,24 @@
   ],
   "faq": [
     {
+      "q": "What is the best way to record lectures?",
+      "a": "Sit close to the speaker, put the phone flat on the desk with its bottom edge toward them, and silence it. Distance matters more than the app. Then use the free recorder on your phone if you only want to listen again, or an app like Cassette if you want the transcript and notes written for you."
+    },
+    {
+      "q": "Can I record a lecture on a laptop?",
+      "a": "Yes. Voice Memos records on a Mac and Sound Recorder on Windows, both for free. Cassette for Mac records the room with its switch slid to MIC, and writes the transcript after you press STOP. A Mac with Apple Intelligence on macOS 26 or later writes the notes too."
+    },
+    {
       "q": "Can I record a lecture with my phone locked?",
       "a": "Yes. Cassette keeps recording when the screen locks, on iPhone and on Android."
     },
     {
       "q": "Does it work without Wi-Fi?",
-      "a": "Yes. Recording, the transcript and the notes all work in airplane mode, which helps in a basement lecture hall. On iPhone, the transcript needs a language your phone can handle on the device, with its speech model downloaded. On Android, the notes model arrives over Wi-Fi once after you install, so open Cassette on Wi-Fi before class."
+      "a": "Yes. Recording works in airplane mode, which helps in a basement lecture hall. On iPhone, the transcript is written on the device in the languages it supports there, once that language's speech model is downloaded; otherwise Apple's servers write it. On Android, the notes model arrives over Wi-Fi once after you install, on a phone with 8 GB of memory or more, so open Cassette on Wi-Fi before class."
     },
     {
       "q": "Can I keep the recording private?",
-      "a": "Notes are never written by an outside AI service. On Android, the audio only leaves the phone if you sign in with Premium, which backs tapes up. On iPhone there are more cases: Apple's servers transcribe a tape the phone can't do on the device, the notes can be written on Apple's Private Cloud Compute on iOS 27, and tapes go in iCloud and computer backups and in your Premium backup. To stop all of that, turn on On-device only in your Cassette profile."
+      "a": "On Android, the audio only leaves the phone if you sign in with Premium, which backs tapes up. On iPhone there are more cases: Apple's servers transcribe a tape the phone can't do on the device, the notes can be written on Apple's Private Cloud Compute on iOS 27, and tapes go in iCloud and computer backups and in your Premium backup. To stop all of that, turn on On-device only in your Cassette profile."
     },
     {
       "q": "Is Cassette free for lectures?",
@@ -160,6 +201,14 @@
     {
       "name": "Apple Support: View a Voice Memos transcription on iPhone",
       "url": "https://support.apple.com/guide/iphone/view-a-transcription-iph00953a982/ios"
+    },
+    {
+      "name": "Apple Support: Create a recording on Mac (Voice Memos)",
+      "url": "https://support.apple.com/guide/voice-memos/create-a-recording-vmaa4b813415/mac"
+    },
+    {
+      "name": "Microsoft Support: Sound Recorder app for Windows FAQ",
+      "url": "https://support.microsoft.com/en-us/windows/apps/sound-recorder-app-for-windows-faq"
     }
   ]
 }
